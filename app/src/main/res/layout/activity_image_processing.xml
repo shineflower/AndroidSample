@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="center"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:text="小慕美图"
+        android:textSize="40sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/primary_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Primary Color"/>
+
+    <Button
+        android:id="@+id/color_matrix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Color Matrix" />
+
+    <Button
+        android:id="@+id/pixels_effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pixels Effect" />
+
+    <Button
+        android:id="@+id/matrix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Matrix"/>
+
+    <Button
+        android:id="@+id/round_view_xfermode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Round Rect Xfermode"/>
+
+    <Button
+        android:id="@+id/bitmap_shader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bitmap Shader"/>
+
+    <Button
+        android:id="@+id/reflect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reflect"/>
+
+    <Button
+        android:id="@+id/mesh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mesh"/>
+</LinearLayout>

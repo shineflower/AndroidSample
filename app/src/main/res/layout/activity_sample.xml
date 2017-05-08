@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 绑定 -->
+    <data>
+        <variable
+            name="employee"
+            type="com.jackie.sample.data_binding.Employee"/>
+        <variable
+            name="presenter"
+            type="com.jackie.sample.data_binding.SampleActivity.Presenter"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_sample"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.jackie.sample.databinding.SampleActivity"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onTextChanged="@{ presenter.onTextChanged }"
+            android:hint="请输入First Name" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入Last Name" />
+
+        <!-- 方法引用 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="@{ presenter.onClick }"
+            android:text="@{ employee.firstName }"/>
+
+        <!-- 监听器绑定 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="@{ () -> presenter.onClickListenerBinding(employee)}"
+            android:text="@{ employee.lastName }"/>
+    </LinearLayout>
+</layout>

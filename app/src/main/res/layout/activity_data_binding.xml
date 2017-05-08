@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jackie.sample.data_binding.DataBindingActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAMPLE"/>
+
+    <Button
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LIST"/>
+
+    <Button
+        android:id="@+id/two_way"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TWO WAY"/>
+
+    <Button
+        android:id="@+id/animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANIMATION"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+package com.jackie.sample.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * Created by Jackie on 2016/1/12.
+ * name属性注解类
+ */
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface TreeNodeName {
+}

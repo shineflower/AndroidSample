@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jackie.sample">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <application
+        android:name=".application.SampleApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".desk.DeskActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 高仿微信主界面(自定义指示器和消息提醒) -->
+        <activity android:name=".wechat_tab.WechatTabActivity"/>
+
+        <!-- 图像处理集合 -->
+        <activity android:name=".image_processing.ImageProcessingActivity"/>
+        <activity android:name=".image_processing.PrimaryColorActivity"/>
+        <activity android:name=".image_processing.ColorMatrixActivity"/>
+        <activity android:name=".image_processing.PixelsEffectActivity"/>
+        <activity android:name=".image_processing.MatrixActivity"/>
+        <activity android:name=".image_processing.RoundRectXfermodeActivity"/>
+        <activity android:name=".image_processing.BitmapShaderActivity"/>
+        <activity android:name=".image_processing.ReflectActivity"/>
+        <activity android:name=".image_processing.MeshActivity"/>
+
+        <!-- ViewPager切换动画 -->
+        <activity android:name=".view_pager_anim_transfer.ViewPagerTransferAnimActivity"/>
+
+        <!-- 图片预览和多点触控 -->
+        <activity android:name=".zoom_image_view.ZoomActivity"/>
+
+        <!-- 自定义索引查询联系人 -->
+        <activity android:name=".indexable_contact.IndexableContactActivity"/>
+
+        <!-- 自定义实现刮刮卡效果 -->
+        <activity android:name=".scratch_card.ScratchCardActivity"/>
+
+        <!-- 自定义树形控件 -->
+        <activity android:name=".tree.TreeActivity"/>
+
+        <!-- 弧形菜单 -->
+        <activity android:name=".arc_menu.ArcMenuActivity"/>
+
+        <!-- 仿QQ侧滑菜单 -->
+        <activity android:name=".sliding_menu.SlidingMenuActivity"/>
+
+        <!-- 仿微信语音聊天 -->
+        <activity android:name=".wechat_recorder.WechatRecorderActivity"/>
+
+        <!-- 仿微信图片选择器 -->
+        <activity android:name=".wechat_image_picker.WechatImagePickerActivity"/>
+
+        <!-- 自定义图案锁屏 -->
+        <activity android:name=".lock_pattern.LockPatternActivity"/>
+
+        <!-- 多线程断点续传下载 -->
+        <activity android:name=".multiple_download.DownloadActivity"/>
+        <service android:name=".service.DownloadService"/>
+
+        <!-- 人脸检测 -->
+        <activity android:name=".face_detect.FaceDetectActivity"/>
+
+        <!-- 幸运转盘 -->
+        <activity android:name=".lucky_wheel.LuckyWheelActivity"/>
+
+        <!-- Data Binding -->
+        <activity android:name=".data_binding.DataBindingActivity"/>
+        <activity android:name=".data_binding.SampleActivity" />
+        <activity android:name=".data_binding.ListActivity" />
+        <activity android:name=".data_binding.TwoWayActivity"/>
+        <activity android:name=".data_binding.AnimationActivity"/>
+
+
+        <!-- 仿支付宝支付密码输入框 -->
+        <activity android:name=".alipay.AliPayActivity"/>
+
+        <!-- okhttp3 -->
+        <activity android:name=".okhttp3.Okhttp3Activity"/>
+
+        <!-- 多样式的ProgressBar -->
+        <activity android:name=".progress_bar.ProgressBarActivity"/>
+
+        <!-- 高仿京东天猫下拉刷新 -->
+        <activity android:name=".jd_tmall_refresh.JdTmallRefreshActivity"/>
+        <activity android:name=".jd_tmall_refresh.jd.JdActivity"/>
+        <activity android:name=".jd_tmall_refresh.tmall.TmallActivity"/>
+
+        <!-- 基于文件模式和字节流模式的录音 -->
+        <activity android:name=".file_stream_recorder.FileStreamRecorderActivity"/>
+        <activity android:name=".file_stream_recorder.FileModeActivity"/>
+        <activity android:name=".file_stream_recorder.StreamModeActivity"/>
+    </application>
+
+</manifest>

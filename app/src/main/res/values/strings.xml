@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SampleAll</string>
+
+    <string name="state_normal">按住 说话</string>
+    <string name="state_recording">松开 结束</string>
+    <string name="state_cancel">松开手指，取消发送</string>
+
+    <string name="dialog_recording">手指上滑，取消发送</string>
+    <string name="dialog_cancel">松开手指，取消发送</string>
+    <string name="dialog_too_short">录音时间太短</string>
+
+    <string name="download_progress_text">%1$dM/%2$dM</string>
+</resources>

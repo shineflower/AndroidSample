@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jackie="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jackie.sample.custom_view.ScratchView
+        android:id="@+id/scratch"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        jackie:text="500,0000"
+        jackie:textSize="30sp"
+        jackie:textColor="#FF00FF"/>
+</RelativeLayout>
