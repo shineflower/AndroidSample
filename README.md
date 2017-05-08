@@ -1,4 +1,3 @@
-一些案例的集合    
 ViewPager切换动画   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/view_pager.gif)
 
