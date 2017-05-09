@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_element"
+            android:layout_width="70dp"
+            android:layout_height="85dp"
+            android:src="@drawable/icon_ok"
+            android:layout_centerInParent="true"
+            android:transitionName="XXX"/>
+    </RelativeLayout>
+</RelativeLayout>

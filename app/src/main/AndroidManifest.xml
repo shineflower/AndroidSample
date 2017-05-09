@@ -112,6 +112,58 @@
         <activity android:name=".file_stream_recorder.FileStreamRecorderActivity"/>
         <activity android:name=".file_stream_recorder.FileModeActivity"/>
         <activity android:name=".file_stream_recorder.StreamModeActivity"/>
+
+        <!-- 共享元素跳转 -->
+        <activity android:name=".share_element.ShareElementFromActivity"/>
+        <activity android:name=".share_element.ShareElementToActivity"/>
+
+        <!-- 线性色彩渐变 -->
+        <activity android:name=".gradient.LinearGradientActivity"/>
+
+        <!-- Sin正弦曲线 -->
+        <activity android:name=".sin.SinActivity"/>
+
+        <!-- 一个Canvas时钟 -->
+        <activity android:name=".clock.ClockActivity"/>
+
+        <!-- 仿理财产品的钱数额的变化动画 -->
+        <activity android:name=".animator.ValueAnimatorActivity"/>
+
+        <!-- RecyclerView滑动删除 -->
+        <activity android:name=".slide_delete.SlideDeleteActivity"/>
+
+        <!-- 有界波纹和无界波纹效果(可以放到任何View上面) -->
+        <activity android:name=".ripple.RippleActivity"/>
+
+        <!-- 可以上下进行粘性滑动的ScrollView -->
+        <activity android:name=".scroll_view.ScrollViewActivity"/>
+
+        <!-- 三维开门一样的效果 -->
+        <activity android:name=".animator.OpenDoor3DActivity"/>
+
+        <!-- 模拟电视的关机动画 -->
+        <activity android:name=".animator.TurnOffTvActivity"/>
+
+        <!-- 按钮波纹与波纹色定制 -->
+        <activity android:name=".android_l.AndroidLTouchFeedbackActivity"/>
+
+        <!-- Android L 动画新特性 -->
+        <activity android:name=".android_l.AndroidLCircularRevealActivity"/>
+
+        <!-- 贝塞尔曲线的购物车添加动画 -->
+        <activity android:name=".animator.ShoppingCartBezierActivity"/>
+
+        <!-- 文字特效 -->
+        <activity android:name=".text_view.TextViewActivity"/>
+
+        <!-- 用于搜索的标签添加与管理控件 -->
+        <activity android:name=".edit_text.SearchEditTextActivity"/>
+
+        <!-- 共享元素相关测试加入Fragment -->
+        <activity android:name=".share_element.PhotoActivity"/>
+
+        <!-- 自定义柱状图进度条 -->
+        <activity android:name=".progress_bar.ProgressLinearLayoutActivity"/>
     </application>
 
 </manifest>

@@ -17,11 +17,11 @@ public class SampleBean<T> {
         this.title = title;
     }
 
-    public Class<T> getClassName() {
+    public Class getClassName() {
         return className;
     }
 
-    public void setClassName(Class<T> className) {
+    public void setClassName(Class className) {
         this.className = className;
     }
 }

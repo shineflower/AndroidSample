@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_android_ltouch_feedback"
+    android:layout_width="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="波纹效果"
+        android:background="?android:attr/selectableItemBackground"
+        android:colorControlHighlight="#FF4081"
+        android:colorAccent="#FF4081"
+        />
+
+    <!--波纹有边界
+    android:colorControlHighlight 设置波纹的颜色，不过没起效果。。。
+    android:background="?android:attr/selectableItemBackgroundBorderless"波纹超出边界
+    -->
+</RelativeLayout>

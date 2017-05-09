@@ -65,5 +65,21 @@
             app:progress_text_size="20sp"
             app:progress_text_color="#44ff0000"
             app:progress_unreachable_color="#eee"/>
+
+        <com.jackie.sample.custom_view.HorizontalBoldProgressBar
+            android:id="@+id/horizontal_bold_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+        
+        <com.jackie.sample.custom_view.ObliqueProgressBar
+            android:id="@+id/oblique_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>

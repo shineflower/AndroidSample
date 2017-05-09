@@ -9,11 +9,20 @@ import android.view.View;
 import com.jackie.sample.R;
 import com.jackie.sample.adapter.SampleAdapter;
 import com.jackie.sample.alipay.AliPayActivity;
+import com.jackie.sample.android_l.AndroidLCircularRevealActivity;
+import com.jackie.sample.android_l.AndroidLTouchFeedbackActivity;
+import com.jackie.sample.animator.OpenDoor3DActivity;
+import com.jackie.sample.animator.ShoppingCartBezierActivity;
+import com.jackie.sample.animator.TurnOffTvActivity;
+import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
+import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
+import com.jackie.sample.edit_text.SearchEditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
+import com.jackie.sample.gradient.LinearGradientActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
 import com.jackie.sample.indexable_contact.IndexableContactActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
@@ -22,13 +31,21 @@ import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
 import com.jackie.sample.okhttp3.Okhttp3Activity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
+import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
+import com.jackie.sample.ripple.RippleActivity;
 import com.jackie.sample.scratch_card.ScratchCardActivity;
+import com.jackie.sample.scroll_view.ScrollViewActivity;
+import com.jackie.sample.share_element.PhotoActivity;
+import com.jackie.sample.share_element.ShareElementFromActivity;
+import com.jackie.sample.sin.SinActivity;
+import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
-import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
-import com.jackie.sample.wechat_tab.WechatTabActivity;
+import com.jackie.sample.text_view.TextViewActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferAnimActivity;
+import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
+import com.jackie.sample.wechat_tab.WechatTabActivity;
 import com.jackie.sample.zoom_image_view.ZoomActivity;
 
 import java.util.LinkedList;
@@ -160,17 +177,102 @@ public class DeskActivity extends Activity {
         sampleBean.setClassName(FileStreamRecorderActivity.class);
         linkedList.add(sampleBean);
 
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("共享元素的界面跳转");
+        sampleBean.setClassName(ShareElementFromActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("线性色彩渐变");
+        sampleBean.setClassName(LinearGradientActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("Sin正弦曲线");
+        sampleBean.setClassName(SinActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("一个Canvas时钟");
+        sampleBean.setClassName(ClockActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿理财产品的钱数额的变化动画");
+        sampleBean.setClassName(ValueAnimatorActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("RecyclerView滑动删除");
+        sampleBean.setClassName(SlideDeleteActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("有界波纹和无界波纹效果(可以放到任何View上面)");
+        sampleBean.setClassName(RippleActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("可以上下进行粘性滑动的ScrollView");
+        sampleBean.setClassName(ScrollViewActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("三维开门一样的效果");
+        sampleBean.setClassName(OpenDoor3DActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("模拟电视的关机动画");
+        sampleBean.setClassName(TurnOffTvActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("按钮波纹与波纹色定制");
+        sampleBean.setClassName(AndroidLTouchFeedbackActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("Android L 动画新特性");
+        sampleBean.setClassName(AndroidLCircularRevealActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("贝塞尔曲线的购物车添加动画");
+        sampleBean.setClassName(ShoppingCartBezierActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("文字特效");
+        sampleBean.setClassName(TextViewActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("用于搜索的标签添加与管理控件");
+        sampleBean.setClassName(SearchEditTextActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("共享元素相关测试加入Fragment");
+        sampleBean.setClassName(PhotoActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义柱状图进度条");
+        sampleBean.setClassName(ProgressLinearLayoutActivity.class);
+        linkedList.add(sampleBean);
+
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
         mRecyclerView.setAdapter(sampleAdapter);
         sampleAdapter.notifyDataSetChanged();
     }
 
     public void hideNavigationBar() {
-        int uiFlags = //View.SYSTEM_UI_FLAG_LAYOUT_STABLE|
-                //View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION|
+        int uiFlags = //View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                //View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION; // hide nav bar
 
-        if(android.os.Build.VERSION.SDK_INT >= 19 ){
+        if (android.os.Build.VERSION.SDK_INT >= 19){
             uiFlags |= 0x00001000;    //SYSTEM_UI_FLAG_IMMERSIVE_STICKY: hide navigation bars - compatibility: building API level is lower thatn 19, use magic number directly for higher API target level
         } else {
             uiFlags |= View.SYSTEM_UI_FLAG_LOW_PROFILE;
