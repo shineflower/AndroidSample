@@ -45,3 +45,33 @@ ViewPager切换动画
 
 高仿京东天猫下拉刷新   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/jd_tmall_refresh.gif)
+
+一个Canvas时钟   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/clock.png)
+
+仿理财产品的钱数额的变化动画   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/money_animation.gif)
+
+RecyclerView滑动删除   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/slide_delete.gif)
+
+三维开门一样的效果   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/open_door_3d.gif)
+
+模拟电视的关机动画   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/turn_off_tv.gif)
+
+Android L动画新特性   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/android_l_animation.gif)
+
+贝塞尔曲线的购物车添加动画   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/shopping_cart.gif)
+
+用于搜索的标签添加与管理控件   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/search_edit_text.gif)
+
+共享元素相关测试加入Fragment   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/share_element_animation.gif)
+
+自定义柱状图进度条   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/progress_linear_layout.gif)
