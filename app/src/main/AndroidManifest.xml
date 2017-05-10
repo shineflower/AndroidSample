@@ -93,7 +93,6 @@
         <activity android:name=".data_binding.TwoWayActivity"/>
         <activity android:name=".data_binding.AnimationActivity"/>
 
-
         <!-- 仿支付宝支付密码输入框 -->
         <activity android:name=".alipay.AliPayActivity"/>
 
@@ -112,6 +111,10 @@
         <activity android:name=".file_stream_recorder.FileStreamRecorderActivity"/>
         <activity android:name=".file_stream_recorder.FileModeActivity"/>
         <activity android:name=".file_stream_recorder.StreamModeActivity"/>
+
+        <!-- Material Design -->
+        <activity android:name=".material_design.MaterialDesignActivity"/>
+        <activity android:name=".material_design.FruitActivity"/>
 
         <!-- 共享元素跳转 -->
         <activity android:name=".share_element.ShareElementFromActivity"/>

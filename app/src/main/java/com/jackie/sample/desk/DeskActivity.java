@@ -28,6 +28,7 @@ import com.jackie.sample.indexable_contact.IndexableContactActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
+import com.jackie.sample.material_design.MaterialDesignActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
 import com.jackie.sample.okhttp3.Okhttp3Activity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
@@ -175,6 +176,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("基于文件模式和字节流模式的录音");
         sampleBean.setClassName(FileStreamRecorderActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("Material Design");
+        sampleBean.setClassName(MaterialDesignActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
