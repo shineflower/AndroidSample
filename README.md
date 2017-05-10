@@ -46,6 +46,9 @@ ViewPager切换动画
 高仿京东天猫下拉刷新   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/jd_tmall_refresh.gif)
 
+Material Design   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/material_design.gif)
+
 一个Canvas时钟   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/clock.png)
 
