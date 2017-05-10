@@ -78,3 +78,7 @@ Android L动画新特性
 
 自定义柱状图进度条   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/progress_linear_layout.gif)
+
+自定义垂直时间轴布局   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/timeline.gif)
+
