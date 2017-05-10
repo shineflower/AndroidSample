@@ -167,6 +167,9 @@
 
         <!-- 自定义柱状图进度条 -->
         <activity android:name=".progress_bar.ProgressLinearLayoutActivity"/>
+
+        <!-- 自定义垂直时间轴布局 -->
+        <activity android:name=".timeline.TimelineActivity"/>
     </application>
 
 </manifest>

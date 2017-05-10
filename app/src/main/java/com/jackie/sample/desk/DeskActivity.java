@@ -42,6 +42,7 @@ import com.jackie.sample.sin.SinActivity;
 import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.text_view.TextViewActivity;
+import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferAnimActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
@@ -266,6 +267,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("自定义柱状图进度条");
         sampleBean.setClassName(ProgressLinearLayoutActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义垂直时间轴布局");
+        sampleBean.setClassName(TimelineActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

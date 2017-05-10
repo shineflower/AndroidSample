@@ -33,4 +33,21 @@
     <declare-styleable name="CircleProgressBar">
         <attr name="progress_radius" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="TimelineLayout">
+        <!--时间轴左偏移值-->
+        <attr name="line_margin_left" format="dimension"/>
+        <!--时间轴上偏移值-->
+        <attr name="line_margin_top" format="dimension"/>
+        <!--线宽-->
+        <attr name="line_stroke_width" format="dimension"/>
+        <!--线的颜色-->
+        <attr name="line_color" format="color"/>
+        <!--点的大小-->
+        <attr name="point_size" format="dimension"/>
+        <!--点的颜色-->
+        <attr name="point_color" format="color"/>
+        <!--图标-->
+        <attr name="icon_src" format="reference"/>
+    </declare-styleable>
 </resources>
