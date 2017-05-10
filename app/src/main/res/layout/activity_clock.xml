@@ -6,9 +6,13 @@
     android:orientation="vertical" >
 
     <com.jackie.sample.custom_view.ClockView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_margin="20dp"
         android:layout_gravity="center_horizontal"/>
 
+    <com.jackie.sample.custom_view.ClockTimeView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"/>
 </LinearLayout>
