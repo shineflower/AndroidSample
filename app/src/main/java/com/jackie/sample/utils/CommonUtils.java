@@ -3,14 +3,14 @@ package com.jackie.sample.utils;
 /**
  * Created by Jackie on2017/3/6
  */
-public class Common {
-    private static Common mInstance;
+public class CommonUtils {
+    private static CommonUtils mInstance;
 
-    public static Common getInstance() {
+    public static CommonUtils getInstance() {
         if (mInstance == null) {
-            synchronized (Common.class) {
+            synchronized (CommonUtils.class) {
                 if (mInstance == null) {
-                    mInstance = new Common();
+                    mInstance = new CommonUtils();
                 }
             }
         }

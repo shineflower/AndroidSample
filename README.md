@@ -85,3 +85,5 @@ Android L动画新特性
 自定义垂直时间轴布局   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/timeline.gif)
 
+快速实现动态模糊效果   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/blur.gif)

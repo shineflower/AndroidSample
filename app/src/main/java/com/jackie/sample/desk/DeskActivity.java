@@ -17,6 +17,7 @@ import com.jackie.sample.animator.TurnOffTvActivity;
 import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
+import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
@@ -45,6 +46,7 @@ import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.text_view.TextViewActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
+import com.jackie.sample.utils.ScreenUtils;
 import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferAnimActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
@@ -65,7 +67,7 @@ public class DeskActivity extends Activity {
         setContentView(mRootView);
 
         initView();
-        hideNavigationBar();//控制底部的NavigationBar的显示和隐藏的效果
+        ScreenUtils.hideNavigationBar(this);//控制底部的NavigationBar的显示和隐藏的效果
     }
 
     private void initView() {
@@ -280,22 +282,13 @@ public class DeskActivity extends Activity {
         sampleBean.setClassName(TimelineActivity.class);
         linkedList.add(sampleBean);
 
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("快速实现动态模糊效果");
+        sampleBean.setClassName(BlurActivity.class);
+        linkedList.add(sampleBean);
+
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
         mRecyclerView.setAdapter(sampleAdapter);
         sampleAdapter.notifyDataSetChanged();
-    }
-
-    public void hideNavigationBar() {
-        int uiFlags = //View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-                //View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION; // hide nav bar
-
-        if (android.os.Build.VERSION.SDK_INT >= 19){
-            uiFlags |= 0x00001000;    //SYSTEM_UI_FLAG_IMMERSIVE_STICKY: hide navigation bars - compatibility: building API level is lower thatn 19, use magic number directly for higher API target level
-        } else {
-            uiFlags |= View.SYSTEM_UI_FLAG_LOW_PROFILE;
-        }
-
-        getWindow().getDecorView().setSystemUiVisibility(uiFlags);
     }
 }

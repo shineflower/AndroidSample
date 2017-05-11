@@ -175,6 +175,9 @@
 
         <!-- 自定义垂直时间轴布局 -->
         <activity android:name=".timeline.TimelineActivity"/>
+
+        <!-- 快速实现动态模糊效果 -->
+        <activity android:name=".blur.BlurActivity"/>
     </application>
 
 </manifest>

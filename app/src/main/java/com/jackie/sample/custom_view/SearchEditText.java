@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.jackie.sample.R;
-import com.jackie.sample.utils.Common;
+import com.jackie.sample.utils.CommonUtils;
 
 /**
  * Created by Jackie on 2017/2/21.
@@ -69,7 +69,7 @@ public class SearchEditText extends RelativeLayout {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (keyCode == KeyEvent.KEYCODE_DEL) {
-                    if (Common.getInstance().isNotFastClick()) {
+                    if (CommonUtils.getInstance().isNotFastClick()) {
                         if (mEditText.getText().toString().length() > 0) {
                             String str = mEditText.getText().toString();
                             str = str.substring(0, str.length() - 1);

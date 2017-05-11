@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 /**
  * Created by Jackie on 2015/12/29.
- * Common ViewHolder
+ * CommonUtils ViewHolder
  */
 public class ViewHolder {
     private SparseArray<View> mSparseArray;

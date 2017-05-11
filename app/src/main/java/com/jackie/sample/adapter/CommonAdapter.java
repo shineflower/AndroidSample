@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * Created by Jackie on 2015/12/29.
- * Common Adapter
+ * CommonUtils Adapter
  */
 public abstract class CommonAdapter<T> extends BaseAdapter {
     protected Context mContext;
