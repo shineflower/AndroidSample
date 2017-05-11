@@ -17,7 +17,7 @@ ViewPager切换动画
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/arc_menu.gif)
 
 流式布局   
-![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/flow_layout.gif)
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/flow_layout.png)
 
 仿QQ侧滑菜单   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/qq_sliding_menu.gif)
