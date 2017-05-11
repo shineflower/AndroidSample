@@ -39,6 +39,7 @@ import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
 import com.jackie.sample.ripple.RippleActivity;
 import com.jackie.sample.scratch_card.ScratchCardActivity;
 import com.jackie.sample.scroll_view.ScrollViewActivity;
+import com.jackie.sample.sesame_credit.SesameCreditActivity;
 import com.jackie.sample.share_element.PhotoActivity;
 import com.jackie.sample.share_element.ShareElementFromActivity;
 import com.jackie.sample.sin.SinActivity;
@@ -291,6 +292,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("快速实现动态模糊效果");
         sampleBean.setClassName(BlurActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿芝麻信用雷达分布图");
+        sampleBean.setClassName(SesameCreditActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

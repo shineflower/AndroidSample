@@ -90,3 +90,6 @@ Android L动画新特性
 
 快速实现动态模糊效果   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/blur.gif)
+
+仿芝麻信用雷达分布图   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/sesame_credit.png)

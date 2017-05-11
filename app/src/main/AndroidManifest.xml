@@ -181,6 +181,9 @@
 
         <!-- 快速实现动态模糊效果 -->
         <activity android:name=".blur.BlurActivity"/>
+
+        <!-- 仿芝麻信用雷达分布图 -->
+        <activity android:name=".sesame_credit.SesameCreditActivity"/>
     </application>
 
 </manifest>
