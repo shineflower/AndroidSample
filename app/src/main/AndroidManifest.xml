@@ -66,6 +66,9 @@
         <!-- 弧形菜单 -->
         <activity android:name=".arc_menu.ArcMenuActivity"/>
 
+        <!-- 流式布局 -->
+        <activity android:name=".flow_layout.FlowLayoutActivity"/>
+
         <!-- 仿QQ侧滑菜单 -->
         <activity android:name=".sliding_menu.SlidingMenuActivity"/>
 

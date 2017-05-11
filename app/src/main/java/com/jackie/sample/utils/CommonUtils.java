@@ -1,5 +1,9 @@
 package com.jackie.sample.utils;
 
+import android.graphics.Color;
+
+import java.util.Random;
+
 /**
  * Created by Jackie on2017/3/6
  */
@@ -28,5 +32,24 @@ public class CommonUtils {
         } else {
             return false;
         }
+    }
+
+    /**
+     * 随机颜色
+     */
+    public int getRandomColor() {
+        StringBuilder stringBuilder = new StringBuilder();
+        Random random = new Random();
+        String hexString;
+        for (int i = 0; i < 3; i++) {
+            hexString = Integer.toHexString(random.nextInt(0xFF));
+            if (hexString.length() == 1) {
+                hexString = "0" + hexString;
+            }
+
+            stringBuilder.append(hexString);
+        }
+
+        return Color.parseColor("#" + stringBuilder.toString());
     }
 }

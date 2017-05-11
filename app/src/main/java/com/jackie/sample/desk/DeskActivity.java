@@ -24,6 +24,7 @@ import com.jackie.sample.drag_exchange.ExchangeActivity;
 import com.jackie.sample.edit_text.SearchEditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
+import com.jackie.sample.flow_layout.FlowLayoutActivity;
 import com.jackie.sample.gradient.LinearGradientActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
 import com.jackie.sample.indexable_contact.IndexableContactActivity;
@@ -115,6 +116,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("弧形菜单");
         sampleBean.setClassName(ArcMenuActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("流式布局");
+        sampleBean.setClassName(FlowLayoutActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

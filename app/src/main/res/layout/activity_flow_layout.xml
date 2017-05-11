@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffddee"
+    android:orientation="vertical">
+
+    <com.jackie.sample.custom_view.FlowLayout
+        android:id="@+id/flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#abc777"
+        android:paddingLeft="20dp">
+    </com.jackie.sample.custom_view.FlowLayout>
+</LinearLayout>
