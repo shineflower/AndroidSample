@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <application
         android:name=".application.SampleApplication"
         android:allowBackup="true"
@@ -134,6 +136,9 @@
 
         <!-- RecyclerView滑动删除 -->
         <activity android:name=".slide_delete.SlideDeleteActivity"/>
+
+        <!-- GridView长按交换位置 -->
+        <activity android:name=".drag_exchange.ExchangeActivity"/>
 
         <!-- 有界波纹和无界波纹效果(可以放到任何View上面) -->
         <activity android:name=".ripple.RippleActivity"/>

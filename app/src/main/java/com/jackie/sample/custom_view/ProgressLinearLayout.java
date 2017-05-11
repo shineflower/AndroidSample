@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import com.jackie.sample.R;
 import com.jackie.sample.bean.Point;
 import com.jackie.sample.utils.DensityUtils;
+import com.jackie.sample.utils.ScreenUtils;
 
 /**
  * Created by Jackie on 2017/5/9
@@ -155,7 +156,7 @@ public class ProgressLinearLayout extends LinearLayout {
                 mProgressView3.getLocationOnScreen(mPosition3);
                 mProgressView4.getLocationOnScreen(mPosition4);
 
-                int statusBarHeight = getStatusBarHeight();
+                int statusBarHeight = ScreenUtils.getStatusBarHeight(mContext);
                 int width = mProgressView1.getWidth();
                 int height = mProgressView1.getHeight();
 
@@ -237,17 +238,6 @@ public class ProgressLinearLayout extends LinearLayout {
             }
         }
     };
-
-    // 获取状态栏高度
-    private int getStatusBarHeight() {
-        int height = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            height = getResources().getDimensionPixelSize(resourceId);
-        }
-
-        return height;
-    }
 
     public class PointEvaluator implements TypeEvaluator {
         @Override

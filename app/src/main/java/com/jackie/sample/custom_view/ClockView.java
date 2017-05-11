@@ -69,7 +69,7 @@ public class ClockView extends View{
         Paint smallPaintPaint = new Paint(paint); //小刻度画笔对象
         smallPaintPaint.setStrokeWidth(1);
 
-        float  y = this.getHeight() / 2.0f - 25;
+        float y = this.getHeight() / 2.0f - 25;
         float lineLengthLong  = (12 * 3f), lineLengthShort = (5 * 3f);
         int count = 60; //总刻度数
 

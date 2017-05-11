@@ -58,6 +58,9 @@ Material Design
 RecyclerView滑动删除   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/slide_delete.gif)
 
+GridView长按交换位置   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/exchange.gif)
+
 三维开门一样的效果   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/open_door_3d.gif)
 

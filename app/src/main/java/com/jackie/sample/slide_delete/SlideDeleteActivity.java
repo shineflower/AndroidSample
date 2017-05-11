@@ -36,7 +36,7 @@ public class SlideDeleteActivity extends Activity implements OnStartDragListener
     public List<SlideDeleteBean> initData(){
         List<SlideDeleteBean> list = new ArrayList<>();
         String[] titles = getResources().getStringArray(R.array.array_title);
-        for(int i=0;i<titles.length;i++){
+        for(int i = 0;i < titles.length; i++){
             SlideDeleteBean slideDeleteBean = new SlideDeleteBean();
             slideDeleteBean.setNumber(i + 1);
             slideDeleteBean.setTitle(titles[i]);

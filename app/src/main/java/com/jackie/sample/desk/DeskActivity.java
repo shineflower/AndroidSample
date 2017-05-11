@@ -19,6 +19,7 @@ import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
+import com.jackie.sample.drag_exchange.ExchangeActivity;
 import com.jackie.sample.edit_text.SearchEditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
@@ -212,6 +213,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("RecyclerView滑动删除");
         sampleBean.setClassName(SlideDeleteActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("GridView长按交换位置");
+        sampleBean.setClassName(ExchangeActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
