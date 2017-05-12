@@ -211,11 +211,21 @@ public class FaceDetectActivity extends AppCompatActivity implements View.OnClic
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (data != null && requestCode == RESULT_FIRST_USER) {
             Uri uri = data.getData();
-            Cursor cursor = getContentResolver().query(uri, null, null, null, null);
-            cursor.moveToFirst();
-
-            int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
-            mCurrentPath = cursor.getString(index);
+            /**
+             * 在红米手机上，Uri uri = data.getData();
+             * uri返回的值是 file:///storage/emulated/0/DCIM/Camera/IMG_20170512_132530_HDR.jpg
+             * 正常的uri的格式是content://，所以需要进行单独处理
+             */
+            if (!TextUtils.isEmpty(uri.getAuthority())) {
+                Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+                if (cursor != null) {
+                    cursor.moveToFirst();
+                    int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+                    mCurrentPath = cursor.getString(index);
+                }
+            } else {
+                mCurrentPath = uri.getPath();
+            }
 
             //压缩图片
             resizeImage();
