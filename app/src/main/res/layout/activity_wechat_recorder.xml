@@ -31,7 +31,7 @@
             android:padding="5dp"
             android:text="@string/state_normal"
             android:textColor="#727272"
-            android:background="@drawable/bg_recorder_normal"/>
+            android:background="@drawable/shape_recorder_normal_bg"/>
 
         <View
             android:layout_width="match_parent"

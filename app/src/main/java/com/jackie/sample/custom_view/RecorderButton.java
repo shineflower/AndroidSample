@@ -166,11 +166,11 @@ public class RecorderButton extends Button implements AudioManager.OnAudioStateL
             mCurrentState = state;
             switch (state) {
                 case STATE_NORMAL:
-                    setBackgroundResource(R.drawable.bg_recorder_normal);
+                    setBackgroundResource(R.drawable.shape_recorder_normal_bg);
                     setText(R.string.state_normal);
                 break;
                 case STATE_RECORDING:
-                    setBackgroundResource(R.drawable.bg_recorder_recording);
+                    setBackgroundResource(R.drawable.shpe_recorder_recording_bg);
                     setText(R.string.state_recording);
 
                     if (mIsRecording) {
@@ -178,7 +178,7 @@ public class RecorderButton extends Button implements AudioManager.OnAudioStateL
                     }
                     break;
                 case STATE_CANCEL:
-                    setBackgroundResource(R.drawable.bg_recorder_recording);
+                    setBackgroundResource(R.drawable.shpe_recorder_recording_bg);
                     setText(R.string.state_cancel);
 
                     mDialogManager.showCancelDialog();

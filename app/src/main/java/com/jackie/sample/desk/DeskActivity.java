@@ -19,6 +19,7 @@ import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.clock.ClockActivity;
+import com.jackie.sample.count_down.CountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
 import com.jackie.sample.edit_text.SearchEditTextActivity;
@@ -26,6 +27,7 @@ import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
 import com.jackie.sample.flow_layout.FlowLayoutActivity;
 import com.jackie.sample.gradient.LinearGradientActivity;
+import com.jackie.sample.image_code.ImageCodeActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
 import com.jackie.sample.indexable_contact.IndexableContactActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
@@ -39,12 +41,14 @@ import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
 import com.jackie.sample.ripple.RippleActivity;
 import com.jackie.sample.scratch_card.ScratchCardActivity;
 import com.jackie.sample.scroll_view.ScrollViewActivity;
+import com.jackie.sample.select_contact.SelectContactActivity;
 import com.jackie.sample.sesame_credit.SesameCreditActivity;
 import com.jackie.sample.share_element.PhotoActivity;
 import com.jackie.sample.share_element.ShareElementFromActivity;
 import com.jackie.sample.sin.SinActivity;
 import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
+import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
@@ -78,6 +82,26 @@ public class DeskActivity extends Activity {
 
         LinkedList<SampleBean> linkedList = new LinkedList<>();
         SampleBean sampleBean;
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("短信验证码倒计时");
+        sampleBean.setClassName(CountDownActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("图片验证码");
+        sampleBean.setClassName(ImageCodeActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义Switch组件");
+        sampleBean.setClassName(SwitcherActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("选择联系人列表");
+        sampleBean.setClassName(SelectContactActivity.class);
+        linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
         sampleBean.setTitle("高仿微信主界面(自定义指示器和消息提醒)");

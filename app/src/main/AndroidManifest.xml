@@ -34,6 +34,18 @@
             </intent-filter>
         </activity>
 
+        <!-- 短信验证码倒计时 -->
+        <activity android:name=".count_down.CountDownActivity"/>
+
+        <!-- 图片验证码 -->
+        <activity android:name=".image_code.ImageCodeActivity"/>
+
+        <!-- 自定义Switch组件 -->
+        <activity android:name=".switcher.SwitcherActivity"/>
+
+        <!-- 选择联系人列表 -->
+        <activity android:name=".select_contact.SelectContactActivity"/>
+
         <!-- 高仿微信主界面(自定义指示器和消息提醒) -->
         <activity android:name=".wechat_tab.WechatTabActivity"/>
 

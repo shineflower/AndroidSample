@@ -1,3 +1,15 @@
+短信验证码倒计时   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/count_down.gif)
+
+图片验证码   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/image_code.gif)
+
+自定义Switch组件   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/switcher.gif)
+
+选择联系人列表   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/select_contact.gif)
+
 ViewPager切换动画   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/view_pager.gif)
 
