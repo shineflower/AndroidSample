@@ -43,7 +43,7 @@ public class DownloadActivity extends AppCompatActivity {
         mFileInfoList = new ArrayList<>();
 
         /**
-         * Anroid 6.0需要添加下面的运行时权限检测
+         * Android 6.0需要添加下面的运行时权限检测
          */
         //创建文件
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)

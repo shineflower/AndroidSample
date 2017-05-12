@@ -36,7 +36,7 @@ public class DownloadService extends Service {
 
     private static final int MSG_DOWNLOAD_INIT = 0;
 
-    //下载任务的结合
+    //下载任务的集合
     private SparseArray<DownloadTask> mDownloadTaskSparseArray = new SparseArray<>();
 
     private Handler mHandler = new Handler() {
@@ -64,7 +64,7 @@ public class DownloadService extends Service {
 
                 //启动初始化线程
                 InitThread initThread = new InitThread(fileInfo);
-//            initThread.start();
+//                initThread.start();
                 DownloadTask.mExecutorService.execute(initThread);
             } else if (DOWNLOAD_ACTION_STOP.equals(intent.getAction())) {
                 FileInfo fileInfo = intent.getParcelableExtra(KEY_DOWNLOAD_FILE_INFO);

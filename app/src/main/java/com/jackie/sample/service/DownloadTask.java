@@ -154,6 +154,11 @@ public class DownloadTask {
                             /**
                              * int mProgress，随着mProgress不断增大，当mProgress * 100的值大于2的31次方时，会变成负数
                              * mProgress单位是byte，右移20位，转化成M
+                             * tb = 1024gb
+                               gb = 1024mb
+                               mb = 1024kb
+                               kb = 1024bytes
+                               bytes = 8bit
                              */
 //                            intent.putExtra(DownloadService.KEY_DOWNLOAD_PROGRESS, mProgress * 100 / mFileInfo.getLength());
                             intent.putExtra(DownloadService.KEY_DOWNLOAD_ID, mFileInfo.getId());
