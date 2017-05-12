@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -39,6 +40,8 @@ public class DragGridView extends GridView implements AdapterView.OnItemLongClic
     private int mDownY;
     private int mMoveX;
     private int mMoveY;
+    private int mUpX;
+    private int mUpY;
 
     private boolean mIsDrag;
 
@@ -46,6 +49,7 @@ public class DragGridView extends GridView implements AdapterView.OnItemLongClic
     private int mOffset2Top;
 
     private int mSpeed = 30;
+    private int mTouchSlop;
 
     public interface OnExchangeListener {
 
@@ -76,6 +80,8 @@ public class DragGridView extends GridView implements AdapterView.OnItemLongClic
         mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         mStatusHeight = ScreenUtils.getStatusBarHeight(context);
+
+        mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
 
         setOnItemLongClickListener(this);
     }
@@ -149,7 +155,17 @@ public class DragGridView extends GridView implements AdapterView.OnItemLongClic
                 }
                 break;
             case MotionEvent.ACTION_UP:
+                mUpX = (int) ev.getX();
+                mUpY = (int) ev.getY();
+
                 if (mIsDrag) {
+                    if (Math.abs(mUpX - mDownX) >= mTouchSlop && Math.abs(mUpY - mDownY) >= mTouchSlop) {
+                        //正常拖动，remove callback 并 stopDrag
+                    } else {
+                        //如果只是长按一下，没有拖动，则显示mStartDragView，否则长按一下，没有拖动，mStartDragView也会消失
+                        mStartDragView.setVisibility(View.VISIBLE);
+                    }
+
                     removeCallbacks(mScrollRunnable);
                     stopDrag();
                     return true;
