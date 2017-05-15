@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_ccb"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.jackie.sample.custom_view.CircleMenuLayout
+        android:id="@+id/circle_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="100dp"
+        android:background="@drawable/circle_bg3" >
+
+        <RelativeLayout
+            android:id="@+id/circle_menu_item_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/template_center_unlogin" />
+
+            <ImageView
+                android:layout_width="116dp"
+                android:layout_height="116dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/template_mask_unlogin_normal" />
+        </RelativeLayout>
+    </com.jackie.sample.custom_view.CircleMenuLayout>
+</LinearLayout>

@@ -18,6 +18,7 @@ import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
+import com.jackie.sample.circle_menu.CircleMenuActivity;
 import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.count_down.CountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
@@ -321,6 +322,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿芝麻信用雷达分布图");
         sampleBean.setClassName(SesameCreditActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿建行圆形菜单");
+        sampleBean.setClassName(CircleMenuActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

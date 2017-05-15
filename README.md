@@ -105,3 +105,6 @@ Android L动画新特性
 
 仿芝麻信用雷达分布图   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/sesame_credit.png)
+
+仿建行圆形菜单   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/circle_menu.gif)

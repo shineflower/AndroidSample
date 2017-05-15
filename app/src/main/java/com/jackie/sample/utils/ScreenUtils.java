@@ -2,7 +2,9 @@ package com.jackie.sample.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.WindowManager;
 
 /**
  * Created by Jackie on 2017/5/11.
@@ -51,6 +53,27 @@ public class ScreenUtils {
 //                e.printStackTrace();
 //            }
 //        }
+//
 //        return statusHeight;
 //    }
+
+    //获取屏幕的宽高
+    public static int getMinScreenSize(Context context) {
+        WindowManager windowManager = (WindowManager) context.getSystemService(
+                Context.WINDOW_SERVICE);
+
+        //方法一
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        windowManager.getDefaultDisplay().getMetrics(displayMetrics);
+
+        //方法二
+//        windowManager.getDefaultDisplay().getWidth();
+//        windowManager.getDefaultDisplay().getHeight();
+
+        //方法三
+//        context.getResources().getDisplayMetrics().widthPixels;
+//        context.getResources().getDisplayMetrics().heightPixels;
+
+        return Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels);
+    }
 }
