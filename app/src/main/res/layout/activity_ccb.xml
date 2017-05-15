@@ -22,11 +22,12 @@
             android:textSize="20dp" />
 
         <TextView
-            android:layout_width="fill_parent"
-            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
 			android:textAlignment="textStart"
             android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
             android:text="贴心的银行服务，带给您更安全便捷的智能金融体验。"
             android:textColor="#ffffff"
             android:textSize="13.5dp" />
@@ -48,18 +49,17 @@
                 android:layout_height="wrap_content" >
 
                 <ImageView
-                    android:layout_width="104.0dp"
-                    android:layout_height="104.0dp"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/template_center_unlogin" />
+                    android:background="@drawable/template_center_login" />
 
                 <ImageView
-                    android:layout_width="116.0dip"
-                    android:layout_height="116.0dip"
+                    android:layout_width="116dip"
+                    android:layout_height="116dip"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/template_mask_unlogin_normal" />
+                    android:background="@drawable/template_mask_login_normal" />
             </RelativeLayout>
         </com.jackie.sample.custom_view.CircleMenuLayout>
     </FrameLayout>
-
 </LinearLayout>

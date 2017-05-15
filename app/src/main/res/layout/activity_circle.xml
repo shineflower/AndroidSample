@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="100dp"
-        android:background="@drawable/circle_bg3" >
+        android:background="@drawable/bg_circle_menu" >
 
         <RelativeLayout
             android:id="@+id/circle_menu_item_center"
@@ -21,13 +21,13 @@
                 android:layout_width="104dp"
                 android:layout_height="104dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/template_center_unlogin" />
+                android:background="@drawable/template_center_login" />
 
             <ImageView
                 android:layout_width="116dp"
                 android:layout_height="116dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/template_mask_unlogin_normal" />
+                android:background="@drawable/template_mask_login_normal" />
         </RelativeLayout>
     </com.jackie.sample.custom_view.CircleMenuLayout>
 </LinearLayout>

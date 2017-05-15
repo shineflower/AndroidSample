@@ -23,8 +23,7 @@ public class CircleActivity extends Activity {
 			"转账汇款", "我的账户", "信用卡" };
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		//自已切换布局文件看效果
