@@ -50,4 +50,10 @@
         <!--图标-->
         <attr name="icon_src" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="ClipImageLayout">
+        <!-- 水平间距 -->
+        <attr name="horizontal_padding" format="dimension"/>
+        <attr name="image_drawable" format="reference"/>
+    </declare-styleable>
 </resources>

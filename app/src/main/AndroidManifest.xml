@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
 
         <!-- 主界面 -->
         <activity
@@ -64,7 +64,7 @@
         <activity android:name=".view_pager_anim_transfer.ViewPagerTransferAnimActivity"/>
 
         <!-- 图片预览和多点触控 -->
-        <activity android:name=".zoom_image_view.ZoomActivity"/>
+        <activity android:name=".zoom_image.ZoomImageActivity"/>
 
         <!-- 自定义索引查询联系人 -->
         <activity android:name=".indexable_contact.IndexableContactActivity"/>
@@ -201,6 +201,11 @@
         <activity android:name=".circle_menu.CircleMenuActivity"/>
         <activity android:name=".circle_menu.CircleActivity"/>
         <activity android:name=".circle_menu.CCBActivity"/>
+
+        <!-- 高仿微信头像裁切 -->
+        <activity android:name=".clip_image.ClipActivity"
+            android:theme="@style/AppTheme.ActionBar"/>
+        <activity android:name=".clip_image.ShowImageActivity"/>
     </application>
 
 </manifest>

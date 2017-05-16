@@ -240,7 +240,7 @@ public class WechatImagePickerActivity extends AppCompatActivity {
         mBottomLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPopupWindow.setAnimationStyle(R.style.popup_window_anim);
+                mPopupWindow.setAnimationStyle(R.style.PopupWindowAnimation);
                 mPopupWindow.showAsDropDown(mBottomLayout, 0, 0);
                 lightOff();
             }

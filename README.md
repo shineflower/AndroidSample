@@ -16,6 +16,9 @@ ViewPager切换动画
 图片预览和多点触摸   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/zoom_image_view.gif)
 
+高仿微信头像裁切   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/clip_image_view.gif)
+
 自定义索引查询联系人   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/indexable_contact.gif)
 
@@ -27,6 +30,9 @@ ViewPager切换动画
 
 弧形菜单   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/arc_menu.gif)
+
+仿建行圆形菜单   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/circle_menu.gif)
 
 流式布局   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/flow_layout.png)
@@ -105,6 +111,3 @@ Android L动画新特性
 
 仿芝麻信用雷达分布图   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/sesame_credit.png)
-
-仿建行圆形菜单   
-![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/circle_menu.gif)
