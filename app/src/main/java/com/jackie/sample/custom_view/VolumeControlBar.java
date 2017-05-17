@@ -93,7 +93,7 @@ public class VolumeControlBar extends View {
     protected void onDraw(Canvas canvas) {
         mPaint.setAntiAlias(true); // 消除锯齿
         mPaint.setStrokeWidth(mCircleWidth); // 设置圆环的宽度
-        mPaint.setStrokeCap(Paint.Cap.ROUND); // 定义线段断电形状为圆头
+        mPaint.setStrokeCap(Paint.Cap.ROUND); // 定义线段端点形状为圆头
         mPaint.setAntiAlias(true); // 消除锯齿
         mPaint.setStyle(Paint.Style.STROKE); // 设置空心
 
