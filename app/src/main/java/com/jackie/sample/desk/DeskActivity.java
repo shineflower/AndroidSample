@@ -57,6 +57,7 @@ import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
 import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferAnimActivity;
+import com.jackie.sample.volume_control.VolumeControlActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
 import com.jackie.sample.wechat_tab.WechatTabActivity;
@@ -339,6 +340,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿芝麻信用雷达分布图");
         sampleBean.setClassName(SesameCreditActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("视频音量调控");
+        sampleBean.setClassName(VolumeControlActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

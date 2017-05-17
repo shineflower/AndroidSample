@@ -54,7 +54,7 @@
         <!--线宽-->
         <attr name="line_stroke_width" format="dimension"/>
         <!--线的颜色-->
-        <attr name="line_color" format="color"/>
+        <attr name="line_color" format="color"/>Vo
         <!--点的大小-->
         <attr name="point_size" format="dimension"/>
         <!--点的颜色-->
@@ -67,5 +67,14 @@
         <!-- 水平间距 -->
         <attr name="horizontal_padding" format="dimension"/>
         <attr name= "image_drawable" format="reference"/>
+    </declare-styleable>
+    
+    <declare-styleable name="VolumeControlBar">
+        <attr name="first_color" format="color"/>
+        <attr name="second_color" format="color"/>
+        <attr name="circle_width" format="dimension"/>
+        <attr name="dot_count" format="integer"/>
+        <attr name="split_size" format="integer"/>
+        <attr name="center_image" format="reference"/>
     </declare-styleable>
 </resources>

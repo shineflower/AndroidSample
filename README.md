@@ -10,6 +10,9 @@
 选择联系人列表   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/select_contact.gif)
 
+打造炫酷ViewPager字体指示器   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/tab_indicator.gif)
+
 ViewPager切换动画   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/view_pager.gif)
 
@@ -111,3 +114,6 @@ Android L动画新特性
 
 仿芝麻信用雷达分布图   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/sesame_credit.png)
+
+视频音量调控   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/volume_control.gif)

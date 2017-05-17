@@ -1,11 +1,10 @@
 package com.jackie.sample.custom_view;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.Build;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -72,9 +71,10 @@ public class PasswordView extends EditText {
      * 绘制圆角矩形背景
      * @param canvas
      */
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void drawRoundRect(Canvas canvas) {
-        canvas.drawRoundRect(0, 0, mWidth, mHeight, 12, 12, mBorderPaint);
+//        canvas.drawRoundRect(0, 0, mWidth, mHeight, 12, 12, mBorderPaint);
+//        4.4 API 21以下上面的写法会出现NoSuchMethodError异常，需要换成下面的写法
+        canvas.drawRoundRect(new RectF(0, 0, mWidth,mHeight), 12, 12, mBorderPaint);
     }
 
     /**

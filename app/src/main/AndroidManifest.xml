@@ -209,6 +209,9 @@
 
         <!-- 仿芝麻信用雷达分布图 -->
         <activity android:name=".sesame_credit.SesameCreditActivity"/>
+
+        <!-- 视频音量调控 -->
+        <activity android:name=".volume_control.VolumeControlActivity"/>
     </application>
 
 </manifest>
