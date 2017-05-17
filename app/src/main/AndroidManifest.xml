@@ -46,8 +46,11 @@
         <!-- 选择联系人列表 -->
         <activity android:name=".select_contact.SelectContactActivity"/>
 
-        <!-- 高仿微信主界面(自定义指示器和消息提醒) -->
+        <!-- 仿微信主界面(自定义指示器和消息提醒) -->
         <activity android:name=".wechat_tab.WechatTabActivity"/>
+
+        <!-- 打造炫酷ViewPager字体指示器 -->
+        <activity android:name=".color_track_tab.ColorTrackTabActivity"/>
 
         <!-- 图像处理集合 -->
         <activity android:name=".image_processing.ImageProcessingActivity"/>
@@ -66,6 +69,11 @@
         <!-- 图片预览和多点触控 -->
         <activity android:name=".zoom_image.ZoomImageActivity"/>
 
+        <!-- 仿微信头像裁切 -->
+        <activity android:name=".clip_image.ClipActivity"
+            android:theme="@style/AppTheme.ActionBar"/>
+        <activity android:name=".clip_image.ShowImageActivity"/>
+
         <!-- 自定义索引查询联系人 -->
         <activity android:name=".indexable_contact.IndexableContactActivity"/>
 
@@ -77,6 +85,11 @@
 
         <!-- 弧形菜单 -->
         <activity android:name=".arc_menu.ArcMenuActivity"/>
+
+        <!-- 仿建行圆形菜单 -->
+        <activity android:name=".circle_menu.CircleMenuActivity"/>
+        <activity android:name=".circle_menu.CircleActivity"/>
+        <activity android:name=".circle_menu.CCBActivity"/>
 
         <!-- 流式布局 -->
         <activity android:name=".flow_layout.FlowLayoutActivity"/>
@@ -119,7 +132,7 @@
         <!-- 多样式的ProgressBar -->
         <activity android:name=".progress_bar.ProgressBarActivity"/>
 
-        <!-- 高仿京东天猫下拉刷新 -->
+        <!-- 仿京东天猫下拉刷新 -->
         <activity android:name=".jd_tmall_refresh.JdTmallRefreshActivity"/>
         <activity android:name=".jd_tmall_refresh.jd.JdActivity"/>
         <activity android:name=".jd_tmall_refresh.tmall.TmallActivity"/>
@@ -196,16 +209,6 @@
 
         <!-- 仿芝麻信用雷达分布图 -->
         <activity android:name=".sesame_credit.SesameCreditActivity"/>
-
-        <!-- 仿建行圆形菜单 -->
-        <activity android:name=".circle_menu.CircleMenuActivity"/>
-        <activity android:name=".circle_menu.CircleActivity"/>
-        <activity android:name=".circle_menu.CCBActivity"/>
-
-        <!-- 高仿微信头像裁切 -->
-        <activity android:name=".clip_image.ClipActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity android:name=".clip_image.ShowImageActivity"/>
     </application>
 
 </manifest>

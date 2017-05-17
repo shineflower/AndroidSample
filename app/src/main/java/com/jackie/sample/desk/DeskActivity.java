@@ -21,6 +21,7 @@ import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
 import com.jackie.sample.clip_image.ClipActivity;
 import com.jackie.sample.clock.ClockActivity;
+import com.jackie.sample.color_track_tab.ColorTrackTabActivity;
 import com.jackie.sample.count_down.CountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
@@ -106,8 +107,13 @@ public class DeskActivity extends Activity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("高仿微信主界面(自定义指示器和消息提醒)");
+        sampleBean.setTitle("仿微信主界面(自定义指示器和消息提醒)");
         sampleBean.setClassName(WechatTabActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("打造炫酷ViewPager字体指示器");
+        sampleBean.setClassName(ColorTrackTabActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
@@ -126,7 +132,7 @@ public class DeskActivity extends Activity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("高仿微信头像裁切");
+        sampleBean.setTitle("仿微信头像裁切");
         sampleBean.setClassName(ClipActivity.class);
         linkedList.add(sampleBean);
 
@@ -216,7 +222,7 @@ public class DeskActivity extends Activity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("高仿京东天猫下拉刷新");
+        sampleBean.setTitle("仿京东天猫下拉刷新");
         sampleBean.setClassName(JdTmallRefreshActivity.class);
         linkedList.add(sampleBean);
 

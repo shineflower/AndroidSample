@@ -10,7 +10,7 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
-        jackie:text="500,0000"
-        jackie:textSize="30sp"
-        jackie:textColor="#FF00FF"/>
+        jackie:scratch_text="500,0000"
+        jackie:scratch_text_size="30sp"
+        jackie:text_color="#FF00FF"/>
 </RelativeLayout>

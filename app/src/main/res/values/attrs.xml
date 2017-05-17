@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="ColorTrackView">
+        <attr name="track_text" format="string"/>
+        <attr name="track_text_size" format="dimension"/>
+        <attr name="text_origin_color" format="color|reference" />
+        <attr name="text_change_color" format="color|reference" />
+        <attr name="progress" format="float" />
+        <attr name="direction">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
     <declare-styleable name="ScratchView">
-        <attr name="text" format="string"/>
-        <attr name="textSize" format="dimension"/>
-        <attr name="textColor" format="color"/>
+        <attr name="scratch_text" format="string"/>
+        <attr name="scratch_text_size" format="dimension"/>
+        <attr name="text_color" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="ArcMenu">
@@ -17,7 +29,7 @@
     </declare-styleable>
 
     <declare-styleable name="SlidingMenu">
-        <attr name="paddingRight" format="dimension" />
+        <attr name="padding_right" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="HorizontalProgressBar">
@@ -54,6 +66,6 @@
     <declare-styleable name="ClipImageLayout">
         <!-- 水平间距 -->
         <attr name="horizontal_padding" format="dimension"/>
-        <attr name="image_drawable" format="reference"/>
+        <attr name= "image_drawable" format="reference"/>
     </declare-styleable>
 </resources>

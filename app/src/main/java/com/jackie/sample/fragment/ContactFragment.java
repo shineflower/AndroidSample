@@ -1,4 +1,4 @@
-package com.jackie.sample.wechat_tab;
+package com.jackie.sample.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,9 +11,7 @@ import com.jackie.sample.R;
 public class ContactFragment extends Fragment
 {
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState)
-	{
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.fragment_contact, container, false);
 	}
 }

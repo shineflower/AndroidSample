@@ -16,7 +16,7 @@ ViewPager切换动画
 图片预览和多点触摸   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/zoom_image_view.gif)
 
-高仿微信头像裁切   
+仿微信头像裁切   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/clip_image_view.gif)
 
 自定义索引查询联系人   
@@ -64,7 +64,7 @@ ViewPager切换动画
 多样式的ProgressBar   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/progress_bar.gif)
 
-高仿京东天猫下拉刷新   
+仿京东天猫下拉刷新   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/jd_tmall_refresh.gif)
 
 Material Design   

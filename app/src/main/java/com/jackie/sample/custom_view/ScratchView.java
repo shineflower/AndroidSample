@@ -74,9 +74,9 @@ public class ScratchView extends View {
         TypedArray ta = null;
         try {
             ta  = context.obtainStyledAttributes(attrs, R.styleable.ScratchView);
-            mText = ta.getString(R.styleable.ScratchView_text);
-            mTextSize = (int) ta.getDimension(R.styleable.ScratchView_textSize, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 20, getResources().getDisplayMetrics()));
-            mTextColor = ta.getColor(R.styleable.ScratchView_textColor, Color.DKGRAY);
+            mText = ta.getString(R.styleable.ScratchView_scratch_text);
+            mTextSize = (int) ta.getDimension(R.styleable.ScratchView_scratch_text_size, TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 20, getResources().getDisplayMetrics()));
+            mTextColor = ta.getColor(R.styleable.ScratchView_text_color, Color.DKGRAY);
         } finally {
             ta.recycle();
         }

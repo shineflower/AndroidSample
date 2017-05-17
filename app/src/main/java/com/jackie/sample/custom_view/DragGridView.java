@@ -33,8 +33,8 @@ public class DragGridView extends GridView implements AdapterView.OnItemLongClic
 
     private View mStartDragView;
     private View mLastHiddenView;
-    private int mDragPosition;
     private ImageView mImageView;
+    private int mDragPosition;
 
     private int mDownX;
     private int mDownY;
@@ -260,7 +260,7 @@ public class DragGridView extends GridView implements AdapterView.OnItemLongClic
             }
 
             //当我们的手指到达GridView向上或者向下滚动的偏移量的时候，可能我们手指没有移动，但是DragGridView在自动的滚动
-            //所以我们在这里调用下onSwapItem()方法来交换item
+            //所以我们在这里调用下swapItem()方法来交换item
             swapItem();
 
 //            scrollBy(0, scrollY); //只能用下面的

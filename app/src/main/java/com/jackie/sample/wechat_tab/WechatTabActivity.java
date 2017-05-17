@@ -12,6 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jackie.sample.R;
+import com.jackie.sample.fragment.ChatFragment;
+import com.jackie.sample.fragment.ContactFragment;
+import com.jackie.sample.fragment.FriendFragment;
 import com.jauker.widget.BadgeView;
 
 import java.util.ArrayList;
