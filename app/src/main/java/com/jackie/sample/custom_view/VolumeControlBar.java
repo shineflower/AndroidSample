@@ -105,9 +105,9 @@ public class VolumeControlBar extends View {
 
         //计算内切正方形的位置
         int innerRadius = outerRadius - mCircleWidth / 2;  //获得内圆的半径
-        //内切正方形的距离顶部 = mCircleWidth + innerRadius - √2 / 2
-        mRect.left = (int) (innerRadius - Math.sqrt(2) * 1.0f / 2 * innerRadius) + mCircleWidth;
         //内切正方形的距离左边 = mCircleWidth + innerRadius - √2 / 2
+        mRect.left = (int) (innerRadius - Math.sqrt(2) * 1.0f / 2 * innerRadius) + mCircleWidth;
+        //内切正方形的距离顶部 = mCircleWidth + innerRadius - √2 / 2
         mRect.top = (int) (innerRadius - Math.sqrt(2) * 1.0f / 2 * innerRadius) + mCircleWidth;
         mRect.right = (int) (mRect.left + Math.sqrt(2) * innerRadius);
         mRect.bottom = (int) (mRect.top + Math.sqrt(2) * innerRadius);
