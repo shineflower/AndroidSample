@@ -47,7 +47,7 @@ public class LuckyWheelSurfaceView extends SurfaceView implements SurfaceHolder.
      */
     private Bitmap[] mImageBitmaps;
 
-    private Bitmap mBackgroundBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.background);
+    private Bitmap mBackgroundBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_lucky_wheel);
     /**
      * 盘块的颜色
      */

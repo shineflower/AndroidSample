@@ -54,7 +54,7 @@
         <!--线宽-->
         <attr name="line_stroke_width" format="dimension"/>
         <!--线的颜色-->
-        <attr name="line_color" format="color"/>Vo
+        <attr name="line_color" format="color"/>
         <!--点的大小-->
         <attr name="point_size" format="dimension"/>
         <!--点的颜色-->

@@ -73,7 +73,7 @@ public class SelectContactActivity extends AppCompatActivity implements View.OnC
         mRecyclerView = new RecyclerView(this);
         //设置布局管理器
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setBackgroundResource(R.drawable.background);
+        mRecyclerView.setBackgroundResource(R.drawable.bg_select_contact);
 
         //设置Adapter
         mAdapter = new ContactAdapter(this, mNumberList);
