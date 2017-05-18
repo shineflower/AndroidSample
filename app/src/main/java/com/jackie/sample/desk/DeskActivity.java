@@ -115,12 +115,12 @@ public class DeskActivity extends Activity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("仿微信6.0主界面");
+        sampleBean.setTitle("仿微信主界面(图标颜色追踪)");
         sampleBean.setClassName(WechatTabWithoutIndicatorActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("打造炫酷ViewPager颜色追踪指示器");
+        sampleBean.setTitle("打造炫酷ViewPager字体颜色追踪指示器");
         sampleBean.setClassName(ViewPagerColorTrackIndicatorActivity.class);
         linkedList.add(sampleBean);
 

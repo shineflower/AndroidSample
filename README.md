@@ -10,10 +10,13 @@
 选择联系人列表   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/select_contact.gif)
 
-仿微信6.0主界面   
-![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/wechat_tab.gif)
+仿微信主界面(自定义指示器和消息提醒)   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/wechat_tab_with_indicator.gif)
 
-打造炫酷ViewPager颜色追踪指示器   
+仿微信主界面(图标颜色追踪)   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/wechat_tab_without_indicator.gif)
+
+打造炫酷ViewPager字体颜色追踪指示器   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/color_track_tab_indicator.gif)
 
 打造炫酷ViewPager三角形指示器   

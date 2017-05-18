@@ -49,10 +49,10 @@
         <!-- 仿微信主界面(自定义指示器和消息提醒) -->
         <activity android:name=".wechat_tab.WechatTabWithIndicatorActivity"/>
 
-        <!-- 仿微信6.0主界面 -->
+        <!-- 仿微信主界面(图标颜色追踪) -->
         <activity android:name=".wechat_tab.WechatTabWithoutIndicatorActivity"/>
 
-        <!-- 打造炫酷ViewPager颜色追踪指示器 -->
+        <!-- 打造炫酷ViewPager字体颜色追踪指示器 -->
         <activity android:name=".view_pager_indicator.ViewPagerColorTrackIndicatorActivity"/>
 
         <!-- 打造炫酷ViewPager三角形指示器 -->
