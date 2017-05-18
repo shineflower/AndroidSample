@@ -12,5 +12,5 @@
         android:layout_centerInParent="true"
         jackie:scratch_text="500,0000"
         jackie:scratch_text_size="30sp"
-        jackie:text_color="#FF00FF"/>
+        jackie:scratch_text_color="#FF00FF"/>
 </RelativeLayout>

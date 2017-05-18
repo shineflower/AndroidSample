@@ -60,7 +60,8 @@ import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferAnimActivity;
 import com.jackie.sample.volume_control.VolumeControlActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
-import com.jackie.sample.wechat_tab.WechatTabActivity;
+import com.jackie.sample.wechat_tab.WechatTabWithIndicatorActivity;
+import com.jackie.sample.wechat_tab.WechatTabWithoutIndicatorActivity;
 import com.jackie.sample.zoom_image.ZoomImageActivity;
 
 import java.util.LinkedList;
@@ -109,7 +110,12 @@ public class DeskActivity extends Activity {
 
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿微信主界面(自定义指示器和消息提醒)");
-        sampleBean.setClassName(WechatTabActivity.class);
+        sampleBean.setClassName(WechatTabWithIndicatorActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿微信6.0主界面");
+        sampleBean.setClassName(WechatTabWithoutIndicatorActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

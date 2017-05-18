@@ -11,11 +11,18 @@
             <enum name="right" value="1" />
         </attr>
     </declare-styleable>
+    
+    <declare-styleable name="ChangeColorIconView">
+        <attr name="change_icon" format="reference"/>
+        <attr name="change_color" format="color"/>
+        <attr name="change_text" format="string"/>
+        <attr name="change_text_size" format="dimension"/>
+    </declare-styleable>
 
     <declare-styleable name="ScratchView">
         <attr name="scratch_text" format="string"/>
         <attr name="scratch_text_size" format="dimension"/>
-        <attr name="text_color" format="color"/>
+        <attr name="scratch_text_color" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="ArcMenu">

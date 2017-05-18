@@ -20,11 +20,11 @@ import com.jauker.widget.BadgeView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WechatTabActivity extends AppCompatActivity {
+public class WechatTabWithIndicatorActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
 
-    LinearLayout mChatLayout;
+    private LinearLayout mChatLayout;
     private TextView mChatTextView;
     private TextView mFriendTextView;
     private TextView mContactTextView;
@@ -38,7 +38,7 @@ public class WechatTabActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wechat_tab);
+        setContentView(R.layout.activity_wechat_tab_with_indicator);
 
         initView();
         initData();

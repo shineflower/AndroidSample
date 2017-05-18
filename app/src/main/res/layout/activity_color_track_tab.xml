@@ -18,7 +18,7 @@
             jackie:track_text="简介"
             jackie:text_change_color="#ffff0000"
             jackie:text_origin_color="#ff000000"
-            jackie:track_text_size="18sp" />
+            jackie:track_text_size="20sp" />
 
         <com.jackie.sample.custom_view.ColorTrackView
             android:id="@+id/tab_02"
@@ -28,7 +28,7 @@
             jackie:track_text="评价"
             jackie:text_change_color="#ffff0000"
             jackie:text_origin_color="#ff000000"
-            jackie:track_text_size="18sp" />
+            jackie:track_text_size="20sp" />
 
         <com.jackie.sample.custom_view.ColorTrackView
             android:id="@+id/tab_03"
@@ -38,7 +38,7 @@
             jackie:track_text="相关"
             jackie:text_change_color="#ffff0000"
             jackie:text_origin_color="#ff000000"
-            jackie:track_text_size="18sp" />
+            jackie:track_text_size="20sp" />
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
