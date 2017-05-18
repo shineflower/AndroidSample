@@ -21,7 +21,6 @@ import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
 import com.jackie.sample.clip_image.ClipActivity;
 import com.jackie.sample.clock.ClockActivity;
-import com.jackie.sample.color_track_tab.ColorTrackTabActivity;
 import com.jackie.sample.count_down.CountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
@@ -57,6 +56,8 @@ import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
 import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferAnimActivity;
+import com.jackie.sample.view_pager_indicator.ViewPagerColorTrackIndicatorActivity;
+import com.jackie.sample.view_pager_indicator.ViewPagerTriangleIndicatorActivity;
 import com.jackie.sample.volume_control.VolumeControlActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
@@ -119,8 +120,13 @@ public class DeskActivity extends Activity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("打造炫酷ViewPager字体指示器");
-        sampleBean.setClassName(ColorTrackTabActivity.class);
+        sampleBean.setTitle("打造炫酷ViewPager颜色追踪指示器");
+        sampleBean.setClassName(ViewPagerColorTrackIndicatorActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("打造炫酷ViewPager三角形指示器");
+        sampleBean.setClassName(ViewPagerTriangleIndicatorActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

@@ -57,7 +57,6 @@ public class ScreenUtils {
 //        return statusHeight;
 //    }
 
-    //获取屏幕的宽高
     public static int getMinScreenSize(Context context) {
         WindowManager windowManager = (WindowManager) context.getSystemService(
                 Context.WINDOW_SERVICE);
@@ -75,5 +74,10 @@ public class ScreenUtils {
 //        context.getResources().getDisplayMetrics().heightPixels;
 
         return Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels);
+    }
+
+    //获取屏幕的宽高
+    public static int getScreenWidth(Context context) {
+        return context.getResources().getDisplayMetrics().widthPixels;
     }
 }

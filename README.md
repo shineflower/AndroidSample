@@ -13,8 +13,11 @@
 仿微信6.0主界面   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/wechat_tab.gif)
 
-打造炫酷ViewPager字体指示器   
-![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/tab_indicator.gif)
+打造炫酷ViewPager颜色追踪指示器   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/color_track_tab_indicator.gif)
+
+打造炫酷ViewPager三角形指示器   
+![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/triangle_tab_indicator.gif)
 
 ViewPager切换动画   
 ![README](https://github.com/shineflower/SampleAll/blob/master/screenshots/view_pager.gif)

@@ -1,4 +1,4 @@
-package com.jackie.sample.color_track_tab;
+package com.jackie.sample.view_pager_indicator;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,17 +17,17 @@ import java.util.List;
  * Created by Jackie on 2017/5/17.
  */
 
-public class ColorTrackTabActivity extends FragmentActivity {
+public class ViewPagerColorTrackIndicatorActivity extends FragmentActivity {
     private String[] mTabTitles = new String[] { "简介", "评价", "相关" };
     private ViewPager mViewPager;
     private FragmentPagerAdapter mAdapter;
     private TabFragment[] mFragments = new TabFragment[mTabTitles.length];
-    private List<ColorTrackView> mTabs = new ArrayList<>();
+    private List<ColorTrackView> mTabList = new ArrayList<>();
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_color_track_tab);
+        setContentView(R.layout.activity_view_pager_color_track);
 
         initView();
         initData();
@@ -37,9 +37,9 @@ public class ColorTrackTabActivity extends FragmentActivity {
     private void initView() {
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
 
-        mTabs.add((ColorTrackView) findViewById(R.id.tab_01));
-        mTabs.add((ColorTrackView) findViewById(R.id.tab_02));
-        mTabs.add((ColorTrackView) findViewById(R.id.tab_03));
+        mTabList.add((ColorTrackView) findViewById(R.id.tab_01));
+        mTabList.add((ColorTrackView) findViewById(R.id.tab_02));
+        mTabList.add((ColorTrackView) findViewById(R.id.tab_03));
     }
 
     private void initData() {
@@ -73,8 +73,8 @@ public class ColorTrackTabActivity extends FragmentActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 if (positionOffset > 0) {
-                    ColorTrackView leftColorTrackView = mTabs.get(position);
-                    ColorTrackView rightColorTrackView = mTabs.get(position + 1);
+                    ColorTrackView leftColorTrackView = mTabList.get(position);
+                    ColorTrackView rightColorTrackView = mTabList.get(position + 1);
 
                     leftColorTrackView.setDirection(1);
                     rightColorTrackView.setDirection(0);

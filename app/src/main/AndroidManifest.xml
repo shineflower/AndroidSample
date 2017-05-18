@@ -52,8 +52,11 @@
         <!-- 仿微信6.0主界面 -->
         <activity android:name=".wechat_tab.WechatTabWithoutIndicatorActivity"/>
 
-        <!-- 打造炫酷ViewPager字体指示器 -->
-        <activity android:name=".color_track_tab.ColorTrackTabActivity"/>
+        <!-- 打造炫酷ViewPager颜色追踪指示器 -->
+        <activity android:name=".view_pager_indicator.ViewPagerColorTrackIndicatorActivity"/>
+
+        <!-- 打造炫酷ViewPager三角形指示器 -->
+        <activity android:name=".view_pager_indicator.ViewPagerTriangleIndicatorActivity"/>
 
         <!-- 图像处理集合 -->
         <activity android:name=".image_processing.ImageProcessingActivity"/>
