@@ -28,13 +28,13 @@ public class ScreenUtils {
 
     // 获取状态栏高度
     public static int getStatusBarHeight(Context context) {
-        int height = 0;
+        int statusHeight = 0;
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
         if (resourceId > 0) {
-            height = context.getResources().getDimensionPixelSize(resourceId);
+            statusHeight = context.getResources().getDimensionPixelSize(resourceId);
         }
 
-        return height;
+        return statusHeight;
     }
 
 //    public static int getWindowStatusHeight(Context context) {
@@ -76,8 +76,13 @@ public class ScreenUtils {
         return Math.min(displayMetrics.widthPixels, displayMetrics.heightPixels);
     }
 
-    //获取屏幕的宽高
+    //获取屏幕的宽度
     public static int getScreenWidth(Context context) {
         return context.getResources().getDisplayMetrics().widthPixels;
+    }
+
+    //获取屏幕的高度
+    public static int getScreenHeight(Context context) {
+        return context.getResources().getDisplayMetrics().heightPixels;
     }
 }

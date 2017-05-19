@@ -178,7 +178,13 @@
         <activity android:name=".ripple.RippleActivity"/>
 
         <!-- 可以上下进行粘性滑动的ScrollView -->
-        <activity android:name=".scroll_view.ScrollViewActivity"/>
+        <activity android:name=".scroll_view.ElasticScrollViewActivity"/>
+
+        <!-- 可以循环滑动并且保证条目完整性的ScrollView -->
+        <activity android:name=".scroll_view.LoopCompletenessScrollViewActivity"/>
+
+        <!-- 可以循环滑动并且保证条目完整性的ListView -->
+        <activity android:name=".list_view.LoopCompletenessListViewActivity"/>
 
         <!-- 三维开门一样的效果 -->
         <activity android:name=".animator.OpenDoor3DActivity"/>

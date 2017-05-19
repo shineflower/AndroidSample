@@ -33,6 +33,7 @@ import com.jackie.sample.image_code.ImageCodeActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
 import com.jackie.sample.indexable_contact.IndexableContactActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
+import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
 import com.jackie.sample.material_design.MaterialDesignActivity;
@@ -42,7 +43,8 @@ import com.jackie.sample.progress_bar.ProgressBarActivity;
 import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
 import com.jackie.sample.ripple.RippleActivity;
 import com.jackie.sample.scratch_card.ScratchCardActivity;
-import com.jackie.sample.scroll_view.ScrollViewActivity;
+import com.jackie.sample.scroll_view.ElasticScrollViewActivity;
+import com.jackie.sample.scroll_view.LoopCompletenessScrollViewActivity;
 import com.jackie.sample.select_contact.SelectContactActivity;
 import com.jackie.sample.sesame_credit.SesameCreditActivity;
 import com.jackie.sample.share_element.PhotoActivity;
@@ -291,7 +293,17 @@ public class DeskActivity extends Activity {
 
         sampleBean = new SampleBean();
         sampleBean.setTitle("可以上下进行粘性滑动的ScrollView");
-        sampleBean.setClassName(ScrollViewActivity.class);
+        sampleBean.setClassName(ElasticScrollViewActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("可以循环滑动并且保证条目完整性的ScrollView");
+        sampleBean.setClassName(LoopCompletenessScrollViewActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("可以循环滑动并且保证条目完整性的ListView");
+        sampleBean.setClassName(LoopCompletenessListViewActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

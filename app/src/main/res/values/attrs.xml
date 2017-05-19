@@ -20,7 +20,7 @@
     </declare-styleable>
 
     <declare-styleable name="ViewPagerIndicator">
-        <attr name="item_count" format="integer"/>
+        <attr name="indicator_item_count" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="ScratchView">
@@ -78,6 +78,10 @@
         <!-- 水平间距 -->
         <attr name="horizontal_padding" format="dimension"/>
         <attr name= "image_drawable" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoopCompletenessListView">
+        <attr name="loop_item_count" format="integer"/>
     </declare-styleable>
     
     <declare-styleable name="VolumeControlBar">

@@ -11,7 +11,7 @@
         android:layout_height="45dp"
         android:background="@drawable/bg_title_bar"
         android:orientation="horizontal"
-        jackie:item_count="4" >
+        jackie:indicator_item_count="4" >
 
         <TextView
             android:layout_width="0dp"
