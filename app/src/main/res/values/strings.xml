@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SampleAll</string>
+    <string name="app_name">AndroidSample</string>
 
     <string name="tab_wechat">微信</string>
     <string name="tab_contact">通讯录</string>
@@ -15,6 +15,9 @@
     <string name="dialog_too_short">录音时间太短</string>
 
     <string name="download_progress_text">%1$dM/%2$dM</string>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
 
     <string-array name="array_title">
         <item>条目一</item>
