@@ -59,7 +59,7 @@ public class MaterialDesignActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         /**
-         * 写在setDisplayHomeAsUpEnabled(true)下面，才能有系统自带的箭头动画
+         * 写在setDisplayHomeAsUpEnabled(true)下面，才能有系统自带的Toggle按钮的动画
          * ActionBarDrawerToggle 是 DrawerLayout.DrawerListener实现。
          * 和 NavigationDrawer 搭配使用，推荐用这个方法，符合Android design规范。
          * 作用：
