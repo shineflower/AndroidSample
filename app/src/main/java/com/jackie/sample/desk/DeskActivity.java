@@ -66,6 +66,7 @@ import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
 import com.jackie.sample.wechat_tab.WechatTabWithIndicatorActivity;
 import com.jackie.sample.wechat_tab.WechatTabWithoutIndicatorActivity;
 import com.jackie.sample.zoom_image.ZoomImageActivity;
+import com.jackie.sample.zxing.ZxingActivity;
 
 import java.util.LinkedList;
 
@@ -369,6 +370,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("视频音量调控");
         sampleBean.setClassName(VolumeControlActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("基于Google Zxing实现二维码、条形码扫描");
+        sampleBean.setClassName(ZxingActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
