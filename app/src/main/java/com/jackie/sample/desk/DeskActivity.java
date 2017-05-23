@@ -24,7 +24,7 @@ import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.count_down.CountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
-import com.jackie.sample.edit_text.SearchEditTextActivity;
+import com.jackie.sample.edit_text.EditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
 import com.jackie.sample.flow_layout.FlowLayoutActivity;
@@ -333,13 +333,13 @@ public class DeskActivity extends Activity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("文字特效");
+        sampleBean.setTitle("自定义TextView文字特效");
         sampleBean.setClassName(TextViewActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("用于搜索的标签添加与管理控件");
-        sampleBean.setClassName(SearchEditTextActivity.class);
+        sampleBean.setTitle("自定义EditText特效(搜索的标签添加与管理控件)");
+        sampleBean.setClassName(EditTextActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

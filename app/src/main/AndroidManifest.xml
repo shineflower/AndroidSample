@@ -209,8 +209,8 @@
         <!-- 文字特效 -->
         <activity android:name=".text_view.TextViewActivity"/>
 
-        <!-- 用于搜索的标签添加与管理控件 -->
-        <activity android:name=".edit_text.SearchEditTextActivity"/>
+        <!-- 自定义EditText特效(搜索的标签添加与管理控件) -->
+        <activity android:name=".edit_text.EditTextActivity"/>
 
         <!-- 共享元素相关测试加入Fragment -->
         <activity android:name=".share_element.PhotoActivity"/>
@@ -231,10 +231,8 @@
         <activity android:name=".volume_control.VolumeControlActivity"/>
 
         <!-- 基于Google Zxing实现二维码、条形码扫描 -->
-        <activity android:name=".zxing.ZxingActivity"
-            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".zxing.ZxingActivity"/>
         <activity android:name=".zxing.CaptureActivity"
-            android:theme="@android:style/Theme.NoTitleBar"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
