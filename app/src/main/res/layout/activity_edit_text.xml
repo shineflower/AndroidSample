@@ -76,7 +76,7 @@
             android:layout_marginRight="10dp"
             android:drawablePadding="5dp"
             android:drawableLeft="@drawable/icon_user"
-            android:drawableRight="@drawable/selector_delete"
+            android:drawableRight="@drawable/selector_delete_bg"
             android:hint="输入用户名"
             android:singleLine="true">
         </com.jackie.sample.custom_view.ClearEditText>
@@ -91,7 +91,7 @@
             android:layout_marginRight="10dp"
             android:drawablePadding="5dp"
             android:drawableLeft="@drawable/icon_account"
-            android:drawableRight="@drawable/selector_delete"
+            android:drawableRight="@drawable/selector_delete_bg"
             android:hint="输入密码"
             android:singleLine="true"
             android:password="true">

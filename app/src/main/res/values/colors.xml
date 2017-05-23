@@ -15,4 +15,14 @@
     <color name="viewfinder_mask">#60000000</color>
     <!-- 扫描框中的小黄点 #00000000 -->
     <color name="possible_result_points">#c0ffff00</color>
+
+    <!-- 雪白色 -->
+    <color name="floral_white">#FFFAF0</color>
+    <!-- 暗灰色 -->
+    <color name="dim_grey">#696969</color>
+
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- 灰色 -->
+    <color name="grey">#808080</color>
 </resources>

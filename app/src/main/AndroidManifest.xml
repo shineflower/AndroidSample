@@ -114,6 +114,9 @@
         <!-- 仿微信图片选择器 -->
         <activity android:name=".wechat_image_picker.WechatImagePickerActivity"/>
 
+        <!-- 仿微信对话列表滑动删除效果 -->
+        <activity android:name=".wechat_slide.WechatSlideActivity"/>
+
         <!-- 自定义图案锁屏 -->
         <activity android:name=".lock_pattern.LockPatternActivity"/>
 

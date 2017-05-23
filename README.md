@@ -58,6 +58,9 @@ ViewPager切换动画
 仿微信图片选择器   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/wechat_image_picker.gif)
 
+仿微信对话列表滑动删除效果   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/wechat_slide.gif)
+
 自定义图案解锁   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/lock_pattern.gif)
 
