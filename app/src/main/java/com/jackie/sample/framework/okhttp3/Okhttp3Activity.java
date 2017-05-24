@@ -1,4 +1,4 @@
-package com.jackie.sample.okhttp3;
+package com.jackie.sample.framework.okhttp3;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

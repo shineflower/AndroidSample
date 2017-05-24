@@ -1,4 +1,4 @@
-package com.jackie.sample.okhttp3;
+package com.jackie.sample.framework.okhttp3;
 
 /**
  * Created by Administrator on 2016/10/30.
