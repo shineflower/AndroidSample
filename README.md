@@ -129,3 +129,6 @@ Android L动画新特性
 
 视频音量调控   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/volume_control.gif)
+
+圆形仪表盘，实现展示不同级别范围   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/circle_range.gif)

@@ -239,6 +239,9 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!-- 圆形仪表盘，实现展示不同级别范围 -->
+        <activity android:name=".circle_range.CircleRangeActivity"/>
     </application>
 
 </manifest>

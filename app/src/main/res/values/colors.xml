@@ -25,4 +25,8 @@
     <color name="black">#000000</color>
     <!-- 灰色 -->
     <color name="grey">#808080</color>
+
+    <color name="widget_extra_color">#999999</color>
+    <color name="widget_border_color">#B9E2FB</color>
+    <color name="widget_cursor_color">#356CDB</color>
 </resources>

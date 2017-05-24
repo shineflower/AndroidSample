@@ -19,6 +19,7 @@ import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
+import com.jackie.sample.circle_range.CircleRangeActivity;
 import com.jackie.sample.clip_image.ClipActivity;
 import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.count_down.CountDownActivity;
@@ -381,6 +382,11 @@ public class DeskActivity extends Activity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("基于Google Zxing实现二维码、条形码扫描");
         sampleBean.setClassName(ZxingActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("圆形仪表盘，实现展示不同级别范围");
+        sampleBean.setClassName(CircleRangeActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
