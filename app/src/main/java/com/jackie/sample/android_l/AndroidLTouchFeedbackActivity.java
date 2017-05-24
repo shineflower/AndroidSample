@@ -1,14 +1,14 @@
 package com.jackie.sample.android_l;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.jackie.sample.R;
 
 /**
  * Ripple波纹效果
  */
-public class AndroidLTouchFeedbackActivity extends Activity {
+public class AndroidLTouchFeedbackActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

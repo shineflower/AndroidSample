@@ -1,7 +1,7 @@
 package com.jackie.sample.desk;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -39,7 +39,6 @@ import com.jackie.sample.lock_pattern.LockPatternActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
 import com.jackie.sample.material_design.MaterialDesignActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
-import com.jackie.sample.okhttp3.Okhttp3Activity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
 import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
 import com.jackie.sample.ripple.RippleActivity;
@@ -55,6 +54,7 @@ import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
+import com.jackie.sample.framework.FrameworkActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
@@ -72,7 +72,7 @@ import com.jackie.sample.zxing.ZxingActivity;
 
 import java.util.LinkedList;
 
-public class DeskActivity extends Activity {
+public class DeskActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private View mRootView;
 
@@ -235,8 +235,8 @@ public class DeskActivity extends Activity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("Okhttp3");
-        sampleBean.setClassName(Okhttp3Activity.class);
+        sampleBean.setTitle("各种网络框架");
+        sampleBean.setClassName(FrameworkActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

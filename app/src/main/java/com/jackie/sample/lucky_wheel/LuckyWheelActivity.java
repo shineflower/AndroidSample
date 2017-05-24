@@ -1,14 +1,14 @@
 package com.jackie.sample.lucky_wheel;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.LuckyWheelSurfaceView;
 
-public class LuckyWheelActivity extends Activity {
+public class LuckyWheelActivity extends AppCompatActivity {
     private LuckyWheelSurfaceView mLuckyWheel;
     private ImageButton mStartButton;
 

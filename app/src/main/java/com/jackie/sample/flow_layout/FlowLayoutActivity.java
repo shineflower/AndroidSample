@@ -1,7 +1,7 @@
 package com.jackie.sample.flow_layout;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.Button;
 
@@ -13,7 +13,7 @@ import com.jackie.sample.custom_view.FlowLayout;
  * 流式布局
  */
 
-public class FlowLayoutActivity extends Activity {
+public class FlowLayoutActivity extends AppCompatActivity {
     private FlowLayout mFlowLayout;
 
     String[] mTexts = { "小米4s小米电源", "Button ImageView", "TextView", "HelloWorld", "割双眼皮", "Welcome Hi ",

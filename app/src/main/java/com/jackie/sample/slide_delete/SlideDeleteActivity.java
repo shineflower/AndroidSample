@@ -1,7 +1,7 @@
 package com.jackie.sample.slide_delete;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -15,7 +15,7 @@ import com.jackie.sample.listener.SimpleItemTouchCallback;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlideDeleteActivity extends Activity implements OnStartDragListener {
+public class SlideDeleteActivity extends AppCompatActivity implements OnStartDragListener {
     private RecyclerView mRecyclerView;
     private SlideDeleteAdapter mAdapter;
     private ItemTouchHelper mHelper;

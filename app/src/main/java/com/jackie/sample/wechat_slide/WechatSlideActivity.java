@@ -1,7 +1,7 @@
 package com.jackie.sample.wechat_slide;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,7 +20,7 @@ import com.jackie.sample.custom_view.SlideView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WechatSlideActivity extends Activity implements OnItemClickListener, SlideView.OnSlideListener {
+public class WechatSlideActivity extends AppCompatActivity implements OnItemClickListener, SlideView.OnSlideListener {
     private ListViewCompat mListView;
     private SlideAdapter mSlideAdapter;
 

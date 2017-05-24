@@ -1,14 +1,14 @@
 package com.jackie.sample.arc_menu;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.ArcMenu;
 
-public class ArcMenuActivity extends Activity {
+public class ArcMenuActivity extends AppCompatActivity {
     private ArcMenu mArcMenu;
 
     @Override

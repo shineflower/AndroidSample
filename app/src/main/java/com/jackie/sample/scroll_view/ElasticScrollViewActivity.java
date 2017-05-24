@@ -1,11 +1,11 @@
 package com.jackie.sample.scroll_view;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.jackie.sample.R;
 
-public class ElasticScrollViewActivity extends Activity {
+public class ElasticScrollViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,7 @@
 package com.jackie.sample.drag_exchange;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.SimpleAdapter;
 
 import com.jackie.sample.R;
@@ -16,7 +16,7 @@ import java.util.List;
  * Created by Jackie on 2017/5/11.
  */
 
-public class ExchangeActivity extends Activity {
+public class ExchangeActivity extends AppCompatActivity {
     private List<HashMap<String, Object>> mList = new ArrayList<>();
 
     @Override

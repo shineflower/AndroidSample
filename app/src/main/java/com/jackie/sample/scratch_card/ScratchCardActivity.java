@@ -1,13 +1,13 @@
 package com.jackie.sample.scratch_card;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.ScratchView;
 
-public class ScratchCardActivity extends Activity implements ScratchView.OnSwipeCompletedListener {
+public class ScratchCardActivity extends AppCompatActivity implements ScratchView.OnSwipeCompletedListener {
     private ScratchView mScratchView;
 
     @Override

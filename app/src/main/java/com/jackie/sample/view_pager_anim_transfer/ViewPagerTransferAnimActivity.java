@@ -1,11 +1,11 @@
 package com.jackie.sample.view_pager_anim_transfer;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewPagerTransferAnimActivity extends Activity {
+public class ViewPagerTransferAnimActivity extends AppCompatActivity {
     private CustomViewPager mViewPager;
 
     private int[] mImgResIds = { R.drawable.guide_image1, R.drawable.guide_image2, R.drawable.guide_image3};

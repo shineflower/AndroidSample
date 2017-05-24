@@ -140,8 +140,14 @@
         <!-- 仿支付宝支付密码输入框 -->
         <activity android:name=".alipay.AliPayActivity"/>
 
-        <!-- okhttp3 -->
-        <activity android:name=".okhttp3.Okhttp3Activity"/>
+        <!-- 各种网络框架 -->
+        <activity android:name=".framework.FrameworkActivity"/>
+        <activity android:name=".framework.volley.VolleyActivity"/>
+        <activity android:name=".framework.okhttp.OkhttpActivity"/>
+        <activity android:name=".framework.okhttp3.Okhttp3Activity"/>
+        <activity android:name=".framework.fresco.FrescoActivity"/>
+        <activity android:name=".framework.retrofit.RetrofitActivity"/>
+        <activity android:name=".framework.nohttp.NohttpActivity"/>
 
         <!-- 多样式的ProgressBar -->
         <activity android:name=".progress_bar.ProgressBarActivity"/>

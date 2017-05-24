@@ -1,7 +1,7 @@
 package com.jackie.sample.circle_range;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.jackie.sample.R;
@@ -15,7 +15,7 @@ import java.util.Random;
  * Created by Jackie on 2017/5/24.
  */
 
-public class CircleRangeActivity extends Activity implements View.OnClickListener {
+public class CircleRangeActivity extends AppCompatActivity implements View.OnClickListener {
     private CircleRangeView mCircleRangeView;
     private String [] mValueArray;
     private Random mRandom;

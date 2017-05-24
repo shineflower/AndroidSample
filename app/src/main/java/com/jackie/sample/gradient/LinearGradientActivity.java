@@ -1,11 +1,11 @@
 package com.jackie.sample.gradient;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.jackie.sample.R;
 
-public class LinearGradientActivity extends Activity {
+public class LinearGradientActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

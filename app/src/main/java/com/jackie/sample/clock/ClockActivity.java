@@ -1,11 +1,11 @@
 package com.jackie.sample.clock;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.jackie.sample.R;
 
-public class ClockActivity extends Activity {
+public class ClockActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

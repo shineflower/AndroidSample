@@ -1,8 +1,8 @@
 package com.jackie.sample.list_view;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -19,7 +19,7 @@ import java.util.Random;
  * Created by Jackie on 2017/5/19.
  */
 
-public class LoopCompletenessListViewActivity extends Activity {
+public class LoopCompletenessListViewActivity extends AppCompatActivity {
     private List<String> mList;
     private LoopCompletenessListView mListView;
     private CommonAdapter<String> mAdapter;

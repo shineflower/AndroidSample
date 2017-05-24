@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
 import android.util.Pair;
 import android.view.View;
@@ -16,7 +17,7 @@ import com.jackie.sample.R;
 /**
  * 共享元素的界面跳转
  */
-public class ShareElementFromActivity extends Activity {
+public class ShareElementFromActivity extends AppCompatActivity {
     private ImageView mImageView;
     private Context mContext;
     private Activity mActivity;

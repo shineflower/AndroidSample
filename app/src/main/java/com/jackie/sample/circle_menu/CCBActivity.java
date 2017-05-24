@@ -1,7 +1,7 @@
 package com.jackie.sample.circle_menu;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -12,7 +12,7 @@ import com.jackie.sample.custom_view.CircleMenuLayout;
  * Created by Jackie on 2017/5/15
  * 仿建行圆形菜单
  */
-public class CCBActivity extends Activity {
+public class CCBActivity extends AppCompatActivity {
 	private CircleMenuLayout mCircleMenuLayout;
 
 	private int[] mItemIcons = new int[] { R.drawable.home_bank_1_normal,

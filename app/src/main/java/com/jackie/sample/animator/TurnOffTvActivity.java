@@ -1,8 +1,8 @@
 package com.jackie.sample.animator;
 
-import android.app.Activity;
 import android.graphics.Matrix;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
@@ -16,7 +16,7 @@ import com.jackie.sample.R;
 /**
  * 自定义的animation动画，模拟电视的关机的动画。
  */
-public class TurnOffTvActivity extends Activity {
+public class TurnOffTvActivity extends AppCompatActivity {
     private ImageView mImageView;
     private int mWidth;
     private int mHeight;

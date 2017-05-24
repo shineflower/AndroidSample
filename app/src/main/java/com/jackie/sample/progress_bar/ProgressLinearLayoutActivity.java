@@ -1,7 +1,7 @@
 package com.jackie.sample.progress_bar;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.ProgressLinearLayout;
@@ -10,7 +10,7 @@ import com.jackie.sample.custom_view.ProgressLinearLayout;
  * Created by Jackie on 2017/5/9.
  */
 
-public class ProgressLinearLayoutActivity extends Activity {
+public class ProgressLinearLayoutActivity extends AppCompatActivity {
     private ProgressLinearLayout mProgressLinearLayout;
 
     @Override

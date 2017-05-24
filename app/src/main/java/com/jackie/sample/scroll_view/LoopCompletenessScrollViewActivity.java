@@ -1,8 +1,8 @@
 package com.jackie.sample.scroll_view;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,7 +20,7 @@ import java.util.List;
  * Created by Jackie on 2017/5/19.
  */
 
-public class LoopCompletenessScrollViewActivity extends Activity {
+public class LoopCompletenessScrollViewActivity extends AppCompatActivity {
     private LoopCompletenessScrollView mScrollView;
     private LoopCompletenessScrollView.ScrollViewAdapter mAdapter;
     private LayoutInflater mInflater;

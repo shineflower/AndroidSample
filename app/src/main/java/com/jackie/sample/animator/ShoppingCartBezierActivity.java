@@ -2,11 +2,11 @@ package com.jackie.sample.animator;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Path;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,7 +19,7 @@ import com.jackie.sample.utils.DensityUtils;
  * 贝塞尔曲线的购物车添加动画
  * 2017-02-28
  */
-public class ShoppingCartBezierActivity extends Activity {
+public class ShoppingCartBezierActivity extends AppCompatActivity {
     private RelativeLayout mBezierLayout;
     private ImageView mBezierFood, mBezierShoppingCart;
     private Button mBezierAdd;

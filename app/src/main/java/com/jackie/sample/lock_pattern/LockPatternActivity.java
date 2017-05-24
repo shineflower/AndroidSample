@@ -1,13 +1,13 @@
 package com.jackie.sample.lock_pattern;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.LockPatternView;
 
-public class LockPatternActivity extends Activity implements LockPatternView.OnPatternChangeListener {
+public class LockPatternActivity extends AppCompatActivity implements LockPatternView.OnPatternChangeListener {
     private TextView mLockPatternHint;
     private LockPatternView mLockPatternView;
 

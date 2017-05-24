@@ -1,9 +1,9 @@
 package com.jackie.sample.clip_image;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.jackie.sample.R;
@@ -12,7 +12,7 @@ import com.jackie.sample.R;
  * Created by Jackie on 2017/5/15
  * 显示图片
  */
-public class ShowImageActivity extends Activity {
+public class ShowImageActivity extends AppCompatActivity {
 	private ImageView mImageView;
 
 	@Override

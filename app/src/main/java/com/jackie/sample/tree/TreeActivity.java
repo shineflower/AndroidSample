@@ -1,9 +1,9 @@
 package com.jackie.sample.tree;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,7 +20,7 @@ import com.jackie.sample.bean.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TreeActivity extends Activity {
+public class TreeActivity extends AppCompatActivity {
     private ListView mListView;
     private SimpleTreeListViewAdapter mSimpleTreeListViewAdapter;
     private List<FileBean> mList = new ArrayList<>();

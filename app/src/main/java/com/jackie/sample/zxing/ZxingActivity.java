@@ -1,10 +1,10 @@
 package com.jackie.sample.zxing;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -19,7 +19,7 @@ import com.jackie.sample.zxing.utils.QRCodeUtils;
 
 import java.io.File;
 
-public class ZxingActivity extends Activity {
+public class ZxingActivity extends AppCompatActivity {
 	private final static int SCANNING_REQUEST_CODE = 1;
 	//显示扫描结果
 	private TextView mTextView ;

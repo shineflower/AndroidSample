@@ -1,9 +1,9 @@
 package com.jackie.sample.animator;
 
-import android.app.Activity;
 import android.graphics.Camera;
 import android.graphics.Matrix;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
@@ -18,7 +18,7 @@ import com.jackie.sample.R;
 /**
  * 三维的点击效果(开门一样的效果)
  */
-public class OpenDoor3DActivity extends Activity {
+public class OpenDoor3DActivity extends AppCompatActivity {
     private ImageView mImage;
     private int mWidth;
     private int mHeight;

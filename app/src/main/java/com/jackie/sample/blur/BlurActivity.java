@@ -1,9 +1,9 @@
 package com.jackie.sample.blur;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -16,7 +16,7 @@ import com.jackie.sample.utils.BlurUtils;
  * 高斯模糊
  */
 
-public class BlurActivity extends Activity {
+public class BlurActivity extends AppCompatActivity {
     private ImageView mBlurImage, mOriginImage;
     private SeekBar mSeekBar;
     private TextView mSeekProgress;

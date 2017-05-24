@@ -1,9 +1,9 @@
 package com.jackie.sample.wechat_recorder;
 
-import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -17,7 +17,7 @@ import com.jackie.sample.utils.MediaManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WechatRecorderActivity extends Activity implements RecorderButton.OnRecordStateListener {
+public class WechatRecorderActivity extends AppCompatActivity implements RecorderButton.OnRecordStateListener {
 
     private ListView mListView;
     private RecorderButton mRecorderButton;

@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewTreeObserver;
@@ -17,7 +18,7 @@ import com.jackie.sample.utils.DensityUtils;
  * Android L新增的动画效果
  * 图形揭示
  */
-public class AndroidLCircularRevealActivity extends Activity {
+public class AndroidLCircularRevealActivity extends AppCompatActivity {
     private Context mContext;
     private View mCircularRevealView1, mCircularRevealView2;
     private Animator mAnimator1;
