@@ -140,7 +140,7 @@
         <!-- 仿支付宝支付密码输入框 -->
         <activity android:name=".alipay.AliPayActivity"/>
 
-        <!-- 各种网络框架 -->
+        <!-- 各种网络加载框架 -->
         <activity android:name=".framework.FrameworkActivity"/>
         <activity android:name=".framework.volley.VolleyActivity"/>
         <activity android:name=".framework.okhttp.OkhttpActivity"/>

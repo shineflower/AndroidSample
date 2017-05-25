@@ -174,7 +174,7 @@ public class NohttpActivity extends AppCompatActivity implements View.OnClickLis
                     public void run() {
                         String url = "http://pic.toomao.com/bd90075f0e05997ac305d0e358125be344b64a47";
                         DownloadQueue downloadQueue = NoHttp.newDownloadQueue();
-                        DownloadRequest downloadRequest = NoHttp.createDownloadRequest(url, Environment.getExternalStorageDirectory()+"", "aaa.png", true, true);
+                        DownloadRequest downloadRequest = NoHttp.createDownloadRequest(url, Environment.getExternalStorageDirectory() + "", "aaa.png", true, true);
                         // 如果需要添加很多个请求用第一个参数来区分，然后在监听里面就知道是哪个请求了
                         downloadQueue.add(3, downloadRequest, downloadListener);
                     }

@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/bezier_layout"
+    android:id="@+id/rly_bezier_curve_shopping_cart"
     android:layout_width="match_parent"
-    android:background="@android:color/white"
-    android:clipToPadding="true"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
 
-    <ImageView
-        android:id="@+id/bezier_food"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/food"
-        android:layout_alignParentRight="true"/>
-
-    <ImageView
-        android:id="@+id/bezier_shopping_cart"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:src="@drawable/shopping_cart"
-        android:layout_alignParentBottom="true"/>
-
-    <Button
-        android:id="@+id/bezier_add"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/fly_bezier_curve_shopping_cart"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="点击" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/iv_bezier_curve_shopping_cart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:src="@drawable/shopping_cart" />
+
+        <TextView
+            android:id="@+id/tv_bezier_curve_shopping_cart_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/shape_shopping_cart_count_bg"
+            android:text="0"
+            android:textColor="@color/white"/>
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lv_bezier_curve_shopping_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fly_bezier_curve_shopping_cart"/>
 </RelativeLayout>
+

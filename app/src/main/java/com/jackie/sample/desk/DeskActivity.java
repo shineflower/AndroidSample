@@ -235,7 +235,7 @@ public class DeskActivity extends AppCompatActivity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("各种网络框架");
+        sampleBean.setTitle("各种网络加载框架");
         sampleBean.setClassName(FrameworkActivity.class);
         linkedList.add(sampleBean);
 
