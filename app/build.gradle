@@ -60,4 +60,6 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
 
     compile files('libs/zxing-3.3.0.jar')
+
+    compile files('libs/libammsdk.jar')
 }

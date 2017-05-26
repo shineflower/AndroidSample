@@ -39,6 +39,7 @@ import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
 import com.jackie.sample.material_design.MaterialDesignActivity;
+import com.jackie.sample.mm_alert.SendToWXActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
 import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
@@ -393,6 +394,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿QQ手机管家小火箭效果实现");
         sampleBean.setClassName(FloatWindowActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿IOS微信分享对话框");
+        sampleBean.setClassName(SendToWXActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

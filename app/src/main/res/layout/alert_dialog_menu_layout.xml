@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="bottom"
+	android:background="@drawable/btn_style_alert_dialog_background">
+
+	<ListView
+		android:id="@+id/content_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_gravity="center"
+		android:listSelector="@drawable/mm_trans"
+		android:cacheColorHint="@color/transparent" />
+</LinearLayout>

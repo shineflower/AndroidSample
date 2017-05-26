@@ -255,6 +255,9 @@
         <!-- 仿QQ手机管家小火箭效果 -->
         <activity android:name=".float_window.FloatWindowActivity"/>
         <service android:name=".service.FloatWindowService"/>
+
+        <!-- 仿IOS微信分享对话框 -->
+        <activity android:name=".mm_alert.SendToWXActivity"/>
     </application>
 
 </manifest>

@@ -32,4 +32,8 @@
     <color name="widget_extra_color">#999999</color>
     <color name="widget_border_color">#B9E2FB</color>
     <color name="widget_cursor_color">#356CDB</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="nav_page">#FFE1E8EB</color>
 </resources>
