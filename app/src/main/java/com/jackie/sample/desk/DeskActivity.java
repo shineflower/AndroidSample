@@ -28,6 +28,7 @@ import com.jackie.sample.drag_exchange.ExchangeActivity;
 import com.jackie.sample.edit_text.EditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
+import com.jackie.sample.float_window.FloatWindowActivity;
 import com.jackie.sample.flow_layout.FlowLayoutActivity;
 import com.jackie.sample.gradient.LinearGradientActivity;
 import com.jackie.sample.image_code.ImageCodeActivity;
@@ -387,6 +388,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("圆形仪表盘，实现展示不同级别范围");
         sampleBean.setClassName(CircleRangeActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿QQ手机管家小火箭效果实现");
+        sampleBean.setClassName(FloatWindowActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

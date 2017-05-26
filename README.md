@@ -132,3 +132,7 @@ Android L动画新特性
 
 圆形仪表盘，实现展示不同级别范围   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/circle_range.gif)
+
+仿QQ手机管家小火箭效果实现   
+模拟器录出来的gif动画有点丢帧，真机不会有这个问题   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/rocket_launcher.gif)

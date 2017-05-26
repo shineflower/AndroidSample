@@ -18,6 +18,9 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
     <application
         android:name=".application.SampleApplication"
         android:allowBackup="true"
@@ -248,6 +251,10 @@
 
         <!-- 圆形仪表盘，实现展示不同级别范围 -->
         <activity android:name=".circle_range.CircleRangeActivity"/>
+
+        <!-- 仿QQ手机管家小火箭效果 -->
+        <activity android:name=".float_window.FloatWindowActivity"/>
+        <service android:name=".service.FloatWindowService"/>
     </application>
 
 </manifest>

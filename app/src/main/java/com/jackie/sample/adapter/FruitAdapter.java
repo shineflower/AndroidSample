@@ -38,6 +38,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
 
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_fruit, parent, false);
         final ViewHolder holder = new ViewHolder(view);
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

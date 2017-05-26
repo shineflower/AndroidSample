@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.jackie.sample.R;
+import com.jackie.sample.adapter.FruitAdapter;
 import com.jackie.sample.bean.Fruit;
 
 import java.util.ArrayList;
