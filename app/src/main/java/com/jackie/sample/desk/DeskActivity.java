@@ -39,6 +39,7 @@ import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
 import com.jackie.sample.material_design.MaterialDesignActivity;
+import com.jackie.sample.metro.MetroActivity;
 import com.jackie.sample.mm_alert.SendToWXActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
@@ -399,6 +400,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿IOS微信分享对话框");
         sampleBean.setClassName(SendToWXActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿Win8的metro的UI界面");
+        sampleBean.setClassName(MetroActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

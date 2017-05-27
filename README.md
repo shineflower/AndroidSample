@@ -136,3 +136,6 @@ Android L动画新特性
 仿QQ手机管家小火箭效果实现   
 模拟器录出来的gif动画有点丢帧，真机不会有这个问题   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/rocket_launcher.gif)
+
+仿Win8的metro的UI界面   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/metro.gif)

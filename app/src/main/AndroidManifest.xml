@@ -258,6 +258,9 @@
 
         <!-- 仿IOS微信分享对话框 -->
         <activity android:name=".mm_alert.SendToWXActivity"/>
+
+        <!-- 仿Win8的metro的UI界面 -->
+        <activity android:name=".metro.MetroActivity"/>
     </application>
 
 </manifest>

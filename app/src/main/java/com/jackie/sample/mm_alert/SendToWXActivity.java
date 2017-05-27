@@ -1,16 +1,16 @@
 package com.jackie.sample.mm_alert;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 
 import com.jackie.sample.R;
 import com.jackie.sample.utils.MMAlert;
 
-public class SendToWXActivity extends Activity {
+public class SendToWXActivity extends AppCompatActivity {
 
 	private static final int THUMB_SIZE = 150;
 
