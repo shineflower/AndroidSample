@@ -10,7 +10,7 @@
 
 	<TextView
 		android:id="@+id/popup_text"
-		android:layout_width="fill_parent"
+		android:layout_width="match_parent"
 		android:layout_height="45dp"
 		android:background="@drawable/selector_style_alert_dialog_cancel"
 		android:gravity="center"

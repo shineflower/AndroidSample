@@ -1,7 +1,7 @@
 <com.jackie.sample.custom_view.LoopCompletenessScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scroll_view"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbars="none" >
 
