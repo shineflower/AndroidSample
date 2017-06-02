@@ -30,8 +30,10 @@ import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
 import com.jackie.sample.float_window.FloatWindowActivity;
 import com.jackie.sample.flow_layout.FlowLayoutActivity;
+import com.jackie.sample.framework.FrameworkActivity;
 import com.jackie.sample.gradient.LinearGradientActivity;
 import com.jackie.sample.image_code.ImageCodeActivity;
+import com.jackie.sample.image_filling.ImageFillingActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
 import com.jackie.sample.indexable_contact.IndexableContactActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
@@ -57,7 +59,6 @@ import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
-import com.jackie.sample.framework.FrameworkActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
@@ -405,6 +406,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿Win8的metro的UI界面");
         sampleBean.setClassName(MetroActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("不规则图像填充");
+        sampleBean.setClassName(ImageFillingActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

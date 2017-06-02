@@ -261,6 +261,9 @@
 
         <!-- 仿Win8的metro的UI界面 -->
         <activity android:name=".metro.MetroActivity"/>
+
+        <!-- 不规则图像填充 -->
+        <activity android:name=".image_filling.ImageFillingActivity"/>
     </application>
 
 </manifest>

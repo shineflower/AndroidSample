@@ -36,7 +36,7 @@ public class CommonUtils {
 
     /**
      * 随机颜色
-     * Color.argb(random.nextInt(120), random.nextInt(255), random.nextInt(255), random.nextInt(255));
+     * Color.argb(255, random.nextInt(255), random.nextInt(255), random.nextInt(255));
      */
     public int getRandomColor() {
         StringBuilder stringBuilder = new StringBuilder();
