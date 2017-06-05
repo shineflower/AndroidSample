@@ -16,6 +16,7 @@ import com.jackie.sample.animator.ShoppingCartBezierActivity;
 import com.jackie.sample.animator.TurnOffTvActivity;
 import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
+import com.jackie.sample.baidu_map.BaiduMapActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
@@ -411,6 +412,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("不规则图像填充");
         sampleBean.setClassName(ImageFillingActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("百度地图");
+        sampleBean.setClassName(BaiduMapActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

@@ -62,4 +62,6 @@ dependencies {
     compile files('libs/zxing-3.3.0.jar')
 
     compile files('libs/libammsdk.jar')
+
+    compile files('libs/BaiduLBS_Android.jar')
 }
