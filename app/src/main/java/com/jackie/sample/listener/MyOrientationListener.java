@@ -15,8 +15,7 @@ public class MyOrientationListener implements SensorEventListener {
 	
 	private OnOrientationListener mOnOrientationListener ;
 
-	public MyOrientationListener(Context context)
-	{
+	public MyOrientationListener(Context context) {
 		this.mContext = context;
 	}
 
@@ -30,8 +29,7 @@ public class MyOrientationListener implements SensorEventListener {
 		}
 
 		// 注册
-		if (mSensor != null)
-		{//SensorManager.SENSOR_DELAY_UI
+		if (mSensor != null) {   //SensorManager.SENSOR_DELAY_UI
 			mSensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_UI);
 		}
 	}
@@ -53,21 +51,21 @@ public class MyOrientationListener implements SensorEventListener {
             // 这里我们可以得到数据，然后根据需要来处理  
             float x = event.values[SensorManager.DATA_X];  
             
-            if(Math.abs(x- mLastX) > 1.0) {
+            if(Math.abs(x - mLastX) > 1.0) {
             	mOnOrientationListener.onOrientationChanged(x);
             }
-//            Log.e("DATA_X", x+"");
-            mLastX = x ;
+
+//            LogUtils.showErrLog(x + "");
+
+			mLastX = x ;
         }  
 	}
 	
 	public void setOnOrientationListener(OnOrientationListener onOrientationListener) {
 		this.mOnOrientationListener = onOrientationListener ;
 	}
-	
-	
+
 	public interface OnOrientationListener {
 		void onOrientationChanged(float x);
 	}
-
 }

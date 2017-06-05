@@ -22,7 +22,7 @@ public class ZoomImageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_zoom);
+        setContentView(R.layout.activity_zoom_image);
 
         for (int i = 0; i < mImgResIds.length; i++) {
             ZoomImageView zoomImageView = new ZoomImageView(this);

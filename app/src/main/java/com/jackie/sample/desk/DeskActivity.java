@@ -72,6 +72,7 @@ import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
 import com.jackie.sample.wechat_slide.WechatSlideActivity;
 import com.jackie.sample.wechat_tab.WechatTabWithIndicatorActivity;
 import com.jackie.sample.wechat_tab.WechatTabWithoutIndicatorActivity;
+import com.jackie.sample.zoom_image.LargeImageActivity;
 import com.jackie.sample.zoom_image.ZoomImageActivity;
 import com.jackie.sample.zxing.ZxingActivity;
 
@@ -152,6 +153,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("图片预览和多点触控");
         sampleBean.setClassName(ZoomImageActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("高清加载巨图方案");
+        sampleBean.setClassName(LargeImageActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

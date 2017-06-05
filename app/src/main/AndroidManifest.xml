@@ -99,6 +99,9 @@
         <!-- 图片预览和多点触控 -->
         <activity android:name=".zoom_image.ZoomImageActivity"/>
 
+        <!-- 高清加载巨图方案 -->
+        <activity android:name=".zoom_image.LargeImageActivity"/>
+
         <!-- 仿微信头像裁切 -->
         <activity android:name=".clip_image.ClipActivity"
             android:theme="@style/AppTheme.ActionBar"/>
