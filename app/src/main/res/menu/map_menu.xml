@@ -25,9 +25,21 @@
         android:title="我的位置"/>
 
     <item
+        android:id="@+id/id_menu_map_marker"
+        android:icon="@mipmap/ic_launcher"
+        android:showAsAction="never"
+        android:title="添加覆盖物"/>
+
+    <item
         android:id="@+id/menu_map_style"
         android:icon="@mipmap/ic_launcher"
         android:showAsAction="never"
         android:title="地图模式【正常】"/>
+
+    <item
+        android:id="@+id/menu_map_offline"
+        android:icon="@mipmap/ic_launcher"
+        android:showAsAction="never"
+        android:title="离线地图"/>
 
 </menu>

@@ -287,6 +287,7 @@
         <!-- 百度地图 -->
         <activity android:name=".baidu_map.BaiduMapActivity"
             android:theme="@style/AppTheme.ActionBar"/>
+        <activity android:name=".baidu_map.OfflineMapActivity"/>
 
         <service
             android:name="com.baidu.location.f"
