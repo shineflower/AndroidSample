@@ -22,7 +22,7 @@
 打造炫酷ViewPager三角形指示器   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/triangle_tab_indicator.gif)
 
-ViewPager切换动画   
+ViewPager炫酷切换效果(适用于Guide)   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/view_pager.gif)
 
 图片预览和多点触摸   
