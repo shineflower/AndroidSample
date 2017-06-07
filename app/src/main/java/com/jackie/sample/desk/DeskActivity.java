@@ -63,7 +63,8 @@ import com.jackie.sample.text_view.TextViewActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
-import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferAnimActivity;
+import com.jackie.sample.view_pager_anim_transfer.banner.ViewPagerTransferBannerAnimActivity;
+import com.jackie.sample.view_pager_anim_transfer.guide.ViewPagerTransferGuideAnimActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerColorTrackIndicatorActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerTriangleIndicatorActivity;
 import com.jackie.sample.volume_control.VolumeControlActivity;
@@ -146,8 +147,13 @@ public class DeskActivity extends AppCompatActivity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("ViewPager切换动画");
-        sampleBean.setClassName(ViewPagerTransferAnimActivity.class);
+        sampleBean.setTitle("ViewPager炫酷切换效果(适用于Guide)");
+        sampleBean.setClassName(ViewPagerTransferGuideAnimActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("ViewPager炫酷切换效果(适用于Banner)");
+        sampleBean.setClassName(ViewPagerTransferBannerAnimActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

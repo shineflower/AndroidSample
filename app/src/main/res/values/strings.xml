@@ -6,6 +6,17 @@
     <string name="tab_find">发现</string>
     <string name="tab_me">我</string>
 
+    <string-array name="magic_effect">
+        <item>RotateDown</item>
+        <item>RotateUp</item>
+        <item>RotateY</item>
+        <item>Standard</item>
+        <item>Alpha</item>
+        <item>ScaleIn</item>
+        <item>RotateDown and Alpha</item>
+        <item>RotateDown and Alpha and ScaleIn</item>
+    </string-array>
+
     <string name="state_normal">按住 说话</string>
     <string name="state_recording">松开 结束</string>
     <string name="state_cancel">松开手指，取消发送</string>

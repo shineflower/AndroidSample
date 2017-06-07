@@ -1,4 +1,4 @@
-package com.jackie.sample.view_pager_anim_transfer;
+package com.jackie.sample.view_pager_anim_transfer.guide;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;

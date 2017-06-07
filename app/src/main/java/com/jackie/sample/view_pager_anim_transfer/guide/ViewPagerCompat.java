@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jackie.sample.view_pager_anim_transfer;
+package com.jackie.sample.view_pager_anim_transfer.guide;
 
 import android.content.Context;
 import android.content.res.Resources;

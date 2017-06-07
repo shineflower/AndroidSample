@@ -1,4 +1,4 @@
-package com.jackie.sample.view_pager_anim_transfer;
+package com.jackie.sample.view_pager_anim_transfer.guide;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewPagerTransferAnimActivity extends AppCompatActivity {
+public class ViewPagerTransferGuideAnimActivity extends AppCompatActivity {
     private CustomViewPager mViewPager;
 
     private int[] mImgResIds = { R.drawable.guide_image1, R.drawable.guide_image2, R.drawable.guide_image3};
@@ -27,7 +27,7 @@ public class ViewPagerTransferAnimActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_view_pager_transfer_anim);
+        setContentView(R.layout.activity_view_pager_transfer_guide_anim);
 
         for (int i = 0; i < mImgResIds.length; i++) {
             ImageView imageView = new ImageView(this);
