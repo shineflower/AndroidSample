@@ -56,7 +56,7 @@ public class ZxingActivity extends AppCompatActivity {
 				String createContent = createEditText.getText().toString().trim();
 
 				/**
-				 * /storage/emulated/0/Android/data/com.jackie.sampl/files/qr_1495419734955.jpg
+				 * /storage/emulated/0/Android/data/com.jackie.sample/files/qr_1495419734955.jpg
 				 */
 				final String filePath =  StorageUtils.getFileRoot(ZxingActivity.this) + File.separator
 						+ "qr_" + System.currentTimeMillis() + ".jpg";

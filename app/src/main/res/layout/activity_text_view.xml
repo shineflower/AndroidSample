@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_text_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:clipToPadding="true"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
     <com.jackie.sample.custom_view.FlashTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="北京市发布霾黄色预警，外出携带好口罩" />
+
+    <!-- 文本内容要够长才可以滚动 -->
+    <com.jackie.sample.custom_view.MarqueeTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
-        android:layout_marginTop="15dp" />
-</RelativeLayout>
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="北京市发布霾黄色预警，外出携带好口罩北京市发布霾黄色预警，外出携带好口罩"/>
+
+    <TextView
+        android:id="@+id/text_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/text_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/text_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/text_view_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
