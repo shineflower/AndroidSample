@@ -153,7 +153,7 @@ public class WechatImagePickerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_image_picker);
+        setContentView(R.layout.activity_wechat_image_picker);
 
         initView();
         initData();

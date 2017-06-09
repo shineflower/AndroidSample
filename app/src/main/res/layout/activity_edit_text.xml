@@ -110,4 +110,8 @@
             android:textSize="18sp"
             android:textColor="@android:color/white"/>
     </LinearLayout>
+
+    <com.jackie.sample.custom_view.ReminderEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

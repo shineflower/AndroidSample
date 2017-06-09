@@ -71,13 +71,20 @@
         <!--点的颜色-->
         <attr name="point_color" format="color"/>
         <!--图标-->
-        <attr name="icon_src" format="reference"/>
+        <attr name="timeline_icon_src" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="ClipImageLayout">
         <!-- 水平间距 -->
         <attr name="horizontal_padding" format="dimension"/>
         <attr name= "image_drawable" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="JCameraView">
+        <attr name="icon_size" format="dimension"/>
+        <attr name="icon_margin" format="dimension"/>
+        <attr name="camera_icon_src" format="reference"/>
+        <attr name="duration_max" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="LoopCompletenessListView">

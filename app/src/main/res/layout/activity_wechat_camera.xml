@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <com.jackie.sample.wechat_camera.view.JCameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:icon_size="30dp"
+        app:icon_margin="20dp"
+        app:camera_icon_src="@drawable/ic_camera_enhance_black_24dp"
+        app:duration_max="10000"/>
+</LinearLayout>

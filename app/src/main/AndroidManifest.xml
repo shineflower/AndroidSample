@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
@@ -142,6 +144,9 @@
 
         <!-- 仿微信对话列表滑动删除效果 -->
         <activity android:name=".wechat_slide.WechatSlideActivity"/>
+
+        <!-- 仿微信拍照效果 -->
+        <activity android:name=".wechat_camera.WechatCameraActivity"/>
 
         <!-- 自定义图案锁屏 -->
         <activity android:name=".lock_pattern.LockPatternActivity"/>

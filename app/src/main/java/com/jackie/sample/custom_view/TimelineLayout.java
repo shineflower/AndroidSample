@@ -57,7 +57,7 @@ public class TimelineLayout extends LinearLayout {
         mPointSize = ta.getDimensionPixelSize(R.styleable.TimelineLayout_point_size, 8);
         mPointColor = ta.getDimensionPixelOffset(R.styleable.TimelineLayout_point_color, 0xff3dd1a5);
 
-        int iconRes = ta.getResourceId(R.styleable.TimelineLayout_icon_src, R.drawable.ic_ok);
+        int iconRes = ta.getResourceId(R.styleable.TimelineLayout_timeline_icon_src, R.drawable.ic_ok);
         BitmapDrawable drawable = (BitmapDrawable) context.getResources().getDrawable(iconRes);
         if (drawable != null) {
             mIcon = drawable.getBitmap();

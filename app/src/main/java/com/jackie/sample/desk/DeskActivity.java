@@ -68,6 +68,7 @@ import com.jackie.sample.view_pager_anim_transfer.guide.ViewPagerTransferGuideAn
 import com.jackie.sample.view_pager_indicator.ViewPagerColorTrackIndicatorActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerTriangleIndicatorActivity;
 import com.jackie.sample.volume_control.VolumeControlActivity;
+import com.jackie.sample.wechat_camera.WechatCameraActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
 import com.jackie.sample.wechat_slide.WechatSlideActivity;
@@ -219,6 +220,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿微信对话列表滑动删除效果");
         sampleBean.setClassName(WechatSlideActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿微信拍照效果");
+        sampleBean.setClassName(WechatCameraActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
