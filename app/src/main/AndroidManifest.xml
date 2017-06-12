@@ -307,5 +307,7 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="SWh76veHCCQOqf4MUDH0LmQkZ2cs2led" />
+
+        <activity android:name=".multiple_list.MultipleListActivity"/>
     </application>
 </manifest>

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.jackie.sample.R;
 import com.jackie.sample.adapter.SampleAdapter;
@@ -45,6 +44,7 @@ import com.jackie.sample.material_design.MaterialDesignActivity;
 import com.jackie.sample.metro.MetroActivity;
 import com.jackie.sample.mm_alert.SendToWXActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
+import com.jackie.sample.multiple_list.MultipleListActivity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
 import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
 import com.jackie.sample.ripple.RippleActivity;
@@ -82,21 +82,19 @@ import java.util.LinkedList;
 
 public class DeskActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
-    private View mRootView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mRootView = getLayoutInflater().inflate(R.layout.activity_desk, null);
-        setContentView(mRootView);
+        setContentView(R.layout.activity_desk);
 
         initView();
         ScreenUtils.hideNavigationBar(this);//控制底部的NavigationBar的显示和隐藏的效果
     }
 
     private void initView() {
-        mRecyclerView = (RecyclerView) mRootView.findViewById(R.id.rv_desk_content);
+        mRecyclerView = (RecyclerView) findViewById(R.id.rv_desk_content);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         LinkedList<SampleBean> linkedList = new LinkedList<>();
@@ -435,6 +433,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("百度地图");
         sampleBean.setClassName(BaiduMapActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("优雅的实现多类型列表");
+        sampleBean.setClassName(MultipleListActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
