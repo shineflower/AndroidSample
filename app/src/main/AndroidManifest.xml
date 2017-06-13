@@ -148,6 +148,9 @@
         <!-- 仿微信拍照效果 -->
         <activity android:name=".wechat_camera.WechatCameraActivity"/>
 
+        <!-- 仿微信朋友圈9图上传选择器 -->
+        <activity android:name=".wechat_image_upload.WechatImageUploadActivity"/>
+
         <!-- 自定义图案锁屏 -->
         <activity android:name=".lock_pattern.LockPatternActivity"/>
 

@@ -87,6 +87,23 @@
         <attr name="duration_max" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="ImageShowPickerView">
+        <!-- 单张图片大小（宽高一样） -->
+        <attr name="picture_size" format="dimension" />
+        <!-- 添加图片 -->
+        <attr name="add_picture_resource_id" format="reference" />
+        <!-- 删除图片 -->
+        <attr name="delete_picture_resource_id" format="reference" />
+        <!-- 是否显示删除按钮-->
+        <attr name="is_show_delete_picture" format="boolean" />
+        <!-- 是否展示动画-->
+        <attr name="is_show_animation" format="boolean" />
+        <!-- 单行显示数量-->
+        <attr name="show_num_one_line" format="integer" />
+        <!-- 最大数量 -->
+        <attr name="max_num" format="integer" />
+    </declare-styleable>
+
     <declare-styleable name="LoopCompletenessListView">
         <attr name="loop_item_count" format="integer"/>
     </declare-styleable>

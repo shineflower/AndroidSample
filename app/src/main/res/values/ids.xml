@@ -36,4 +36,7 @@
   
   <item type="id" name="about_version_code">false</item>
   <item type="id" name="split">false</item>
+
+  <item name="iv_image_show_picker_picture" type="id" />
+  <item name="iv_image_show_picker_delete" type="id" />
 </resources>
