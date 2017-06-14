@@ -18,9 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jackie.sample.R;
-import com.jackie.sample.adapter.ImageAdapter;
-import com.jackie.sample.bean.ImageFolder;
-import com.jackie.sample.custom_view.DirectoryPopupWindow;
+import com.jackie.sample.wechat_image_picker.adapter.ImageAdapter;
+import com.jackie.sample.wechat_image_picker.bean.ImageFolder;
+import com.jackie.sample.wechat_image_picker.view.DirectoryPopupWindow;
 
 import java.io.File;
 import java.io.FilenameFilter;

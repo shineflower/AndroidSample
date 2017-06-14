@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jackie.sample.R;
-import com.jackie.sample.adapter.CommonAdapter;
+import com.jackie.sample.wechat_image_picker.adapter.CommonAdapter;
 import com.jackie.sample.custom_view.LoopCompletenessListView;
-import com.jackie.sample.utils.ViewHolder;
+import com.jackie.sample.wechat_image_picker.utils.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

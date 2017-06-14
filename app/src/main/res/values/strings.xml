@@ -141,4 +141,8 @@
 
     <string name="get_token_from_weixin">获取微信访问Token</string>
     <string name="unregister_from_weixin">从微信反注册</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_delete">Delete</string>
 </resources>

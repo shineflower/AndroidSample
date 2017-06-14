@@ -311,6 +311,10 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="SWh76veHCCQOqf4MUDH0LmQkZ2cs2led" />
 
+        <!-- 优雅的实现多类型列表 -->
         <activity android:name=".multiple_list.MultipleListActivity"/>
+
+        <!-- 实现Gmail的收件箱效果 -->
+        <activity android:name=".gmail.GmailActivity"/>
     </application>
 </manifest>

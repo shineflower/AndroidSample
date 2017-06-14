@@ -21,8 +21,8 @@ import android.view.SurfaceHolder;
 import android.widget.ImageView;
 
 import com.jackie.sample.utils.ScreenUtils;
-import com.jackie.sample.wechat_camera.util.AngleUtil;
-import com.jackie.sample.wechat_camera.util.CameraParamUtil;
+import com.jackie.sample.wechat_camera.utils.AngleUtils;
+import com.jackie.sample.wechat_camera.utils.CameraParamUtils;
 import com.jackie.sample.wechat_camera.view.JCameraView;
 
 import java.io.File;
@@ -87,7 +87,7 @@ public class CameraInterface {
             }
 
             float[] values = event.values;
-            mAngle = AngleUtil.getSensorAngle(values[0], values[1]);
+            mAngle = AngleUtils.getSensorAngle(values[0], values[1]);
             rotationAnimation();
         }
 
@@ -297,9 +297,9 @@ public class CameraInterface {
         if (mCamera != null) {
             try {
                 mParams = mCamera.getParameters();
-                Camera.Size previewSize = CameraParamUtil.getInstance().getPreviewSize(mParams
+                Camera.Size previewSize = CameraParamUtils.getInstance().getPreviewSize(mParams
                         .getSupportedPreviewSizes(), 1000, screenProps);
-                Camera.Size pictureSize = CameraParamUtil.getInstance().getPictureSize(mParams
+                Camera.Size pictureSize = CameraParamUtils.getInstance().getPictureSize(mParams
                         .getSupportedPictureSizes(), 1200, screenProps);
 
                 mParams.setPreviewSize(previewSize.width, previewSize.height);
@@ -309,13 +309,13 @@ public class CameraInterface {
 
                 mParams.setPictureSize(pictureSize.width, pictureSize.height);
 
-                if (CameraParamUtil.getInstance().isSupportedFocusMode(
+                if (CameraParamUtils.getInstance().isSupportedFocusMode(
                         mParams.getSupportedFocusModes(),
                         Camera.Parameters.FOCUS_MODE_AUTO)) {
                     mParams.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
                 }
 
-                if (CameraParamUtil.getInstance().isSupportedPictureFormats(mParams.getSupportedPictureFormats(),
+                if (CameraParamUtils.getInstance().isSupportedPictureFormats(mParams.getSupportedPictureFormats(),
                         ImageFormat.JPEG)) {
                     mParams.setPictureFormat(ImageFormat.JPEG);
                     mParams.setJpegQuality(100);
@@ -432,9 +432,9 @@ public class CameraInterface {
 
         Camera.Size videoSize;
         if (mParams.getSupportedVideoSizes() == null) {
-            videoSize = CameraParamUtil.getInstance().getPictureSize(mParams.getSupportedPreviewSizes(), 1000, mScreenProps);
+            videoSize = CameraParamUtils.getInstance().getPictureSize(mParams.getSupportedPreviewSizes(), 1000, mScreenProps);
         } else {
-            videoSize = CameraParamUtil.getInstance().getPictureSize(mParams.getSupportedVideoSizes(), 1000, mScreenProps);
+            videoSize = CameraParamUtils.getInstance().getPictureSize(mParams.getSupportedVideoSizes(), 1000, mScreenProps);
         }
 
         if (videoSize.width == videoSize.height) {

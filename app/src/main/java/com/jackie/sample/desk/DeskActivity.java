@@ -31,6 +31,7 @@ import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
 import com.jackie.sample.float_window.FloatWindowActivity;
 import com.jackie.sample.flow_layout.FlowLayoutActivity;
 import com.jackie.sample.framework.FrameworkActivity;
+import com.jackie.sample.gmail.GmailActivity;
 import com.jackie.sample.gradient.LinearGradientActivity;
 import com.jackie.sample.image_code.ImageCodeActivity;
 import com.jackie.sample.image_filling.ImageFillingActivity;
@@ -444,6 +445,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("优雅的实现多类型列表");
         sampleBean.setClassName(MultipleListActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("实现Gmail的收件箱效果");
+        sampleBean.setClassName(GmailActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

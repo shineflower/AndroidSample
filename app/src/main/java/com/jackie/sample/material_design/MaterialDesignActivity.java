@@ -104,7 +104,7 @@ public class MaterialDesignActivity extends AppCompatActivity {
         mAdapter = new FruitAdapter(mFruitList);
         recyclerView.setAdapter(mAdapter);
 
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
+        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override

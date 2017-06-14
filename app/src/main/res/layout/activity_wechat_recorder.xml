@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.jackie.sample.custom_view.RecorderButton
+        <com.jackie.sample.wechat_recorder.view.RecorderButton
             android:id="@+id/recorder_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

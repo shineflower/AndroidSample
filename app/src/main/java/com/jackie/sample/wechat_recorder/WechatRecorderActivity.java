@@ -9,10 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.jackie.sample.R;
-import com.jackie.sample.adapter.RecorderAdapter;
-import com.jackie.sample.bean.Recorder;
-import com.jackie.sample.custom_view.RecorderButton;
-import com.jackie.sample.utils.MediaManager;
+import com.jackie.sample.wechat_recorder.adapter.RecorderAdapter;
+import com.jackie.sample.wechat_recorder.bean.Recorder;
+import com.jackie.sample.wechat_recorder.view.RecorderButton;
+import com.jackie.sample.wechat_recorder.utils.MediaManager;
 
 import java.util.ArrayList;
 import java.util.List;
