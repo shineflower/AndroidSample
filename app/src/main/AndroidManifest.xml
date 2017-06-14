@@ -315,6 +315,7 @@
         <activity android:name=".multiple_list.MultipleListActivity"/>
 
         <!-- 实现Gmail的收件箱效果 -->
-        <activity android:name=".gmail.GmailActivity"/>
+        <activity android:name=".gmail.GmailActivity"
+            android:theme="@style/AppTheme.NoActionBar.Gmail"/>
     </application>
 </manifest>

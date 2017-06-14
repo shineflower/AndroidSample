@@ -50,7 +50,7 @@ public class GmailActivity extends AppCompatActivity implements SwipeRefreshLayo
 
         setContentView(R.layout.activity_gmail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("收件箱");
+        toolbar.setTitle("Gmail");
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -64,7 +64,6 @@ public class GmailActivity extends AppCompatActivity implements SwipeRefreshLayo
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
-        mSwipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);
         mSwipeRefreshLayout.setOnRefreshListener(this);
 
         mAdapter = new MessagesAdapter(this, mMessageList, this);
@@ -225,6 +224,7 @@ public class GmailActivity extends AppCompatActivity implements SwipeRefreshLayo
     private void toggleSelection(int position) {
         mAdapter.toggleSelection(position);
         int count = mAdapter.getSelectedItemCount();
+
         if (count == 0) {
             mActionMode.finish();
         } else {
@@ -268,11 +268,12 @@ public class GmailActivity extends AppCompatActivity implements SwipeRefreshLayo
             mAdapter.clearSelections();
             mSwipeRefreshLayout.setEnabled(true);
             mActionMode = null;
+
             mRecyclerView.post(new Runnable() {
                 @Override
                 public void run() {
                     mAdapter.resetAnimationIndex();
-                    // mAdapter.notifyDataSetChanged();
+//                    mAdapter.notifyDataSetChanged();
                 }
             });
         }
