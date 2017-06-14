@@ -17,11 +17,18 @@
         android:layout_below="@id/scan_qr_code"
         android:text="生成二维码"/>
 
+    <Button
+        android:id="@+id/choose_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_qr_code"
+        android:text="从相册选取二维码"/>
+
     <LinearLayout
         android:id="@+id/create_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/create_qr_code"
+        android:layout_below="@id/choose_qr_code"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:orientation="horizontal">

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidSample</string>
+    <string name="app_name">Sample</string>
 
     <string name="tab_wechat">微信</string>
     <string name="tab_contact">通讯录</string>

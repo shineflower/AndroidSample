@@ -2,18 +2,26 @@ package com.jackie.sample.zxing.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 
 import com.google.zxing.BarcodeFormat;
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.DecodeHintType;
 import com.google.zxing.EncodeHintType;
+import com.google.zxing.PlanarYUVLuminanceSource;
+import com.google.zxing.Result;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.qrcode.QRCodeReader;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 /**
@@ -80,6 +88,9 @@ public class QRCodeUtils {
 
     /**
      * 在二维码中间添加Logo图案
+     * @param src    bitmap
+     * @param logo   logo
+     * @return
      */
     private static Bitmap addLogo(Bitmap src, Bitmap logo) {
         if (src == null) {
@@ -121,5 +132,77 @@ public class QRCodeUtils {
         }
 
         return bitmap;
+    }
+
+    /**
+     * 从选择的图片识别二维码
+     * @param drawable  图片drawable
+     * @return
+     */
+    public static String getStringFromQRCode(Drawable drawable) {
+        String httpString = null;
+
+        Bitmap bitmap = ImageUtils.drawableToBitmap(drawable);
+        byte[] data = ImageUtils.getYUV420sp(bitmap.getWidth(), bitmap.getHeight(), bitmap);
+
+        // 处理
+        try {
+            Hashtable<DecodeHintType, Object> hints = new Hashtable<>();
+//            hints.put(DecodeHintType.CHARACTER_SET, "utf-8");
+            hints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
+            hints.put(DecodeHintType.POSSIBLE_FORMATS, BarcodeFormat.QR_CODE);
+            PlanarYUVLuminanceSource source = new PlanarYUVLuminanceSource(data,
+                    bitmap.getWidth(),
+                    bitmap.getHeight(),
+                    0, 0,
+                    bitmap.getWidth(),
+                    bitmap.getHeight(),
+                    false);
+
+            BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(source));
+            QRCodeReader qrCodeReader = new QRCodeReader();
+            Result result = qrCodeReader.decode(binaryBitmap, hints);
+
+            httpString = result.getText();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        bitmap.recycle();
+
+        return httpString;
+    }
+
+    public static String getStringFromQRCode(Bitmap bitmap) {
+        String qrCodeString = null;
+
+        byte[] data = ImageUtils.getYUV420sp(bitmap.getWidth(), bitmap.getHeight(), bitmap);
+
+        // 处理
+        try {
+            Hashtable<DecodeHintType, Object> hints = new Hashtable<>();
+//            hints.put(DecodeHintType.CHARACTER_SET, "utf-8");
+            hints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
+            hints.put(DecodeHintType.POSSIBLE_FORMATS, BarcodeFormat.QR_CODE);
+            PlanarYUVLuminanceSource source = new PlanarYUVLuminanceSource(data,
+                    bitmap.getWidth(),
+                    bitmap.getHeight(),
+                    0, 0,
+                    bitmap.getWidth(),
+                    bitmap.getHeight(),
+                    false);
+
+            BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(source));
+            QRCodeReader qrCodeReader = new QRCodeReader();
+            Result result = qrCodeReader.decode(binaryBitmap, hints);
+
+            qrCodeString = result.getText();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        bitmap.recycle();
+
+        return qrCodeString;
     }
 }
