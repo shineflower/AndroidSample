@@ -56,7 +56,6 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 
     compile 'com.google.code.gson:gson:2.2.4'
-
     compile 'in.srain.cube:ultra-ptr:1.0.11'
 
     compile 'com.facebook.fresco:fresco:0.12.0'
@@ -72,4 +71,6 @@ dependencies {
     compile files('libs/libammsdk.jar')
 
     compile files('libs/BaiduLBS_Android.jar')
+
+    compile files('libs/pinyin4j-2.5.0.jar')
 }

@@ -210,12 +210,15 @@ public class IndexScroller {
         if (mSections == null || mSections.length == 0) {
             return 0;
         }
+
         if (y < mIndexBarRect.top + mIndexBarMargin) {
             return 0;
         }
+
         if (y >= mIndexBarRect.top + mIndexBarRect.height() - mIndexBarMargin) {
             return mSections.length - 1;
         }
+
         return (int) ((y - mIndexBarRect.top - mIndexBarMargin) / ((mIndexBarRect.height() - 2 * mIndexBarMargin) / mSections.length));
     }
 

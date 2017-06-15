@@ -39,6 +39,7 @@ public class IndexableListView extends ListView {
     @Override
     public void setFastScrollEnabled(boolean enabled) {
         mIsFastScrollEnabled = enabled;
+
         if (mIsFastScrollEnabled) {
             if (mScroller == null)
                 mScroller = new IndexScroller(getContext(), this);
