@@ -46,6 +46,7 @@ import com.jackie.sample.metro.MetroActivity;
 import com.jackie.sample.mm_alert.SendToWXActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
 import com.jackie.sample.multiple_list.MultipleListActivity;
+import com.jackie.sample.popup_window.PopupWindowActivity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
 import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
 import com.jackie.sample.ripple.RippleActivity;
@@ -450,6 +451,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("实现Gmail的收件箱效果");
         sampleBean.setClassName(GmailActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("封装一个通用的PopupWindow");
+        sampleBean.setClassName(PopupWindowActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

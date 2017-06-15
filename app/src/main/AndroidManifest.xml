@@ -317,5 +317,8 @@
         <!-- 实现Gmail的收件箱效果 -->
         <activity android:name=".gmail.GmailActivity"
             android:theme="@style/AppTheme.NoActionBar.Gmail"/>
+
+        <!-- 封装一个通用的PopupWindow -->
+        <activity android:name=".popup_window.PopupWindowActivity"/>
     </application>
 </manifest>

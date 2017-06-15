@@ -6,6 +6,8 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 
+import static com.baidu.location.h.j.w;
+
 /**
  * Created by Jackie on 2017/5/11.
  * 屏幕相关工具类
@@ -84,5 +86,15 @@ public class ScreenUtils {
     //获取屏幕的高度
     public static int getScreenHeight(Context context) {
         return context.getResources().getDisplayMetrics().heightPixels;
+    }
+
+    /**
+     * 测量View的宽高
+     * @param view view
+     */
+    public static void measureWidthAndHeight(View view) {
+        int width = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        int height = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        view.measure(width, height);
     }
 }

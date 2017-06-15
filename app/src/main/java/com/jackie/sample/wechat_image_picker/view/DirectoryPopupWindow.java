@@ -40,7 +40,7 @@ public class DirectoryPopupWindow extends PopupWindow {
     public DirectoryPopupWindow(Context context, List<ImageFolder> list) {
         calculateWidthAndHeight(context);
 
-        mContentView = LayoutInflater.from(context).inflate(R.layout.popupwindow_main, null);
+        mContentView = LayoutInflater.from(context).inflate(R.layout.popup_window_main, null);
         setContentView(mContentView);
 
         this.mList = list;

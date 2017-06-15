@@ -85,4 +85,25 @@
         <item name="android:shadowRadius">1</item>
     </style>
 
+
+    <style name="AnimationDown" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_down_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_down_out</item>
+    </style>
+
+    <style name="AnimationRight" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_left_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_left_out</item>
+    </style>
+
+    <style name="AnimationLeft" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_scale_right_in</item>
+        <item name="android:windowExitAnimation">@anim/push_scale_right_out</item>
+    </style>
+
+    <style name="AnimationUp" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_translate_up_in</item>
+        <item name="android:windowExitAnimation">@anim/push_translate_up_out</item>
+    </style>
+
 </resources>
