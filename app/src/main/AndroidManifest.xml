@@ -2,21 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jackie.sample">
 
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>/>
-
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-
-    <uses-permission android:name="android.permission.VIBRATE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -29,12 +26,12 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -61,264 +58,275 @@
         </activity>
 
         <!-- 短信验证码倒计时 -->
-        <activity android:name=".count_down.CountDownActivity"/>
+        <activity android:name=".count_down.CountDownActivity" />
 
         <!-- 图片验证码 -->
-        <activity android:name=".image_code.ImageCodeActivity"/>
+        <activity android:name=".image_code.ImageCodeActivity" />
 
         <!-- 自定义Switch组件 -->
-        <activity android:name=".switcher.SwitcherActivity"/>
+        <activity android:name=".switcher.SwitcherActivity" />
 
         <!-- 选择联系人列表 -->
-        <activity android:name=".select_contact.SelectContactActivity"/>
+        <activity android:name=".select_contact.SelectContactActivity" />
 
         <!-- 仿微信主界面(自定义指示器和消息提醒) -->
-        <activity android:name=".wechat_tab.WechatTabWithIndicatorActivity"/>
+        <activity android:name=".wechat_tab.WechatTabWithIndicatorActivity" />
 
         <!-- 仿微信主界面(图标颜色追踪) -->
-        <activity android:name=".wechat_tab.WechatTabWithoutIndicatorActivity"/>
+        <activity android:name=".wechat_tab.WechatTabWithoutIndicatorActivity" />
 
         <!-- 打造炫酷ViewPager字体颜色追踪指示器 -->
-        <activity android:name=".view_pager_indicator.ViewPagerColorTrackIndicatorActivity"/>
+        <activity android:name=".view_pager_indicator.ViewPagerColorTrackIndicatorActivity" />
 
         <!-- 打造炫酷ViewPager三角形指示器 -->
-        <activity android:name=".view_pager_indicator.ViewPagerTriangleIndicatorActivity"/>
+        <activity android:name=".view_pager_indicator.ViewPagerTriangleIndicatorActivity" />
 
         <!-- 图像处理集合 -->
-        <activity android:name=".image_processing.ImageProcessingActivity"/>
-        <activity android:name=".image_processing.PrimaryColorActivity"/>
-        <activity android:name=".image_processing.ColorMatrixActivity"/>
-        <activity android:name=".image_processing.PixelsEffectActivity"/>
-        <activity android:name=".image_processing.MatrixActivity"/>
-        <activity android:name=".image_processing.RoundRectXfermodeActivity"/>
-        <activity android:name=".image_processing.BitmapShaderActivity"/>
-        <activity android:name=".image_processing.ReflectActivity"/>
-        <activity android:name=".image_processing.MeshActivity"/>
+        <activity android:name=".image_processing.ImageProcessingActivity" />
+        <activity android:name=".image_processing.PrimaryColorActivity" />
+        <activity android:name=".image_processing.ColorMatrixActivity" />
+        <activity android:name=".image_processing.PixelsEffectActivity" />
+        <activity android:name=".image_processing.MatrixActivity" />
+        <activity android:name=".image_processing.RoundRectXfermodeActivity" />
+        <activity android:name=".image_processing.BitmapShaderActivity" />
+        <activity android:name=".image_processing.ReflectActivity" />
+        <activity android:name=".image_processing.MeshActivity" />
 
         <!-- ViewPager炫酷切换效果(适用于Guide) -->
-        <activity android:name=".view_pager_anim_transfer.guide.ViewPagerTransferGuideAnimActivity"/>
+        <activity android:name=".view_pager_anim_transfer.guide.ViewPagerTransferGuideAnimActivity" />
 
         <!-- ViewPager炫酷切换效果(适用于Banner) -->
-        <activity android:name=".view_pager_anim_transfer.banner.ViewPagerTransferBannerAnimActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
+        <activity
+            android:name=".view_pager_anim_transfer.banner.ViewPagerTransferBannerAnimActivity"
+            android:theme="@style/AppTheme.ActionBar" />
 
         <!-- 图片预览和多点触控 -->
-        <activity android:name=".zoom_image.ZoomImageActivity"/>
+        <activity android:name=".zoom_image.ZoomImageActivity" />
 
         <!-- 高清加载巨图方案 -->
-        <activity android:name=".zoom_image.LargeImageActivity"/>
+        <activity android:name=".zoom_image.LargeImageActivity" />
 
         <!-- 仿微信头像裁切 -->
-        <activity android:name=".clip_image.ClipActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity android:name=".clip_image.ShowImageActivity"/>
+        <activity
+            android:name=".clip_image.ClipActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity android:name=".clip_image.ShowImageActivity" />
 
         <!-- 自定义索引查询联系人 -->
-        <activity android:name=".indexable_contact.IndexableContactActivity"/>
+        <activity android:name=".indexable_contact.IndexableContactActivity" />
 
         <!-- 自定义实现刮刮卡效果 -->
-        <activity android:name=".scratch_card.ScratchCardActivity"/>
+        <activity android:name=".scratch_card.ScratchCardActivity" />
 
         <!-- 自定义树形控件 -->
-        <activity android:name=".tree.TreeActivity"/>
+        <activity android:name=".tree.TreeActivity" />
 
         <!-- 弧形菜单 -->
-        <activity android:name=".arc_menu.ArcMenuActivity"/>
+        <activity android:name=".arc_menu.ArcMenuActivity" />
 
         <!-- 仿建行圆形菜单 -->
-        <activity android:name=".circle_menu.CircleMenuActivity"/>
-        <activity android:name=".circle_menu.CircleActivity"/>
-        <activity android:name=".circle_menu.CCBActivity"/>
+        <activity android:name=".circle_menu.CircleMenuActivity" />
+        <activity android:name=".circle_menu.CircleActivity" />
+        <activity android:name=".circle_menu.CCBActivity" />
 
         <!-- 流式布局 -->
-        <activity android:name=".flow_layout.FlowLayoutActivity"/>
+        <activity android:name=".flow_layout.FlowLayoutActivity" />
 
         <!-- 仿QQ侧滑菜单 -->
-        <activity android:name=".sliding_menu.SlidingMenuActivity"/>
+        <activity android:name=".sliding_menu.SlidingMenuActivity" />
 
         <!-- 仿微信语音聊天 -->
-        <activity android:name=".wechat_recorder.WechatRecorderActivity"/>
+        <activity android:name=".wechat_recorder.WechatRecorderActivity" />
 
         <!-- 仿微信图片选择器 -->
-        <activity android:name=".wechat_image_picker.WechatImagePickerActivity"/>
+        <activity android:name=".wechat_image_picker.WechatImagePickerActivity" />
 
         <!-- 仿微信对话列表滑动删除效果 -->
-        <activity android:name=".wechat_slide.WechatSlideActivity"/>
+        <activity android:name=".wechat_slide.WechatSlideActivity" />
 
         <!-- 仿微信拍照效果 -->
-        <activity android:name=".wechat_camera.WechatCameraActivity"/>
+        <activity android:name=".wechat_camera.WechatCameraActivity" />
 
         <!-- 仿微信朋友圈9图上传选择器 -->
-        <activity android:name=".wechat_image_upload.WechatImageUploadActivity"/>
+        <activity android:name=".wechat_image_upload.WechatImageUploadActivity" />
 
         <!-- 自定义图案锁屏 -->
-        <activity android:name=".lock_pattern.LockPatternActivity"/>
+        <activity android:name=".lock_pattern.LockPatternActivity" />
 
         <!-- 多线程断点续传下载 -->
-        <activity android:name=".multiple_download.DownloadActivity"/>
-        <service android:name=".service.DownloadService"/>
+        <activity android:name=".multiple_download.DownloadActivity" />
+
+        <service android:name=".service.DownloadService" />
 
         <!-- 人脸检测 -->
-        <activity android:name=".face_detect.FaceDetectActivity"/>
+        <activity android:name=".face_detect.FaceDetectActivity" />
 
         <!-- 幸运转盘 -->
-        <activity android:name=".lucky_wheel.LuckyWheelActivity"/>
+        <activity android:name=".lucky_wheel.LuckyWheelActivity" />
 
         <!-- Data Binding -->
-        <activity android:name=".data_binding.DataBindingActivity"/>
+        <activity android:name=".data_binding.DataBindingActivity" />
         <activity android:name=".data_binding.SampleActivity" />
         <activity android:name=".data_binding.ListActivity" />
-        <activity android:name=".data_binding.TwoWayActivity"/>
-        <activity android:name=".data_binding.AnimationActivity"/>
+        <activity android:name=".data_binding.TwoWayActivity" />
+        <activity android:name=".data_binding.AnimationActivity" />
 
         <!-- 仿支付宝支付密码输入框 -->
-        <activity android:name=".alipay.AliPayActivity"/>
+        <activity android:name=".alipay.AliPayActivity" />
 
         <!-- 各种网络加载框架 -->
-        <activity android:name=".framework.FrameworkActivity"/>
-        <activity android:name=".framework.volley.VolleyActivity"/>
-        <activity android:name=".framework.okhttp.OkhttpActivity"/>
-        <activity android:name=".framework.okhttp3.Okhttp3Activity"/>
-        <activity android:name=".framework.fresco.FrescoActivity"/>
-        <activity android:name=".framework.retrofit.RetrofitActivity"/>
-        <activity android:name=".framework.nohttp.NohttpActivity"/>
+        <activity android:name=".framework.FrameworkActivity" />
+        <activity android:name=".framework.volley.VolleyActivity" />
+        <activity android:name=".framework.okhttp.OkhttpActivity" />
+        <activity android:name=".framework.okhttp3.Okhttp3Activity" />
+        <activity android:name=".framework.fresco.FrescoActivity" />
+        <activity android:name=".framework.retrofit.RetrofitActivity" />
+        <activity android:name=".framework.nohttp.NohttpActivity" />
 
         <!-- 多样式的ProgressBar -->
-        <activity android:name=".progress_bar.ProgressBarActivity"/>
+        <activity android:name=".progress_bar.ProgressBarActivity" />
 
         <!-- 仿京东天猫下拉刷新 -->
-        <activity android:name=".jd_tmall_refresh.JdTmallRefreshActivity"/>
-        <activity android:name=".jd_tmall_refresh.jd.JdActivity"/>
-        <activity android:name=".jd_tmall_refresh.tmall.TmallActivity"/>
+        <activity android:name=".jd_tmall_refresh.JdTmallRefreshActivity" />
+        <activity android:name=".jd_tmall_refresh.jd.JdActivity" />
+        <activity android:name=".jd_tmall_refresh.tmall.TmallActivity" />
 
         <!-- 基于文件模式和字节流模式的录音 -->
-        <activity android:name=".file_stream_recorder.FileStreamRecorderActivity"/>
-        <activity android:name=".file_stream_recorder.FileModeActivity"/>
-        <activity android:name=".file_stream_recorder.StreamModeActivity"/>
+        <activity android:name=".file_stream_recorder.FileStreamRecorderActivity" />
+        <activity android:name=".file_stream_recorder.FileModeActivity" />
+        <activity android:name=".file_stream_recorder.StreamModeActivity" />
 
         <!-- Material Design -->
-        <activity android:name=".material_design.MaterialDesignActivity"/>
-        <activity android:name=".material_design.FruitActivity"/>
+        <activity android:name=".material_design.MaterialDesignActivity" />
+        <activity android:name=".material_design.FruitActivity" />
 
         <!-- 共享元素跳转 -->
-        <activity android:name=".share_element.ShareElementFromActivity"/>
-        <activity android:name=".share_element.ShareElementToActivity"/>
+        <activity android:name=".share_element.ShareElementFromActivity" />
+        <activity android:name=".share_element.ShareElementToActivity" />
 
         <!-- 线性色彩渐变 -->
-        <activity android:name=".gradient.LinearGradientActivity"/>
+        <activity android:name=".gradient.LinearGradientActivity" />
 
         <!-- Sin正弦曲线 -->
-        <activity android:name=".sin.SinActivity"/>
+        <activity android:name=".sin.SinActivity" />
 
         <!-- 一个Canvas时钟 -->
-        <activity android:name=".clock.ClockActivity"/>
+        <activity android:name=".clock.ClockActivity" />
 
         <!-- 仿理财产品的钱数额的变化动画 -->
-        <activity android:name=".animator.ValueAnimatorActivity"/>
+        <activity android:name=".animator.ValueAnimatorActivity" />
 
         <!-- RecyclerView滑动删除 -->
-        <activity android:name=".slide_delete.SlideDeleteActivity"/>
+        <activity android:name=".slide_delete.SlideDeleteActivity" />
 
         <!-- GridView长按交换位置 -->
-        <activity android:name=".drag_exchange.ExchangeActivity"/>
+        <activity android:name=".drag_exchange.ExchangeActivity" />
 
         <!-- 有界波纹和无界波纹效果(可以放到任何View上面) -->
-        <activity android:name=".ripple.RippleActivity"/>
+        <activity android:name=".ripple.RippleActivity" />
 
         <!-- 可以上下进行粘性滑动的ScrollView -->
-        <activity android:name=".scroll_view.ElasticScrollViewActivity"/>
+        <activity android:name=".scroll_view.ElasticScrollViewActivity" />
 
         <!-- 可以循环滑动并且保证条目完整性的ScrollView -->
-        <activity android:name=".scroll_view.LoopCompletenessScrollViewActivity"/>
+        <activity android:name=".scroll_view.LoopCompletenessScrollViewActivity" />
 
         <!-- 可以循环滑动并且保证条目完整性的ListView -->
-        <activity android:name=".list_view.LoopCompletenessListViewActivity"/>
+        <activity android:name=".list_view.LoopCompletenessListViewActivity" />
 
         <!-- 三维开门一样的效果 -->
-        <activity android:name=".animator.OpenDoor3DActivity"/>
+        <activity android:name=".animator.OpenDoor3DActivity" />
 
         <!-- 模拟电视的关机动画 -->
-        <activity android:name=".animator.TurnOffTvActivity"/>
+        <activity android:name=".animator.TurnOffTvActivity" />
 
         <!-- 按钮波纹与波纹色定制 -->
-        <activity android:name=".android_l.AndroidLTouchFeedbackActivity"/>
+        <activity android:name=".android_l.AndroidLTouchFeedbackActivity" />
 
         <!-- Android L 动画新特性 -->
-        <activity android:name=".android_l.AndroidLCircularRevealActivity"/>
+        <activity android:name=".android_l.AndroidLCircularRevealActivity" />
 
         <!-- 贝塞尔曲线的购物车添加动画 -->
-        <activity android:name=".animator.ShoppingCartBezierActivity"/>
+        <activity android:name=".animator.ShoppingCartBezierActivity" />
 
         <!-- 文字特效 -->
-        <activity android:name=".text_view.TextViewActivity"/>
+        <activity android:name=".text_view.TextViewActivity" />
 
         <!-- 自定义EditText特效(搜索的标签添加与管理控件) -->
-        <activity android:name=".edit_text.EditTextActivity"/>
+        <activity android:name=".edit_text.EditTextActivity" />
 
         <!-- 共享元素相关测试加入Fragment -->
-        <activity android:name=".share_element.PhotoActivity"/>
+        <activity android:name=".share_element.PhotoActivity" />
 
         <!-- 自定义柱状图进度条 -->
-        <activity android:name=".progress_bar.ProgressLinearLayoutActivity"/>
+        <activity android:name=".progress_bar.ProgressLinearLayoutActivity" />
 
         <!-- 自定义垂直时间轴布局 -->
-        <activity android:name=".timeline.TimelineActivity"/>
+        <activity android:name=".timeline.TimelineActivity" />
 
         <!-- 快速实现动态模糊效果 -->
-        <activity android:name=".blur.BlurActivity"/>
+        <activity android:name=".blur.BlurActivity" />
 
         <!-- 仿芝麻信用雷达分布图 -->
-        <activity android:name=".sesame_credit.SesameCreditActivity"/>
+        <activity android:name=".sesame_credit.SesameCreditActivity" />
 
         <!-- 视频音量调控 -->
-        <activity android:name=".volume_control.VolumeControlActivity"/>
+        <activity android:name=".volume_control.VolumeControlActivity" />
 
         <!-- 基于Google Zxing实现二维码、条形码扫描 -->
-        <activity android:name=".zxing.ZxingActivity"/>
-        <activity android:name=".zxing.CaptureActivity"
+        <activity android:name=".zxing.ZxingActivity" />
+        <activity
+            android:name=".zxing.CaptureActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <!-- 圆形仪表盘，实现展示不同级别范围 -->
-        <activity android:name=".circle_range.CircleRangeActivity"/>
+        <activity android:name=".circle_range.CircleRangeActivity" />
 
         <!-- 仿QQ手机管家小火箭效果 -->
-        <activity android:name=".float_window.FloatWindowActivity"/>
-        <service android:name=".service.FloatWindowService"/>
+        <activity android:name=".float_window.FloatWindowActivity" />
+
+        <service android:name=".service.FloatWindowService" />
 
         <!-- 仿IOS微信分享对话框 -->
-        <activity android:name=".mm_alert.SendToWXActivity"/>
+        <activity android:name=".mm_alert.SendToWXActivity" />
 
         <!-- 仿Win8的metro的UI界面 -->
-        <activity android:name=".metro.MetroActivity"/>
+        <activity android:name=".metro.MetroActivity" />
 
         <!-- 不规则图像填充 -->
-        <activity android:name=".image_filling.ImageFillingActivity"/>
+        <activity android:name=".image_filling.ImageFillingActivity" />
 
         <!-- 百度地图 -->
-        <activity android:name=".baidu_map.BaiduMapActivity"
-            android:theme="@style/AppTheme.ActionBar"/>
-        <activity android:name=".baidu_map.OfflineMapActivity"/>
+        <activity
+            android:name=".baidu_map.BaiduMapActivity"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity android:name=".baidu_map.OfflineMapActivity" />
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote">
-        </service>
+            android:process=":remote"></service>
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="SWh76veHCCQOqf4MUDH0LmQkZ2cs2led" />
 
         <!-- 优雅的实现多类型列表 -->
-        <activity android:name=".multiple_list.MultipleListActivity"/>
+        <activity android:name=".multiple_list.MultipleListActivity" />
 
         <!-- 实现Gmail的收件箱效果 -->
-        <activity android:name=".gmail.GmailActivity"
-            android:theme="@style/AppTheme.NoActionBar.Gmail"/>
+        <activity
+            android:name=".gmail.GmailActivity"
+            android:theme="@style/AppTheme.NoActionBar.Gmail" />
 
         <!-- 封装一个通用的PopupWindow -->
-        <activity android:name=".popup_window.PopupWindowActivity"/>
+        <activity android:name=".popup_window.PopupWindowActivity" />
+
+        <!-- 通知 -->
+        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".notification.RemoteActivity"/>
     </application>
+
 </manifest>
