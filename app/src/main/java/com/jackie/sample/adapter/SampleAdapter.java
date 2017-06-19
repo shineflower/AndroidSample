@@ -26,7 +26,7 @@ public class SampleAdapter extends RecyclerView.Adapter<SampleAdapter.SampleView
 
     @Override
     public SampleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        mItemView = LayoutInflater.from(mContext).inflate(R.layout.desk_adapter_item, parent, false);
+        mItemView = LayoutInflater.from(mContext).inflate(R.layout.item_desk_adapter, parent, false);
         SampleViewHolder sampleViewHolder = new SampleViewHolder(mItemView);
         return sampleViewHolder;
     }

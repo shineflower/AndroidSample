@@ -96,6 +96,7 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
                     postDelayed(new AutoScaleRunnable(mInitScale, x, y), 16);
                     mIsAutoScale = true;
                 }
+
                 return true;
             }
         });
@@ -108,7 +109,7 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
         /**
          * 缩放的目标值
          */
-        float mTargetScale;
+        float targetScale;
         float x;
         float y;
 
@@ -118,15 +119,15 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
         float tempScale;
 
         public AutoScaleRunnable(float targetScale, float x, float y) {
-            this.mTargetScale = targetScale;
+            this.targetScale = targetScale;
             this.x = x;
             this.y = y;
 
-            if (getScale() < mTargetScale) {
+            if (getScale() < this.targetScale) {
                 tempScale = BIGGER;
             }
 
-            if (getScale() > mTargetScale) {
+            if (getScale() > this.targetScale) {
                 tempScale = SMALLER;
             }
         }
@@ -142,11 +143,11 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
 
             float currentScale = getScale();
 
-            if ((tempScale > 1.0f && currentScale < mTargetScale) || (tempScale < 1.0f && currentScale > mTargetScale)) {
+            if ((tempScale > 1.0f && currentScale < targetScale) || (tempScale < 1.0f && currentScale > targetScale)) {
                 postDelayed(this, 16);
             } else {
                 //设置成目标值
-                float scale = mTargetScale / currentScale;
+                float scale = targetScale / currentScale;
                 mImageMatrix.postScale(scale, scale, x, y);
                 checkBorderAndCenterWhenScale();
                 setImageMatrix(mImageMatrix);
@@ -204,7 +205,6 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
              * 当图片的宽和高都大于控件的宽和高，需要将图片的宽和高缩小
              */
             if (dw > width && dh > height) {
-
                 scale = Math.min(width * 1.0f / dw, height * 1.0f / dh);
             }
 
@@ -454,7 +454,6 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
 
         mImageMatrix.postTranslate(dx, dy);
     }
-
 
     private boolean isMoveAction(float x, float y) {
         return Math.sqrt(x * x + y * y) > mTouchSlop;

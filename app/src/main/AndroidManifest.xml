@@ -34,7 +34,6 @@
     <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".application.SampleApplication"
@@ -307,7 +306,7 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"></service>
+            android:process=":remote" />
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
@@ -326,7 +325,11 @@
 
         <!-- 通知 -->
         <activity android:name=".notification.NotificationActivity" />
-        <activity android:name=".notification.RemoteActivity"/>
+        <activity android:name=".notification.RemoteActivity" />
+
+        <!-- 自定义视频播放器 -->
+        <activity android:name=".video_player.VideoPlayerActivity"/>
+        <activity android:name=".video_player.RecyclerViewActivity"/>
     </application>
 
 </manifest>

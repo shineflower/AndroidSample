@@ -66,6 +66,7 @@ import com.jackie.sample.text_view.TextViewActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
+import com.jackie.sample.video_player.VideoPlayerActivity;
 import com.jackie.sample.view_pager_anim_transfer.banner.ViewPagerTransferBannerAnimActivity;
 import com.jackie.sample.view_pager_anim_transfer.guide.ViewPagerTransferGuideAnimActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerColorTrackIndicatorActivity;
@@ -462,6 +463,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("通知");
         sampleBean.setClassName(NotificationActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义视频播放器");
+        sampleBean.setClassName(VideoPlayerActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
