@@ -96,6 +96,21 @@
 	        style="@style/MMLineActionButton"
 	        android:layout_margin="10dp"
 	        android:text="@string/unregister_from_weixin"/>
-	    
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+			style="@style/CommonButtonNormal"
+            android:layout_margin="10dp"
+			android:text="按钮样式背景渐变带阴影可点击"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+			style="@style/CommonButtonNoClick"
+			android:layout_margin="10dp"
+			android:text="按钮样式背景渐变带阴影不可点击"/>
 	</LinearLayout>
 </ScrollView>

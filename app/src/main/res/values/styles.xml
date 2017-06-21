@@ -85,6 +85,21 @@
         <item name="android:shadowRadius">1</item>
     </style>
 
+    <!--普通按钮样式-->
+    <style name="CommonButtonNormal" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="android:background">@drawable/btn_normal_shadow_bg</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <!--不可点击按钮样式-->
+    <style name="CommonButtonNoClick" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
+        <item name="android:background">@drawable/shape_button_no_click_bg</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
 
     <style name="AnimationDown" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/push_scale_down_in</item>
