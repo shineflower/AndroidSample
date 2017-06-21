@@ -112,7 +112,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
         /**
          * 缩放的目标值
          */
-        float mTargetScale;
+        float targetScale;
         float x;
         float y;
 
@@ -122,15 +122,15 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
         float tempScale;
 
         public AutoScaleRunnable(float targetScale, float x, float y) {
-            this.mTargetScale = targetScale;
+            this.targetScale = targetScale;
             this.x = x;
             this.y = y;
 
-            if (getScale() < mTargetScale) {
+            if (getScale() < this.targetScale) {
                 tempScale = BIGGER;
             }
 
-            if (getScale() > mTargetScale) {
+            if (getScale() > this.targetScale) {
                 tempScale = SMALLER;
             }
         }
@@ -146,11 +146,11 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
 
             float currentScale = getScale();
 
-            if ((tempScale > 1.0f && currentScale < mTargetScale) || (tempScale < 1.0f && currentScale > mTargetScale)) {
+            if ((tempScale > 1.0f && currentScale < targetScale) || (tempScale < 1.0f && currentScale > targetScale)) {
                 postDelayed(this, 16);
             } else {
                 //设置成目标值
-                float scale = mTargetScale / currentScale;
+                float scale = targetScale / currentScale;
                 mImageMatrix.postScale(scale, scale, x, y);
                 checkBorder();
                 setImageMatrix(mImageMatrix);

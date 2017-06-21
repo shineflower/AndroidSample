@@ -16,7 +16,7 @@ import com.jackie.sample.R;
 
 public class ClipImageLayout extends RelativeLayout {
     private ClipImageView mClipImageView;
-    private ClipImageBorderView mClipImageBorderView;
+    private ClipImageBorder mClipImageBorder;
 
     private int mHorizontalPadding;
     private Drawable mImageDrawable;
@@ -33,14 +33,14 @@ public class ClipImageLayout extends RelativeLayout {
         super(context, attrs, defStyleAttr);
 
         mClipImageView = new ClipImageView(context);
-        mClipImageBorderView = new ClipImageBorderView(context);
+        mClipImageBorder = new ClipImageBorder(context);
 
         android.view.ViewGroup.LayoutParams params = new LayoutParams(
                 android.view.ViewGroup.LayoutParams.MATCH_PARENT,
                 android.view.ViewGroup.LayoutParams.MATCH_PARENT);
 
         this.addView(mClipImageView, params);
-        this.addView(mClipImageBorderView, params);
+        this.addView(mClipImageBorder, params);
 
         // 设置默认值
         if (mHorizontalPadding == 0) {
@@ -54,7 +54,6 @@ public class ClipImageLayout extends RelativeLayout {
             mImageDrawable = getResources().getDrawable(R.drawable.yifei1);
         }
 
-
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ClipImageLayout);
 
         mHorizontalPadding = ta.getDimensionPixelOffset(R.styleable.ClipImageLayout_horizontal_padding, mHorizontalPadding);
@@ -64,9 +63,8 @@ public class ClipImageLayout extends RelativeLayout {
 
         mClipImageView.setImageDrawable(mImageDrawable);
         mClipImageView.setHorizontalPadding(mHorizontalPadding);
-        mClipImageBorderView.setHorizontalPadding(mHorizontalPadding);
+        mClipImageBorder.setHorizontalPadding(mHorizontalPadding);
     }
-
 
     /**
      * 对外公布设置边距的方法,单位为dp

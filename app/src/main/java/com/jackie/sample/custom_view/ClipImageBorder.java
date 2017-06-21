@@ -13,7 +13,7 @@ import android.view.View;
  * Created by Jackie on 2017/5/15.
  */
 
-public class ClipImageBorderView extends View {
+public class ClipImageBorder extends View {
     /**
      * 水平方向与View的边距
      */
@@ -33,15 +33,15 @@ public class ClipImageBorderView extends View {
 
     private Paint mPaint;
 
-    public ClipImageBorderView(Context context) {
+    public ClipImageBorder(Context context) {
         this(context, null);
     }
 
-    public ClipImageBorderView(Context context, @Nullable AttributeSet attrs) {
+    public ClipImageBorder(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public ClipImageBorderView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ClipImageBorder(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         //计算padding的px
