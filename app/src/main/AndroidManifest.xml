@@ -328,8 +328,11 @@
         <activity android:name=".notification.RemoteActivity" />
 
         <!-- 自定义视频播放器 -->
-        <activity android:name=".video_player.VideoPlayerActivity"/>
-        <activity android:name=".video_player.RecyclerViewActivity"/>
+        <activity android:name=".video_player.VideoPlayerActivity" />
+        <activity android:name=".video_player.RecyclerViewActivity" />
+
+        <!-- 自定义倒计时录音交互动效 -->
+        <activity android:name=".recorder_timing.RecorderTimingActivity"/>
     </application>
 
 </manifest>

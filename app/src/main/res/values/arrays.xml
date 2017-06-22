@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="magic_effect">
+        <item>RotateDown</item>
+        <item>RotateUp</item>
+        <item>RotateY</item>
+        <item>Standard</item>
+        <item>Alpha</item>
+        <item>ScaleIn</item>
+        <item>RotateDown and Alpha</item>
+        <item>RotateDown and Alpha and ScaleIn</item>
+    </string-array>
+
+    <string-array name="array_title">
+        <item>条目一</item>
+        <item>条目二</item>
+        <item>条目三</item>
+        <item>条目四</item>
+        <item>条目五</item>
+        <item>条目六</item>
+    </string-array>
+
+    <string-array name="circle_range_view_colors">
+        <item>#008C8C</item>
+        <item>#4DA6FF</item>
+        <item>#4DC433</item>
+        <item>#A4C433</item>
+        <item>#FF944D</item>
+        <item>#FF4D4D</item>
+        <item>#C30C0C</item>
+    </string-array>
+
+    <string-array name="circle_range_view_values">
+        <item>BP_PURE_PERIOD_HBP</item>
+        <item>BP_LOW</item>
+        <item>BP_NORMAL</item>
+        <item>BP_NORMAL_HIGH</item>
+        <item>BP_MILD_HYPERTENSION</item>
+        <item>BP_MIDDLE_HYPERTENSION</item>
+        <item>BP_SEVERE_HYPERTENSION</item>
+    </string-array>
+
+    <string-array name="circle_range_view_texts">
+        <item>单纯收缩期</item>
+        <item>偏低</item>
+        <item>理想</item>
+        <item>正常</item>
+        <item>轻度</item>
+        <item>中度</item>
+        <item>重度</item>
+    </string-array>
+
+    <!-- 逐帧动画 如果直接定义在drawable中，图片太多，会出现OOM-->
+    <string-array name="recorder_anim_list">
+        <item>@drawable/record1</item>
+        <item>@drawable/record2</item>
+        <item>@drawable/record3</item>
+        <item>@drawable/record4</item>
+        <item>@drawable/record5</item>
+        <item>@drawable/record6</item>
+        <item>@drawable/record7</item>
+        <item>@drawable/record8</item>
+        <item>@drawable/record9</item>
+        <item>@drawable/record10</item>
+        <item>@drawable/record11</item>
+        <item>@drawable/record12</item>
+        <item>@drawable/record13</item>
+        <item>@drawable/record14</item>
+        <item>@drawable/record15</item>
+        <item>@drawable/record16</item>
+        <item>@drawable/record17</item>
+        <item>@drawable/record18</item>
+        <item>@drawable/record19</item>
+        <item>@drawable/record20</item>
+        <item>@drawable/record21</item>
+        <item>@drawable/record22</item>
+        <item>@drawable/record23</item>
+        <item>@drawable/record24</item>
+        <item>@drawable/record25</item>
+        <item>@drawable/record26</item>
+        <item>@drawable/record27</item>
+        <item>@drawable/record28</item>
+        <item>@drawable/record29</item>
+        <item>@drawable/record30</item>
+    </string-array>
+</resources>

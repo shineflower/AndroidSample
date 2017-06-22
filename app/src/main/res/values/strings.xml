@@ -6,17 +6,6 @@
     <string name="tab_find">发现</string>
     <string name="tab_me">我</string>
 
-    <string-array name="magic_effect">
-        <item>RotateDown</item>
-        <item>RotateUp</item>
-        <item>RotateY</item>
-        <item>Standard</item>
-        <item>Alpha</item>
-        <item>ScaleIn</item>
-        <item>RotateDown and Alpha</item>
-        <item>RotateDown and Alpha and ScaleIn</item>
-    </string-array>
-
     <string name="state_normal">按住 说话</string>
     <string name="state_recording">松开 结束</string>
     <string name="state_cancel">松开手指，取消发送</string>
@@ -29,15 +18,6 @@
 
     <string name="drawer_open">open</string>
     <string name="drawer_close">close</string>
-
-    <string-array name="array_title">
-        <item>条目一</item>
-        <item>条目二</item>
-        <item>条目三</item>
-        <item>条目四</item>
-        <item>条目五</item>
-        <item>条目六</item>
-    </string-array>
 
     <string name="image_transition">image</string>
 
@@ -56,36 +36,6 @@
     <string name="yoona_detail">林允儿（Yoona），1990年5月30日出生于韩国首尔，韩国女歌手、演员、主持人，女子演唱团体少女时代成员之一。2002年，林允儿被韩国SM娱乐有限公司发掘，正式进入SM公司成为旗下练习生。2007年8月5日以演唱团体少女时代正式出道。2008年在电视连续剧《你是我的命运》担任女主角，凭借该剧获得第45届百想艺术大赏最佳新人女演员奖。2009年参演电视剧《乞丐变王子》；同年凭借电视剧《你是我的命运》获得百想艺术大奖最佳新人女演员奖。</string>
 
     <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
-
-    <string-array name="circle_range_view_colors">
-        <item>#008C8C</item>
-        <item>#4DA6FF</item>
-        <item>#4DC433</item>
-        <item>#A4C433</item>
-        <item>#FF944D</item>
-        <item>#FF4D4D</item>
-        <item>#C30C0C</item>
-    </string-array>
-
-    <string-array name="circle_range_view_values">
-        <item>BP_PURE_PERIOD_HBP</item>
-        <item>BP_LOW</item>
-        <item>BP_NORMAL</item>
-        <item>BP_NORMAL_HIGH</item>
-        <item>BP_MILD_HYPERTENSION</item>
-        <item>BP_MIDDLE_HYPERTENSION</item>
-        <item>BP_SEVERE_HYPERTENSION</item>
-    </string-array>
-
-    <string-array name="circle_range_view_texts">
-        <item>单纯收缩期</item>
-        <item>偏低</item>
-        <item>理想</item>
-        <item>正常</item>
-        <item>轻度</item>
-        <item>中度</item>
-        <item>重度</item>
-    </string-array>
 
     <string name="app_ok">确定</string>
     <string name="app_cancel">取消</string>

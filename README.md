@@ -139,3 +139,6 @@ Android L动画新特性
 
 仿Win8的metro的UI界面   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/metro.gif)
+
+自定义倒计时录音交互动效   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/recorder_timing.gif)

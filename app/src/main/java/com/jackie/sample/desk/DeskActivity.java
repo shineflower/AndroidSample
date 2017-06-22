@@ -37,6 +37,7 @@ import com.jackie.sample.image_code.ImageCodeActivity;
 import com.jackie.sample.image_filling.ImageFillingActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
 import com.jackie.sample.indexable_contact.IndexableContactActivity;
+import com.jackie.sample.recorder_timing.RecorderTimingActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
 import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
@@ -468,6 +469,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("自定义视频播放器");
         sampleBean.setClassName(VideoPlayerActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义倒计时录音交互动效");
+        sampleBean.setClassName(RecorderTimingActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

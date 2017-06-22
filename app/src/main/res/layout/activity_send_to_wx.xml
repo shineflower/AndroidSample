@@ -111,6 +111,6 @@
             android:layout_gravity="center_horizontal"
 			style="@style/CommonButtonNoClick"
 			android:layout_margin="10dp"
-			android:text="按钮样式背景渐变带阴影不可点击"/>
+			android:text="按钮样式背景渐变带阴影不点击"/>
 	</LinearLayout>
 </ScrollView>
