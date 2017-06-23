@@ -130,8 +130,14 @@
         <attr name="extraTextSize" format="dimension|reference"/>
     </declare-styleable>
 
-
     <declare-styleable name="VirtualKeyboardView">
         <attr name="type" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RangeBar">
+        <attr name="textStyle" format="enum">
+            <enum name="NORMAL" value="0"/>
+            <enum name="TEXT" value="1"/>
+        </attr>
     </declare-styleable>
 </resources>

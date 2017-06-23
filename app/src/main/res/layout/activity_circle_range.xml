@@ -1,16 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.jackie.sample.custom_view.CircleRangeView
-        android:id="@+id/circle_range_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        app:rangeColorArray="@array/circle_range_view_colors"
-        app:rangeTextArray="@array/circle_range_view_texts"
-        app:rangeValueArray="@array/circle_range_view_values"/>
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.jackie.sample.custom_view.CircleRangeView
+            android:id="@+id/circle_range_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            app:rangeColorArray="@array/circle_range_view_colors"
+            app:rangeTextArray="@array/circle_range_view_texts"
+            app:rangeValueArray="@array/circle_range_view_values"/>
+
+        <com.jackie.sample.custom_view.RangeBar
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="10dp"/>
+
+        <com.jackie.sample.custom_view.RangeBar
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            app:textStyle="TEXT"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#0971ce"
+            android:textSize="27sp"
+            tools:text="≤3小时"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp">
+
+            <View
+                android:id="@+id/bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ececec"/>
+
+            <Gallery
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_above="@+id/bottom_line"
+                android:layout_centerHorizontal="true"
+                android:spacing="10dp"/>
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_line"
+                android:layout_centerHorizontal="true"
+                android:background="#0971ce"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

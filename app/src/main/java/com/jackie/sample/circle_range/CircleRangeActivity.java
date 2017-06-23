@@ -3,11 +3,16 @@ package com.jackie.sample.circle_range;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Gallery;
+import android.widget.TextView;
 
 import com.jackie.sample.R;
+import com.jackie.sample.adapter.GalleryAdapter;
 import com.jackie.sample.custom_view.CircleRangeView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -20,6 +25,14 @@ public class CircleRangeActivity extends AppCompatActivity implements View.OnCli
     private String [] mValueArray;
     private Random mRandom;
 
+    private TextView mTime;
+    private Gallery mGallery;
+    private GalleryAdapter mAdapter;
+
+    private List<String> mDataList;
+
+    private static final String[] DATA_ARRAY = { "不设置", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +43,36 @@ public class CircleRangeActivity extends AppCompatActivity implements View.OnCli
 
         mValueArray = getResources().getStringArray(R.array.circle_range_view_values);
         mRandom = new Random();
+
+
+
+        mTime = (TextView) findViewById(R.id.time);
+        mGallery = (Gallery) findViewById(R.id.gallery);
+
+        mDataList = new ArrayList<>();
+        Collections.addAll(mDataList, DATA_ARRAY);
+
+        mAdapter = new GalleryAdapter(2, mDataList);
+
+        mGallery.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mAdapter.setSelectPosition(position);
+
+                if (position == 0) {
+                    mTime.setText(DATA_ARRAY[position]);
+                } else {
+                    mTime.setText("≤" + DATA_ARRAY[position]);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        mGallery.setAdapter(mAdapter);
     }
 
     @Override

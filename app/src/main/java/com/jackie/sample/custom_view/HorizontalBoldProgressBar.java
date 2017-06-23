@@ -49,8 +49,8 @@ public class HorizontalBoldProgressBar extends View {
         mProgressPaint.setAntiAlias(true);//去锯齿
 
         mTextPaint = new Paint();
-        mTextPaint.setStrokeWidth(DensityUtils.dip2px(mContext,1));
-        mTextPaint.setTextSize(DensityUtils.dip2px(mContext,14));
+        mTextPaint.setStrokeWidth(DensityUtils.dip2px(mContext, 1));
+        mTextPaint.setTextSize(DensityUtils.dip2px(mContext, 14));
         mTextPaint.setColor(mContext.getResources().getColor(R.color.gray));
         mTextPaint.setTextAlign(Paint.Align.LEFT);
     }
