@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_adder"
+            android:layout_width="24dp"
+            android:layout_height="24dp">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_add"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_input_number"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_toRightOf="@id/rl_adder"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:inputType="number"
+            android:textColor="#333333"
+            android:textSize="24dp"
+            android:text="3"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_subtract"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toRightOf="@id/et_input_number">
+
+            <ImageView
+
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_reduce"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

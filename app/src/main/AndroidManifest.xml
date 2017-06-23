@@ -335,7 +335,10 @@
         <activity android:name=".recorder_timing.RecorderTimingActivity" />
 
         <!-- 自定义键盘 -->
-        <activity android:name=".keyboard.KeyboardActivity"/>
+        <activity android:name=".keyboard.KeyboardActivity" />
+
+        <!-- 数字加减器 -->
+        <activity android:name=".adder_subtractor.AdderSubtractorActivity" />
     </application>
 
 </manifest>

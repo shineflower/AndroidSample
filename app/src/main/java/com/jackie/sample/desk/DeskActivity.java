@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.jackie.sample.R;
 import com.jackie.sample.adapter.SampleAdapter;
+import com.jackie.sample.adder_subtractor.AdderSubtractorActivity;
 import com.jackie.sample.alipay.AliPayActivity;
 import com.jackie.sample.android_l.AndroidLCircularRevealActivity;
 import com.jackie.sample.android_l.AndroidLTouchFeedbackActivity;
@@ -480,6 +481,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("自定义键盘");
         sampleBean.setClassName(KeyboardActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("数字加减器");
+        sampleBean.setClassName(AdderSubtractorActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
