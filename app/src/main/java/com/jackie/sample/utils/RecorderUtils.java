@@ -1,6 +1,5 @@
 package com.jackie.sample.utils;
 
-import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Environment;
@@ -12,15 +11,12 @@ import java.util.List;
 /**
  *  Created by Jackie on 2017/6/22.
  *  录音工具类
- *
  */
 public class RecorderUtils {
-    private Context mContext;
     private MediaRecorder mMediaRecorder;
     private MediaPlayer mMediaPlayer;
 
-    public RecorderUtils(Context context, MediaRecorder mediaRecorder){
-        this.mContext = context;
+    public RecorderUtils(MediaRecorder mediaRecorder){
         this.mMediaRecorder = mediaRecorder;
         mMediaPlayer = new MediaPlayer();
 
@@ -35,7 +31,7 @@ public class RecorderUtils {
 
     public void startRecorder(List<String> list) {
         try {
-            if(mMediaRecorder == null){
+            if(mMediaRecorder == null) {
                 mMediaRecorder = new MediaRecorder();
             }
 

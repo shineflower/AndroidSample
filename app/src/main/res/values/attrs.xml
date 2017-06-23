@@ -129,4 +129,9 @@
         <attr name="rangeTextSize" format="dimension|reference"/>
         <attr name="extraTextSize" format="dimension|reference"/>
     </declare-styleable>
+
+
+    <declare-styleable name="VirtualKeyboardView">
+        <attr name="type" format="integer" />
+    </declare-styleable>
 </resources>

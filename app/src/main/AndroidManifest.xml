@@ -332,7 +332,10 @@
         <activity android:name=".video_player.RecyclerViewActivity" />
 
         <!-- 自定义倒计时录音交互动效 -->
-        <activity android:name=".recorder_timing.RecorderTimingActivity"/>
+        <activity android:name=".recorder_timing.RecorderTimingActivity" />
+
+        <!-- 自定义键盘 -->
+        <activity android:name=".keyboard.KeyboardActivity"/>
     </application>
 
 </manifest>

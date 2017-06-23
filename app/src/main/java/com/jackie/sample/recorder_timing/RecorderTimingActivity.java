@@ -187,7 +187,7 @@ public class RecorderTimingActivity extends AppCompatActivity implements View.On
         mMediaRecorder = new MediaRecorder();
         mRecordFileList = new ArrayList(); //录音的集合
 
-        mRecordArmUtils = new RecorderUtils(this, mMediaRecorder);
+        mRecordArmUtils = new RecorderUtils(mMediaRecorder);
         //获得JackieRecorder文件夹下.mp3后缀的文件名集合
         getRecorderFiles();
         //开始录音
