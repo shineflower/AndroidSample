@@ -339,6 +339,9 @@
 
         <!-- 数字加减器 -->
         <activity android:name=".adder_subtractor.AdderSubtractorActivity" />
+
+        <!-- 四级地址选择器 -->
+        <activity android:name=".address.AddressSelectActivity" />
     </application>
 
 </manifest>

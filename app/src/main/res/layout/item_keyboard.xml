@@ -11,6 +11,6 @@
         android:background="@drawable/selector_keyboard"
         android:gravity="center"
         android:textSize="24dp"
-        android:textColor="#333333" />
+        android:textColor="@color/color_333333" />
 
 </LinearLayout>

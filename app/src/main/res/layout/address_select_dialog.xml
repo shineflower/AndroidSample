@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee"
+            android:layout_alignParentBottom="true"/>
+
+        <LinearLayout
+            android:id="@+id/ll_select_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_address_select_dialog_bg"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="left|center"
+                    android:textSize="16dp"
+                    android:text="选择省"
+                    android:textColor="@color/color_0971ce" />
+
+                <View
+                    android:id="@+id/view_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/color_0971ce"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:background="@null"
+                    android:textSize="16dp"
+                    tools:text="选择市"
+                    android:button="@null"/>
+
+                <View
+                    android:id="@+id/view_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginRight="45dp"
+                    android:background="@color/color_0971ce"
+                    android:visibility="invisible"
+                    tools:visibility="visible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:background="@null"
+                    android:textSize="16dp"
+                    android:button="@null" />
+
+                <View
+                    android:id="@+id/view_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/color_0971ce"
+                    android:layout_marginRight="40dp"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_s"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:background="@null"
+                    android:textSize="16dp"
+                    tools:text="选择街道"
+                    android:button="@null" />
+
+                <View
+                    android:id="@+id/view_s"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/color_0971ce"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_p"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:visibility="visible"/>
+
+        <ListView
+            android:id="@+id/lv_c"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:visibility="invisible"/>
+
+        <ListView
+            android:id="@+id/lv_d"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:visibility="invisible"/>
+
+        <ListView
+            android:id="@+id/lv_s"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:visibility="invisible"/>
+    </FrameLayout>
+</LinearLayout>

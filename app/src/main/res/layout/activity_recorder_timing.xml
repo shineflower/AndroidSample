@@ -35,7 +35,7 @@
             android:layout_marginTop="45dp"
             android:layout_gravity="center_horizontal"
             android:textSize="27dp"
-            android:textColor="#0971ce"/>
+            android:textColor="@color/color_0971ce"/>
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -61,7 +61,7 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="确定"
-                android:textColor="#0971ce"
+                android:textColor="@color/color_0971ce"
                 android:background="@drawable/selector_keyboard"
                 android:textSize="20dp" />
         </LinearLayout>

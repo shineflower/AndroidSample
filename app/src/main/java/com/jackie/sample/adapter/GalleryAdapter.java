@@ -71,7 +71,7 @@ public class GalleryAdapter extends BaseAdapter {
     }
 
     private class ViewHolder {
-        TextView textView ;
+        TextView textView;
         View lineView;
 
         public ViewHolder(View convertView) {

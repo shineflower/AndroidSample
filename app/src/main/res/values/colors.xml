@@ -50,4 +50,8 @@
     <color name="row_activated">#e0e0e0</color>
     <color name="bg_action_mode">#757575</color>
     <color name="bg_circle_default">#666666</color>
+
+
+    <color name="color_333333">#333333</color>
+    <color name="color_0971ce">#0971ce</color>
 </resources>

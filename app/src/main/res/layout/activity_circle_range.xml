@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:textColor="#0971ce"
+            android:textColor="@color/color_0971ce"
             android:textSize="27sp"
             tools:text="≤3小时"/>
 
@@ -67,7 +67,7 @@
                 android:layout_height="match_parent"
                 android:layout_above="@+id/bottom_line"
                 android:layout_centerHorizontal="true"
-                android:background="#0971ce"/>
+                android:background="@color/color_0971ce"/>
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
