@@ -10,7 +10,7 @@
         android:id="@+id/tv_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tv_line"
+        android:layout_above="@+id/v_line"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:text="3"

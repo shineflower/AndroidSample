@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.StyleRes;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -188,8 +187,6 @@ public class AddressSelectDialog extends Dialog implements View.OnClickListener,
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         WrappedAddressDataBean wrappedAddressDataBean;
-        List<WrappedAddressDataBean> queriedDistrictList = null;
-        List<WrappedAddressDataBean> queriedStreetList = null;
 
         switch (parent.getId()) {
             case R.id.lv_p:
@@ -226,114 +223,51 @@ public class AddressSelectDialog extends Dialog implements View.OnClickListener,
             case R.id.lv_c:
                 wrappedAddressDataBean = mCityList.get(position);
 
-                if (queriedDistrictList != null && queriedDistrictList.size() == 1 && TextUtils.isEmpty(queriedDistrictList.get(0).name)) {    //	没有第三级
-                    if (wrappedAddressDataBean.isCheck) {   //	如果已经被选中, 什么都不做, 直接dismiss
-                        this.dismiss();
-                        return;
-                    }
-
-                    wrappedAddressDataBean.isCheck = true;  //	如果没有被选中, 先让状态变成选中
-                    mTextViewC.setText(wrappedAddressDataBean.name);
-                    mTextViewD.setText("");
-                    mTextViewS.setText("");
-
-                    if (mLastCityPosition > -1) {   //	如果不是第一次被选中, 清除之前的状态
-                        mCityList.get(mLastCityPosition).isCheck = false;
-                        mLastDistrictPosition = -1;
-                        mDistrictAdapter.notifyDataSetChanged();
-                    }
-
-                    mLastCityPosition = position;
-                    mCityAdapter.notifyDataSetChanged();
-
-                    mProvince = mTextViewP.getText().toString().trim();
-                    mCity = mTextViewC.getText().toString().trim();
-                    mDistrict = "";
-                    mStreet = "";
-
-                    if (mOnAddressListener != null) {
-                        mOnAddressListener.onAddress(mProvince, mCity, mDistrict, mStreet);
-                    }
-
-                    this.dismiss();
-                } else {    //如果有第三级
-                    if (wrappedAddressDataBean.isCheck) {
-                        return;
-                    }
-
-                    wrappedAddressDataBean.isCheck = true;
-
-                    mTextViewC.setText(wrappedAddressDataBean.name);
-                    checkButton(mTextViewD);
-                    mTextViewD.setText("选择区");
-                    mTextViewS.setText("");
-
-                    if (mLastCityPosition > -1) {
-                        mCityList.get(mLastCityPosition).isCheck = false;
-                        mLastDistrictPosition = -1;
-                        mDistrictAdapter.notifyDataSetChanged();
-                    }
-
-                    mLastCityPosition = position;
-                    mCityAdapter.notifyDataSetChanged();
-                    mDistrictAdapter.notifyDataSetChanged();
-                    showListView(mListViewD);
+                if (wrappedAddressDataBean.isCheck) {
+                    return;
                 }
+
+                wrappedAddressDataBean.isCheck = true;
+
+                mTextViewC.setText(wrappedAddressDataBean.name);
+                checkButton(mTextViewD);
+                mTextViewD.setText("选择区");
+                mTextViewS.setText("");
+
+                if (mLastCityPosition > -1) {
+                    mCityList.get(mLastCityPosition).isCheck = false;
+                    mLastDistrictPosition = -1;
+                    mDistrictAdapter.notifyDataSetChanged();
+                }
+
+                mLastCityPosition = position;
+                mCityAdapter.notifyDataSetChanged();
+                mDistrictAdapter.notifyDataSetChanged();
+                showListView(mListViewD);
                 break;
             case R.id.lv_d:
                 wrappedAddressDataBean = mDistrictList.get(position);
 
-                if (queriedStreetList != null && queriedStreetList.size() == 1 && TextUtils.isEmpty(queriedStreetList.get(0).name)) {
-                    if (wrappedAddressDataBean.isCheck) {
-                        this.dismiss();
-                        return;
-                    }
-
-                    wrappedAddressDataBean.isCheck = true;
-                    mTextViewD.setText(wrappedAddressDataBean.name);
-                    mTextViewS.setText("");
-
-                    if (mLastDistrictPosition > -1) {
-                        mDistrictList.get(mLastDistrictPosition).isCheck = false;
-                        mLastStreetPosition = -1;
-                        mStreetAdapter.notifyDataSetChanged();
-                    }
-
-                    mLastStreetPosition = position;
-                    mDistrictAdapter.notifyDataSetChanged();
-
-                    mProvince = mTextViewP.getText().toString().trim();
-                    mCity = mTextViewC.getText().toString().trim();
-                    mDistrict = mTextViewD.getText().toString().trim();
-                    mStreet = "";
-
-                    if (mOnAddressListener != null) {
-                        mOnAddressListener.onAddress(mProvince, mCity, mDistrict , mStreet);
-                    }
-
-                    this.dismiss();
-                } else {
-                    if (wrappedAddressDataBean.isCheck) {
-                        return;
-                    }
-
-                    wrappedAddressDataBean.isCheck = true;
-
-                    mTextViewD.setText(wrappedAddressDataBean.name);
-                    checkButton(mTextViewS);
-                    mTextViewS.setText("选择街道");
-
-                    if (mLastDistrictPosition > -1) {
-                        mDistrictList.get(mLastDistrictPosition).isCheck = false;
-                        mLastStreetPosition = -1;
-                        mStreetAdapter.notifyDataSetChanged();
-                    }
-
-                    mLastDistrictPosition = position;
-                    mDistrictAdapter.notifyDataSetChanged();
-                    mStreetAdapter.notifyDataSetChanged();
-                    showListView(mListViewS);
+                if (wrappedAddressDataBean.isCheck) {
+                    return;
                 }
+
+                wrappedAddressDataBean.isCheck = true;
+
+                mTextViewD.setText(wrappedAddressDataBean.name);
+                checkButton(mTextViewS);
+                mTextViewS.setText("选择街道");
+
+                if (mLastDistrictPosition > -1) {
+                    mDistrictList.get(mLastDistrictPosition).isCheck = false;
+                    mLastStreetPosition = -1;
+                    mStreetAdapter.notifyDataSetChanged();
+                }
+
+                mLastDistrictPosition = position;
+                mDistrictAdapter.notifyDataSetChanged();
+                mStreetAdapter.notifyDataSetChanged();
+                showListView(mListViewS);
                 break;
             case R.id.lv_s:
                 wrappedAddressDataBean = mStreetList.get(position);
