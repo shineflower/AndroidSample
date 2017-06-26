@@ -69,5 +69,17 @@
                 android:layout_centerHorizontal="true"
                 android:background="@color/color_0971ce"/>
         </RelativeLayout>
+
+        <com.jackie.sample.custom_view.StepView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"/>
+
+        <com.jackie.sample.custom_view.StepView
+            android:layout_width="40dp"
+            android:layout_height="360dp"
+            android:layout_gravity="center_horizontal"
+            app:orientation="vertical"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 </ScrollView>

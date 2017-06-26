@@ -267,7 +267,7 @@ public class RecorderTimingActivity extends AppCompatActivity implements View.On
     protected void onDestroy() {
         super.onDestroy();
 
-        mHandler = null;
+//        mHandler = null;
 
         mFasterAnimationsContainer.stop();
     }

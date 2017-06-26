@@ -54,4 +54,6 @@
 
     <color name="color_333333">#333333</color>
     <color name="color_0971ce">#0971ce</color>
+    <color name="color_ff1f1f">#ff1f1f</color>
+    <color name="color_ececec">#ececec</color>
 </resources>
