@@ -6,7 +6,6 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -337,24 +336,12 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
         int height = getHeight();
 
         switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                if (rectF.width() > width + 0.01f || rectF.height() > height + 0.01f) {
-                    if (getParent() instanceof ViewPager) {
-                        getParent().requestDisallowInterceptTouchEvent(true);
-                    }
-                }
             case MotionEvent.ACTION_MOVE:
-                if (rectF.width() > width + 0.01f || rectF.height() > height + 0.01f) {
-                    if (getParent() instanceof ViewPager) {
-                        getParent().requestDisallowInterceptTouchEvent(true);
-                    }
-                }
-
                 float dx = x - mLastX;
                 float dy = y - mLastY;
 
                 if (!mIsCanDrag) {
-                    mIsCanDrag = isMoveAction(dx, dy);
+                    mIsCanDrag = isCanDrag(dx, dy);
                 }
 
                 if (mIsCanDrag) {
@@ -457,7 +444,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
         mImageMatrix.postTranslate(dx, dy);
     }
 
-    private boolean isMoveAction(float x, float y) {
+    private boolean isCanDrag(float x, float y) {
         return Math.sqrt(x * x + y * y) > mTouchSlop;
     }
 
