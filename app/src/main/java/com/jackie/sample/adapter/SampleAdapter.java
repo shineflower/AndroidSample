@@ -43,7 +43,6 @@ public class SampleAdapter extends RecyclerView.Adapter<SampleAdapter.SampleView
                 mContext.startActivity(intent);
             }
         });
-
     }
 
     @Override

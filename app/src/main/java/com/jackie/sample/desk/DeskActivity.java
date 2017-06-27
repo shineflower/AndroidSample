@@ -17,7 +17,6 @@ import com.jackie.sample.animator.ShoppingCartBezierActivity;
 import com.jackie.sample.animator.TurnOffTvActivity;
 import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
-import com.jackie.sample.baidu_map.BaiduMapActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
@@ -44,6 +43,8 @@ import com.jackie.sample.keyboard.KeyboardActivity;
 import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
+import com.jackie.sample.map.AMapActivity;
+import com.jackie.sample.map.BaiduMapActivity;
 import com.jackie.sample.material_design.MaterialDesignActivity;
 import com.jackie.sample.metro.MetroActivity;
 import com.jackie.sample.mm_alert.SendToWXActivity;
@@ -447,6 +448,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("百度地图");
         sampleBean.setClassName(BaiduMapActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("高德地图");
+        sampleBean.setClassName(AMapActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

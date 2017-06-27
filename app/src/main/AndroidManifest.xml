@@ -3,7 +3,7 @@
     package="com.jackie.sample">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    />
+
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -34,6 +34,29 @@
     <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 高德地图相关的权限 -->
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <!--<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
+    <!--用于访问网络，网络定位需要上网-->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--用于读取手机当前的状态-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--用于写入缓存数据到扩展存储卡-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
         android:name=".application.SampleApplication"
@@ -299,9 +322,9 @@
 
         <!-- 百度地图 -->
         <activity
-            android:name=".baidu_map.BaiduMapActivity"
+            android:name=".map.BaiduMapActivity"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".baidu_map.OfflineMapActivity" />
+        <activity android:name=".map.OfflineMapActivity" />
 
         <service
             android:name="com.baidu.location.f"
@@ -311,6 +334,15 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="SWh76veHCCQOqf4MUDH0LmQkZ2cs2led" />
+
+        <!-- 高德地图 -->
+        <activity android:name=".map.AMapActivity"/>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="b75cbe11d4e78cc3e83c423a85a0c82f" />
 
         <!-- 优雅的实现多类型列表 -->
         <activity android:name=".multiple_list.MultipleListActivity" />

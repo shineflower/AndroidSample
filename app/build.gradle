@@ -71,6 +71,9 @@ dependencies {
     compile files('libs/libammsdk.jar')
 
     compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/AMap_Location_V3.4.0_20170427.jar')
+    compile files('libs/AMap_Search_V5.1.0_20170517.jar')
+    compile files('libs/AMap_Map3D_V5.2.0_20170602.jar')
 
     compile files('libs/pinyin4j-2.5.0.jar')
 

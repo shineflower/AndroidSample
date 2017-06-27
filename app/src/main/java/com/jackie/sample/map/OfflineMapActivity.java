@@ -1,4 +1,4 @@
-package com.jackie.sample.baidu_map;
+package com.jackie.sample.map;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

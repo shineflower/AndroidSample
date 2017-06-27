@@ -1,4 +1,4 @@
-package com.jackie.sample.baidu_map;
+package com.jackie.sample.map;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,6 +38,7 @@ import java.util.List;
 
 /**
  * Created by Jackie on 2017/6/2.
+ * 百度地图
  */
 
 public class BaiduMapActivity extends AppCompatActivity {
