@@ -146,5 +146,18 @@
             <enum name="horizontal" value="0"/>
             <enum name="vertical" value="1"/>
         </attr>
+
+        <attr name="sectionLineHeight" format="dimension"/>
+
+        <attr name="stepStyle" format="enum">
+            <enum name="common" value="0"/>
+            <enum name="red" value="1"/>
+            <enum name="ave" value="2"/>
+        </attr>
+
+        <attr name="totalStep" format="integer"/>
+        <attr name="currentStep" format="integer"/>
+        <attr name="unCompleteRadius" format="dimension"/>
+        <attr name="unCompleteColor" format="color"/>
     </declare-styleable>
 </resources>

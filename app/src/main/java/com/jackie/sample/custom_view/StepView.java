@@ -17,8 +17,6 @@ import com.jackie.sample.utils.DensityUtils;
  */
 
 public class StepView extends View {
-    private Context mContext;
-
     private int mTotalStep = 4;
     private int mCurrentStep = 2;
 
@@ -33,8 +31,8 @@ public class StepView extends View {
     private int mUnCompleteColor = getResources().getColor(R.color.color_ececec);
     private int mTextColor = getResources().getColor(android.R.color.white);
 
-    private float mCompleteRadius;
-    private float mUnCompleteRadius;
+    private int mCompleteRadius;
+    private int mUnCompleteRadius;
 
     private int mWidth;
     private int mHeight;
@@ -43,11 +41,16 @@ public class StepView extends View {
     private int mPaddingLeft;
     private int mPaddingTop;
 
-    private final int HORIZONTAL = 0;
-    private final int VERTICAL = 1;
-
     private int mOrientation;
     private float mBorder;
+
+    private final int HORIZONTAL = 0;
+    private final int VERTICAL = 1;
+    private final int STYLE_COMMON = 0;
+    private final int STYLE_RED = 1;
+    private final int STYLE_AVE = 2;
+
+    private int mStyle = STYLE_COMMON;
 
     public StepView(Context context) {
         this(context, null);
@@ -60,28 +63,31 @@ public class StepView extends View {
     public StepView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        mContext = context;
+        mCompleteRadius = DensityUtils.dip2px(context, 13);
+        mUnCompleteRadius = DensityUtils.dip2px(context, 8);
+        mSectionLineHeight = DensityUtils.dip2px(context, 2);
+        mPaddingLeft = DensityUtils.dip2px(context, 30);
+        mPaddingTop = DensityUtils.dip2px(context, 30);
+
+        mBorder = DensityUtils.dip2px(context, 1);
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.StepView);
         mOrientation = ta.getInt(R.styleable.StepView_orientation, HORIZONTAL);
+        mSectionLineHeight = ta.getDimensionPixelSize(R.styleable.StepView_sectionLineHeight, mSectionLineHeight);
+        mStyle = ta.getInt(R.styleable.StepView_stepStyle, STYLE_COMMON);
+        mTotalStep = ta.getInt(R.styleable.StepView_totalStep, 3);
+        mCurrentStep = ta.getInt(R.styleable.StepView_currentStep, 1);
+        mUnCompleteRadius = ta.getDimensionPixelSize(R.styleable.StepView_unCompleteRadius, mUnCompleteRadius);
+        mUnCompleteColor = ta.getColor(R.styleable.StepView_unCompleteColor, mUnCompleteColor);
         ta.recycle();
 
-        initView();
+        initView(context);
     }
 
-    private void initView() {
-        mCompleteRadius = DensityUtils.dip2px(mContext, 13);
-        mUnCompleteRadius = DensityUtils.dip2px(mContext, 8);
-        mSectionLineHeight = DensityUtils.dip2px(mContext, 2);
-        mPaddingLeft = DensityUtils.dip2px(mContext, 30);
-        mPaddingTop = DensityUtils.dip2px(mContext, 30);
-
-        mBorder = DensityUtils.dip2px(mContext, 1);
-
-
+    private void initView(Context context) {
         mCompletePaint = createPaint(mCompleteColor, Paint.Style.FILL, mSectionLineHeight);
         mUnCompletePaint = createPaint(mUnCompleteColor, Paint.Style.FILL, mSectionLineHeight);
-        mTextPaint = createTextPaint(mTextColor, DensityUtils.sp2px(mContext, 10));
+        mTextPaint = createTextPaint(mTextColor, DensityUtils.sp2px(context, 10));
         mTransparentPaint = createPaint(mTextColor, Paint.Style.FILL, mSectionLineHeight);
     }
 
@@ -139,18 +145,36 @@ public class StepView extends View {
         }
 
         for (int i = 0; i < mTotalStep; i++) {
+            String text = String.valueOf(i + 1);
+            float textWidth = mTextPaint.measureText(text);
+            float textHeight = mTextPaint.descent() + mTextPaint.ascent();
+
             if (i < mCurrentStep - 1) {
                 canvas.drawCircle(mPaddingLeft + i * mSectionLineWidth, 0, mUnCompleteRadius, mCompletePaint);
+
+                //没有完成的圆圈中画上数字
+                if (mStyle == STYLE_AVE) {
+                    canvas.drawText(text, mPaddingLeft + i * mSectionLineWidth - textWidth / 2, 0 - textHeight / 2, mTextPaint);
+                }
             } else if (i == mCurrentStep - 1) {
-                mCompletePaint.setColor(mCurrentPositionCircleColor);
-                canvas.drawCircle(mPaddingLeft + i * mSectionLineWidth, 0, mCompleteRadius, mCompletePaint);
+                if (mStyle == STYLE_RED) {
+                    mCompletePaint.setColor(mCurrentPositionCircleColor);
+                }
+
+                if (mStyle == STYLE_AVE) {
+                    canvas.drawCircle(mPaddingLeft + i * mSectionLineWidth, 0, mUnCompleteRadius, mCompletePaint);
+                } else {
+                    canvas.drawCircle(mPaddingLeft + i * mSectionLineWidth, 0, mCompleteRadius, mCompletePaint);
+                }
+
                 mCompletePaint.setColor(mCompleteColor);
-                String text = String.valueOf(mCurrentStep);
-                float textWidth = mTextPaint.measureText(text);
-                float textHeight = mTextPaint.descent() + mTextPaint.ascent();
                 canvas.drawText(text, mPaddingLeft + i * mSectionLineWidth - textWidth / 2, 0 - textHeight / 2, mTextPaint);
             } else {
                 canvas.drawCircle(mPaddingLeft + i * mSectionLineWidth, 0, mUnCompleteRadius, mUnCompletePaint);
+
+                if (mStyle == STYLE_AVE) {
+                    canvas.drawText(text, mPaddingLeft + i * mSectionLineWidth - textWidth / 2, 0 - textHeight / 2, mTextPaint);
+                }
             }
         }
     }

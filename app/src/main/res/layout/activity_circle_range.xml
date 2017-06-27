@@ -76,10 +76,27 @@
             android:layout_marginTop="10dp"/>
 
         <com.jackie.sample.custom_view.StepView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            app:stepStyle="red"/>
+
+        <com.jackie.sample.custom_view.StepView
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            app:sectionLineHeight="1dp"
+            app:stepStyle="ave"
+            app:totalStep="3"
+            app:currentStep="2"
+            app:unCompleteRadius="10dp"
+            app:unCompleteColor="#c2c7cd"/>
+
+        <com.jackie.sample.custom_view.StepView
             android:layout_width="40dp"
             android:layout_height="360dp"
             android:layout_gravity="center_horizontal"
-            app:orientation="vertical"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            app:orientation="vertical"/>
     </LinearLayout>
 </ScrollView>
