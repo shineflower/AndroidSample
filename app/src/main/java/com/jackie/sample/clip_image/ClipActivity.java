@@ -26,7 +26,7 @@ public class ClipActivity extends AppCompatActivity {
         setContentView(R.layout.activity_clip);
 
         mClipImageLayout = (ClipImageLayout) findViewById(R.id.clip_image_layout);
-//        mClipImageLayout.setHorizontalPadding(20);
+//        mClipImageLayout.setHorizontalPadding(30);
 //        mClipImageLayout.setImageDrawable(getResources().getDrawable(R.drawable.yifei1));
     }
 

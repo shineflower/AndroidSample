@@ -77,7 +77,7 @@ public class ClipImageBorder extends View {
                 mVerticalPadding, mPaint);
         // 绘制下边
         canvas.drawRect(mHorizontalPadding, height - mVerticalPadding,
-                getWidth() - mHorizontalPadding, height, mPaint);
+                width - mHorizontalPadding, height, mPaint);
 
         // 绘制外边框
         mPaint.setColor(Color.parseColor("#ffffff"));

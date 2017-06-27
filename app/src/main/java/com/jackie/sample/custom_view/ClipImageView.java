@@ -8,7 +8,6 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -195,10 +194,6 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
                 return;
             }
 
-            //计算padding的px
-            mHorizontalPadding = (int) TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, mHorizontalPadding,
-                    getResources().getDisplayMetrics());
             // 垂直方向的边距
             mVerticalPadding = (height - (width - 2 * mHorizontalPadding)) / 2;
 
@@ -223,6 +218,14 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
                     && dh < height - mVerticalPadding * 2) {
                 float scaleW = (width * 1.0f - mHorizontalPadding * 2) / dw;
                 float scaleH = (height * 1.0f - mVerticalPadding * 2) / dh;
+
+                scale = Math.max(scaleW, scaleH);
+            }
+
+            if (dw >= getWidth() - mHorizontalPadding * 2
+                    && dh >= getHeight() - mVerticalPadding * 2) {
+                float scaleW = (getWidth() * 1.0f - mHorizontalPadding * 2) / dw;
+                float scaleH = (getHeight() * 1.0f - mVerticalPadding * 2) / dh;
 
                 scale = Math.max(scaleW, scaleH);
             }
@@ -431,33 +434,24 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
         float dy = 0;
 
         //缩放的时候进行边界检测，防止出现空隙
-        if (rectF.width() >= width) {
-            if (rectF.left > 0) {  //图片跟左边有空隙
-                dx = -rectF.left;  //向左移动
+        if (rectF.width() + 0.01 >= width - mHorizontalPadding * 2) {
+            if (rectF.left > mHorizontalPadding) {  //图片跟左边有空隙
+                dx = -rectF.left + mHorizontalPadding;  //向左移动
             }
 
-            if (rectF.right < width) { //图片跟右边有空隙
-                dx = width - rectF.right;  //向右移动
-            }
-        }
-
-        if (rectF.height() >= height) {
-            if (rectF.top > 0) {
-                dy = -rectF.top;
-            }
-
-            if (rectF.bottom < height) {
-                dy = height - rectF.bottom;
+            if (rectF.right < width - mHorizontalPadding) { //图片跟右边有空隙
+                dx = width - mHorizontalPadding - rectF.right;  //向右移动
             }
         }
 
-        //当图片的宽度和高度小于控件的宽和高时，图片居中显示
-        if (rectF.width() < width) {
-            dx = width / 2 - rectF.right + rectF.width() / 2;
-        }
+        if (rectF.height() + 0.01 >= height - mVerticalPadding * 2) {
+            if (rectF.top > mVerticalPadding) {
+                dy = -rectF.top + mVerticalPadding;
+            }
 
-        if (rectF.height() < height) {
-            dy = height / 2 - rectF.bottom + rectF.height() / 2;
+            if (rectF.bottom < height - mVerticalPadding) {
+                dy = height - mVerticalPadding - rectF.bottom;
+            }
         }
 
         mImageMatrix.postTranslate(dx, dy);

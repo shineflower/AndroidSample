@@ -8,6 +8,6 @@
         android:id="@+id/clip_image_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:horizontal_padding="20dp"
+        app:horizontal_padding="40dp"
         app:image_drawable="@drawable/yifei1"/>
 </RelativeLayout>

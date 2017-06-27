@@ -25,6 +25,8 @@ public class ShowImageActivity extends AppCompatActivity {
 		byte[] buffer = getIntent().getByteArrayExtra("bitmap");
 		Bitmap bitmap = BitmapFactory.decodeByteArray(buffer, 0, buffer.length);
 
+		//可能出现android.os.TransactionTooLargeException，导致图片显示不出，正常做法是将图片保存
+
 		if (bitmap != null) {
 			mImageView.setImageBitmap(bitmap);
 		}

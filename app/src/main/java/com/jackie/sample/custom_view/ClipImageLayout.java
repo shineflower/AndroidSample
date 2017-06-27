@@ -39,20 +39,8 @@ public class ClipImageLayout extends RelativeLayout {
                 android.view.ViewGroup.LayoutParams.MATCH_PARENT,
                 android.view.ViewGroup.LayoutParams.MATCH_PARENT);
 
-        this.addView(mClipImageView, params);
-        this.addView(mClipImageBorder, params);
-
-        // 设置默认值
-        if (mHorizontalPadding == 0) {
-            //既没有setHorizontalPadding也没有在xml中定义，设置一个默认值
-            mHorizontalPadding = (int) TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics());
-        }
-
-        if (mImageDrawable == null) {
-            //既没有setImageDrawable也没有在xml中定义，设置一个默认值
-            mImageDrawable = getResources().getDrawable(R.drawable.yifei1);
-        }
+        addView(mClipImageView, params);
+        addView(mClipImageBorder, params);
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ClipImageLayout);
 
@@ -60,6 +48,18 @@ public class ClipImageLayout extends RelativeLayout {
         mImageDrawable = ta.getDrawable(R.styleable.ClipImageLayout_image_drawable);
 
         ta.recycle();
+
+		// 设置默认值
+		if (mHorizontalPadding == 0) {
+			//既没有setHorizontalPadding也没有在xml中定义，设置一个默认值
+			mHorizontalPadding = (int) TypedValue.applyDimension(
+					TypedValue.COMPLEX_UNIT_DIP, 20, getResources().getDisplayMetrics());
+		}
+
+		if (mImageDrawable == null) {
+			//既没有setImageDrawable也没有在xml中定义，设置一个默认值
+			mImageDrawable = getResources().getDrawable(R.drawable.yifei1);
+		}
 
         mClipImageView.setImageDrawable(mImageDrawable);
         mClipImageView.setHorizontalPadding(mHorizontalPadding);
