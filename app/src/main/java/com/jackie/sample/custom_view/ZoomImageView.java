@@ -197,7 +197,7 @@ public class ZoomImageView extends ImageView implements ViewTreeObserver.OnGloba
             /**
              * 当图片的高度大于控件的宽度，并且图片的宽度小于控件的宽度时，将图片的高度缩小
              */
-            if (dh > height &&  dw < width) {
+            if (dw < width && dh > height) {
                 scale = height * 1.0f / dh;
             }
 

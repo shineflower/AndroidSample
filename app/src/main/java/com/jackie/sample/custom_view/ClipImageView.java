@@ -100,6 +100,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
                     postDelayed(new AutoScaleRunnable(mInitScale, x, y), 16);
                     mIsAutoScale = true;
                 }
+
                 return true;
             }
         });
@@ -141,7 +142,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
              * 进行缩放
              */
             mImageMatrix.postScale(tempScale, tempScale, x, y);
-            checkBorder();
+            checkBorderWhenScale();
             setImageMatrix(mImageMatrix);
 
             float currentScale = getScale();
@@ -152,7 +153,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
                 //设置成目标值
                 float scale = targetScale / currentScale;
                 mImageMatrix.postScale(scale, scale, x, y);
-                checkBorder();
+                checkBorderWhenScale();
                 setImageMatrix(mImageMatrix);
 
                 mIsAutoScale = false;
@@ -207,13 +208,14 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
 
             float scale = 1.0f;
 
-            if (dw < width - mHorizontalPadding * 2
-                    && dh > height - mVerticalPadding * 2) {
+            //当图片的宽度大于控件的宽度，并且图片的高度小于控件的高度时，将图片的宽度缩小
+            if (dw > width - mHorizontalPadding * 2
+                    && dh < height - mVerticalPadding * 2) {
                 scale = (width * 1.0f - mHorizontalPadding * 2) / dw;
             }
 
-            if (dh < height - mVerticalPadding * 2
-                    && dw > width - mHorizontalPadding * 2) {
+            if (dw < width - mHorizontalPadding * 2
+                    && dh > height - mVerticalPadding * 2) {
                 scale = (height * 1.0f - mVerticalPadding * 2) / dh;
             }
 
@@ -264,7 +266,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
             }
 
             mImageMatrix.postScale(scaleFactor, scaleFactor, detector.getFocusX(), detector.getFocusY());
-            checkBorder();
+            checkBorderWhenScale();
             setImageMatrix(mImageMatrix);
         }
 
@@ -286,38 +288,6 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
         }
 
         return rectF;
-    }
-
-    private void checkBorder() {
-        RectF rect = getMatrixRectF();
-        float deltaX = 0;
-        float deltaY = 0;
-
-        int width = getWidth();
-        int height = getHeight();
-
-        // 如果宽或高大于屏幕，则控制范围
-        if (rect.width() >= width - 2 * mHorizontalPadding) {
-            if (rect.left > mHorizontalPadding) {
-                deltaX = -rect.left + mHorizontalPadding;
-            }
-
-            if (rect.right < width - mHorizontalPadding) {
-                deltaX = width - mHorizontalPadding - rect.right;
-            }
-        }
-
-        if (rect.height() >= height - 2 * mVerticalPadding) {
-            if (rect.top > mVerticalPadding) {
-                deltaY = -rect.top + mVerticalPadding;
-            }
-
-            if (rect.bottom < height - mVerticalPadding) {
-                deltaY = height - mVerticalPadding - rect.bottom;
-            }
-        }
-
-        mImageMatrix.postTranslate(deltaX, deltaY);
     }
 
     @Override
@@ -443,6 +413,51 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
             if (rectF.bottom < height) {
                 dy = height - rectF.bottom;
             }
+        }
+
+        mImageMatrix.postTranslate(dx, dy);
+    }
+
+    /**
+     * 在缩放的时候进行边界和位置的控制
+     */
+    private void checkBorderWhenScale() {
+        RectF rectF = getMatrixRectF();
+
+        int width = getWidth();
+        int height = getHeight();
+
+        float dx = 0;
+        float dy = 0;
+
+        //缩放的时候进行边界检测，防止出现空隙
+        if (rectF.width() >= width) {
+            if (rectF.left > 0) {  //图片跟左边有空隙
+                dx = -rectF.left;  //向左移动
+            }
+
+            if (rectF.right < width) { //图片跟右边有空隙
+                dx = width - rectF.right;  //向右移动
+            }
+        }
+
+        if (rectF.height() >= height) {
+            if (rectF.top > 0) {
+                dy = -rectF.top;
+            }
+
+            if (rectF.bottom < height) {
+                dy = height - rectF.bottom;
+            }
+        }
+
+        //当图片的宽度和高度小于控件的宽和高时，图片居中显示
+        if (rectF.width() < width) {
+            dx = width / 2 - rectF.right + rectF.width() / 2;
+        }
+
+        if (rectF.height() < height) {
+            dy = height / 2 - rectF.bottom + rectF.height() / 2;
         }
 
         mImageMatrix.postTranslate(dx, dy);
