@@ -374,6 +374,10 @@
 
         <!-- 四级地址选择器 -->
         <activity android:name=".address.AddressSelectActivity" />
+
+        <!-- WebView自定义长按选择，实现收藏 / 分享选中文本 -->
+        <activity android:name=".web_view.WebViewActivity" />
+        <activity android:name=".web_view.WebViewAPIActivity" />
     </application>
 
 </manifest>

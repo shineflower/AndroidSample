@@ -77,6 +77,7 @@ import com.jackie.sample.view_pager_anim_transfer.guide.ViewPagerTransferGuideAn
 import com.jackie.sample.view_pager_indicator.ViewPagerColorTrackIndicatorActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerTriangleIndicatorActivity;
 import com.jackie.sample.volume_control.VolumeControlActivity;
+import com.jackie.sample.web_view.WebViewActivity;
 import com.jackie.sample.wechat_camera.WechatCameraActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_image_upload.WechatImageUploadActivity;
@@ -498,6 +499,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("四级地址选择器");
         sampleBean.setClassName(AddressSelectActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("WebView自定义长按选择，实现收藏 / 分享选中文本");
+        sampleBean.setClassName(WebViewActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
