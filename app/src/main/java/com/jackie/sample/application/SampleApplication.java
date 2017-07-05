@@ -1,6 +1,8 @@
 package com.jackie.sample.application;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.yolanda.nohttp.NoHttp;
@@ -17,5 +19,12 @@ public class SampleApplication extends Application {
         Fresco.initialize(this);
 
         NoHttp.initialize(this);
+    }
+
+    @Override
+    protected void attachBaseContext(Context context) {
+        super.attachBaseContext(context);
+
+        MultiDex.install(this);
     }
 }
