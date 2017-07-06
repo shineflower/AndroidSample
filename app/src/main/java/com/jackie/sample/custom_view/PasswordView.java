@@ -74,7 +74,7 @@ public class PasswordView extends EditText {
     private void drawRoundRect(Canvas canvas) {
 //        canvas.drawRoundRect(0, 0, mWidth, mHeight, 12, 12, mBorderPaint);
 //        4.4 API 21以下上面的写法会出现NoSuchMethodError异常，需要换成下面的写法
-        canvas.drawRoundRect(new RectF(0, 0, mWidth,mHeight), 12, 12, mBorderPaint);
+        canvas.drawRoundRect(new RectF(0, 0, mWidth, mHeight), 12, 12, mBorderPaint);
     }
 
     /**

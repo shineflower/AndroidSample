@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_flower"
+          android:title="落鲜花"
+          android:icon="@drawable/falling_menu_flower"
+          android:showAsAction="never"/>
+    <item android:id="@+id/menu_dandelion"
+          android:title="落蒲公英"
+          android:icon="@drawable/falling_menu_dandelion"
+          android:showAsAction="never"/>
+    <item android:id="@+id/menu_heart"
+          android:title="落爱心"
+          android:icon="@drawable/falling_menu_heart"
+          android:showAsAction="never"/>
+</menu>

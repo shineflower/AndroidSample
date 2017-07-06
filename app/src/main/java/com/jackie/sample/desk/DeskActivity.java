@@ -28,6 +28,7 @@ import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
 import com.jackie.sample.edit_text.EditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
+import com.jackie.sample.falling.FallingActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
 import com.jackie.sample.float_window.FloatWindowActivity;
 import com.jackie.sample.flow_layout.FlowLayoutActivity;
@@ -504,6 +505,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("WebView自定义长按选择，实现收藏 / 分享选中文本");
         sampleBean.setClassName(WebViewActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("碎片飘落效果控件");
+        sampleBean.setClassName(FallingActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

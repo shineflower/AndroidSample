@@ -160,4 +160,11 @@
         <attr name="unCompleteRadius" format="dimension"/>
         <attr name="unCompleteColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="FallingView">
+        <attr name="flakeSrc" format="reference"/>
+        <attr name="flakeScale" format="integer"/>
+        <attr name="flakeDensity" format="integer"/>
+        <attr name="fallingDelay" format="integer"/>
+    </declare-styleable>
 </resources>
