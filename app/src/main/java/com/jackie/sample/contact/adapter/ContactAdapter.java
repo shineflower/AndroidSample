@@ -15,6 +15,10 @@ import com.jackie.sample.contact.utils.TextDrawable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by Jackie on 2017/7/6.
+ * MeizuContactActivity Adapter
+ */
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
     private List<ContactBean> mContactList;
 

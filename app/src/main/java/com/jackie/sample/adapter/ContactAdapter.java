@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Created by Jackie on 2015/12/18.
- * RecyclerView Adapter
+ * SelectContactActivity Adapter
  */
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.RecyclerViewHolder> {
     private OnItemClickListener mOnItemClickListener;
