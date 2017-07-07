@@ -125,7 +125,7 @@ public class PopupWindowActivity extends AppCompatActivity implements CommonPopu
                 .setWidthAndHeight(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                 .create();
 
-        mCommonPopupWindow.showAsDropDown(view, (-mCommonPopupWindow.getWidth() + DensityUtils.dip2px(this, 20)), -(mCommonPopupWindow.getHeight() + view.getMeasuredHeight()));
+        mCommonPopupWindow.showAsDropDown(view, (-mCommonPopupWindow.getWidth() + DensityUtils.dp2px(this, 20)), -(mCommonPopupWindow.getHeight() + view.getMeasuredHeight()));
     }
 
     @Override

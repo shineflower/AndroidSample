@@ -59,7 +59,7 @@ public class ObliqueProgressBar extends View {
 
         //进度
         mPaint.setColor(Color.parseColor("#6Aa96ecb"));
-        mPaint.setStrokeWidth(DensityUtils.dip2px(mContext, 3));
+        mPaint.setStrokeWidth(DensityUtils.dp2px(mContext, 3));
         float x = mCurrent * (getWidth() / 100f);
         for (int i = 0; i < x; i += 30) {
             canvas.drawLine(i - 30, -10, i + 30, getHeight() + 10, mPaint);

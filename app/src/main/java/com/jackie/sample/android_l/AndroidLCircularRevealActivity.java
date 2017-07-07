@@ -1,7 +1,6 @@
 package com.jackie.sample.android_l;
 
 import android.animation.Animator;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -54,9 +53,9 @@ public class AndroidLCircularRevealActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mAnimator1 = ViewAnimationUtils.createCircularReveal(
                         mCircularRevealView1,
-                        DensityUtils.dip2px(mContext, 100) / 2,
-                        DensityUtils.dip2px(mContext, 100) / 2,
-                        DensityUtils.dip2px(mContext, 100),
+                        DensityUtils.dp2px(mContext, 100) / 2,
+                        DensityUtils.dp2px(mContext, 100) / 2,
+                        DensityUtils.dp2px(mContext, 100),
                         0);
                 mAnimator1.setInterpolator(new AccelerateDecelerateInterpolator());
                 mAnimator1.setDuration(2000);
@@ -72,7 +71,7 @@ public class AndroidLCircularRevealActivity extends AppCompatActivity {
                         0,
                         0,
                         0,
-                        (float) Math.hypot(DensityUtils.dip2px(mContext,100), DensityUtils.dip2px(mContext,100)));
+                        (float) Math.hypot(DensityUtils.dp2px(mContext,100), DensityUtils.dp2px(mContext,100)));
                 mAnimator2.setInterpolator(new AccelerateInterpolator());
                 mAnimator2.setDuration(2000);
                 mAnimator2.start();

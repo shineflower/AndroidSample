@@ -1,4 +1,4 @@
-package com.jackie.sample.indexable_contact;
+package com.jackie.sample.contact;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -29,7 +29,7 @@ public class IndexableContactActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        mListView = (IndexableListView) findViewById(R.id.contacts_list_view);
+        mListView = (IndexableListView) findViewById(R.id.contact_list_view);
         mList = ContactUtils.getDisplayName(this);
 
         ContactAdapter contactAdapter = new ContactAdapter(this, android.R.layout.simple_expandable_list_item_1, mList);

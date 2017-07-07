@@ -48,7 +48,7 @@ public class ClockView extends View{
         this.getWidth();
         this.getHeight();
 
-        Log.e("message", "" + DensityUtils.px2dip(mContext, this.getWidth()) + "  " + DensityUtils.px2dip(mContext, this.getHeight()));//获取到的就是我们在布局里面设置的dp高度与宽度。
+        Log.e("message", "" + DensityUtils.px2dp(mContext, this.getWidth()) + "  " + DensityUtils.px2dp(mContext, this.getHeight()));//获取到的就是我们在布局里面设置的dp高度与宽度。
 
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);

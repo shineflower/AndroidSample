@@ -89,10 +89,10 @@ public class RangeBar extends ProgressBar {
         mTextStyle = ta.getInt(R.styleable.RangeBar_textStyle, NORMAL);
         ta.recycle();
 
-        mLineHeight = DensityUtils.dip2px(context, 3);
-        mPaddingLeft = DensityUtils.dip2px(context, 44);
-        mBlueRadius = DensityUtils.dip2px(context, 14);
-        mWhiteRadius = DensityUtils.dip2px(context, 13);
+        mLineHeight = DensityUtils.dp2px(context, 3);
+        mPaddingLeft = DensityUtils.dp2px(context, 44);
+        mBlueRadius = DensityUtils.dp2px(context, 14);
+        mWhiteRadius = DensityUtils.dp2px(context, 13);
 
         mReachWidth = mPaddingLeft + mWhiteRadius;
 
@@ -166,15 +166,15 @@ public class RangeBar extends ProgressBar {
         String text = String.valueOf(getProgress());
         float textWidth =  mBlueTextPaint.measureText(text);
         float textHeight = mBlueTextPaint.descent() + mBlueTextPaint.ascent();
-        canvas.drawText(text, mReachWidth - textWidth / 2, -mBlueRadius - DensityUtils.dip2px(mContext, 10), mBlueTextPaint);
+        canvas.drawText(text, mReachWidth - textWidth / 2, -mBlueRadius - DensityUtils.dp2px(mContext, 10), mBlueTextPaint);
 
         switch (mTextStyle) {
             case TEXT:
                 String number = ZERO;
                 float numberWidth = mGreyTextPaint.measureText(number);
                 float numberHeight =  mGreyTextPaint.descent() + mGreyTextPaint.ascent();
-                canvas.drawText(number, mPaddingLeft - DensityUtils.dip2px(mContext, 5) - numberWidth, 0 - numberHeight / 2, mGreyTextPaint);
-                canvas.drawText(getMax() + "", mPaddingLeft + mLineWidth + DensityUtils.dip2px(mContext, 5), 0 - numberHeight/2, mGreyTextPaint);
+                canvas.drawText(number, mPaddingLeft - DensityUtils.dp2px(mContext, 5) - numberWidth, 0 - numberHeight / 2, mGreyTextPaint);
+                canvas.drawText(getMax() + "", mPaddingLeft + mLineWidth + DensityUtils.dp2px(mContext, 5), 0 - numberHeight/2, mGreyTextPaint);
                 break;
             default:
                 break;

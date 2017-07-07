@@ -68,7 +68,7 @@ public class ProgressLinearLayout extends LinearLayout {
     public void initView(){
         setWillNotDraw(false);
 
-        mDotSize = DensityUtils.dip2px(mContext, 5);
+        mDotSize = DensityUtils.dp2px(mContext, 5);
 
         this.setOrientation(HORIZONTAL);
 
@@ -95,7 +95,7 @@ public class ProgressLinearLayout extends LinearLayout {
         mLinePaint.setStyle(Paint.Style.STROKE);
         mLinePaint.setAntiAlias(true); //去锯齿
         mLinePaint.setStrokeCap(Paint.Cap.BUTT); //圆形的笔触
-        mLinePaint.setStrokeWidth(DensityUtils.dip2px(mContext, 2));
+        mLinePaint.setStrokeWidth(DensityUtils.dp2px(mContext, 2));
     }
 
     @Override

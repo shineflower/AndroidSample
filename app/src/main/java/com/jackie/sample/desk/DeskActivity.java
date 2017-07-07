@@ -23,6 +23,8 @@ import com.jackie.sample.circle_menu.CircleMenuActivity;
 import com.jackie.sample.circle_range.CircleRangeActivity;
 import com.jackie.sample.clip_image.ClipActivity;
 import com.jackie.sample.clock.ClockActivity;
+import com.jackie.sample.contact.IndexableContactActivity;
+import com.jackie.sample.contact.MeizuContactActivity;
 import com.jackie.sample.count_down.CountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
@@ -38,7 +40,6 @@ import com.jackie.sample.gradient.LinearGradientActivity;
 import com.jackie.sample.image_code.ImageCodeActivity;
 import com.jackie.sample.image_filling.ImageFillingActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
-import com.jackie.sample.indexable_contact.IndexableContactActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
 import com.jackie.sample.keyboard.KeyboardActivity;
 import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
@@ -185,6 +186,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("自定义索引查询联系人");
         sampleBean.setClassName(IndexableContactActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿魅族手机通讯录界面");
+        sampleBean.setClassName(MeizuContactActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

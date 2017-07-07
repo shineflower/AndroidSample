@@ -49,8 +49,8 @@ public class HorizontalBoldProgressBar extends View {
         mProgressPaint.setAntiAlias(true);//去锯齿
 
         mTextPaint = new Paint();
-        mTextPaint.setStrokeWidth(DensityUtils.dip2px(mContext, 1));
-        mTextPaint.setTextSize(DensityUtils.dip2px(mContext, 14));
+        mTextPaint.setStrokeWidth(DensityUtils.dp2px(mContext, 1));
+        mTextPaint.setTextSize(DensityUtils.dp2px(mContext, 14));
         mTextPaint.setColor(mContext.getResources().getColor(R.color.gray));
         mTextPaint.setTextAlign(Paint.Align.LEFT);
     }
@@ -73,7 +73,7 @@ public class HorizontalBoldProgressBar extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        mWidth = getWidth() - DensityUtils.dip2px(mContext, 60);
+        mWidth = getWidth() - DensityUtils.dp2px(mContext, 60);
         mHeight = getHeight();
 
         float marginHeight = mHeight / 2.0f;
@@ -85,7 +85,7 @@ public class HorizontalBoldProgressBar extends View {
         int nowWidth = (int)(mCurrent * unitWidth);
 
         mProgressPaint.setShader(new LinearGradient(0, marginHeight, nowWidth, marginHeight, getResources().getColor(R.color.start_color), getResources().getColor(R.color.end_color), Shader.TileMode.REPEAT)); //从(0,0)到(0,height)的色彩渐变
-        canvas.drawLine(DensityUtils.dip2px(mContext, marginHeight), marginHeight, nowWidth - marginHeight, marginHeight, mProgressPaint);
+        canvas.drawLine(DensityUtils.dp2px(mContext, marginHeight), marginHeight, nowWidth - marginHeight, marginHeight, mProgressPaint);
 
         String text = "" + mCurrent;
         Rect bounds = new Rect();
@@ -96,7 +96,7 @@ public class HorizontalBoldProgressBar extends View {
          * http://mikewang.blog.51cto.com/3826268/871765/
          * http://www.2cto.com/kf/201512/455655.html
          */
-        canvas.drawText(text, 0, text.length(), nowWidth + DensityUtils.dip2px(mContext, 10), mHeight - 2, mTextPaint);
+        canvas.drawText(text, 0, text.length(), nowWidth + DensityUtils.dp2px(mContext, 10), mHeight - 2, mTextPaint);
     }
 
     int mTemp = 0;

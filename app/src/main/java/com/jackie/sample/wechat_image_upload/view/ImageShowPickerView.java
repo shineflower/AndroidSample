@@ -128,7 +128,7 @@ public class ImageShowPickerView extends LinearLayout {
         this.mContext = context;
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ImageShowPickerView);
-        mPictureSize = ta.getDimensionPixelSize(R.styleable.ImageShowPickerView_picture_size, DensityUtils.dip2px(context, mPictureSize));
+        mPictureSize = ta.getDimensionPixelSize(R.styleable.ImageShowPickerView_picture_size, DensityUtils.dp2px(context, mPictureSize));
         mAddPictureResourceId = ta.getResourceId(R.styleable.ImageShowPickerView_add_picture_resource_id, R.mipmap.image_show_picker_add);
         mDeletePictureResourceId = ta.getResourceId(R.styleable.ImageShowPickerView_delete_picture_resource_id, R.mipmap.image_show_picker_delete);
         mIsShowDeletePicture = ta.getBoolean(R.styleable.ImageShowPickerView_is_show_delete_picture, true);
@@ -153,7 +153,7 @@ public class ImageShowPickerView extends LinearLayout {
 //        int lineNumber = mList.size() % mShowNumOneLine == 0 ? mList.size() / mShowNumOneLine : (mList.size() / mShowNumOneLine) + 1;
 ////        计算高度 = 行数 * 每行的高度 + (行数 - 1) * 10dp 的 margin + 10dp(为了居中)
 ////        高度的计算需要自己好好理解，否则会产生嵌套recyclerView可以滑动的现象
-//        layoutParams.height = DensityUtils.dip2px(getContext(), lineNumber * mPictureSize) ;
+//        layoutParams.height = DensityUtils.dp2px(getContext(), lineNumber * mPictureSize) ;
 //        layoutParams.height =lineNumber  * mPictureSize ;
 
         mRecyclerView.setLayoutParams(layoutParams);

@@ -63,13 +63,13 @@ public class StepView extends View {
     public StepView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        mCompleteRadius = DensityUtils.dip2px(context, 13);
-        mUnCompleteRadius = DensityUtils.dip2px(context, 8);
-        mSectionLineHeight = DensityUtils.dip2px(context, 2);
-        mPaddingLeft = DensityUtils.dip2px(context, 30);
-        mPaddingTop = DensityUtils.dip2px(context, 30);
+        mCompleteRadius = DensityUtils.dp2px(context, 13);
+        mUnCompleteRadius = DensityUtils.dp2px(context, 8);
+        mSectionLineHeight = DensityUtils.dp2px(context, 2);
+        mPaddingLeft = DensityUtils.dp2px(context, 30);
+        mPaddingTop = DensityUtils.dp2px(context, 30);
 
-        mBorder = DensityUtils.dip2px(context, 1);
+        mBorder = DensityUtils.dp2px(context, 1);
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.StepView);
         mOrientation = ta.getInt(R.styleable.StepView_orientation, HORIZONTAL);

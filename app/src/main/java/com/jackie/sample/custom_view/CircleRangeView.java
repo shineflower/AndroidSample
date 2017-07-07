@@ -86,7 +86,7 @@ public class CircleRangeView extends View {
 
         mRangeTextSize = DensityUtils.sp2px(context, 34);
         mExtraTextSize = DensityUtils.sp2px(context, 14);
-        mBorderSize = DensityUtils.dip2px(context, 5);
+        mBorderSize = DensityUtils.dp2px(context, 5);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircleRangeView);
 
@@ -115,8 +115,8 @@ public class CircleRangeView extends View {
 
         this.mSection = mRangeColorArray.length;
 
-        mSparkleWidth =  DensityUtils.dip2px(mContext, 15);
-        mCalibrationWidth = DensityUtils.dip2px(mContext, 10);
+        mSparkleWidth =  DensityUtils.dp2px(mContext, 15);
+        mCalibrationWidth = DensityUtils.dp2px(mContext, 10);
 
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
@@ -136,12 +136,12 @@ public class CircleRangeView extends View {
         mPadding = Math.max(Math.max(getPaddingLeft(), getPaddingTop()), Math.max(getPaddingRight(), getPaddingBottom()));
         setPadding(mPadding, mPadding, mPadding, mPadding);
 
-        mLength = mPadding + mSparkleWidth / 2f + DensityUtils.dip2px(mContext, 12);
+        mLength = mPadding + mSparkleWidth / 2f + DensityUtils.dp2px(mContext, 12);
 
-        int width = resolveSize(DensityUtils.dip2px(mContext, 220), widthMeasureSpec);
+        int width = resolveSize(DensityUtils.dp2px(mContext, 220), widthMeasureSpec);
         mRadius = (width - mPadding * 2) / 2;
 
-        setMeasuredDimension(width, width - DensityUtils.dip2px(mContext, 30));
+        setMeasuredDimension(width, width - DensityUtils.dp2px(mContext, 30));
 
         mCenterX = mCenterY = getMeasuredWidth() / 2f;
 
@@ -260,7 +260,7 @@ public class CircleRangeView extends View {
             mPaint.setColor(mExtraColor);
             mPaint.setTextSize(mExtraTextSize);
             for (int i = 0; i < mExtraList.size(); i++) {
-                canvas.drawText(mExtraList.get(i), mCenterX, mCenterY + DensityUtils.dip2px(mContext, 50) + i * DensityUtils.dip2px(mContext, 20), mPaint);
+                canvas.drawText(mExtraList.get(i), mCenterX, mCenterY + DensityUtils.dp2px(mContext, 50) + i * DensityUtils.dp2px(mContext, 20), mPaint);
             }
         }
     }

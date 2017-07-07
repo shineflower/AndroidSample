@@ -69,13 +69,13 @@ public class TimelineActivity extends AppCompatActivity implements View.OnClickL
                 subItem();
                 break;
             case R.id.add_margin:
-                int currentMargin = DensityUtils.px2dip(this, mTimelineLayout.getLineMarginLeft());
-                mTimelineLayout.setLineMarginLeft(DensityUtils.dip2px(this, ++currentMargin));
+                int currentMargin = DensityUtils.px2dp(this, mTimelineLayout.getLineMarginLeft());
+                mTimelineLayout.setLineMarginLeft(DensityUtils.dp2px(this, ++currentMargin));
                 mCurrentMargin.setText("current line margin left is " + currentMargin + "dp");
                 break;
             case R.id.sub_margin:
-                currentMargin = DensityUtils.px2dip(this, mTimelineLayout.getLineMarginLeft());
-                mTimelineLayout.setLineMarginLeft(DensityUtils.dip2px(this, --currentMargin));
+                currentMargin = DensityUtils.px2dp(this, mTimelineLayout.getLineMarginLeft());
+                mTimelineLayout.setLineMarginLeft(DensityUtils.dp2px(this, --currentMargin));
                 mCurrentMargin.setText("current line margin left is " + currentMargin + "dp");
                 break;
             default:

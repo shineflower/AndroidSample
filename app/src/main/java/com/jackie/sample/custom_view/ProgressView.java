@@ -66,7 +66,7 @@ public class ProgressView extends View {
         super.onDraw(canvas);
 
         mWidth = getWidth();
-        mHeight = DensityUtils.dip2px(mContext, 300);
+        mHeight = DensityUtils.dp2px(mContext, 300);
 
         //设置自定义view的宽度 LinearGradient(x1, y1, x2, y2) 四个参数代表的是线性渲染的基准线
         mProgressPaint.setShader(new LinearGradient(0, mProgressBottom, 0, mProgressTop, new int[]{ R.color.task_blue, Color.WHITE, R.color.task_blue }, null, Shader.TileMode.REPEAT));

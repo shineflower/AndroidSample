@@ -138,7 +138,10 @@
         <activity android:name=".clip_image.ShowImageActivity" />
 
         <!-- 自定义索引查询联系人 -->
-        <activity android:name=".indexable_contact.IndexableContactActivity" />
+        <activity android:name=".contact.IndexableContactActivity" />
+
+        <!-- 仿魅族手机通讯录界面 -->
+        <activity android:name=".contact.MeizuContactActivity" />
 
         <!-- 自定义实现刮刮卡效果 -->
         <activity android:name=".scratch_card.ScratchCardActivity" />

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+    <com.jackie.sample.contact.view.IndexBar
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/transparent">
+
+        <com.jackie.sample.contact.view.SideBar
+            android:id="@+id/side_bar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+    </com.jackie.sample.contact.view.IndexBar>
+
+</RelativeLayout>
