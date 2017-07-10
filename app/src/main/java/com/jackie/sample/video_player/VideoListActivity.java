@@ -15,7 +15,7 @@ import com.jackie.sample.video_player.view.VideoPlayer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewActivity extends AppCompatActivity {
+public class VideoListActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
 

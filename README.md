@@ -34,6 +34,9 @@ ViewPager炫酷切换效果(适用于Guide)
 自定义索引查询联系人   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/indexable_contact.gif)
 
+仿魅族手机通讯录界面   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/meizu_contact.gif)
+
 自定义刮刮卡效果   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/scratch_card.gif)
 

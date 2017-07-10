@@ -62,6 +62,6 @@ public class VideoPlayerActivity extends AppCompatActivity {
     }
 
     public void showVideoList(View view) {
-        startActivity(new Intent(this, RecyclerViewActivity.class));
+        startActivity(new Intent(this, VideoListActivity.class));
     }
 }
