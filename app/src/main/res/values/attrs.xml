@@ -128,12 +128,12 @@
         <attr name="range_text_array" format="reference" />
         <attr name="range_value_array" format="reference" />
 
-        <attr name="border_color" format="color|reference"/>
-        <attr name="cursor_color" format="color|reference"/>
-        <attr name="extra_text_color" format="color|reference"/>
+        <attr name="border_color" format="color|reference" />
+        <attr name="cursor_color" format="color|reference" />
+        <attr name="extra_text_color" format="color|reference" />
 
-        <attr name="range_text_size" format="dimension|reference"/>
-        <attr name="extra_text_size" format="dimension|reference"/>
+        <attr name="range_text_size" format="dimension|reference" />
+        <attr name="extra_text_size" format="dimension|reference" />
     </declare-styleable>
 
     <declare-styleable name="VirtualKeyboardView">
@@ -142,35 +142,35 @@
 
     <declare-styleable name="RangeBar">
         <attr name="text_style" format="enum">
-            <enum name="NORMAL" value="0"/>
-            <enum name="TEXT" value="1"/>
+            <enum name="NORMAL" value="0" />
+            <enum name="TEXT" value="1" />
         </attr>
     </declare-styleable>
 
     <declare-styleable name="StepView">
         <attr name="orientation" format="enum">
-            <enum name="horizontal" value="0"/>
-            <enum name="vertical" value="1"/>
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
         </attr>
 
         <attr name="section_line_height" format="dimension"/>
 
         <attr name="step_style" format="enum">
-            <enum name="common" value="0"/>
-            <enum name="red" value="1"/>
-            <enum name="ave" value="2"/>
+            <enum name="common" value="0" />
+            <enum name="red" value="1" />
+            <enum name="ave" value="2" />
         </attr>
 
-        <attr name="total_step" format="integer"/>
-        <attr name="current_step" format="integer"/>
-        <attr name="unComplete_radius" format="dimension"/>
-        <attr name="unComplete_color" format="color"/>
+        <attr name="total_step" format="integer" />
+        <attr name="current_step" format="integer" />
+        <attr name="unComplete_radius" format="dimension" />
+        <attr name="unComplete_color" format="color" />
     </declare-styleable>
 
     <declare-styleable name="FallingView">
-        <attr name="flake_src" format="reference"/>
-        <attr name="flake_scale" format="integer"/>
-        <attr name="flake_density" format="integer"/>
-        <attr name="falling_delay" format="integer"/>
+        <attr name="flake_src" format="reference" />
+        <attr name="flake_scale" format="integer" />
+        <attr name="flake_density" format="integer" />
+        <attr name="falling_delay" format="integer" />
     </declare-styleable>
 </resources>
