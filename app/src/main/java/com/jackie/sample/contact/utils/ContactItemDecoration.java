@@ -100,7 +100,8 @@ public class ContactItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void onDrawOver(Canvas canvas, RecyclerView parent, RecyclerView.State state) {
-        //用来绘制悬浮框
+        //http://www.jcodecraeer.com/a/anzhuokaifa/2017/0615/8079.html
+        //用来绘制悬浮框(将TitleBar固定在最上面)
         int position = ((LinearLayoutManager) (parent.getLayoutManager())).findFirstVisibleItemPosition();
         if (mContactList == null || mContactList.size() == 0 || mContactList.size() <= position || position < 0) {
             return;

@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:jackie="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#55ffffff"
@@ -10,24 +10,24 @@
         android:layout_height="200dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        jackie:first_color="#252420"
-        jackie:second_color="#FDFDFD"
-        jackie:circle_width="12dp"
-        jackie:dot_count="20"
-        jackie:split_size="25"
-        jackie:center_image="@drawable/volume_settings"/>
+        app:first_color="#252420"
+        app:second_color="#FDFDFD"
+        app:circle_width="12dp"
+        app:dot_count="20"
+        app:split_size="25"
+        app:center_image="@drawable/volume_settings"/>
 
     <com.jackie.sample.custom_view.VolumeControlBar
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        jackie:first_color="#00ff00"
-        jackie:second_color="#ff0000"
-        jackie:circle_width="10dp"
-        jackie:dot_count="10"
-        jackie:split_size="15"
-        jackie:center_image="@drawable/volume_center_image"/>
+        app:first_color="#00ff00"
+        app:second_color="#ff0000"
+        app:circle_width="10dp"
+        app:dot_count="10"
+        app:split_size="15"
+        app:center_image="@drawable/volume_center_image"/>
 
     <com.jackie.sample.custom_view.VolumeControlBar
         android:layout_width="100dp"
@@ -35,10 +35,10 @@
         android:layout_gravity="bottom"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="20dp"
-        jackie:first_color="#ADC6E5"
-        jackie:second_color="#0362DB"
-        jackie:circle_width="10dp"
-        jackie:dot_count="8"
-        jackie:split_size="25"
-        jackie:center_image="@drawable/icon_qq_small"/>
+        app:first_color="#ADC6E5"
+        app:second_color="#0362DB"
+        app:circle_width="10dp"
+        app:dot_count="8"
+        app:split_size="25"
+        app:center_image="@drawable/icon_qq_small"/>
 </LinearLayout>

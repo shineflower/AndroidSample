@@ -2,10 +2,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:jackie="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/arc_menu"
-    jackie:position="right_bottom"
-    jackie:radius="100dp">
+    app:position="right_bottom"
+    app:radius="100dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"

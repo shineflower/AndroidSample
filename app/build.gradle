@@ -11,6 +11,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        // Enabling multidex support.
         multiDexEnabled true
     }
 
@@ -44,7 +45,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //添加分包设置 http://blog.csdn.net/maxwell_nc/article/details/51050700
-    compile 'com.android.support:multidex:'
+    compile 'com.android.support:multidex:1.0.1'
 
     compile files('libs/badgeview.jar')
 
@@ -60,7 +61,8 @@ dependencies {
     //volley
     compile files('libs/volley-1.0.19.jar')
     //nohttp
-    compile 'com.yolanda.nohttp:nohttp:1.0.2'
+    compile 'com.yolanda.nohttp:nohttp:1.1.0'
+    compile 'com.alibaba:fastjson:1.1.59.android'
 
     //retrofit2
     compile 'com.squareup.retrofit2:retrofit:2.0.2'

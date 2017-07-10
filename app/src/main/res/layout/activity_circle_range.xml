@@ -17,9 +17,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:padding="10dp"
-            app:rangeColorArray="@array/circle_range_view_colors"
-            app:rangeTextArray="@array/circle_range_view_texts"
-            app:rangeValueArray="@array/circle_range_view_values"/>
+            app:range_color_array="@array/circle_range_view_colors"
+            app:range_text_array="@array/circle_range_view_texts"
+            app:range_value_array="@array/circle_range_view_values"/>
 
         <com.jackie.sample.custom_view.RangeBar
             android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:padding="10dp"
-            app:textStyle="TEXT"/>
+            app:text_style="TEXT"/>
 
         <TextView
             android:id="@+id/time"
@@ -79,18 +79,18 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
-            app:stepStyle="red"/>
+            app:step_style="red"/>
 
         <com.jackie.sample.custom_view.StepView
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            app:sectionLineHeight="1dp"
-            app:stepStyle="ave"
-            app:totalStep="3"
-            app:currentStep="2"
-            app:unCompleteRadius="10dp"
-            app:unCompleteColor="#c2c7cd"/>
+            app:section_line_height="1dp"
+            app:step_style="ave"
+            app:total_step="3"
+            app:current_step="2"
+            app:unComplete_radius="10dp"
+            app:unComplete_color="#c2c7cd"/>
 
         <com.jackie.sample.custom_view.StepView
             android:layout_width="40dp"

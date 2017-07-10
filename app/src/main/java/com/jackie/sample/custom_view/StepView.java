@@ -73,12 +73,12 @@ public class StepView extends View {
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.StepView);
         mOrientation = ta.getInt(R.styleable.StepView_orientation, HORIZONTAL);
-        mSectionLineHeight = ta.getDimensionPixelSize(R.styleable.StepView_sectionLineHeight, mSectionLineHeight);
-        mStyle = ta.getInt(R.styleable.StepView_stepStyle, STYLE_COMMON);
-        mTotalStep = ta.getInt(R.styleable.StepView_totalStep, 3);
-        mCurrentStep = ta.getInt(R.styleable.StepView_currentStep, 1);
-        mUnCompleteRadius = ta.getDimensionPixelSize(R.styleable.StepView_unCompleteRadius, mUnCompleteRadius);
-        mUnCompleteColor = ta.getColor(R.styleable.StepView_unCompleteColor, mUnCompleteColor);
+        mSectionLineHeight = ta.getDimensionPixelSize(R.styleable.StepView_section_line_height, mSectionLineHeight);
+        mStyle = ta.getInt(R.styleable.StepView_step_style, STYLE_COMMON);
+        mTotalStep = ta.getInt(R.styleable.StepView_total_step, 3);
+        mCurrentStep = ta.getInt(R.styleable.StepView_current_step, 1);
+        mUnCompleteRadius = ta.getDimensionPixelSize(R.styleable.StepView_unComplete_radius, mUnCompleteRadius);
+        mUnCompleteColor = ta.getColor(R.styleable.StepView_unComplete_color, mUnCompleteColor);
         ta.recycle();
 
         initView(context);

@@ -64,9 +64,9 @@ public class ColorTrackView extends View {
 
         TypedArray ta = context.obtainStyledAttributes(attrs,
                 R.styleable.ColorTrackView);
-        mText = ta.getString(R.styleable.ColorTrackView_track_text);
+        mText = ta.getString(R.styleable.ColorTrackView_text);
         mTextSize = ta.getDimensionPixelSize(
-                R.styleable.ColorTrackView_track_text_size, mTextSize);
+                R.styleable.ColorTrackView_text_size, mTextSize);
         mTextOriginColor = ta.getColor(
                 R.styleable.ColorTrackView_text_origin_color,
                 mTextOriginColor);

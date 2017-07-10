@@ -17,7 +17,7 @@
             android:progress="0"
             android:padding="5dp"
             android:layout_marginTop="20dp"
-            app:progress_text_size="18sp"/>
+            app:text_size="18sp"/>
 
         <com.jackie.sample.custom_view.HorizontalProgressBar
             android:layout_width="match_parent"
@@ -25,46 +25,46 @@
             android:progress="50"
             android:padding="5dp"
             android:layout_marginTop="20dp"
-            app:progress_text_size="18sp"
-            app:progress_text_color="#44ff0000"
-            app:progress_unreachable_color="#eee"/>
+            app:text_size="18sp"
+            app:text_color="#44ff0000"
+            app:unreachable_color="#eee"/>
 
         <com.jackie.sample.custom_view.CircleProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:progress_radius="30dp"
+            app:radius="30dp"
             android:progress="20"
             android:padding="5dp"
             android:layout_marginTop="20dp"
-            app:progress_text_size="20sp"
-            app:progress_text_color="#44ff0000"
-            app:progress_unreachable_color="#eee"/>
+            app:text_size="20sp"
+            app:text_color="#44ff0000"
+            app:unreachable_color="#eee"/>
 
         <com.jackie.sample.custom_view.CircleProgressBar
             android:id="@+id/circle_progressbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:progress_radius="60dp"
+            app:radius="60dp"
             android:progress="0"
             android:padding="5dp"
             android:layout_marginTop="20dp"
-            app:progress_text_size="20sp"
-            app:progress_text_color="#44ff0000"
-            app:progress_unreachable_color="#eee"/>
+            app:text_size="20sp"
+            app:text_color="#44ff0000"
+            app:unreachable_color="#eee"/>
 
         <com.jackie.sample.custom_view.CircleProgressBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            app:progress_radius="80dp"
+            app:radius="80dp"
             android:progress="80"
             android:padding="5dp"
             android:layout_marginTop="20dp"
-            app:progress_text_size="20sp"
-            app:progress_text_color="#44ff0000"
-            app:progress_unreachable_color="#eee"/>
+            app:text_size="20sp"
+            app:text_color="#44ff0000"
+            app:unreachable_color="#eee"/>
 
         <com.jackie.sample.custom_view.HorizontalBoldProgressBar
             android:id="@+id/horizontal_bold_progressbar"

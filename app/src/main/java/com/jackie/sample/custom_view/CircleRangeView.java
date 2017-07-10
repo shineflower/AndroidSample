@@ -90,16 +90,16 @@ public class CircleRangeView extends View {
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircleRangeView);
 
-        mRangeColorArray = typedArray.getTextArray(R.styleable.CircleRangeView_rangeColorArray);
-        mRangeTextArray = typedArray.getTextArray(R.styleable.CircleRangeView_rangeTextArray);
-        mRangeValueArray = typedArray.getTextArray(R.styleable.CircleRangeView_rangeValueArray);
+        mRangeColorArray = typedArray.getTextArray(R.styleable.CircleRangeView_range_color_array);
+        mRangeTextArray = typedArray.getTextArray(R.styleable.CircleRangeView_range_text_array);
+        mRangeValueArray = typedArray.getTextArray(R.styleable.CircleRangeView_range_value_array);
 
         mExtraColor = ContextCompat.getColor(context, R.color.widget_extra_color);
         mBorderColor =  ContextCompat.getColor(context, R.color.widget_border_color);
         mCursorColor = ContextCompat.getColor(context, R.color.widget_cursor_color);
 
-        mRangeTextSize = typedArray.getDimensionPixelSize(R.styleable.CircleRangeView_rangeTextSize, mRangeTextSize);
-        mExtraTextSize = typedArray.getDimensionPixelSize(R.styleable.CircleRangeView_extraTextSize, mExtraTextSize);
+        mRangeTextSize = typedArray.getDimensionPixelSize(R.styleable.CircleRangeView_range_text_size, mRangeTextSize);
+        mExtraTextSize = typedArray.getDimensionPixelSize(R.styleable.CircleRangeView_extra_text_size, mExtraTextSize);
 
         typedArray.recycle();
 

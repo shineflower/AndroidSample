@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:jackie="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,7 +10,7 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
-        jackie:scratch_text="500,0000"
-        jackie:scratch_text_size="30sp"
-        jackie:scratch_text_color="#FF00FF"/>
+        app:text="500,0000"
+        app:text_size="30sp"
+        app:text_color="#FF00FF"/>
 </RelativeLayout>

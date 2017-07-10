@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Jackie on 2017/6/22.
- * 逐帧动画工具，OOM
+ * 逐帧动画工具，避免OOM
  */
 public class FasterAnimationsContainer {
     private Context mContext;

@@ -86,7 +86,7 @@ public class RangeBar extends ProgressBar {
 
     private void initView(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.RangeBar);
-        mTextStyle = ta.getInt(R.styleable.RangeBar_textStyle, NORMAL);
+        mTextStyle = ta.getInt(R.styleable.RangeBar_text_style, NORMAL);
         ta.recycle();
 
         mLineHeight = DensityUtils.dp2px(context, 3);

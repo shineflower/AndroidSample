@@ -40,7 +40,7 @@ public class CircleProgressBar extends HorizontalProgressBar {
                 R.styleable.CircleProgressBar);
 
         mRadius = (int) ta.getDimension(
-                R.styleable.CircleProgressBar_progress_radius, mRadius);
+                R.styleable.CircleProgressBar_radius, mRadius);
 
         ta.recycle();
 

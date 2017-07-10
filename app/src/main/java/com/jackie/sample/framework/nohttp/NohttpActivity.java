@@ -197,7 +197,7 @@ public class NohttpActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         @Override
-        public void onFailed(int what, String url, Object tag, Exception exception, int responseCode, long networkMillis) {
+        public void onFailed(int what, Response<String> response) {
 
         }
 

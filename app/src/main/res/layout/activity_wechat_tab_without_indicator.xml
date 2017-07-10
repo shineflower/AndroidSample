@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:jackie="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -23,9 +23,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            jackie:change_icon="@drawable/ic_menu_wechat"
-            jackie:change_text="@string/tab_wechat"
-            jackie:change_text_size="15sp" />
+            app:icon="@drawable/ic_menu_wechat"
+            app:text="@string/tab_wechat"
+            app:text_size="15sp" />
 
         <com.jackie.sample.custom_view.ChangeColorIconWithTextView
             android:id="@+id/indicator_contact"
@@ -33,9 +33,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            jackie:change_icon="@drawable/ic_menu_contact"
-            jackie:change_text="@string/tab_contact"
-            jackie:change_text_size="15sp" />
+            app:icon="@drawable/ic_menu_contact"
+            app:text="@string/tab_contact"
+            app:text_size="15sp" />
 
         <com.jackie.sample.custom_view.ChangeColorIconWithTextView
             android:id="@+id/indicator_discovery"
@@ -43,9 +43,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            jackie:change_icon="@drawable/ic_menu_discovery"
-            jackie:change_text="@string/tab_find"
-            jackie:change_text_size="15sp" />
+            app:icon="@drawable/ic_menu_discovery"
+            app:text="@string/tab_find"
+            app:text_size="15sp" />
 
         <com.jackie.sample.custom_view.ChangeColorIconWithTextView
             android:id="@+id/indicator_me"
@@ -53,8 +53,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            jackie:change_icon="@drawable/ic_menu_me"
-            jackie:change_text="@string/tab_me"
-            jackie:change_text_size="15sp" />
+            app:icon="@drawable/ic_menu_me"
+            app:text="@string/tab_me"
+            app:text_size="15sp" />
     </LinearLayout>
 </LinearLayout>

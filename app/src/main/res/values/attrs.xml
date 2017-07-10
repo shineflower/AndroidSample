@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="icon" format="reference" />
+    <attr name="text" format = "string" />
+    <attr name="text_size" format="dimension" />
+    <attr name="text_color" format="color" />
+    <attr name="radius" format="dimension" />
+
+    <declare-styleable name="ChangeColorIconView">
+        <attr name="icon" />
+        <attr name="text_color" />
+        <attr name="text" />
+        <attr name="text_size" />
+    </declare-styleable>
+
     <declare-styleable name="ColorTrackView">
-        <attr name="track_text" format="string"/>
-        <attr name="track_text_size" format="dimension"/>
+        <attr name="text" />
+        <attr name="text_size" />
         <attr name="text_origin_color" format="color|reference" />
         <attr name="text_change_color" format="color|reference" />
         <attr name="progress" format="float" />
@@ -11,32 +24,25 @@
             <enum name="right" value="1" />
         </attr>
     </declare-styleable>
-    
-    <declare-styleable name="ChangeColorIconView">
-        <attr name="change_icon" format="reference"/>
-        <attr name="change_color" format="color"/>
-        <attr name="change_text" format="string"/>
-        <attr name="change_text_size" format="dimension"/>
-    </declare-styleable>
 
     <declare-styleable name="ViewPagerIndicator">
         <attr name="indicator_item_count" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="ScratchView">
-        <attr name="scratch_text" format="string"/>
-        <attr name="scratch_text_size" format="dimension"/>
-        <attr name="scratch_text_color" format="color"/>
+        <attr name="text" />
+        <attr name="text_size" />
+        <attr name="text_color" />
     </declare-styleable>
 
     <declare-styleable name="ArcMenu">
         <attr name="position" format="enum">
-            <enum name="left_top" value="0"/>
-            <enum name="left_bottom" value="1"/>
-            <enum name="right_top" value="2"/>
-            <enum name="right_bottom" value="3"/>
+            <enum name="left_top" value="0" />
+            <enum name="left_bottom" value="1" />
+            <enum name="right_top" value="2" />
+            <enum name="right_bottom" value="3" />
         </attr>
-        <attr name="radius" format="dimension"/>
+        <attr name="radius" />
     </declare-styleable>
 
     <declare-styleable name="SlidingMenu">
@@ -44,47 +50,47 @@
     </declare-styleable>
 
     <declare-styleable name="HorizontalProgressBar">
-        <attr name="progress_unreachable_color" format="color"/>
-        <attr name="progress_unreachable_height" format="dimension"/>
-        <attr name="progress_reachable_color" format="color"/>
-        <attr name="progress_reachable_height" format="dimension"/>
-        <attr name="progress_text_color" format="color"/>
-        <attr name="progress_text_size" format="dimension"/>
-        <attr name="progress_text_offset" format="dimension"/>
+        <attr name="unreachable_color" format="color" />
+        <attr name="unreachable_height" format="dimension" />
+        <attr name="reachable_color" format="color" />
+        <attr name="reachable_height" format="dimension" />
+        <attr name="text_color" />
+        <attr name="text_size" />
+        <attr name="text_offset" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="CircleProgressBar">
-        <attr name="progress_radius" format="dimension"/>
+        <attr name="radius" />
     </declare-styleable>
 
     <declare-styleable name="TimelineLayout">
         <!--时间轴左偏移值-->
-        <attr name="line_margin_left" format="dimension"/>
+        <attr name="line_margin_left" format="dimension" />
         <!--时间轴上偏移值-->
-        <attr name="line_margin_top" format="dimension"/>
+        <attr name="line_margin_top" format="dimension" />
         <!--线宽-->
-        <attr name="line_stroke_width" format="dimension"/>
+        <attr name="line_stroke_width" format="dimension" />
         <!--线的颜色-->
-        <attr name="line_color" format="color"/>
+        <attr name="line_color" format="color" />
         <!--点的大小-->
-        <attr name="point_size" format="dimension"/>
+        <attr name="point_size" format="dimension" />
         <!--点的颜色-->
-        <attr name="point_color" format="color"/>
+        <attr name="point_color" format="color" />
         <!--图标-->
-        <attr name="timeline_icon_src" format="reference"/>
+        <attr name="timeline_icon_src" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="ClipImageLayout">
         <!-- 水平间距 -->
-        <attr name="horizontal_padding" format="dimension"/>
-        <attr name= "image_drawable" format="reference"/>
+        <attr name="horizontal_padding" format="dimension" />
+        <attr name="image_drawable" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="JCameraView">
-        <attr name="icon_size" format="dimension"/>
-        <attr name="icon_margin" format="dimension"/>
-        <attr name="camera_icon_src" format="reference"/>
-        <attr name="duration_max" format="integer"/>
+        <attr name="icon_size" format="dimension" />
+        <attr name="icon_margin" format="dimension" />
+        <attr name="camera_icon_src" format="reference" />
+        <attr name="duration_max" format="integer" />
     </declare-styleable>
 
     <declare-styleable name="ImageShowPickerView">
@@ -105,29 +111,29 @@
     </declare-styleable>
 
     <declare-styleable name="LoopCompletenessListView">
-        <attr name="loop_item_count" format="integer"/>
+        <attr name="loop_item_count" format="integer" />
     </declare-styleable>
     
     <declare-styleable name="VolumeControlBar">
-        <attr name="first_color" format="color"/>
-        <attr name="second_color" format="color"/>
-        <attr name="circle_width" format="dimension"/>
-        <attr name="dot_count" format="integer"/>
-        <attr name="split_size" format="integer"/>
-        <attr name="center_image" format="reference"/>
+        <attr name="first_color" format="color" />
+        <attr name="second_color" format="color" />
+        <attr name="circle_width" format="dimension" />
+        <attr name="dot_count" format="integer" />
+        <attr name="split_size" format="integer" />
+        <attr name="center_image" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="CircleRangeView">
-        <attr name="rangeColorArray" format="reference"/>
-        <attr name="rangeTextArray" format="reference"/>
-        <attr name="rangeValueArray" format="reference"/>
+        <attr name="range_color_array" format="reference" />
+        <attr name="range_text_array" format="reference" />
+        <attr name="range_value_array" format="reference" />
 
-        <attr name="borderColor" format="color|reference"/>
-        <attr name="cursorColor" format="color|reference"/>
-        <attr name="extraTextColor" format="color|reference"/>
+        <attr name="border_color" format="color|reference"/>
+        <attr name="cursor_color" format="color|reference"/>
+        <attr name="extra_text_color" format="color|reference"/>
 
-        <attr name="rangeTextSize" format="dimension|reference"/>
-        <attr name="extraTextSize" format="dimension|reference"/>
+        <attr name="range_text_size" format="dimension|reference"/>
+        <attr name="extra_text_size" format="dimension|reference"/>
     </declare-styleable>
 
     <declare-styleable name="VirtualKeyboardView">
@@ -135,7 +141,7 @@
     </declare-styleable>
 
     <declare-styleable name="RangeBar">
-        <attr name="textStyle" format="enum">
+        <attr name="text_style" format="enum">
             <enum name="NORMAL" value="0"/>
             <enum name="TEXT" value="1"/>
         </attr>
@@ -147,24 +153,24 @@
             <enum name="vertical" value="1"/>
         </attr>
 
-        <attr name="sectionLineHeight" format="dimension"/>
+        <attr name="section_line_height" format="dimension"/>
 
-        <attr name="stepStyle" format="enum">
+        <attr name="step_style" format="enum">
             <enum name="common" value="0"/>
             <enum name="red" value="1"/>
             <enum name="ave" value="2"/>
         </attr>
 
-        <attr name="totalStep" format="integer"/>
-        <attr name="currentStep" format="integer"/>
-        <attr name="unCompleteRadius" format="dimension"/>
-        <attr name="unCompleteColor" format="color"/>
+        <attr name="total_step" format="integer"/>
+        <attr name="current_step" format="integer"/>
+        <attr name="unComplete_radius" format="dimension"/>
+        <attr name="unComplete_color" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="FallingView">
-        <attr name="flakeSrc" format="reference"/>
-        <attr name="flakeScale" format="integer"/>
-        <attr name="flakeDensity" format="integer"/>
-        <attr name="fallingDelay" format="integer"/>
+        <attr name="flake_src" format="reference"/>
+        <attr name="flake_scale" format="integer"/>
+        <attr name="flake_density" format="integer"/>
+        <attr name="falling_delay" format="integer"/>
     </declare-styleable>
 </resources>

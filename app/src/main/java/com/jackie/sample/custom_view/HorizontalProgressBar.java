@@ -54,25 +54,25 @@ public class HorizontalProgressBar extends ProgressBar {
         TypedArray ta = context.obtainStyledAttributes(attrs,
                 R.styleable.HorizontalProgressBar);
 
-        mUnreachableColor = ta.getColor(R.styleable.HorizontalProgressBar_progress_unreachable_color,
+        mUnreachableColor = ta.getColor(R.styleable.HorizontalProgressBar_unreachable_color,
                 mUnreachableColor);
 
-        mUnreachableHeight = (int) ta.getDimension(R.styleable.HorizontalProgressBar_progress_unreachable_height,
+        mUnreachableHeight = (int) ta.getDimension(R.styleable.HorizontalProgressBar_unreachable_height,
                 mUnreachableHeight);
 
-        mReachableColor = ta.getColor(R.styleable.HorizontalProgressBar_progress_reachable_color,
+        mReachableColor = ta.getColor(R.styleable.HorizontalProgressBar_reachable_color,
                 mReachableColor);
 
-        mReachableHeight = (int) ta.getDimension(R.styleable.HorizontalProgressBar_progress_reachable_height,
+        mReachableHeight = (int) ta.getDimension(R.styleable.HorizontalProgressBar_reachable_height,
                 mReachableHeight);
 
-        mTextSize = (int) ta.getDimension(R.styleable.HorizontalProgressBar_progress_text_size,
+        mTextSize = (int) ta.getDimension(R.styleable.HorizontalProgressBar_text_size,
                 mTextSize);
 
-        mTextColor = ta.getColor(R.styleable.HorizontalProgressBar_progress_text_color,
+        mTextColor = ta.getColor(R.styleable.HorizontalProgressBar_text_color,
                 mTextColor);
 
-        mTextOffset = (int) ta.getDimension(R.styleable.HorizontalProgressBar_progress_text_offset,
+        mTextOffset = (int) ta.getDimension(R.styleable.HorizontalProgressBar_text_offset,
                 mTextOffset);
 
         ta.recycle();

@@ -13,9 +13,14 @@ import com.yolanda.nohttp.NoHttp;
  */
 
 public class SampleApplication extends Application {
+    private static SampleApplication mSampleApplication = null;
+
     @Override
     public void onCreate() {
         super.onCreate();
+
+        mSampleApplication = this;
+
         Fresco.initialize(this);
 
         NoHttp.initialize(this);
@@ -26,5 +31,9 @@ public class SampleApplication extends Application {
         super.attachBaseContext(context);
 
         MultiDex.install(this);
+    }
+
+    public static SampleApplication getApplicationInstance() {
+        return mSampleApplication;
     }
 }

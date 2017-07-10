@@ -55,10 +55,10 @@ public class FallingView extends RelativeLayout {
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.FallingView);
 
-        mFlakeResId = ta.getResourceId(R.styleable.FallingView_flakeSrc, R.drawable.snow_flake);
-        mScale = ta.getInt(R.styleable.FallingView_flakeScale, DEFAULT_SCALE);
-        mFlakeDensity = ta.getInt(R.styleable.FallingView_flakeDensity, DEFAULT_FLAKE_DENSITY);
-        mDelay = ta.getInt(R.styleable.FallingView_fallingDelay, DEFAULT_DELAY);
+        mFlakeResId = ta.getResourceId(R.styleable.FallingView_flake_src, R.drawable.snow_flake);
+        mScale = ta.getInt(R.styleable.FallingView_flake_scale, DEFAULT_SCALE);
+        mFlakeDensity = ta.getInt(R.styleable.FallingView_flake_density, DEFAULT_FLAKE_DENSITY);
+        mDelay = ta.getInt(R.styleable.FallingView_falling_delay, DEFAULT_DELAY);
 
         ta.recycle();
 
