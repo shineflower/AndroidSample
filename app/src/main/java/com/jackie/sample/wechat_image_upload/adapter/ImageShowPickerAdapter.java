@@ -9,10 +9,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.jackie.sample.R;
+import com.jackie.sample.utils.ScreenUtils;
 import com.jackie.sample.wechat_image_upload.bean.ImageShowPickerBean;
-import com.jackie.sample.wechat_image_upload.listener.OnPictureClickListener;
 import com.jackie.sample.wechat_image_upload.listener.OnImageClickListener;
 import com.jackie.sample.wechat_image_upload.listener.OnImageLoaderListener;
+import com.jackie.sample.wechat_image_upload.listener.OnPictureClickListener;
 
 import java.util.List;
 
@@ -28,16 +29,11 @@ public class ImageShowPickerAdapter extends RecyclerView.Adapter<ImageShowPicker
     public OnImageLoaderListener mOnImageLoaderListener;
     private OnImageClickListener mOnImageClickListener;
 
-    private int mPictureSize;
-
     private int mAddPictureResourceId;
     private int mDeletePictureResourceId;
     private boolean mIsShowDeletePicture;
     private boolean mIsShowAnimation;
-
-    public void setPictureSize(int pictureSize) {
-        this.mPictureSize = pictureSize;
-    }
+    private int mShowNumOneLine;
 
     public int getAddPictureResourceId() {
         return mAddPictureResourceId;
@@ -69,6 +65,10 @@ public class ImageShowPickerAdapter extends RecyclerView.Adapter<ImageShowPicker
 
     public void setIsShowAnimation(boolean isShowAnimation) {
         this.mIsShowAnimation = isShowAnimation;
+    }
+
+    public void setShowNumOneLine(int showNumOneLine) {
+        this.mShowNumOneLine = showNumOneLine;
     }
 
     public ImageShowPickerAdapter(Context context, List<ImageShowPickerBean> list, int maxNum, OnImageLoaderListener onImageLoaderListener, OnImageClickListener onImageClickListener) {
@@ -161,8 +161,10 @@ public class ImageShowPickerAdapter extends RecyclerView.Adapter<ImageShowPicker
 
             this.onPictureClickListener = onPictureClickListener;
 
+            int pictureSize = (ScreenUtils.getScreenWidth(mContext) - (mShowNumOneLine + 1) * 10) / mShowNumOneLine;
+
             pictureView = onImageLoaderListener.createImageView(mContext);
-            FrameLayout.LayoutParams pictureParams = new FrameLayout.LayoutParams(mPictureSize, mPictureSize);
+            FrameLayout.LayoutParams pictureParams = new FrameLayout.LayoutParams(pictureSize, pictureSize);
             pictureParams.setMargins(10, 10, 10, 10);
             pictureView.setLayoutParams(pictureParams);
 

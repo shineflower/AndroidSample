@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.jackie.sample.R;
-import com.jackie.sample.utils.DensityUtils;
 import com.jackie.sample.wechat_image_upload.adapter.ImageShowPickerAdapter;
 import com.jackie.sample.wechat_image_upload.bean.ImageShowPickerBean;
 import com.jackie.sample.wechat_image_upload.listener.OnImageClickListener;
@@ -36,15 +35,11 @@ public class ImageShowPickerView extends LinearLayout {
     private ImageShowPickerAdapter mAdapter;
     private List<ImageShowPickerBean> mList;
 
-    //默认单个大小
-    private static final int PICTURE_SIZE = 80;
     //默认单行显示数量
     private static final int SHOW_NUM_ONE_LINE = 4;
     //默认单个大小
     private static final int MAX_NUM = 9;
 
-    //单个item大小
-    private int mPictureSize = PICTURE_SIZE;
     //添加图片
     private int mAddPictureResourceId;
     //删除图片
@@ -57,14 +52,6 @@ public class ImageShowPickerView extends LinearLayout {
     private int mShowNumOneLine;
     //最大数量
     private int mMaxNum;
-
-    /**
-     * 设置单个item大小
-     * @param pictureSize
-     */
-    public void setPictureSize(int pictureSize) {
-        this.mPictureSize = pictureSize;
-    }
 
     /**
      * 设置增加图片
@@ -128,7 +115,6 @@ public class ImageShowPickerView extends LinearLayout {
         this.mContext = context;
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ImageShowPickerView);
-        mPictureSize = ta.getDimensionPixelSize(R.styleable.ImageShowPickerView_picture_size, DensityUtils.dp2px(context, mPictureSize));
         mAddPictureResourceId = ta.getResourceId(R.styleable.ImageShowPickerView_add_picture_resource_id, R.mipmap.image_show_picker_add);
         mDeletePictureResourceId = ta.getResourceId(R.styleable.ImageShowPickerView_delete_picture_resource_id, R.mipmap.image_show_picker_delete);
         mIsShowDeletePicture = ta.getBoolean(R.styleable.ImageShowPickerView_is_show_delete_picture, true);
@@ -154,16 +140,16 @@ public class ImageShowPickerView extends LinearLayout {
 ////        计算高度 = 行数 * 每行的高度 + (行数 - 1) * 10dp 的 margin + 10dp(为了居中)
 ////        高度的计算需要自己好好理解，否则会产生嵌套recyclerView可以滑动的现象
 //        layoutParams.height = DensityUtils.dp2px(getContext(), lineNumber * mPictureSize) ;
-//        layoutParams.height =lineNumber  * mPictureSize ;
+//        layoutParams.height = lineNumber  * mPictureSize ;
 
         mRecyclerView.setLayoutParams(layoutParams);
 
         mAdapter = new ImageShowPickerAdapter(mContext, mList, mMaxNum, mOnImageLoaderListener, mOnImageClickListener);
-        mAdapter.setPictureSize(mPictureSize);
         mAdapter.setAddPictureResourceId(mAddPictureResourceId);
         mAdapter.setDeletePictureResourceId(mDeletePictureResourceId);
         mAdapter.setIsShowDeletePicture(mIsShowDeletePicture);
         mAdapter.setIsShowAnimation(mIsShowAnimation);
+        mAdapter.setShowNumOneLine(mShowNumOneLine);
         mRecyclerView.setAdapter(mAdapter);
     }
 

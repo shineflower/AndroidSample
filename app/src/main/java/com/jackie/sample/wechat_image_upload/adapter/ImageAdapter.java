@@ -58,7 +58,7 @@ public class ImageAdapter extends BaseAdapter {
 
         final List<ImageBean> list = getItem(position);
         holder.imageShowPickerView.setOnImageLoaderListener(new Loader());
-        holder.imageShowPickerView.setMaxNum(mList.size() * list.size());  //所有图片的综合
+        holder.imageShowPickerView.setMaxNum(mList.size() * list.size());  //所有图片的集合
         holder.imageShowPickerView.setData(list);
 
         //展示有动画和无动画

@@ -94,8 +94,6 @@
     </declare-styleable>
 
     <declare-styleable name="ImageShowPickerView">
-        <!-- 单张图片大小（宽高一样） -->
-        <attr name="picture_size" format="dimension" />
         <!-- 添加图片 -->
         <attr name="add_picture_resource_id" format="reference" />
         <!-- 删除图片 -->
