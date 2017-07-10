@@ -8,7 +8,8 @@
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#a83"/>
+        android:background="#a83"
+        android:scrollbars="none"/>
 
     <!--<com.jackie.sample.wechat_image_upload.view.ImageShowPickerView-->
         <!--android:layout_width="wrap_content"-->
