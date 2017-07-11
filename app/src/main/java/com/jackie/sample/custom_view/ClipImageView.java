@@ -140,7 +140,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
              * 进行缩放
              */
             mImageMatrix.postScale(tempScale, tempScale, x, y);
-            checkBorderWhenScale();
+            checkBorder();
             setImageMatrix(mImageMatrix);
 
             float currentScale = getScale();
@@ -151,7 +151,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
                 //设置成目标值
                 float scale = targetScale / currentScale;
                 mImageMatrix.postScale(scale, scale, x, y);
-                checkBorderWhenScale();
+                checkBorder();
                 setImageMatrix(mImageMatrix);
 
                 mIsAutoScale = false;
@@ -268,7 +268,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
             }
 
             mImageMatrix.postScale(scaleFactor, scaleFactor, detector.getFocusX(), detector.getFocusY());
-            checkBorderWhenScale();
+            checkBorder();
             setImageMatrix(mImageMatrix);
         }
 
@@ -347,16 +347,16 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
                 if (mIsCanDrag) {
                     Drawable drawable = getDrawable();
                     if (drawable != null) {
-                        if (rectF.width() < width) {
+                        if (rectF.width() <= width - mHorizontalPadding * 2) {
                             dx = 0;
                         }
 
-                        if (rectF.height() < height) {
+                        if (rectF.height() <= height - mVerticalPadding * 2) {
                             dy = 0;
                         }
 
                         mImageMatrix.postTranslate(dx, dy);
-                        checkBorderWhenTranslate();
+                        checkBorder();
                         setImageMatrix(mImageMatrix);
                     }
                 }
@@ -375,43 +375,9 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
     }
 
     /**
-     * 移动的时候，进行边界检测
+     * 在移动和缩放的时候进行边界和位置的控制
      */
-    private void checkBorderWhenTranslate() {
-        RectF rectF = getMatrixRectF();
-        int width = getWidth();
-        int height = getHeight();
-
-        float dx = 0;
-        float dy = 0;
-
-        if (rectF.width() >= width) {
-            if (rectF.left > 0) {
-                dx = -rectF.left;
-            }
-
-            if (rectF.right < width) {
-                dx = width - rectF.right;
-            }
-        }
-
-        if (rectF.height() >= height) {
-            if (rectF.top > 0) {
-                dy = -rectF.top;
-            }
-
-            if (rectF.bottom < height) {
-                dy = height - rectF.bottom;
-            }
-        }
-
-        mImageMatrix.postTranslate(dx, dy);
-    }
-
-    /**
-     * 在缩放的时候进行边界和位置的控制
-     */
-    private void checkBorderWhenScale() {
+    private void checkBorder() {
         RectF rectF = getMatrixRectF();
 
         int width = getWidth();
@@ -420,7 +386,7 @@ public class ClipImageView extends ImageView implements ViewTreeObserver.OnGloba
         float dx = 0;
         float dy = 0;
 
-        //缩放的时候进行边界检测，防止出现空隙
+        //如果宽或高大于屏幕, 则控制范围; 这里的0.01是因为精度丢失会产生问题，但是误差一般很小，所以我们直接加了一个0.01
         if (rectF.width() + 0.01 >= width - mHorizontalPadding * 2) {
             if (rectF.left > mHorizontalPadding) {  //图片跟左边有空隙
                 dx = -rectF.left + mHorizontalPadding;  //向左移动
