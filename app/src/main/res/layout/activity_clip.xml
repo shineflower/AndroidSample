@@ -8,6 +8,13 @@
         android:id="@+id/clip_image_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:horizontal_padding="40dp"
+        app:horizontal_padding="20dp"
         app:image_drawable="@drawable/yifei1"/>
+
+    <ImageView
+        android:id="@+id/clip_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 </RelativeLayout>

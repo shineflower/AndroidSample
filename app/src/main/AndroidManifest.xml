@@ -135,7 +135,6 @@
         <activity
             android:name=".clip_image.ClipActivity"
             android:theme="@style/AppTheme.ActionBar" />
-        <activity android:name=".clip_image.ShowImageActivity" />
 
         <!-- 自定义索引查询联系人 -->
         <activity android:name=".contact.IndexableContactActivity" />
