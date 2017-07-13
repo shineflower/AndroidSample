@@ -10,6 +10,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.jackie.sample.R;
+import com.jackie.sample.gmail.helper.RoundTransform;
+
+import java.io.File;
+
 /**
  * Created by Jackie on 2015/12/29.
  * CommonUtils ViewHolder
@@ -100,7 +106,7 @@ public class ViewHolder {
     }
 
     /**
-     * 这只ImageView设置图片
+     * 设置ImageView的图片
      * @param viewId   viewId
      * @param path     path
      * @return         this
@@ -108,6 +114,26 @@ public class ViewHolder {
     public ViewHolder loadImage(int viewId, String path) {
         ImageView imageView = getView(viewId);
         ImageLoader.getInstance(3, ImageLoader.Type.LIFO).loadImage(path, imageView);
+        return this;
+    }
+
+    /**
+     * 为ImageView设置圆角图片
+     * @param viewId   viewId
+     * @param path     path
+     * @param radius   radius
+     * @return         this
+     */
+    public ViewHolder loadImage(Context context, int viewId, String path, int radius) {
+        ImageView imageView = getView(viewId);
+
+        // 加载本地图片
+        Glide.with(context)
+                .load(new File(path))
+                .placeholder(R.drawable.picture_no)
+                .transform(new RoundTransform(context, radius))
+                .into(imageView);
+
         return this;
     }
 }

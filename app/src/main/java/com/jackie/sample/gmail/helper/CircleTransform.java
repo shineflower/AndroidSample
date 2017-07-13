@@ -11,6 +11,7 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
 /**
  * Created by Jackie on 2017/6/13.
+ * 圆形图片转化
  */
 
 public class CircleTransform  extends BitmapTransformation {
