@@ -171,4 +171,13 @@
         <attr name="flake_density" format="integer" />
         <attr name="falling_delay" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="PaletteImageView">
+        <attr name="palette_radius" format="dimension" />
+        <attr name="palette_src" format="reference" />
+        <attr name="palette_padding" format="dimension" />
+        <attr name="palette_offsetX" format="dimension" />
+        <attr name="palette_offsetY" format="dimension" />
+        <attr name="palette_shadow_radius" format="dimension" />
+    </declare-styleable>
 </resources>

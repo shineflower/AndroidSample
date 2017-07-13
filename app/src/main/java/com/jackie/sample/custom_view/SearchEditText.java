@@ -63,7 +63,7 @@ public class SearchEditText extends RelativeLayout {
         addView(mView, params);
 
         mSearchLayout = (LinearLayout) mView.findViewById(R.id.search_layout);
-        mEditText = (EditText) mView.findViewById(R.id.edit_text);
+        mEditText = (EditText) mView.findViewById(R.id.search_edit_text);
 
         mEditText.setOnKeyListener(new OnKeyListener() {
             @Override

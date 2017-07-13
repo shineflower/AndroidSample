@@ -1,4 +1,4 @@
-package com.jackie.sample.fragment;
+package com.jackie.sample.view_pager_indicator;
 
 import android.graphics.Color;
 import android.os.Bundle;

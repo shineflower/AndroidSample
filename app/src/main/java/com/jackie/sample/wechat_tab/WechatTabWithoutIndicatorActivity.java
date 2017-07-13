@@ -12,7 +12,7 @@ import android.view.Window;
 
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.ChangeColorIconWithTextView;
-import com.jackie.sample.fragment.TabFragment;
+import com.jackie.sample.view_pager_indicator.TabFragment;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

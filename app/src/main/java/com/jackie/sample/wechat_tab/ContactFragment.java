@@ -1,4 +1,4 @@
-package com.jackie.sample.fragment;
+package com.jackie.sample.wechat_tab;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

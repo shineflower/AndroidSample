@@ -133,7 +133,7 @@
 
         <!-- 仿微信头像裁切 -->
         <activity
-            android:name=".clip_image.ClipActivity"
+            android:name=".clip_image.ClipImageActivity"
             android:theme="@style/AppTheme.ActionBar" />
 
         <!-- 自定义索引查询联系人 -->

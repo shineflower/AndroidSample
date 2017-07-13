@@ -21,7 +21,7 @@ import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
 import com.jackie.sample.circle_range.CircleRangeActivity;
-import com.jackie.sample.clip_image.ClipActivity;
+import com.jackie.sample.clip_image.ClipImageActivity;
 import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.contact.IndexableContactActivity;
 import com.jackie.sample.contact.MeizuContactActivity;
@@ -180,7 +180,7 @@ public class DeskActivity extends AppCompatActivity {
 
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿微信头像裁切");
-        sampleBean.setClassName(ClipActivity.class);
+        sampleBean.setClassName(ClipImageActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

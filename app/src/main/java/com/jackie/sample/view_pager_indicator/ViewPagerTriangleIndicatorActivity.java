@@ -8,7 +8,6 @@ import android.support.v4.view.ViewPager;
 
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.ViewPagerIndicator;
-import com.jackie.sample.fragment.TabFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;

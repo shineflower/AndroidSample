@@ -16,14 +16,14 @@ import com.jackie.sample.custom_view.ClipImageLayout;
  * 裁剪图片
  */
 
-public class ClipActivity extends AppCompatActivity {
+public class ClipImageActivity extends AppCompatActivity {
     private ClipImageLayout mClipImageLayout;
     private ImageView mClipImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clip);
+        setContentView(R.layout.activity_clip_image);
 
         mClipImageLayout = (ClipImageLayout) findViewById(R.id.clip_image_layout);
         mClipImageView = (ImageView) findViewById(R.id.clip_image_view);

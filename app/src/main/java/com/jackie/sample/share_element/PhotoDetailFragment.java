@@ -1,4 +1,4 @@
-package com.jackie.sample.fragment;
+package com.jackie.sample.share_element;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

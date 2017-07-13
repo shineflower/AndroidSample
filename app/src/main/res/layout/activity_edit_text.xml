@@ -114,4 +114,31 @@
     <com.jackie.sample.custom_view.ReminderEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="请输入手机号"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <com.jackie.sample.custom_view.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/text_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:inputType="phone" />
+    </com.jackie.sample.custom_view.TextInputLayout>
 </LinearLayout>

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.jackie.sample.R;
-import com.jackie.sample.fragment.PhotoListFragment;
 
 public class PhotoActivity extends AppCompatActivity {
     private Bundle mSavedInstanceState;

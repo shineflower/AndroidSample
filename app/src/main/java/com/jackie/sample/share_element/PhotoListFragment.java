@@ -1,4 +1,4 @@
-package com.jackie.sample.fragment;
+package com.jackie.sample.share_element;
 
 import android.content.Context;
 import android.os.Build;
@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import com.jackie.sample.R;
 import com.jackie.sample.adapter.PhotoGridAdapter;
 import com.jackie.sample.listener.OnPhotoGridItemClickListener;
-import com.jackie.sample.share_element.DetailTransition;
 
 import java.util.ArrayList;
 import java.util.List;
