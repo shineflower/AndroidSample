@@ -1,7 +1,5 @@
 package com.jackie.sample.face_detect;
 
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -28,8 +26,6 @@ import com.jackie.sample.utils.FaceDetect;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.File;
 
 public class FaceDetectActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView mPhotoImage;
@@ -238,33 +234,5 @@ public class FaceDetectActivity extends AppCompatActivity implements View.OnClic
             mFaceCount.setText("Click Detect ==>");
         }
         super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    /**
-     * Gets the content:// URI from the given corresponding path to a file
-     * @param context       content
-     * @param imageFile     imageFile
-     * @return              content uri
-     */
-    public static Uri getImageContentUri(Context context, File imageFile) {
-        String filePath = imageFile.getAbsolutePath();
-
-        Cursor cursor = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                new String[] { MediaStore.Images.Media._ID }, MediaStore.Images.Media.DATA + "=? ",
-                new String[] { filePath }, null);
-
-        if (cursor != null && cursor.moveToFirst()) {
-            int id = cursor.getInt(cursor.getColumnIndex(MediaStore.MediaColumns._ID));
-            Uri baseUri = Uri.parse("content://media/external/images/media");
-            return Uri.withAppendedPath(baseUri, id + "");
-        } else {
-            if (imageFile.exists()) {
-                ContentValues values = new ContentValues();
-                values.put(MediaStore.Images.Media.DATA, filePath);
-                return context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-            } else {
-                return null;
-            }
-        }
     }
 }

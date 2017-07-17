@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -196,9 +195,9 @@ public class AMapActivity extends AppCompatActivity implements View.OnClickListe
             mPoiSearch = new PoiSearch(this, mQuery);
             mPoiSearch.setOnPoiSearchListener(this);
             LatLonPoint latLonPoint = new LatLonPoint(target.latitude, target.longitude);
-            mPoiSearch.setBound(new PoiSearch.SearchBound(latLonPoint, 1000, true));
-            //设置搜索区域为以lp点为圆心，其周围1000米范围
-            mPoiSearch.searchPOIAsyn();// 异步搜索
+            mPoiSearch.setBound(new PoiSearch.SearchBound(latLonPoint, 1000, true));  //设置搜索区域为以当前位置为圆心，其周围1000米范围
+//            mPoiSearch.searchPOI(); //同步搜索
+            mPoiSearch.searchPOIAsyn(); // 异步搜索
         }
     }
 
@@ -284,7 +283,6 @@ public class AMapActivity extends AppCompatActivity implements View.OnClickListe
 
                     List<SuggestionCity> suggestionCities = poiResult.getSearchSuggestionCitys();// 当搜索不到poi item数据时，会返回含有搜索关键字的城市信息
 
-                    Log.d("chengjie", mPoiItemList.size() + "");
                     if (mPoiItemList != null && mPoiItemList.size() > 0) {
                         mNearAddressList = new ArrayList<>();
 
@@ -302,7 +300,6 @@ public class AMapActivity extends AppCompatActivity implements View.OnClickListe
 
                             mNearAddressList.add(nearAddressBean);
                         }
-
 
                         mAdapter.setNearAddressList(mNearAddressList);
                         mRecyclerView.setAdapter(mAdapter);

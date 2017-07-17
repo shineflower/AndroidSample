@@ -136,7 +136,7 @@ public class QRCodeUtils {
 
     /**
      * 从选择的图片识别二维码
-     * @param drawable  图片drawable
+     * @param drawable  drawable
      * @return
      */
     public static String getStringFromQRCode(Drawable drawable) {
@@ -173,6 +173,11 @@ public class QRCodeUtils {
         return httpString;
     }
 
+    /**
+     * 从选择的图片识别二维码
+     * @param bitmap  bitmap
+     * @return
+     */
     public static String getStringFromQRCode(Bitmap bitmap) {
         String qrCodeString = null;
 

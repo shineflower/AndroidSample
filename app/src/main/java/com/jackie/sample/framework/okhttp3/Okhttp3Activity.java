@@ -5,7 +5,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -106,7 +105,6 @@ public class Okhttp3Activity extends AppCompatActivity implements View.OnClickLi
                 new DisposeDataHandler(new DisposeDataListener() {
             @Override
             public void onSuccess(Object response) {
-                Log.d("chengjie", response.toString());
             }
 
             @Override
@@ -168,7 +166,6 @@ public class Okhttp3Activity extends AppCompatActivity implements View.OnClickLi
 
 //        File file = new File(Environment.getExternalStorageDirectory(), "test.jpg");
 //        if (!file.exists()) {
-//            Log.d("chengjie", file.getAbsolutePath() + " not exist");
 //            return;
 //        }
 //
@@ -197,7 +194,6 @@ public class Okhttp3Activity extends AppCompatActivity implements View.OnClickLi
 
         File file = new File(Environment.getExternalStorageDirectory(), "test.jpg");
         if (!file.exists()) {
-            Log.d("chengjie", file.getAbsolutePath() + " not exist");
             return;
         }
 
@@ -229,7 +225,6 @@ public class Okhttp3Activity extends AppCompatActivity implements View.OnClickLi
         CountingRequestBody countingRequestBody = new CountingRequestBody(requestBody, new CountingRequestBody.OnCountingListener() {
             @Override
             public void onRequestProgress(long byteWritten, long contentLength) {
-                Log.d("chengjie", byteWritten + "/" + contentLength);
             }
         });
 
@@ -277,8 +272,6 @@ public class Okhttp3Activity extends AppCompatActivity implements View.OnClickLi
                     fos.write(buf, 0, len);
 
                     sum += len;
-
-                    Log.d("chengjie", sum + "/" + total);
                 }
 
                 fos.flush();
