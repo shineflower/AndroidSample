@@ -520,6 +520,5 @@ public class DeskActivity extends AppCompatActivity {
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
         mRecyclerView.setAdapter(sampleAdapter);
-        sampleAdapter.notifyDataSetChanged();
     }
 }
