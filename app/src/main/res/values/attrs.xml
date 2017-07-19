@@ -25,7 +25,7 @@
         </attr>
     </declare-styleable>
 
-    <declare-styleable name="ViewPagerIndicator">
+    <declare-styleable name="ViewPagerTriangleIndicator">
         <attr name="indicator_item_count" format="integer"/>
     </declare-styleable>
 

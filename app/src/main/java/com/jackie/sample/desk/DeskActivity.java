@@ -28,6 +28,7 @@ import com.jackie.sample.contact.IndexableContactActivity;
 import com.jackie.sample.contact.MeizuContactActivity;
 import com.jackie.sample.count_down.CountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
+import com.jackie.sample.divider.DividerActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
 import com.jackie.sample.edit_text.EditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
@@ -152,6 +153,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("打造炫酷ViewPager三角形指示器");
         sampleBean.setClassName(ViewPagerTriangleIndicatorActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿IOS滑动分页器");
+        sampleBean.setClassName(DividerActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

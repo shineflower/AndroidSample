@@ -106,6 +106,9 @@
         <!-- 打造炫酷ViewPager三角形指示器 -->
         <activity android:name=".view_pager_indicator.ViewPagerTriangleIndicatorActivity" />
 
+        <!-- 仿IOS滑动分页器 -->
+        <activity android:name=".divider.DividerActivity" />
+
         <!-- 图像处理集合 -->
         <activity android:name=".image_processing.ImageProcessingActivity" />
         <activity android:name=".image_processing.PrimaryColorActivity" />

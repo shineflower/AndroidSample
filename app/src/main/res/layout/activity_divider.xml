@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.jackie.sample.custom_view.CustomViewPagerInternal
+            android:id="@+id/view_pager_1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <!--
+                app:fillColor="#0094f6"   设置选中的圆圈颜色
+                app:radius="4dp"  设置圆圈半径
+                app:strokeColor="@android:color/transparent"   设置圆圈边框
+                app:pageColor="#cccccc"   设置未选中的圆圈颜色
+            -->
+            <com.jackie.sample.custom_view.CirclePageIndicator
+                android:id="@+id/pager_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fillColor="#0094f6"
+                app:radius="4dp"
+                app:strokeColor="@android:color/transparent"
+                app:pageColor="#cccccc"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <com.jackie.sample.custom_view.CustomViewPagerInternal
+                android:id="@+id/view_pager_2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <com.jackie.sample.custom_view.SlideBarView
+                android:id="@+id/slide_bar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
