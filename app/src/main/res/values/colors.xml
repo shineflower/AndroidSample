@@ -13,6 +13,8 @@
 
     <color name="result_view">#b0000000</color>
     <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
     <!-- 扫描框中的小黄点 #00000000 -->
     <color name="possible_result_points">#c0ffff00</color>
 
@@ -57,4 +59,5 @@
     <color name="color_ff1f1f">#ff1f1f</color>
     <color name="color_ececec">#ececec</color>
     <color name="color_999999">#999999</color>
+
 </resources>

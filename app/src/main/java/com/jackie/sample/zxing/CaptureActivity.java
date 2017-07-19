@@ -15,6 +15,7 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -49,6 +50,8 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 	private static final float BEEP_VOLUME = 0.10f;
 	private boolean vibrate;
 
+	private boolean isLightOpen;
+
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,29 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 		});
 		hasSurface = false;
 		inactivityTimer = new InactivityTimer(this);
+
+		ImageView lightOn = (ImageView) findViewById(R.id.light_on);
+		ImageView selectImg = (ImageView) findViewById(R.id.select_img);
+
+		lightOn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				isLightOpen = !isLightOpen;
+
+				if(isLightOpen){
+					CameraManager.get().openLight();
+				}else{
+					CameraManager.get().closeLight();
+				}
+			}
+		});
+
+		selectImg.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+			}
+		});
 	}
 
 	@Override

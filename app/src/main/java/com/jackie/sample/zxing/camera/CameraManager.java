@@ -26,6 +26,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
+import com.jackie.sample.utils.DensityUtils;
+
 import java.io.IOException;
 
 /**
@@ -38,11 +40,11 @@ public final class CameraManager {
 
   private static final String TAG = CameraManager.class.getSimpleName();
 
-  private static final int MIN_FRAME_WIDTH = 240;
-  private static final int MIN_FRAME_HEIGHT = 240;
-  private static final int MAX_FRAME_WIDTH = 480;
-//  private static final int MAX_FRAME_HEIGHT = 360;
-  private static final int MAX_FRAME_HEIGHT = 480;
+  private static int MIN_FRAME_WIDTH = 240;
+  private static int MIN_FRAME_HEIGHT = 240;
+  private static int MAX_FRAME_WIDTH = 480;
+//  private static int MAX_FRAME_HEIGHT = 360;
+  private static int MAX_FRAME_HEIGHT = 480;
 
   private static CameraManager cameraManager;
 
@@ -83,6 +85,12 @@ public final class CameraManager {
     if (cameraManager == null) {
       cameraManager = new CameraManager(context);
     }
+
+    // modify the frame width and height.
+    MIN_FRAME_WIDTH = DensityUtils.dp2px(context, 250);
+    MIN_FRAME_HEIGHT = DensityUtils.dp2px(context, 250);
+    MAX_FRAME_WIDTH = DensityUtils.dp2px(context, 250);
+    MAX_FRAME_HEIGHT = DensityUtils.dp2px(context, 250);
   }
 
   /**
@@ -148,6 +156,28 @@ public final class CameraManager {
       FlashlightManager.disableFlashlight();
       camera.release();
       camera = null;
+    }
+  }
+
+  /**
+   * opens the camera flash light.
+   */
+  public void openLight(){
+    if (camera != null) {
+      Camera.Parameters parameter = camera.getParameters();
+      parameter.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+      camera.setParameters(parameter);
+    }
+  }
+
+  /**
+   * closes the camera flash light.
+   */
+  public void closeLight() {
+    if (camera != null) {
+      Camera.Parameters  parameter = camera.getParameters();
+      parameter.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+      camera.setParameters(parameter);
     }
   }
 

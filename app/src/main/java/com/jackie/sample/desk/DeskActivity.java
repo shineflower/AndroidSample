@@ -19,6 +19,7 @@ import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
+import com.jackie.sample.card_piece.CardPieceActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
 import com.jackie.sample.circle_range.CircleRangeActivity;
 import com.jackie.sample.clip_image.ClipImageActivity;
@@ -516,6 +517,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("碎片飘落效果控件");
         sampleBean.setClassName(FallingActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("项目拼卡效果");
+        sampleBean.setClassName(CardPieceActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

@@ -42,7 +42,7 @@ public class ExchangeActivity extends AppCompatActivity {
             @Override
             public void onExchange(int from, int to) {
 //                HashMap<String, Object> hashMap = mList.get(from);
-                //直接交互item
+////                直接交互item
 //                mList.set(from, mList.get(to));
 //                mList.set(to, hashMap);
 //                mList.set(to, hashMap);
