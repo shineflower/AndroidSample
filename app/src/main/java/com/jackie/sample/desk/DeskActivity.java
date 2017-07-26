@@ -105,6 +105,7 @@ public class DeskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_desk);
 
         initView();
+
         ScreenUtils.hideNavigationBar(this);//控制底部的NavigationBar的显示和隐藏的效果
     }
 

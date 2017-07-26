@@ -182,7 +182,7 @@ public class WechatImagePickerActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Uri imageUri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
-                Cursor cursor = getContentResolver().query(imageUri, null, MediaStore.Images.Media.MIME_TYPE + "= ? or " + MediaStore.Images.Media.MIME_TYPE + "=?", new String[]{"image/jpeg", "image/png"}, MediaStore.Images.Media.DATE_MODIFIED);
+                Cursor cursor = getContentResolver().query(imageUri, null, MediaStore.Images.Media.MIME_TYPE + "= ? or " + MediaStore.Images.Media.MIME_TYPE + "= ? or " + MediaStore.Images.Media.MIME_TYPE + "= ?", new String[]{ "image/jpg", "image/jpeg", "image/png" }, MediaStore.Images.Media.DATE_MODIFIED);
 
                 Set<String> directorySet = new HashSet<>();
                 while(cursor.moveToNext()) {
@@ -212,7 +212,7 @@ public class WechatImagePickerActivity extends AppCompatActivity {
                         int imageCount  = parentFile.list(new FilenameFilter() {
                             @Override
                             public boolean accept(File dir, String filename) {
-                                if (filename.toLowerCase().endsWith(".jpg") || filename.toLowerCase().endsWith(".png") || filename.toLowerCase().endsWith(".jpeg"))
+                                if (filename.toLowerCase().endsWith(".jpg") || filename.toLowerCase().endsWith(".jpeg") || filename.toLowerCase().endsWith(".png"))
                                     return true;
                                 return false;
                             }
