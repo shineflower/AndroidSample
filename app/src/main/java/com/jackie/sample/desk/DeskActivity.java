@@ -70,6 +70,7 @@ import com.jackie.sample.share_element.ShareElementFromActivity;
 import com.jackie.sample.sin.SinActivity;
 import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
+import com.jackie.sample.card_swipe.CardSwipeActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
 import com.jackie.sample.timeline.TimelineActivity;
@@ -529,6 +530,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("项目拼卡效果");
         sampleBean.setClassName(CardPieceActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿探探层叠卡片效果");
+        sampleBean.setClassName(CardSwipeActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

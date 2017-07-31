@@ -180,4 +180,11 @@
         <attr name="palette_offsetY" format="dimension" />
         <attr name="palette_shadow_radius" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="SwipeFlingAdapterView">
+        <attr name="y_offset_step" format="dimension" />
+        <attr name="rotation_degrees" format="float" />
+        <attr name="min_adapter_stack" format="integer" />
+        <attr name="max_visible" format="integer" />
+    </declare-styleable>
 </resources>
