@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import com.jackie.sample.utils.CommonUtils;
@@ -23,7 +22,7 @@ public class VerticalCardPieceLayout extends LinearLayout {
     private static final float[] FIRST_RATIOS = { 0.5f, 0.3f, 0.1f, 0.1f };
     private static final float[][] SECOND_RATIOS = {
             { 0.4f, 0.4f, 0.1f, 0.1f },
-            { 0.3f, 0.2f, 0.5f },
+            { 0.4f, 0.4f, 0.2f },
             { 0.1f, 0.9f },
             { 1.0f }
     };
@@ -68,12 +67,12 @@ public class VerticalCardPieceLayout extends LinearLayout {
 
             //第二层布局
             for (int j = 0; j < mSecondRatios[i].length; j++) {
-                View secondView = new View(context);
-                firstLayout.addView(secondView);
+                LinearLayout secondLayout = new LinearLayout(context);
+                firstLayout.addView(secondLayout);
 
-                secondView.setBackgroundColor(CommonUtils.getInstance().getRandomColor());
+                secondLayout.setBackgroundColor(CommonUtils.getInstance().getRandomColor());
 
-                LinearLayout.LayoutParams secondParams = (LayoutParams) secondView.getLayoutParams();
+                LinearLayout.LayoutParams secondParams = (LayoutParams) secondLayout.getLayoutParams();
                 secondParams.width = 0;
                 secondParams.weight = mSecondRatios[i][j];
                 secondParams.height = LayoutParams.MATCH_PARENT;
@@ -82,9 +81,15 @@ public class VerticalCardPieceLayout extends LinearLayout {
                     secondParams.leftMargin = DensityUtils.dp2px(context, 3);
                 }
 
-                secondView.setLayoutParams(secondParams);
+                secondLayout.setLayoutParams(secondParams);
             }
         }
+    }
+
+    public LinearLayout getChild(int i, int j) {
+        LinearLayout linearLayout = (LinearLayout) ((LinearLayout) getChildAt(i)).getChildAt(j);
+
+        return linearLayout;
     }
 
     /**

@@ -5,11 +5,33 @@
     android:orientation="vertical">
 
     <com.jackie.sample.custom_view.VerticalCardPieceLayout
+        android:id="@+id/card_piece_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <!--<com.jackie.sample.custom_view.HorizontalCardPieceLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/split_merge_right_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右上角拆分合并" />
+
+        <Button
+            android:id="@+id/split_merge_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="中间拆分合并" />
+    </LinearLayout>
 
 </LinearLayout>
