@@ -33,6 +33,9 @@ public class Employee {
         isFired = fired;
     }
 
+    public Employee() {
+    }
+
     public Employee(String firstName, String lastName, boolean isFired) {
         this.firstName = firstName;
         this.lastName = lastName;

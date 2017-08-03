@@ -6,8 +6,6 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 
-import static com.baidu.location.h.j.w;
-
 /**
  * Created by Jackie on 2017/5/11.
  * 屏幕相关工具类
@@ -40,6 +38,22 @@ public class ScreenUtils {
     }
 
 //    public static int getWindowStatusHeight(Context context) {
+
+//        //获取反射的3中方式
+//        //第一种方式：
+//        Class c1 = Class.forName("Employee");
+//        Class c2 = c1.newInstance();
+//
+//
+//        //第二种方式：
+//        //java中每个类型都有class 属性.
+//        Class c3 = Employee.class;
+//
+//        //第三种方式：
+//        //java语言中任何一个java对象都有getClass 方法
+//        Employee employee = new Employee();
+//        Class c4 = employee.getClass(); //c3是运行时类 (e的运行时类是Employee)
+
 //        int statusHeight = 0;
 //        Rect localRect = new Rect();
 //        ((Activity) context).getWindow().getDecorView().getWindowVisibleDisplayFrame(localRect);
