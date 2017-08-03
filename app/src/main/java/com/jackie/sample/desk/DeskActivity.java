@@ -20,13 +20,15 @@ import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
 import com.jackie.sample.card_piece.CardPieceActivity;
+import com.jackie.sample.card_swipe.CardSwipeActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
 import com.jackie.sample.circle_range.CircleRangeActivity;
 import com.jackie.sample.clip_image.ClipImageActivity;
 import com.jackie.sample.clock.ClockActivity;
 import com.jackie.sample.contact.IndexableContactActivity;
 import com.jackie.sample.contact.MeizuContactActivity;
-import com.jackie.sample.count_down.CountDownActivity;
+import com.jackie.sample.count_down.BusinessCountDownActivity;
+import com.jackie.sample.count_down.SMSCountDownActivity;
 import com.jackie.sample.data_binding.DataBindingActivity;
 import com.jackie.sample.divider.DividerActivity;
 import com.jackie.sample.drag_exchange.ExchangeActivity;
@@ -70,7 +72,6 @@ import com.jackie.sample.share_element.ShareElementFromActivity;
 import com.jackie.sample.sin.SinActivity;
 import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
-import com.jackie.sample.card_swipe.CardSwipeActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
 import com.jackie.sample.timeline.TimelineActivity;
@@ -119,7 +120,12 @@ public class DeskActivity extends AppCompatActivity {
 
         sampleBean = new SampleBean();
         sampleBean.setTitle("短信验证码倒计时");
-        sampleBean.setClassName(CountDownActivity.class);
+        sampleBean.setClassName(SMSCountDownActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("电商抢购倒计时");
+        sampleBean.setClassName(BusinessCountDownActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

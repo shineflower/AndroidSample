@@ -14,14 +14,14 @@ import com.jackie.sample.utils.CountDownTimerUtils;
  * 短信验证码倒计时
  */
 
-public class CountDownActivity extends AppCompatActivity implements View.OnClickListener {
+public class SMSCountDownActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView mCountTimeView;
     private CountDownTimer mCountDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_count_down);
+        setContentView(R.layout.activity_sms_count_down);
 
         mCountTimeView = (TextView) findViewById(R.id.tv_count_down);
         mCountDownTimer = new CountDownTimerUtils(mCountTimeView, 60000, 1000);

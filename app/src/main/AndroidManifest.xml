@@ -83,7 +83,10 @@
         </activity>
 
         <!-- 短信验证码倒计时 -->
-        <activity android:name=".count_down.CountDownActivity" />
+        <activity android:name=".count_down.SMSCountDownActivity" />
+
+        <!-- 电商抢购倒计时 -->
+        <activity android:name=".count_down.BusinessCountDownActivity" />
 
         <!-- 图片验证码 -->
         <activity android:name=".image_code.ImageCodeActivity" />
