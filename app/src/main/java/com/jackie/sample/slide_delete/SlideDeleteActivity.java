@@ -1,6 +1,7 @@
 package com.jackie.sample.slide_delete;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,7 +23,7 @@ public class SlideDeleteActivity extends AppCompatActivity implements OnStartDra
     private List<SlideDeleteBean> mList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_delete);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);

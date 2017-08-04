@@ -2,13 +2,14 @@ package com.jackie.sample.list_view;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.jackie.sample.R;
-import com.jackie.sample.wechat_image_picker.adapter.CommonAdapter;
 import com.jackie.sample.custom_view.LoopCompletenessListView;
+import com.jackie.sample.wechat_image_picker.adapter.CommonAdapter;
 import com.jackie.sample.wechat_image_picker.utils.ViewHolder;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class LoopCompletenessListViewActivity extends AppCompatActivity {
     private CommonAdapter<String> mAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loop_completeness_list_view);
 

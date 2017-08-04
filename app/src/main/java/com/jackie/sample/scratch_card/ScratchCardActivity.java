@@ -1,6 +1,7 @@
 package com.jackie.sample.scratch_card;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
@@ -11,7 +12,7 @@ public class ScratchCardActivity extends AppCompatActivity implements ScratchVie
     private ScratchView mScratchView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scratch_card);
 

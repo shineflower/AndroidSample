@@ -1,9 +1,10 @@
-package com.jackie.sample.view_pager_anim_transfer.guide;
+package com.jackie.sample.view_pager_anim_transfer;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.view.Window;
 import android.widget.ImageView;
 
 import com.jackie.sample.R;
+import com.jackie.sample.view_pager_anim_transfer.guide.CustomViewPager;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ public class ViewPagerTransferGuideAnimActivity extends AppCompatActivity {
     private List<ImageView> mList = new ArrayList<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_view_pager_transfer_guide_anim);

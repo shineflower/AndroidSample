@@ -2,13 +2,14 @@ package com.jackie.sample.contact;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.SectionIndexer;
 
 import com.jackie.sample.R;
-import com.jackie.sample.utils.ContactUtils;
 import com.jackie.sample.custom_view.IndexableListView;
+import com.jackie.sample.utils.ContactUtils;
 import com.jackie.sample.utils.StringMatcher;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class IndexableContactActivity extends AppCompatActivity {
     private static final String SECTIONS = "#ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indexable_contact);
 

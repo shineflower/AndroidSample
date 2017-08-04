@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.ImageFormat;
 import android.hardware.Camera;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -44,12 +45,11 @@ public class CustomCameraActivity extends AppCompatActivity implements SurfaceHo
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
     };
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_camera);
 

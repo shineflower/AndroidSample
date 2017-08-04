@@ -124,11 +124,11 @@
         <activity android:name=".image_processing.MeshActivity" />
 
         <!-- ViewPager炫酷切换效果(适用于Guide) -->
-        <activity android:name=".view_pager_anim_transfer.guide.ViewPagerTransferGuideAnimActivity" />
+        <activity android:name=".view_pager_anim_transfer.ViewPagerTransferGuideAnimActivity" />
 
         <!-- ViewPager炫酷切换效果(适用于Banner) -->
         <activity
-            android:name=".view_pager_anim_transfer.banner.ViewPagerTransferBannerAnimActivity"
+            android:name=".view_pager_anim_transfer.ViewPagerTransferBannerAnimActivity"
             android:theme="@style/AppTheme.ActionBar" />
 
         <!-- 图片预览和多点触控 -->
@@ -399,6 +399,9 @@
 
         <!-- 仿探探层叠卡片效果 -->
         <activity android:name=".card_swipe.CardSwipeActivity" />
+
+        <!-- 指纹识别 -->
+        <activity android:name=".finger.FingerActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

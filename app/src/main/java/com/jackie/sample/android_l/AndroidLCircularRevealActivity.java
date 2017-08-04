@@ -3,6 +3,7 @@ package com.jackie.sample.android_l;
 import android.animation.Animator;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewAnimationUtils;
@@ -24,7 +25,7 @@ public class AndroidLCircularRevealActivity extends AppCompatActivity {
     private Animator mAnimator2;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_l_circular_reveal);
         mContext = this;

@@ -1,6 +1,7 @@
 package com.jackie.sample.circle_range;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,7 +35,7 @@ public class CircleRangeActivity extends AppCompatActivity implements View.OnCli
     private static final String[] DATA_ARRAY = { "不设置", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circle_range);
 

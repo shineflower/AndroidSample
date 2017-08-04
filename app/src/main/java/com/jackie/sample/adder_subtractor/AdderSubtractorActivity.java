@@ -1,6 +1,7 @@
 package com.jackie.sample.adder_subtractor;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +17,7 @@ public class AdderSubtractorActivity extends AppCompatActivity implements View.O
     private AdderSubtractorView mAdderSubtractorView2;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adder_subtractor);
 

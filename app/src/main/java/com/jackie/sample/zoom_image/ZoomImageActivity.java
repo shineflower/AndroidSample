@@ -1,6 +1,7 @@
 package com.jackie.sample.zoom_image;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +21,7 @@ public class ZoomImageActivity extends AppCompatActivity {
     private List<ZoomImageView> mZoomImageViewList = new ArrayList<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zoom_image);
 

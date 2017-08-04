@@ -1,6 +1,7 @@
 package com.jackie.sample.view_pager_indicator;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -24,7 +25,7 @@ public class ViewPagerColorTrackIndicatorActivity extends FragmentActivity {
     private List<ColorTrackView> mTabList = new ArrayList<>();
 
     @Override
-    protected void onCreate (Bundle savedInstanceState) {
+    protected void onCreate (@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_color_track);
 

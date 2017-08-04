@@ -43,8 +43,9 @@ public class PhotoDetailFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         mImage = (ImageView) view.findViewById(R.id.detail_image);
         mHead = (TextView) view.findViewById(R.id.detail_head);
         mBody = (TextView) view.findViewById(R.id.detail_body);

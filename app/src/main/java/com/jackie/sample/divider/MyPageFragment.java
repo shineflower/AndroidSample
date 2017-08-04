@@ -14,6 +14,7 @@ public class MyPageFragment extends Fragment {
     private View mRootView;
     private TextView mTextView;
 
+    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_page_indicator, container, false);

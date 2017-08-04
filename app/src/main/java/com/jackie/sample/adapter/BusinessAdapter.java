@@ -35,7 +35,7 @@ public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.ViewHo
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.item_count_down, parent, false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.item_business, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

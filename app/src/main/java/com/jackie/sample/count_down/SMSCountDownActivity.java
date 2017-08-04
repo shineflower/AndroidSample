@@ -2,6 +2,7 @@ package com.jackie.sample.count_down;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ public class SMSCountDownActivity extends AppCompatActivity implements View.OnCl
     private CountDownTimer mCountDownTimer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms_count_down);
 

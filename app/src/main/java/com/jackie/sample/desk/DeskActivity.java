@@ -1,6 +1,7 @@
 package com.jackie.sample.desk;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -36,6 +37,7 @@ import com.jackie.sample.edit_text.EditTextActivity;
 import com.jackie.sample.face_detect.FaceDetectActivity;
 import com.jackie.sample.falling.FallingActivity;
 import com.jackie.sample.file_stream_recorder.FileStreamRecorderActivity;
+import com.jackie.sample.finger.FingerActivity;
 import com.jackie.sample.float_window.FloatWindowActivity;
 import com.jackie.sample.flow_layout.FlowLayoutActivity;
 import com.jackie.sample.framework.FrameworkActivity;
@@ -78,8 +80,8 @@ import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
 import com.jackie.sample.video_player.VideoPlayerActivity;
-import com.jackie.sample.view_pager_anim_transfer.banner.ViewPagerTransferBannerAnimActivity;
-import com.jackie.sample.view_pager_anim_transfer.guide.ViewPagerTransferGuideAnimActivity;
+import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferBannerAnimActivity;
+import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferGuideAnimActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerColorTrackIndicatorActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerTriangleIndicatorActivity;
 import com.jackie.sample.volume_control.VolumeControlActivity;
@@ -101,7 +103,7 @@ public class DeskActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_desk);
@@ -541,6 +543,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿探探层叠卡片效果");
         sampleBean.setClassName(CardSwipeActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("指纹识别");
+        sampleBean.setClassName(FingerActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

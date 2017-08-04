@@ -1,6 +1,7 @@
 package com.jackie.sample.wechat_tab;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -29,7 +30,7 @@ public class WechatTabWithoutIndicatorActivity extends FragmentActivity implemen
     private List<ChangeColorIconWithTextView> mTabIndicatorList = new ArrayList<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wechat_tab_without_indicator);
 

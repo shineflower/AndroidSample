@@ -1,6 +1,7 @@
 package com.jackie.sample.circle_menu;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -24,7 +25,7 @@ public class CCBActivity extends AppCompatActivity {
 			"转账汇款", "我的账户", "信用卡" };
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
         //自已切换布局文件看效果

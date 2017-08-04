@@ -3,6 +3,7 @@ package com.jackie.sample.circle_menu;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -13,7 +14,7 @@ import android.widget.ListView;
 
 public class CircleMenuActivity extends ListActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getListView().setAdapter(

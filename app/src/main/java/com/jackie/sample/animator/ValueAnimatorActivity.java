@@ -1,8 +1,8 @@
 package com.jackie.sample.animator;
 
 import android.animation.ValueAnimator;
-import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -11,13 +11,12 @@ import android.widget.TextView;
 import com.jackie.sample.R;
 
 public class ValueAnimatorActivity extends AppCompatActivity implements View.OnClickListener {
-    private Context mContext;
     private TextView mValueAnimatorIntText, mValueAnimatorFloatText;
     private Button mButton;
     private ValueAnimator mIntValueAnimator, mFloatValueAnimator2;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_value_animator);
 

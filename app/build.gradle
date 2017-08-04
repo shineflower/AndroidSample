@@ -102,4 +102,7 @@ dependencies {
 
     //ExoPlayer as IMediaPlayer: optional, experimental
     compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.0'
+
+    //指纹识别
+    compile 'com.wei.android.lib:fingerprintidentify:1.2.1'
 }

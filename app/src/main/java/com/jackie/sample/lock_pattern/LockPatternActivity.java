@@ -1,6 +1,7 @@
 package com.jackie.sample.lock_pattern;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -12,14 +13,13 @@ public class LockPatternActivity extends AppCompatActivity implements LockPatter
     private LockPatternView mLockPatternView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lock_pattern);
 
         mLockPatternHint = (TextView) findViewById(R.id.lock_pattern_hint);
         mLockPatternView = (LockPatternView) findViewById(R.id.lock_pattern_view);
         mLockPatternView.setOnPatternChangeListener(this);
-
     }
 
     @Override

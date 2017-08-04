@@ -2,6 +2,7 @@ package com.jackie.sample.jd_tmall_refresh;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +15,7 @@ import com.jackie.sample.jd_tmall_refresh.tmall.TmallActivity;
 public class JdTmallRefreshActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jd_tmall_refresh);
 

@@ -3,6 +3,7 @@ package com.jackie.sample.wechat_recorder;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,8 +12,8 @@ import android.widget.ListView;
 import com.jackie.sample.R;
 import com.jackie.sample.wechat_recorder.adapter.RecorderAdapter;
 import com.jackie.sample.wechat_recorder.bean.Recorder;
-import com.jackie.sample.wechat_recorder.view.RecorderButton;
 import com.jackie.sample.wechat_recorder.utils.MediaManager;
+import com.jackie.sample.wechat_recorder.view.RecorderButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ public class WechatRecorderActivity extends AppCompatActivity implements Recorde
     private View mAnimationView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wechat_recorder);
 

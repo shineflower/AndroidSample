@@ -3,6 +3,7 @@ package com.jackie.sample.mm_alert;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
@@ -23,7 +24,7 @@ public class SendToWXActivity extends AppCompatActivity {
 	private CheckBox isTimelineCb;
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_send_to_wx);

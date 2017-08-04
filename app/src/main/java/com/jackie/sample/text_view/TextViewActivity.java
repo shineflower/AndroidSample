@@ -2,6 +2,7 @@ package com.jackie.sample.text_view;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spannable;
@@ -17,7 +18,7 @@ public class TextViewActivity extends AppCompatActivity {
     private TextView mTextView1, mTextView2, mTextView3, mTextView4;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_view);
 
