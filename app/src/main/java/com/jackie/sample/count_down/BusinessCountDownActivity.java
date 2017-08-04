@@ -45,7 +45,7 @@ public class BusinessCountDownActivity extends AppCompatActivity {
             "平安银行 招财进宝猴年生肖金条 AUXXX", "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度",
             "苹果(Apple)iPhone 7 Plus 128G 快来抢", "平安银行 招财进宝猴年生肖金条 AUXXX",
             "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度", "苹果(Apple)iPhone 7 Plus 128G 快来抢",
-            "平安银行 平安金福金条 Au9999 2g", "8平安银行 招财进宝猴年生肖金条 AUXXX",
+            "平安银行 平安金福金条 Au9999 2g", "平安银行 招财进宝猴年生肖金条 AUXXX",
             "苹果(Apple)iPhone 7 Plus 128G 快来抢", "平安银行 平安金福金条 Au9999 2g",
             "平安银行 平安金福金条 Au9999 2g", "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度"
     };

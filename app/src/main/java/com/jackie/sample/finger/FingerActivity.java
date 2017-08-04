@@ -18,7 +18,9 @@ import com.wei.android.lib.fingerprintidentify.base.BaseFingerprint;
 public class FingerActivity extends AppCompatActivity {
     private Button mStart;
     private TextView mResult;
+
     private FingerprintIdentify mFingerprintIdentify;  //指纹识别类，所有接口都封装在这个类里面
+
     private static final int MAX_AVAILABLE_TIMES = 10;  //识别10次就自动结束识别
 
     @Override
