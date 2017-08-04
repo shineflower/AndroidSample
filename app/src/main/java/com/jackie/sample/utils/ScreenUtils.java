@@ -12,6 +12,11 @@ import android.view.WindowManager;
  */
 
 public class ScreenUtils {
+
+    /**
+     * 控制底部的NavigationBar的显示和隐藏的效果
+     * @param activity activity
+     */
     public static void hideNavigationBar(Activity activity) {
         int uiFlags = //View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
                 //View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |

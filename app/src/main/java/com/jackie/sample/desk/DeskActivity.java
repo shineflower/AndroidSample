@@ -110,7 +110,7 @@ public class DeskActivity extends AppCompatActivity {
 
         initView();
 
-        ScreenUtils.hideNavigationBar(this);//控制底部的NavigationBar的显示和隐藏的效果
+        ScreenUtils.hideNavigationBar(this);
     }
 
     private void initView() {
