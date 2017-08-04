@@ -4,7 +4,7 @@ package com.jackie.sample.bean;
  * Created by Jackie on 2017/8/3.
  */
 
-public class CountDownBean {
+public class BusinessBean {
     private String url;
     private String series;   //期号
     private String title;   //标题

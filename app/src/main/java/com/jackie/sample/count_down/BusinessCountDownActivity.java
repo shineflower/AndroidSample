@@ -6,8 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.jackie.sample.R;
-import com.jackie.sample.adapter.CountDownAdapter;
-import com.jackie.sample.bean.CountDownBean;
+import com.jackie.sample.adapter.BusinessAdapter;
+import com.jackie.sample.bean.BusinessBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
 
 public class BusinessCountDownActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
-    private CountDownAdapter mAdapter;
+    private BusinessAdapter mAdapter;
 
     private String[] urls = {
             "https://m.360buyimg.com/n12/jfs/t3274/110/7226515750/340717/dcc22021/58b3f70aN906d7f4e.jpg!q70.jpg",
@@ -40,12 +40,12 @@ public class BusinessCountDownActivity extends AppCompatActivity {
     };
 
     private String[] titles = {
-            "1平安银行 招财进宝猴年生肖金条 AUXXX", "2海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度",
-            "3苹果(Apple)iPhone 7 Plus 128G 快来抢", "4平安银行 招财进宝猴年生肖金条 AUXXX",
-            "5海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度", "6苹果(Apple)iPhone 7 Plus 128G 快来抢",
-            "7平安银行 平安金福金条 Au9999 2g","8平安银行 招财进宝猴年生肖金条 AUXXX",
-            "9苹果(Apple)iPhone 7 Plus 128G 快来抢","10平安银行 平安金福金条 Au9999 2g",
-            "11平安银行 平安金福金条 Au9999 2g","12海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度",};
+            "平安银行 招财进宝猴年生肖金条 AUXXX", "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度",
+            "苹果(Apple)iPhone 7 Plus 128G 快来抢", "平安银行 招财进宝猴年生肖金条 AUXXX",
+            "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度", "苹果(Apple)iPhone 7 Plus 128G 快来抢",
+            "平安银行 平安金福金条 Au9999 2g", "8平安银行 招财进宝猴年生肖金条 AUXXX",
+            "苹果(Apple)iPhone 7 Plus 128G 快来抢", "平安银行 平安金福金条 Au9999 2g",
+            "平安银行 平安金福金条 Au9999 2g", "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度",};
 
     private String[] values = {
             "4421", "888", "7721", "2215", "6624", "645", "1211", "2215", "442", "23", "4421",
@@ -95,23 +95,23 @@ public class BusinessCountDownActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        List<CountDownBean> countDownList = new ArrayList<>();
+        List<BusinessBean> businessList = new ArrayList<>();
 
         for (int i = 0; i < urls.length; i++) {
-            CountDownBean countDownBean = new CountDownBean();
-            countDownBean.setUrl(urls[i]);
-            countDownBean.setSeries(series[i]);
-            countDownBean.setTitle(titles[i]);
-            countDownBean.setValue(values[i]);
-            countDownBean.setNumber(numbers[i]);
-            countDownBean.setName(names[i]);
-            countDownBean.setTime(times[i]);
-            countDownBean.setDate(dates[i]);
-            countDownList.add(countDownBean);
+            BusinessBean businessBean = new BusinessBean();
+            businessBean.setUrl(urls[i]);
+            businessBean.setSeries(series[i]);
+            businessBean.setTitle(titles[i]);
+            businessBean.setValue(values[i]);
+            businessBean.setNumber(numbers[i]);
+            businessBean.setName(names[i]);
+            businessBean.setTime(times[i]);
+            businessBean.setDate(dates[i]);
+            businessList.add(businessBean);
         }
 
 
-        mAdapter = new CountDownAdapter(this, countDownList);
+        mAdapter = new BusinessAdapter(this, businessList);
         mRecyclerView.setAdapter(mAdapter);
     }
 

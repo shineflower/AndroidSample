@@ -17,20 +17,20 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.jackie.sample.R;
-import com.jackie.sample.bean.CountDownBean;
+import com.jackie.sample.bean.BusinessBean;
 
 import java.util.List;
 
-public class CountDownAdapter extends RecyclerView.Adapter<CountDownAdapter.ViewHolder> {
+public class BusinessAdapter extends RecyclerView.Adapter<BusinessAdapter.ViewHolder> {
     private Context mContext;
-    private List<CountDownBean> mCountDownList;
-    private SparseArray<CountDownTimer> mCountDownMap;
+    private List<BusinessBean> mBusinessList;
+    private SparseArray<CountDownTimer> mBusinessMap;
 
-    public CountDownAdapter(Context context, List<CountDownBean> countDownList) {
+    public BusinessAdapter(Context context, List<BusinessBean> businessList) {
         this.mContext = context;
-        this.mCountDownList = countDownList;
+        this.mBusinessList = businessList;
 
-        mCountDownMap = new SparseArray<>();
+        mBusinessMap = new SparseArray<>();
     }
 
     @Override
@@ -42,22 +42,22 @@ public class CountDownAdapter extends RecyclerView.Adapter<CountDownAdapter.View
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final CountDownBean countDownBean = mCountDownList.get(position);
+        final BusinessBean businessBean = mBusinessList.get(position);
 
-        Glide.with(mContext).load(countDownBean.getUrl()).into(holder.icon);
+        Glide.with(mContext).load(businessBean.getUrl()).into(holder.icon);
 
-        holder.title.setText(countDownBean.getTitle());
-        holder.value.setText(countDownBean.getValue());
-        holder.number.setText(countDownBean.getNumber());
-        holder.name.setText(countDownBean.getName());
-        holder.date.setText(countDownBean.getDate());
+        holder.title.setText("第" + businessBean.getSeries() + "期 " + businessBean.getTitle());
+        holder.value.setText(businessBean.getValue());
+        holder.number.setText(businessBean.getNumber());
+        holder.name.setText(businessBean.getName());
+        holder.date.setText(businessBean.getDate());
 
         //将前一个计时器清除
         if (holder.countDownTimer != null) {
             holder.countDownTimer.cancel();
         }
 
-        long time = countDownBean.getTime();
+        long time = businessBean.getTime();
         time = time - System.currentTimeMillis();
 
         if (time > 0) {
@@ -66,7 +66,7 @@ public class CountDownAdapter extends RecyclerView.Adapter<CountDownAdapter.View
                 public void onTick(long millisUntilFinished) {
                     long minute = (millisUntilFinished / 1000) % 3600 / 60;
                     long second = (millisUntilFinished / 1000) % 3600 % 60;
-                    long millisecond = millisUntilFinished % 1000 / 10;
+                    long millisecond = millisUntilFinished % 1000 / 10;  //倒计时的时间间隔为10ms
 
                     holder.time.setText(convert(minute) + ":" +  convert(second) + ":" + convert(millisecond));
                 }
@@ -77,28 +77,34 @@ public class CountDownAdapter extends RecyclerView.Adapter<CountDownAdapter.View
                 }
             }.start();
 
-            mCountDownMap.put(holder.time.hashCode(), holder.countDownTimer);
+            mBusinessMap.put(holder.time.hashCode(), holder.countDownTimer);
         } else {
-            countDownBean.setPublished(true);  //揭晓
-            holder.time.setText("00:00:00");   //时间置空
+            businessBean.setPublished(true);  //揭晓
+            holder.time.setText("00:00:00");  //时间置空
         }
 
-        if(countDownBean.isPublished()){
+        if(businessBean.isPublished()){
             holder.publishLayout.setVisibility(View.VISIBLE);
             holder.timeLayout.setVisibility(View.GONE);
 
-            Glide.with(mContext).load(R.drawable.has_puslished).placeholder(R.drawable.place_holder).into(holder.state);
+            Glide.with(mContext)
+                    .load(R.drawable.has_puslished)
+                    .placeholder(R.drawable.place_holder)
+                    .into(holder.state);
         } else {
             holder.publishLayout.setVisibility(View.GONE);
             holder.timeLayout.setVisibility(View.VISIBLE);
 
-            Glide.with(mContext).load(R.drawable.to_be_published).placeholder(R.drawable.place_holder).into(holder.state);
+            Glide.with(mContext)
+                    .load(R.drawable.to_be_published)
+                    .placeholder(R.drawable.place_holder)
+                    .into(holder.state);
         }
     }
 
     @Override
     public int getItemCount() {
-        return mCountDownList !=  null ? mCountDownList.size() : 0;
+        return mBusinessList !=  null ? mBusinessList.size() : 0;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -175,12 +181,12 @@ public class CountDownAdapter extends RecyclerView.Adapter<CountDownAdapter.View
      * 清空资源
      */
     public void cancelAllTimers() {
-        if (mCountDownMap == null) {
+        if (mBusinessMap == null) {
             return;
         }
 
-        for (int i = 0, length = mCountDownMap.size(); i < length; i++) {
-            CountDownTimer countDownTimer = mCountDownMap.get(mCountDownMap.keyAt(i));
+        for (int i = 0, length = mBusinessMap.size(); i < length; i++) {
+            CountDownTimer countDownTimer = mBusinessMap.get(mBusinessMap.keyAt(i));
 
             if (countDownTimer != null) {
                 countDownTimer.cancel();
