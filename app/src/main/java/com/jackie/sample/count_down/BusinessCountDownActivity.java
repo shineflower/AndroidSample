@@ -23,7 +23,7 @@ public class BusinessCountDownActivity extends AppCompatActivity {
 
     private List<BusinessBean> mBusinessList;
 
-    private static final String[] URLS = {
+    private String[] urls = {
             "https://m.360buyimg.com/n12/jfs/t3274/110/7226515750/340717/dcc22021/58b3f70aN906d7f4e.jpg!q70.jpg",
             "https://m.360buyimg.com/n12/jfs/t3052/303/6006524998/42126/5b5c2f39/589aeca0N83a08142.jpg!q70.jpg",
             "https://m.360buyimg.com/n12/jfs/t2827/323/2794999100/113793/bbe682b9/5774f025Ne1873556.jpg!q70.jpg",
@@ -38,12 +38,12 @@ public class BusinessCountDownActivity extends AppCompatActivity {
             "https://m.360buyimg.com/n12/jfs/t2827/323/2794999100/113793/bbe682b9/5774f025Ne1873556.jpg!q70.jpg"
     };
 
-    private static final String[] SERIES = {
+    private String[] series = {
             "10201", "10031", "11201", "10221", "10443", "10121", "10661", "10411", "10441",
             "10431", "10201", "10031"
     };
 
-    private static final String[] TITLES = {
+    private String[] titles = {
             "平安银行 招财进宝猴年生肖金条 AUXXX", "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度",
             "苹果(Apple)iPhone 7 Plus 128G 快来抢", "平安银行 招财进宝猴年生肖金条 AUXXX",
             "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度", "苹果(Apple)iPhone 7 Plus 128G 快来抢",
@@ -52,21 +52,21 @@ public class BusinessCountDownActivity extends AppCompatActivity {
             "平安银行 平安金福金条 Au9999 2g", "海飞丝 去屑洗发露发质柔滑型 750打架打架速度大幅度"
     };
 
-    private static final String[] VALUES = {
+    private String[] values = {
             "4421", "888", "7721", "2215", "6624", "645", "1211", "2215", "442", "23", "4421",
             "888", "7721"
     };
 
-    private static final String[] NUMBERS = {
+    private String[] numbers = {
             "10543001", "10543002", "10543003", "10543004", "10543005", "10543006",
             "10543007", "10543008", "10543009", "10543010", "10543011", "10543012", "10543013"
     };
 
-    private static final String[] NAMES = {
+    private String[] names = {
             "刘德华", "张学友", "周星驰", "杨千嬅", "古天乐", "ABC", "陈道明", "黄晓明", "高进", "陈宝国", "洪金宝", "林正英"
     };
 
-    private static final long[] TIMES = {
+    private long[] times = {
             System.currentTimeMillis() + 15000,
             System.currentTimeMillis() + 26000,
             System.currentTimeMillis() + 58000,
@@ -81,7 +81,7 @@ public class BusinessCountDownActivity extends AppCompatActivity {
             System.currentTimeMillis() + 175000
     };
 
-    private static final String[] DATES = {
+    private String[] dates = {
             "2017-07-20 12:45:00", "2017-07-21 12:45:00", "2017-07-22 12:45:00",
             "2017-07-20 12:45:00", "2017-07-21 12:45:00", "2017-07-22 12:45:00",
             "2017-07-20 12:45:00", "2017-07-21 12:45:00", "2017-07-22 12:45:00",
@@ -103,17 +103,17 @@ public class BusinessCountDownActivity extends AppCompatActivity {
 
         mBusinessList = new ArrayList<>();
 
-        for (int i = 0; i < URLS.length; i++) {
+        for (int i = 0; i < urls.length; i++) {
             BusinessBean businessBean = new BusinessBean();
 
-            businessBean.setUrl(URLS[i]);
-            businessBean.setSeries(SERIES[i]);
-            businessBean.setTitle(TITLES[i]);
-            businessBean.setValue(VALUES[i]);
-            businessBean.setNumber(NUMBERS[i]);
-            businessBean.setName(NAMES[i]);
-            businessBean.setTime(TIMES[i]);
-            businessBean.setDate(DATES[i]);
+            businessBean.setUrl(urls[i]);
+            businessBean.setSeries(series[i]);
+            businessBean.setTitle(titles[i]);
+            businessBean.setValue(values[i]);
+            businessBean.setNumber(numbers[i]);
+            businessBean.setName(names[i]);
+            businessBean.setTime(times[i]);
+            businessBean.setDate(dates[i]);
 
             mBusinessList.add(businessBean);
         }
