@@ -193,7 +193,6 @@ public class RangeBar extends ProgressBar {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 mDownX = event.getX();
-                mDownY = event.getY();
 
                 if (mDownX >= mPaddingLeft + mOffset && mDownX <= mPaddingLeft + mLineWidth - mOffset) {
                     reachWidth = mDownX;
