@@ -45,6 +45,7 @@ public class RangeBar extends ProgressBar {
     // 默认蓝色大圆的半径是14dp
     private float mBlueRadius;
     private float mWhiteRadius;
+    private float mOffset;
 
     private float mDownX;
 
@@ -94,7 +95,8 @@ public class RangeBar extends ProgressBar {
         mBlueRadius = DensityUtils.dp2px(context, 14);
         mWhiteRadius = DensityUtils.dp2px(context, 13);
 
-        mReachWidth = mPaddingLeft + mWhiteRadius;
+        mOffset = mWhiteRadius - 2;
+        mReachWidth = mPaddingLeft + mOffset;
 
         mBackgroundPaint = createLinePaint(BACKGROUND_COLOR, Paint.Style.FILL, mLineHeight);
         mReachPaint = createLinePaint(REACH_COLOR, Paint.Style.FILL, mLineHeight);
@@ -191,13 +193,14 @@ public class RangeBar extends ProgressBar {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 mDownX = event.getX();
+                mDownY = event.getY();
 
-                if (mDownX >= mPaddingLeft + mWhiteRadius && mDownX <= mPaddingLeft + mLineWidth - mWhiteRadius) {
+                if (mDownX >= mPaddingLeft + mOffset && mDownX <= mPaddingLeft + mLineWidth - mOffset) {
                     reachWidth = mDownX;
-                } else if (mDownX < mPaddingLeft + mWhiteRadius) {
-                    reachWidth = mPaddingLeft + mWhiteRadius;
+                } else if (mDownX < mPaddingLeft + mOffset) {
+                    reachWidth = mPaddingLeft + mOffset;
                 } else {
-                    reachWidth = mPaddingLeft + mLineWidth - mWhiteRadius;
+                    reachWidth = mPaddingLeft + mLineWidth - mOffset;
                 }
 
                 setReachWidth(reachWidth);
@@ -208,18 +211,17 @@ public class RangeBar extends ProgressBar {
 
                 return true;
             case MotionEvent.ACTION_MOVE:
-//                if (event.getY() > getHeight()) {
-//                    return super.onTouchEvent(event);
-//                }
+                //RangeBar滑动的时候，ScrollView(父控件)不拦截事件
+                getParent().requestDisallowInterceptTouchEvent(true);
 
                 mDownX = event.getX();
 
-                if (mDownX >= mPaddingLeft + mWhiteRadius && mDownX <= mPaddingLeft + mLineWidth - mWhiteRadius) {
+                if (mDownX >= mPaddingLeft + mOffset && mDownX <= mPaddingLeft + mLineWidth - mOffset) {
                     reachWidth = mDownX;
-                } else if (mDownX < mPaddingLeft + mWhiteRadius) {
-                    reachWidth = mPaddingLeft + mWhiteRadius;
+                } else if (mDownX < mPaddingLeft + mOffset) {
+                    reachWidth = mPaddingLeft + mOffset;
                 } else {
-                    reachWidth = mPaddingLeft + mLineWidth - mWhiteRadius;
+                    reachWidth = mPaddingLeft + mLineWidth - mOffset;
                 }
 
                 setReachWidth(reachWidth);
@@ -242,13 +244,13 @@ public class RangeBar extends ProgressBar {
 
     @Override
     public synchronized int getProgress() {
-        int progress = (int) (((mReachWidth - mPaddingLeft - mWhiteRadius) / (mLineWidth - 2 * mWhiteRadius)) * getMax());
+        int progress = (int) (((mReachWidth - mPaddingLeft - mOffset) / (mLineWidth - 2 * mOffset)) * getMax());
         return progress;
     }
 
     @Override
     public synchronized void setProgress(int progress) {
-        float reachWidth = mPaddingLeft +  mWhiteRadius + (mLineWidth - 2 * mWhiteRadius) * progress / getMax();
+        float reachWidth = mPaddingLeft +  mOffset + (mLineWidth - 2 * mOffset) * progress / getMax();
         setReachWidth(reachWidth);
     }
 }

@@ -89,7 +89,14 @@ public class SelectContactActivity extends AppCompatActivity implements View.OnC
             }
         });
 
+        //设置Item增加、移除动画
+//        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
         //添加分割线
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+
+        //设置进入动画
+//        LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(context , resId);
+//        mRecyclerView.setLayoutAnimation(animation);
     }
 }
