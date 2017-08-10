@@ -18,6 +18,14 @@ public class RegexUtils {
     }
 
     /**
+     *密码6-16位，由字母加数字组成
+     */
+    public static final boolean checkPassword(String password) {
+        String regex = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$";
+        return Pattern.matches(regex, password);
+    }
+
+    /**
      * 验证Email
      * @param email email地址，格式：zhangsan@zuidaima.com，zhangsan@xxx.com.cn，xxx代表邮件服务商
      * @return 验证成功返回true，验证失败返回false
