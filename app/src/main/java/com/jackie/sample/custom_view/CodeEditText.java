@@ -22,7 +22,8 @@ import com.jackie.sample.utils.ScreenUtils;
 public class CodeEditText extends EditText {
     private Context mContext;
 
-    private Paint mLinePaint;
+    private Paint mGrayLinePaint;
+    private Paint mBlueLinePaint;
     private Paint mCodePaint;
 
     private int mLineWidth;    //线宽
@@ -93,11 +94,17 @@ public class CodeEditText extends EditText {
 
         setTextColor(getResources().getColor(android.R.color.transparent));
 
-        mLinePaint = new Paint();
-        mLinePaint.setAntiAlias(true);
-        mLinePaint.setDither(true);
-        mLinePaint.setStrokeWidth(mLineHeight);
-        mLinePaint.setColor(getResources().getColor(R.color.color_d5d7dc));
+        mGrayLinePaint = new Paint();
+        mGrayLinePaint.setAntiAlias(true);
+        mGrayLinePaint.setDither(true);
+        mGrayLinePaint.setStrokeWidth(mLineHeight);
+        mGrayLinePaint.setColor(getResources().getColor(R.color.color_d5d7dc));
+
+        mBlueLinePaint = new Paint();
+        mBlueLinePaint.setAntiAlias(true);
+        mBlueLinePaint.setDither(true);
+        mBlueLinePaint.setStrokeWidth(mLineHeight);
+        mBlueLinePaint.setColor(getResources().getColor(R.color.color_337cff));
 
         mCodePaint = new Paint();
         mCodePaint.setAntiAlias(true);
@@ -127,10 +134,18 @@ public class CodeEditText extends EditText {
         //计算每条线之间的间距
         mLinePadding = (width - mLineWidth * mCodeLength) / (mCodeLength - 1);
 
-        for (int i = 0; i < mCodeLength; i++) {
+        //灰色
+        for (int i = mInputLength; i < mCodeLength; i++) {
             int x = getPaddingLeft() + (mLineWidth + mLinePadding) * i;
 
-            canvas.drawLine(x, mHeight - mLineHeight, x + mLineWidth, mHeight - mLineHeight, mLinePaint);
+            canvas.drawLine(x, mHeight - mLineHeight, x + mLineWidth, mHeight - mLineHeight, mGrayLinePaint);
+        }
+
+        //蓝色
+        for (int j = 0; j < mInputLength; j++) {
+            int x = getPaddingLeft() + (mLineWidth + mLinePadding) * j;
+
+            canvas.drawLine(x, mHeight - mLineHeight, x + mLineWidth, mHeight - mLineHeight, mBlueLinePaint);
         }
     }
 
