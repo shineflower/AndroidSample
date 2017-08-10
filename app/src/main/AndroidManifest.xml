@@ -282,10 +282,10 @@
         <!-- 贝塞尔曲线的购物车添加动画 -->
         <activity android:name=".animator.ShoppingCartBezierActivity" />
 
-        <!-- 文字特效 -->
+        <!-- 自定义TextView文字特效 -->
         <activity android:name=".text_view.TextViewActivity" />
 
-        <!-- 自定义EditText特效(搜索的标签添加与管理控件) -->
+        <!-- 自定义EditText文字特效 -->
         <activity android:name=".edit_text.EditTextActivity" />
 
         <!-- 共享元素相关测试加入Fragment -->

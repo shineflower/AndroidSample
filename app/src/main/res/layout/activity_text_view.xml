@@ -42,4 +42,10 @@
         android:id="@+id/text_view_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextSwitcher
+        android:id="@+id/text_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" />
 </LinearLayout>

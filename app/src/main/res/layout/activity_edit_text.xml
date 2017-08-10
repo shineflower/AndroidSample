@@ -71,44 +71,55 @@
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_edit_text_clear_bg"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:drawablePadding="5dp"
+            android:background="@drawable/shape_edit_text_clear_bg"
             android:drawableLeft="@drawable/icon_user"
-            android:drawableRight="@drawable/selector_delete_bg"
-            android:hint="输入用户名"
-            android:singleLine="true">
-        </com.jackie.sample.custom_view.ClearEditText>
-
-        <com.jackie.sample.custom_view.ClearEditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_edit_text_clear_bg"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:drawablePadding="5dp"
-            android:drawableLeft="@drawable/icon_account"
-            android:drawableRight="@drawable/selector_delete_bg"
-            android:hint="输入密码"
-            android:singleLine="true"
-            android:password="true">
-        </com.jackie.sample.custom_view.ClearEditText>
+            android:hint="输入用户名"
+            android:singleLine="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.jackie.sample.custom_view.ClearEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_edit_text_clear_bg"
+                android:drawableLeft="@drawable/icon_account"
+                android:drawablePadding="5dp"
+                android:hint="输入密码"
+                android:inputType="textPassword"
+                android:paddingRight="50dp"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:id="@+id/password_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/close_eye" />
+        </RelativeLayout>
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_button_bg"
             android:layout_below="@+id/password"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_button_bg"
             android:text="登录"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <com.jackie.sample.custom_view.ReminderEditText
@@ -141,4 +152,12 @@
             android:hint="请输入手机号"
             android:inputType="phone" />
     </com.jackie.sample.custom_view.TextInputLayout>
+
+    <com.jackie.sample.custom_view.CodeEditText
+        android:id="@+id/code_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"/>
 </LinearLayout>

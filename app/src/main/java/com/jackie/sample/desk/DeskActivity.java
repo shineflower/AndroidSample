@@ -406,7 +406,7 @@ public class DeskActivity extends AppCompatActivity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
-        sampleBean.setTitle("自定义EditText特效(搜索的标签添加与管理控件)");
+        sampleBean.setTitle("自定义EditText文字特效");
         sampleBean.setClassName(EditTextActivity.class);
         linkedList.add(sampleBean);
 

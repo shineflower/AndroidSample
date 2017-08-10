@@ -187,4 +187,11 @@
         <attr name="min_adapter_stack" format="integer" />
         <attr name="max_visible" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="CodeEditText">
+        <attr name="line_width" format="dimension" />
+        <attr name="line_height" format="dimension" />
+        <attr name="code_length" format="dimension" />
+        <attr name="code_size" format="dimension" />
+    </declare-styleable>
 </resources>
