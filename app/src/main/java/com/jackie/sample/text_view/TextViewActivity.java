@@ -34,7 +34,9 @@ public class TextViewActivity extends AppCompatActivity {
 
     private Timer mTimer;
 
-    private int mPosition = 0;
+    private int mPosition = 1;
+
+    private boolean mIsFirstTime = false;
 
     private static final int MSG_SWITCHER = 1;
 
@@ -47,7 +49,13 @@ public class TextViewActivity extends AppCompatActivity {
                 mPosition = 0;
             }
 
-            mTextSwitcher.setText(mList.get(mPosition++));
+            if (!mIsFirstTime) {
+                mTextSwitcher.setCurrentText(mList.get(0));
+
+                mIsFirstTime = true;
+            } else {
+                mTextSwitcher.setText(mList.get(mPosition++));
+            }
         }
     };
 
@@ -105,7 +113,6 @@ public class TextViewActivity extends AppCompatActivity {
 
         mTextSwitcher.setInAnimation(this, R.anim.in_animation_bottom_to_top);
         mTextSwitcher.setOutAnimation(this, R.anim.out_animation_bottom_to_top);
-        mTextSwitcher.setText(mList.get(0));
 
         mTimer = new Timer();
         SwitcherTask switcherTask = new SwitcherTask();
