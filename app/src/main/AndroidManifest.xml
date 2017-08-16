@@ -61,6 +61,11 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
+    <!-- 指纹识别 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
     <application
         android:name=".application.SampleApplication"
         android:allowBackup="true"
@@ -402,6 +407,9 @@
 
         <!-- 指纹识别 -->
         <activity android:name=".finger.FingerActivity" />
+
+        <!-- 新手引导 -->
+        <activity android:name=".newer_guide.NewerGuideActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

@@ -72,10 +72,15 @@ public class ClipImageLayout extends RelativeLayout {
      */
     public void setHorizontalPadding(int horizontalPadding) {
         this.mHorizontalPadding = horizontalPadding;
+
+        mClipImageView.setHorizontalPadding(mHorizontalPadding);
+        mClipImageBorder.setHorizontalPadding(mHorizontalPadding);
     }
 
     public void setImageDrawable(Drawable imageDrawable) {
         this.mImageDrawable = imageDrawable;
+
+        mClipImageView.setImageDrawable(mImageDrawable);
     }
 
     /**

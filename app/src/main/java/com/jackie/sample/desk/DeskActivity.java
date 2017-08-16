@@ -58,6 +58,7 @@ import com.jackie.sample.metro.MetroActivity;
 import com.jackie.sample.mm_alert.SendToWXActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
 import com.jackie.sample.multiple_list.MultipleListActivity;
+import com.jackie.sample.newer_guide.NewerGuideActivity;
 import com.jackie.sample.notification.NotificationActivity;
 import com.jackie.sample.popup_window.PopupWindowActivity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
@@ -548,6 +549,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("指纹识别");
         sampleBean.setClassName(FingerActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("新手引导");
+        sampleBean.setClassName(NewerGuideActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
