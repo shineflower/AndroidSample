@@ -25,7 +25,7 @@ import java.util.List;
  * Created by Jackie on 2017/5/18.
  */
 
-public class ViewPagerIndicator extends LinearLayout {
+public class TrianglePagerIndicator extends LinearLayout {
     private Context mContext;
 
     //绘制三角形的画笔
@@ -74,15 +74,15 @@ public class ViewPagerIndicator extends LinearLayout {
         this.mOnPageChangeListener = onPgeChangeListener;
     }
 
-    public ViewPagerIndicator(Context context) {
+    public TrianglePagerIndicator(Context context) {
         this(context, null);
     }
 
-    public ViewPagerIndicator(Context context, @Nullable AttributeSet attrs) {
+    public TrianglePagerIndicator(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public ViewPagerIndicator(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public TrianglePagerIndicator(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         mContext = context;

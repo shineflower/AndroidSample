@@ -114,6 +114,9 @@
         <!-- 打造炫酷ViewPager三角形指示器 -->
         <activity android:name=".view_pager_indicator.ViewPagerTriangleIndicatorActivity" />
 
+        <!-- 打造炫酷ViewPager回弹指示器 -->
+        <activity android:name=".view_pager_indicator.ViewPagerReboundIndicatorActivity" />
+
         <!-- 仿IOS滑动分页器 -->
         <activity android:name=".divider.DividerActivity" />
 

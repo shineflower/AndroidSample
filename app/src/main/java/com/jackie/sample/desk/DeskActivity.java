@@ -84,6 +84,7 @@ import com.jackie.sample.video_player.VideoPlayerActivity;
 import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferBannerAnimActivity;
 import com.jackie.sample.view_pager_anim_transfer.ViewPagerTransferGuideAnimActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerColorTrackIndicatorActivity;
+import com.jackie.sample.view_pager_indicator.ViewPagerReboundIndicatorActivity;
 import com.jackie.sample.view_pager_indicator.ViewPagerTriangleIndicatorActivity;
 import com.jackie.sample.volume_control.VolumeControlActivity;
 import com.jackie.sample.web_view.WebViewActivity;
@@ -164,6 +165,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("打造炫酷ViewPager三角形指示器");
         sampleBean.setClassName(ViewPagerTriangleIndicatorActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("打造炫酷ViewPager回弹指示器");
+        sampleBean.setClassName(ViewPagerReboundIndicatorActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
