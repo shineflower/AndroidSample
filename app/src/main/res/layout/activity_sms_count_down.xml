@@ -12,7 +12,13 @@
         android:id="@+id/tv_count_down"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="获取验证码"
+        android:background="@drawable/shape_identify_code_normal_bg"
         android:gravity="center"
-        android:background="@drawable/shape_identify_code_normal_bg"/>
+        android:text="获取验证码" />
+
+    <TextView
+        android:id="@+id/tv_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"/>
 </LinearLayout>

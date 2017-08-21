@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <com.jackie.sample.custom_view.ElasticScrollview
+    <com.jackie.sample.custom_view.ElasticScrollView
+        android:id="@+id/sv_elastic"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -19,8 +20,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-                android:text="测试的哦。。。" />
+                android:text="可以上下进行粘性滑动的ScrollView" />
 
         </RelativeLayout>
-    </com.jackie.sample.custom_view.ElasticScrollview>
+    </com.jackie.sample.custom_view.ElasticScrollView>
 </LinearLayout>
