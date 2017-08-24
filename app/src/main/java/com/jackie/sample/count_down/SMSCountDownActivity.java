@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ import java.util.regex.Pattern;
 public class SMSCountDownActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView mCountTimeView;
     private TextView mSmsTxt;
+    private SmsObserver mSmsObserver;
     private CountDownTimer mCountDownTimer;
 
     private static final int MSG_SMS_FINISH = 1;
@@ -55,9 +57,15 @@ public class SMSCountDownActivity extends AppCompatActivity implements View.OnCl
         mCountTimeView.setOnClickListener(this);
 
         mSmsTxt = (TextView) findViewById(R.id.tv_sms);
-        SmsObserver smsObserver = new SmsObserver(this, mHandler);
+        mSmsObserver = new SmsObserver(this, mHandler);
         Uri smsUri = Uri.parse("content://sms");
-        getContentResolver().registerContentObserver(smsUri, true, smsObserver); //注册短信uri的监听
+        getContentResolver().registerContentObserver(smsUri, true, mSmsObserver); //注册短信uri的监听
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        getContentResolver().unregisterContentObserver(mSmsObserver); //取消监听
     }
 
     @Override
@@ -88,6 +96,8 @@ public class SMSCountDownActivity extends AppCompatActivity implements View.OnCl
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             super.onChange(selfChange, uri);
+
+            Log.d("chengjie", uri.toString() + " ");
 
             //收到一条短信，onChange()会执行两次，uri不同
             if (uri.toString().equals("content://sms/raw")) { //未写入数据库，不进行任何操作

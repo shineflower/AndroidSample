@@ -1,7 +1,9 @@
 package com.jackie.sample.utils;
 
 
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -79,5 +81,19 @@ public class ApkTools {
 		}
 
 		return false;
+	}
+
+	/**
+	 * 启动微信
+	 * @param context
+	 */
+	public static void launchWechat(Context context) {
+		Intent intent = new Intent();
+		ComponentName componentName = new ComponentName("com.tencent.mm", "com.tencent.mm.ui.LauncherUI");
+		intent.setAction(Intent.ACTION_MAIN);
+		intent.addCategory(Intent.CATEGORY_LAUNCHER);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		intent.setComponent(componentName);
+		context.startActivity(intent);
 	}
 }

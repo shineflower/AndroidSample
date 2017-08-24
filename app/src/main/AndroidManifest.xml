@@ -39,11 +39,11 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <!-- 高德地图相关的权限 -->
-    <!--用于进行网络定位-->
+    <!-- 用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!--用于访问GPS定位-->
+    <!-- 用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
     <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
     <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
     <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
@@ -65,6 +65,9 @@
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="com.fingerprints.service.ACCESS_FINGERPRINT_MANAGER" />
     <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <!-- 短信 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
         android:name=".application.SampleApplication"

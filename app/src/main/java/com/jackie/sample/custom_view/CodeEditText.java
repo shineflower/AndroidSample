@@ -153,8 +153,6 @@ public class CodeEditText extends EditText {
         for (int i = 0; i < mInputLength; i++) {
             float x = getPaddingLeft() + mLineWidth / 2 - mCodePaint.measureText(mInputText.charAt(i) + "") / 2 + (mLineWidth + mLinePadding) * i;
 
-//            float textHeight = mCodePaint.descent() + mCodePaint.ascent();
-
             Rect bounds = new Rect();
             mCodePaint.getTextBounds(mInputText.charAt(i) + "", 0, (mInputText.charAt(i) + "").length(), bounds);
             Paint.FontMetricsInt fontMetrics = mCodePaint.getFontMetricsInt();

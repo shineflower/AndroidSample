@@ -26,6 +26,14 @@ public class RegexUtils {
     }
 
     /**
+     *输入的全部是数字
+     */
+    public static final boolean checkNumber(String content) {
+        String regex = "^[0-9]*$";
+        return Pattern.matches(regex, content);
+    }
+
+    /**
      * 验证Email
      * @param email email地址，格式：zhangsan@zuidaima.com，zhangsan@xxx.com.cn，xxx代表邮件服务商
      * @return 验证成功返回true，验证失败返回false
