@@ -95,4 +95,22 @@
     <string name="action_settings">Settings</string>
     <string name="action_search">Search</string>
     <string name="action_delete">Delete</string>
+
+    <!--
+
+    &#32;     普通的英文半角空格
+    &#160;    &nbsp; == &#xA0; == no-break space （普通的英文半角空格但不换行）
+    &#12288;  中文全角空格 （一个中文宽度）
+    &#8194;   &ensp; == en空格 （半个中文宽度）
+    &#8195;   &emsp; == em空格 （一个中文宽度）
+    &#8197;   四分之一em空格 （四分之一中文宽度）
+
+    相比平时的空格（&#32;），nbsp拥有不间断（non-breaking）特性。即连续的nbsp会在同一行内显示。即使有100个连续的nbsp，浏览器也不会把它们拆成两行。
+
+    &#8194;   半个中文字更准确点，
+    &#8195;   一个中文字但用起来会比中文字宽一点点。
+    所以中文对齐还是建议使用&#8194;，
+    而&#160; &#8201;在不同机型有不同表现。
+
+    -->
 </resources>

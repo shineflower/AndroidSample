@@ -33,10 +33,10 @@ import java.util.Map;
 public class QRCodeUtils {
     /**
      * 生成一维码Bitmap
-     * @param content    内容
-     * @param widthPix   图片宽度
-     * @param heightPix  图片高度
-     * @return Bitmap
+     * @param content      内容
+     * @param widthPix     图片宽度
+     * @param heightPix    图片高度
+     * @return
      */
     public static Bitmap createOneDCode(String content, int widthPix, int heightPix) {
         try {
@@ -70,11 +70,11 @@ public class QRCodeUtils {
     /**
      * 生成二维码Bitmap
      *
-     * @param content   内容
-     * @param widthPix  图片宽度
-     * @param heightPix 图片高度
-     * @param logo      二维码中心的Logo图标（可以为null）
-     * @param filePath  用于存储二维码图片的文件路径
+     * @param content      内容
+     * @param widthPix     图片宽度
+     * @param heightPix    图片高度
+     * @param logo         二维码中心的Logo图标（可以为null）
+     * @param filePath     用于存储二维码图片的文件路径
      * @return 生成二维码及保存文件是否成功
      */
     public static boolean createQRImage(String content, int widthPix, int heightPix, Bitmap logo, String filePath) {

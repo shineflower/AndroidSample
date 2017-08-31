@@ -210,7 +210,8 @@ public class RangeBar extends ProgressBar {
 
                 return true;
             case MotionEvent.ACTION_MOVE:
-                //RangeBar滑动的时候，ScrollView(父控件)不拦截事件
+                // android:descendantFocusability用法简析 http://www.cnblogs.com/eyu8874521/archive/2012/10/17/2727882.html
+                // RangeBar滑动的时候，ScrollView(父控件)不拦截事件
                 getParent().requestDisallowInterceptTouchEvent(true);
 
                 mDownX = event.getX();

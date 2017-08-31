@@ -196,6 +196,9 @@ public class CodeEditText extends EditText {
      */
     public void setLineHeight(int lineHeight) {
         this.mLineHeight = lineHeight;
+
+        mGrayLinePaint.setStrokeWidth(lineHeight);
+        mBlueLinePaint.setStrokeWidth(lineHeight);
     }
 
     /**
@@ -204,6 +207,8 @@ public class CodeEditText extends EditText {
      */
     public void setCodeLength(int codeLength) {
         this.mCodeLength = codeLength;
+
+        setFilters(new InputFilter[] { new InputFilter.LengthFilter(codeLength) });
     }
 
     /**
@@ -211,7 +216,9 @@ public class CodeEditText extends EditText {
      * @param codeSize  字体大小
      */
     public void setCodeSize(int codeSize) {
-        this.mCodeSize = codeSize;
+        mCodeSize = codeSize;
+
+        mCodePaint.setTextSize(codeSize);
     }
 
     /**

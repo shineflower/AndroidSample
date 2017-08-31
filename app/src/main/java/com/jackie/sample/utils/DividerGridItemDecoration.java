@@ -13,9 +13,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 /**
- * 
- * @author zhy
- * 
+ * RecyclerView 分隔
+ * created by Jackie on 2017/8/28
  */
 public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
 
