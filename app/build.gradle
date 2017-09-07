@@ -30,6 +30,42 @@ android {
         incremental true
         javaMaxHeapSize "4g"
     }
+
+//    sourceSets {
+//        main {
+//            if (IsBuildAar.toBoolean()) {
+//                manifest.srcFile 'src/main/arr/AndroidManifest.xml'
+//
+//                java {
+//                    exclude 'debug/**'
+//                }
+//            } else {
+//                manifest.srcFile 'src/main/AndroidManifest.xml'
+//            }
+//        }
+//    }
+
+    //动态生成aar并制定路径
+//    libraryVariants.all { variant ->
+//        if (variant.buildType.name == 'release') {
+//            variant.assemble.doLast {
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//
+//                    if (outputFile != null && outputFile.name.endsWith('release.aar')) {
+//                        def fileName = "user_center"
+//                        def outputPath = "../aar"
+//
+//                        copy {
+//                            from outputFile
+//                            into outputPath
+//                            rename { fileName + ".aar" }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 
 dependencies {

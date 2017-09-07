@@ -75,7 +75,7 @@ public class VideoPlayerController extends FrameLayout implements View.OnClickLi
     }
 
     private void initView() {
-        LayoutInflater.from(mContext).inflate(R.layout.video_palyer_controller, this, true);
+        LayoutInflater.from(mContext).inflate(R.layout.video_player_controller, this, true);
         mCenterStart = (ImageView) findViewById(R.id.center_start);
         mImage = (ImageView) findViewById(R.id.image);
 
