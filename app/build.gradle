@@ -31,6 +31,10 @@ android {
         javaMaxHeapSize "4g"
     }
 
+//    lintOptions {
+//        abortOnError false
+//    }
+
 //    sourceSets {
 //        main {
 //            if (IsBuildAar.toBoolean()) {
@@ -63,6 +67,17 @@ android {
 //                        }
 //                    }
 //                }
+//            }
+//        }
+//    }
+
+//    android.libraryVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            if (output.outputFile != null && output.outputFile.name.endsWith('release.aar')) {
+//                def fileName = "user_center.arr"
+//                def outputPath = "${rootDir}/arr"
+//
+//                output.outputFile = new File(outputPath, fileName)
 //            }
 //        }
 //    }

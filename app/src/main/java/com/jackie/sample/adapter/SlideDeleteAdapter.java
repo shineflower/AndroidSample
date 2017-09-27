@@ -33,6 +33,7 @@ public class SlideDeleteAdapter extends RecyclerView.Adapter<SlideDeleteAdapter.
                 if(event.getAction() == MotionEvent.ACTION_DOWN){
                     mListener.startDrag(holder);
                 }
+
                 return false;
             }
         });
@@ -46,6 +47,7 @@ public class SlideDeleteAdapter extends RecyclerView.Adapter<SlideDeleteAdapter.
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_slide_delete, parent, false);
+
         return new ViewHolder(view);
     }
 

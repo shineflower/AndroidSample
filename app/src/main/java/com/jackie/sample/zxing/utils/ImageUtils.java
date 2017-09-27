@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
+import android.view.View;
 
 /**
  * Created by Jackie on 2017/6/14.
@@ -34,6 +35,18 @@ public class ImageUtils {
         drawable.setBounds(0, 0, height, height);
         // 把 drawable 内容画到画布中
         drawable.draw(canvas);
+        return bitmap;
+    }
+
+    /**
+     * viewToBitmap
+     * @param view
+     * @return
+     */
+    public Bitmap viewToBitmap(View view) {
+        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        view.draw(canvas);
         return bitmap;
     }
 

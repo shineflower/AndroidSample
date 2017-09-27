@@ -19,24 +19,27 @@ import java.util.List;
 public class SlideDeleteActivity extends AppCompatActivity implements OnStartDragListener {
     private RecyclerView mRecyclerView;
     private SlideDeleteAdapter mAdapter;
-    private ItemTouchHelper mHelper;
+    private ItemTouchHelper mItemTouchHelper;
     private List<SlideDeleteBean> mList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_slide_delete);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new SlideDeleteAdapter(mList = initData(), this);
         mRecyclerView.setAdapter(mAdapter);
-        mHelper = new ItemTouchHelper(new SimpleItemTouchCallback(mAdapter, mList));
-        mHelper.attachToRecyclerView(mRecyclerView);
+        mItemTouchHelper = new ItemTouchHelper(new SimpleItemTouchCallback(mAdapter, mList));
+        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
     }
 
     public List<SlideDeleteBean> initData(){
         List<SlideDeleteBean> list = new ArrayList<>();
         String[] titles = getResources().getStringArray(R.array.array_title);
+
         for(int i = 0;i < titles.length; i++){
             SlideDeleteBean slideDeleteBean = new SlideDeleteBean();
             slideDeleteBean.setNumber(i + 1);
@@ -49,7 +52,7 @@ public class SlideDeleteActivity extends AppCompatActivity implements OnStartDra
 
     @Override
     public void startDrag(RecyclerView.ViewHolder holder) {
-        mHelper.startDrag(holder);
+        mItemTouchHelper.startDrag(holder);
     }
 }
 
