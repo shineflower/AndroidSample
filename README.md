@@ -147,3 +147,7 @@ Android L动画新特性
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/recorder_timing.gif)
 
 自定义键盘，支持身份证键盘(X)、小数键盘(.)和数字键盘三种模式
+
+自定义滚轮选择器   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/time_picker.gif)
+
