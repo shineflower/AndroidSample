@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eeeeee">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="请选择日期时间"
+            android:textColor="#45494e"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/after_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@id/tv_cancel"
+            android:background="#5177ee"
+            android:text="一小时后"
+            android:textColor="#ffffff"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tx_finish"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/CommonButtonBt1"
+            android:layout_marginRight="15dp"
+            android:text="确认"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingRight="15dp"
+                    android:text="年"
+                    android:textColor="#333333"
+                    android:textSize="15dp"/>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingRight="15dp"
+                    android:text="月"
+                    android:textColor="#333333"
+                    android:textSize="15dp"/>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="#333333"
+                    android:textSize="15dp"
+                    android:paddingRight="15dp"
+                    android:text="日"/>
+
+
+
+            </FrameLayout>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="2dp"
+                android:layout_gravity="right"
+                android:background="#eeeeee"
+                android:layout_height="match_parent"/>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingRight="15dp"
+                    android:textColor="#333333"
+                    android:textSize="15dp"
+                    android:text="时"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingRight="15dp"
+                    android:textColor="#333333"
+                    android:textSize="15dp"
+                    android:text="分"/>
+            </FrameLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:background="#eeeeee"
+            android:layout_height="0.5dp"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.jackie.sample.time_picker.loop_view.LoopView
+                    android:id="@+id/loop_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.jackie.sample.time_picker.loop_view.LoopView
+                    android:id="@+id/loop_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.jackie.sample.time_picker.loop_view.LoopView
+                    android:id="@+id/loop_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+
+            </FrameLayout>
+            <View
+                android:layout_width="0.5dp"
+                android:background="#eeeeee"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="2dp"
+                android:layout_height="match_parent"/>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.jackie.sample.time_picker.loop_view.LoopView
+                    android:id="@+id/loop_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+
+
+            </FrameLayout>
+
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.jackie.sample.time_picker.loop_view.LoopView
+                    android:id="@+id/loop_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"/>
+            </FrameLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

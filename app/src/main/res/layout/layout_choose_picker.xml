@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eeeeee">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:text="请选择时间"
+            android:textColor="#45494e"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/after_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@id/tv_title"
+            android:background="#5177ee"
+            android:text="一小时后"
+            android:textColor="#ffffff"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tx_finish"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/CommonButtonBt1"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="确认"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.jackie.sample.time_picker.picker_view.CharacterPickerView
+                    android:id="@+id/loop_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/tx_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dip"
+                    android:textColor="#B3B3B3" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E2E2E2" />
+
+</LinearLayout>

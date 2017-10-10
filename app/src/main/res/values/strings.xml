@@ -96,6 +96,19 @@
     <string name="action_search">Search</string>
     <string name="action_delete">Delete</string>
 
+    <string-array name="loop_list">
+        <item>中华人民共和国万岁1</item>
+        <item>中华人民共和国万岁2</item>
+        <item>中华人民共和国万岁3</item>
+        <item>中华人民共和国万岁4</item>
+        <item>中华人民共和国万岁5</item>
+        <item>中华人民共和国万岁6</item>
+        <item>中华人民共和国万岁7</item>
+        <item>中华人民共和国万岁8</item>
+        <item>中华人民共和国万岁9</item>
+        <item>中华人民共和国万岁10</item>
+    </string-array>
+
     <!--
 
     &#32;     普通的英文半角空格

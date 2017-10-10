@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/common_btn1_press_shape" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/common_btn1_normal_shape" android:state_pressed="false"></item>
+    <item android:drawable="@drawable/common_btn1_noclick_shape" android:state_active="false"></item>
+</selector>

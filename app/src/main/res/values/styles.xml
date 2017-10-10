@@ -121,7 +121,7 @@
         <item name="android:windowExitAnimation">@anim/push_translate_up_out</item>
     </style>
 
-    <!--时间选择器弹窗-->
+    <!--地址选择器弹窗-->
     <style name="Theme.Light.NoTitle.Dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
@@ -132,6 +132,26 @@
     <style name="Animation.Bottom.Rising" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
         <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+
+
+    <!-- 自定义滚轮选择器 -->
+    <style name="Theme.Light.NoTitle.NoShadow.Dialog" parent="Theme.Light.NoTitle.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--bt1按钮样式-->
+    <style name="CommonButtonBt1" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:background">@drawable/common_btn2_solid_selector</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textSize" >18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
     </style>
 
 </resources>

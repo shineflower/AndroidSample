@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eeeeee">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="请选择时间"
+            android:textColor="#45494e"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/after_hour"
+            android:layout_toRightOf="@id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:text="一小时后"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:background="#5177ee"
+            android:layout_marginLeft="22dp"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tx_finish"
+            style="@style/CommonButtonBt1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="确认"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip">
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:layout_width="110dip"
+                android:layout_height="wrap_content">
+
+                <com.jackie.sample.time_picker.loop_view.LoopView
+                    android:id="@+id/loop_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:textSize="15dp"
+                    android:text="时"
+                    android:textColor="#0971ce" />
+            </FrameLayout>
+            <View
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+            <FrameLayout
+                android:layout_width="110dip"
+                android:layout_height="wrap_content">
+
+                <com.jackie.sample.time_picker.loop_view.LoopView
+                    android:id="@+id/loop_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:text="分"
+                    android:textColor="#0971ce" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E2E2E2" />
+
+</LinearLayout>

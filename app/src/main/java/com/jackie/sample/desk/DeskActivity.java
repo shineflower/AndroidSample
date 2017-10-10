@@ -77,6 +77,7 @@ import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
+import com.jackie.sample.time_picker.TimePickerActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
 import com.jackie.sample.utils.ScreenUtils;
@@ -560,6 +561,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("新手引导");
         sampleBean.setClassName(NewerGuideActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义滚轮选择器");
+        sampleBean.setClassName(TimePickerActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
