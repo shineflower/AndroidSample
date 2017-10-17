@@ -23,5 +23,5 @@
         android:layout_height="14dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="#ececec" />
+        android:background="@color/color_d5d7dc" />
 </RelativeLayout>

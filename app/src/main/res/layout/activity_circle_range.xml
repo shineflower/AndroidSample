@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_alignParentBottom="true"
-                android:background="#ececec"/>
+                android:background="@color/color_d5d7dc"/>
 
             <Gallery
                 android:id="@+id/gallery"
@@ -67,7 +67,7 @@
                 android:layout_height="match_parent"
                 android:layout_above="@+id/bottom_line"
                 android:layout_centerHorizontal="true"
-                android:background="@color/color_0971ce"/>
+                android:background="@color/color_337cff"/>
         </RelativeLayout>
 
         <com.jackie.sample.custom_view.StepView
@@ -90,7 +90,7 @@
             app:total_step="3"
             app:current_step="2"
             app:unComplete_radius="10dp"
-            app:unComplete_color="#c2c7cd"/>
+            app:unComplete_color="@color/color_d5d7dc"/>
 
         <com.jackie.sample.custom_view.StepView
             android:layout_width="40dp"

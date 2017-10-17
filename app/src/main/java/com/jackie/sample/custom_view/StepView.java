@@ -28,7 +28,7 @@ public class StepView extends View {
     private Paint mTextPaint;
 
     private int mCompleteColor = getResources().getColor(R.color.color_0971ce);
-    private int mUnCompleteColor = getResources().getColor(R.color.color_ececec);
+    private int mUnCompleteColor = getResources().getColor(R.color.color_d5d7dc);
     private int mTextColor = getResources().getColor(android.R.color.white);
 
     private int mCompleteRadius;
