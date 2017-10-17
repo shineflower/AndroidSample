@@ -55,8 +55,8 @@ public class RangeBar extends ProgressBar {
 
     private int mGreyColor = Color.parseColor("#666666");
 
-    private final int BACKGROUND_COLOR = Color.parseColor("#ececec");
-    private final int REACH_COLOR = Color.parseColor("#0971ce");
+    private final int BACKGROUND_COLOR = Color.parseColor("#d5d7dc");
+    private final int REACH_COLOR = Color.parseColor("#337cff");
     private final int WHITE_BALL_COLOR = getResources().getColor(android.R.color.white);
 
     private OnRangeBarChangeListener mOnRangeBarChangeListener;
