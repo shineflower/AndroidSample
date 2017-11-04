@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.GridView;
 
+//GridView铺开，用于ListView ScrollView 中嵌套GridView，GridView的高度没有展开时用到
 public class CustomGridView extends GridView {
 	public CustomGridView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
@@ -22,7 +23,6 @@ public class CustomGridView extends GridView {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		//最多一行显示2个
 		int expandSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2,
 				MeasureSpec.AT_MOST);
 		super.onMeasure(widthMeasureSpec, expandSpec);

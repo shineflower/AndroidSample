@@ -20,6 +20,7 @@ import android.graphics.drawable.Drawable;
 import android.media.ExifInterface;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -327,5 +328,18 @@ public class BitmapUtils {
 		}
 
 		return inSampleSize;
+	}
+
+	/**
+	 * Android中将View的内容保存为图像的方法
+	 * @param view
+	 * @return
+	 */
+	public Bitmap createViewBitmap(View view) {
+		Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(bitmap);
+		view.draw(canvas);
+
+		return bitmap;
 	}
 }
