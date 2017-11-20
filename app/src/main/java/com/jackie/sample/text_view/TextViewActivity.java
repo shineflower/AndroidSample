@@ -7,6 +7,7 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.text.InputFilter;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.AbsoluteSizeSpan;
@@ -76,6 +77,9 @@ public class TextViewActivity extends AppCompatActivity {
 
         //两次加大字体，设置字体为红色(big会加大字号，font可以定义颜色)
         mTextView1.setText(Html.fromHtml("北京市发布霾黄色预警， <font color='#ff0000'><big><big>外出携带好</big></big></font>口罩"));
+
+        //设置TextView的长度 maxLength
+        mTextView1.setFilters(new InputFilter[] { new InputFilter.LengthFilter(10) });
 
         //设置字体大小为3级标题，设置字体为红色
         mTextView2.setText(Html.fromHtml("北京市发布霾黄色预警，<h3><font color='#ff0000'>外出携带好</font></h3>口罩"));
