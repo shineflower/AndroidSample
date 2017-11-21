@@ -214,7 +214,7 @@ public class FaceDetectActivity extends AppCompatActivity implements View.OnClic
             Uri uri = data.getData();
             /**
              * Uri uri = data.getData();
-             * 在红米手机上，uri返回的值是 file:///storage/emulated/0/DCIM/Camera/IMG_20170512_132530_HDR.jpg
+             * 在小米手机上，uri返回的值是 file:///storage/emulated/0/DCIM/Camera/IMG_20170512_132530_HDR.jpg
              * 正常的uri的格式是content://，所以需要进行单独处理
              */
             if (!TextUtils.isEmpty(uri.getAuthority())) {
