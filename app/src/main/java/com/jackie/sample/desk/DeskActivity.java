@@ -73,6 +73,7 @@ import com.jackie.sample.sesame_credit.SesameCreditActivity;
 import com.jackie.sample.share_element.PhotoActivity;
 import com.jackie.sample.share_element.ShareElementFromActivity;
 import com.jackie.sample.sin.SinActivity;
+import com.jackie.sample.skin_support.SkinSupportActivity;
 import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
@@ -566,6 +567,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("自定义滚轮选择器");
         sampleBean.setClassName(TimePickerActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义换肤");
+        sampleBean.setClassName(SkinSupportActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

@@ -4,6 +4,8 @@ package com.jackie.sample.utils;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -72,6 +74,8 @@ public class DialogUtils {
         WindowManager.LayoutParams params = mDialog.getWindow().getAttributes();
         params.width = context.getResources().getDisplayMetrics().widthPixels * 5 / 6;
         mDialog.getWindow().setAttributes(params);
+        // 这句代码十分重要, 否则圆角背景的圆角永远就只有那么大
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         if (null != title) {
             dialogTitle.setText(title);
@@ -121,6 +125,8 @@ public class DialogUtils {
         WindowManager.LayoutParams params = mDialog.getWindow().getAttributes();
         params.width = context.getResources().getDisplayMetrics().widthPixels * 5 / 6;
         mDialog.getWindow().setAttributes(params);
+        // 这句代码十分重要, 否则圆角背景的圆角永远就只有那么大
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         if (null != title) {
             dialogTitle.setText(title);
@@ -156,6 +162,8 @@ public class DialogUtils {
         WindowManager.LayoutParams params = mDialog.getWindow().getAttributes();
         params.width = context.getResources().getDisplayMetrics().widthPixels * 5 / 6;
         mDialog.getWindow().setAttributes(params);
+        // 这句代码十分重要, 否则圆角背景的圆角永远就只有那么大
+        mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         if (null != title) {
             dialogTitle.setText(title);

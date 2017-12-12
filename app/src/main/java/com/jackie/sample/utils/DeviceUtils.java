@@ -118,8 +118,8 @@ public class DeviceUtils {
      * @return
      */
     public static String getIPAddress(Context context) {
-        NetworkInfo info = ((ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
+        NetworkInfo info = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
+
         if (info != null && info.isConnected()) {
             if (info.getType() == ConnectivityManager.TYPE_MOBILE) {//当前使用2G/3G/4G网络
                 try {
@@ -147,6 +147,7 @@ public class DeviceUtils {
         } else {
             //当前无网络连接,请在设置中打开网络
         }
+
         return null;
     }
 

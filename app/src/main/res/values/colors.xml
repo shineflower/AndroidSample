@@ -62,4 +62,7 @@
     <color name="color_d5d7dc">#d5d7dc</color>
     <color name="color_337cff">#337cff</color>
 
+    <!-- 换肤 背景颜色 -->
+    <color name="background">#ffffff</color>
+
 </resources>

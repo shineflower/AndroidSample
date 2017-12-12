@@ -14,6 +14,10 @@ import android.widget.ScrollView;
 
 import com.jackie.sample.utils.DensityUtils;
 
+/**
+ * Created by Jackie on 2017/12/11
+ * 弹性ScrollView
+ */
 public class ElasticScrollView extends ScrollView {
     private Context mContext;
     private boolean mCanScroll;
@@ -33,11 +37,11 @@ public class ElasticScrollView extends ScrollView {
         init(context);
     }
 
-
     private void init(Context context) {
         mContext = context;
         mGestureDetector = new GestureDetector(new YScrollDetector());
         mCanScroll = true;
+
         setVerticalScrollBarEnabled(false);
     }
 
@@ -54,14 +58,16 @@ public class ElasticScrollView extends ScrollView {
         }
     }
 
-    class YScrollDetector extends SimpleOnGestureListener {
+    private class YScrollDetector extends SimpleOnGestureListener {
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-            if(mCanScroll)
-                if (Math.abs(distanceY) >= Math.abs(distanceX))
+            if(mCanScroll) {
+                if (Math.abs(distanceY) >= Math.abs(distanceX)) {
                     mCanScroll = true;
-                else
+                } else {
                     mCanScroll = false;
+                }
+            }
 
             if (mCanScroll) {
                 if (e1.getAction() == MotionEvent.ACTION_DOWN) {
@@ -69,15 +75,18 @@ public class ElasticScrollView extends ScrollView {
                     startY = e1.getY();
                 }
             }
+
             return mCanScroll;
         }
     }
 
-    double startY, moveYY;
+    private double startY, moveYY;
+
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (inner != null) {
             int action = ev.getAction();
+
             switch (action) {
                 case MotionEvent.ACTION_DOWN:
                     startY = ev.getY();
@@ -86,37 +95,50 @@ public class ElasticScrollView extends ScrollView {
                 case MotionEvent.ACTION_CANCEL:
                     if (isNeedAnimation()) {
                         animation();
+
                         isCount = false;
                     }
 
-                    if (startY < moveYY - DensityUtils.dp2px(mContext, 100)) {
-                        if (onPullListener != null) {
-                            onPullListener.onDownPull();
+                    if (moveYY > 0) {
+                        if (startY < moveYY - DensityUtils.dp2px(mContext, 100)) {
+                            if (onPullListener != null) {
+                                onPullListener.onDownPull();
+                            }
+                        } else if (startY - moveYY > DensityUtils.dp2px(mContext, 100)) {
+                            if (onPullListener != null) {
+                                onPullListener.onUpPull();
+                            }
                         }
-                    } else if (startY - moveYY > DensityUtils.dp2px(mContext, 100)) {
+                    } else {
+                        // 下滑不可能滑出屏幕外，上滑可能滑出屏幕外
                         if (onPullListener != null) {
                             onPullListener.onUpPull();
                         }
                     }
 
+                    moveYY = 0 ;
                     break;
                 case MotionEvent.ACTION_MOVE:
                     final float preY = y;
                     float nowY = ev.getY();
                     int deltaY = (int) (preY - nowY);
+
                     if (!isCount) {
                         deltaY = 0;
                     }
 
                     y = nowY;
+
                     if (isNeedMove()) {
                         if (normal.isEmpty()) {
                             normal.set(inner.getLeft(), inner.getTop(),
                                     inner.getRight(), inner.getBottom());
                         }
+
                         inner.layout(inner.getLeft(), inner.getTop() - deltaY / 2,
                                 inner.getRight(), inner.getBottom() - deltaY / 2);
                     }
+
                     isCount = true;
                     moveYY = ev.getY();
                 default:
@@ -128,8 +150,7 @@ public class ElasticScrollView extends ScrollView {
     }
 
     public void animation() {
-        TranslateAnimation ta = new TranslateAnimation(0, 0, inner.getTop(),
-                normal.top);
+        TranslateAnimation ta = new TranslateAnimation(0, 0, inner.getTop(), normal.top);
         ta.setDuration(200);
         ta.setAnimationListener(new AnimationListener() {
 
@@ -151,6 +172,7 @@ public class ElasticScrollView extends ScrollView {
 
             }
         });
+
         inner.startAnimation(ta);
         inner.layout(normal.left, normal.top, normal.right, normal.bottom);
 
@@ -164,9 +186,11 @@ public class ElasticScrollView extends ScrollView {
     public boolean isNeedMove() {
         int offset = inner.getMeasuredHeight() - getHeight();
         int scrollY = getScrollY();
+
         if (scrollY == 0 || scrollY == offset) {
             return true;
         }
+
         return false;
     }
 
@@ -175,7 +199,8 @@ public class ElasticScrollView extends ScrollView {
         void onUpPull();
     }
 
-    OnPullListener onPullListener = null;
+    private OnPullListener onPullListener = null;
+
     public void setOnPullListener(OnPullListener listener) {
         onPullListener = listener;
     }
