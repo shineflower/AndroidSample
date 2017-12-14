@@ -97,6 +97,7 @@ import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
 import com.jackie.sample.wechat_slide.WechatSlideActivity;
 import com.jackie.sample.wechat_tab.WechatTabWithIndicatorActivity;
 import com.jackie.sample.wechat_tab.WechatTabWithoutIndicatorActivity;
+import com.jackie.sample.zhihu.ZhiHuAdActivity;
 import com.jackie.sample.zoom_image.LargeImageActivity;
 import com.jackie.sample.zoom_image.ZoomImageActivity;
 import com.jackie.sample.zxing.ZxingActivity;
@@ -572,6 +573,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("自定义换肤");
         sampleBean.setClassName(SkinSupportActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿知乎列表广告展示效果");
+        sampleBean.setClassName(ZhiHuAdActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

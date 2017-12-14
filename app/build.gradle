@@ -162,4 +162,7 @@ dependencies {
     compile 'skin.support:skin-support-design:1.2.6'               // skin-support-design material design 控件支持[可选]
     compile 'skin.support:skin-support-cardview:1.2.1'             // skin-support-cardview CardView 控件支持[可选]
     compile 'skin.support:skin-support-constraint-layout:1.0.2.1'  // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
+
+    //仿知乎列表广告展示效果
+    compile 'com.zhy:base-rvadapter:3.0.3'
 }
