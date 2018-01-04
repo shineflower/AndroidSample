@@ -87,7 +87,11 @@ public class ChoosePickerDialog extends Dialog {
         }
 
         private final String getCurrDateValue() {
-            return String.valueOf(params.dataList.get(params.loopData.getCurrentItems())).trim();
+            if (params.dataList.size() == 0) {
+                return null;
+            } else {
+                return String.valueOf(params.dataList.get(params.loopData.getCurrentItems())).trim();
+            }
         }
 
         public Builder setData(List<String> dataList) {
@@ -148,6 +152,11 @@ public class ChoosePickerDialog extends Dialog {
                 @Override
                 public void onClick(View v) {
                     dialog.dismiss();
+
+                    if (getCurrDateValue() == null) {
+                        return;
+                    }
+
                     params.callback.onSelected(getCurrDateValue(),loopData.getCurrentItems());
                 }
             });
