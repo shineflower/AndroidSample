@@ -151,3 +151,8 @@ Android L动画新特性
 自定义滚轮选择器   
 ![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/time_picker.gif)
 
+自定义下拉刷新上拉加载控件   
+![README](https://github.com/shineflower/AndroidSample/blob/master/screenshots/pull_to_refresh.gif)     
+
+
+
