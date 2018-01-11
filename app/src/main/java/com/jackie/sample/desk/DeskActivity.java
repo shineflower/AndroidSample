@@ -54,6 +54,7 @@ import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
 import com.jackie.sample.map.AMapActivity;
 import com.jackie.sample.map.BaiduMapActivity;
 import com.jackie.sample.material_design.MaterialDesignActivity;
+import com.jackie.sample.material_design.SwipeRefreshLayoutActivity;
 import com.jackie.sample.metro.MetroActivity;
 import com.jackie.sample.mm_alert.SendToWXActivity;
 import com.jackie.sample.multiple_download.DownloadActivity;
@@ -578,6 +579,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("仿知乎列表广告展示效果");
         sampleBean.setClassName(ZhiHuAdActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("自定义下拉刷新上拉加载控件");
+        sampleBean.setClassName(SwipeRefreshLayoutActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

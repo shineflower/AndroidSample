@@ -5,6 +5,7 @@
     <attr name="text_size" format="dimension" />
     <attr name="text_color" format="color" />
     <attr name="radius" format="dimension" />
+    <attr name="border_color" format="color|reference" />
 
     <declare-styleable name="ChangeColorIconView">
         <attr name="icon" />
@@ -126,7 +127,7 @@
         <attr name="range_text_array" format="reference" />
         <attr name="range_value_array" format="reference" />
 
-        <attr name="border_color" format="color|reference" />
+        <attr name="border_color" />
         <attr name="cursor_color" format="color|reference" />
         <attr name="extra_text_color" format="color|reference" />
 
@@ -221,6 +222,11 @@
 
         <!--animation duration-->
         <attr name="animationDuration" format="integer|reference" />
+    </declare-styleable>
 
+    <!-- CircleImageView 应用时去掉白边需要用border_width属性 -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" />
     </declare-styleable>
 </resources>

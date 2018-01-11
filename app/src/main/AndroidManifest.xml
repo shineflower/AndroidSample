@@ -427,6 +427,9 @@
         <!-- 仿知乎列表广告展示效果 -->
         <activity android:name=".zhihu.ZhiHuAdActivity" />
 
+        <!-- 自定义下拉刷新上拉加载控件 -->
+        <activity android:name=".material_design.SwipeRefreshLayoutActivity" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.jackie.sample.fileProvider"

@@ -83,6 +83,10 @@ android {
 //    }
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -165,4 +169,7 @@ dependencies {
 
     //仿知乎列表广告展示效果
     compile 'com.zhy:base-rvadapter:3.0.3'
+
+    //圆角 圆形图片 https://github.com/vinc3m1/RoundedImageView
+    compile 'com.makeramen:roundedimageview:2.3.0'
 }
