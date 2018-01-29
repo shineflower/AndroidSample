@@ -126,4 +126,36 @@
     而&#160; &#8201;在不同机型有不同表现。
 
     -->
+
+    <!--permission-->
+    <string name="permission_message_txt">该相册需要赋予访问存储的权限，不开启将无法正常工作！</string>
+    <string name="permission_sure">确定</string>
+    <string name="permission_cancle">取消</string>
+    <string name="permission_promote_txt">提示：</string>
+    <string name="permission_apknohave_txt">当前应用已经没有</string>
+    <string name="share_copyto_clipboard">拷贝到了剪切板</string>
+    <string name="permission_openpermission">权限，去设置界面打开？</string>
+    <string name="permission_readcalendar_txt">读取日历</string>
+    <string name="permission_write_calendar_txt">添加日历</string>
+    <string name="permission_camera_txt">相机</string>
+    <string name="permission_readcontacts_txt">读取联系人</string>
+    <string name="permission_writecontacts_txt">添加联系人</string>
+    <string name="permission_getaccounts_txt">获取联系人</string>
+    <string name="permission_fine_location_txt">定位</string>
+    <string name="permission_coarse_location_txt">基站定位</string>
+    <string name="permission_recordaudio_txt">录制音频</string>
+    <string name="permission_readphone_state_txt">读取电话状态</string>
+    <string name="permission_callphone_txt">拨打电话</string>
+    <string name="permission_calllog_txt">读取拨打日志</string>
+    <string name="permission_write_call_log_txt">添加拨打日志</string>
+    <string name="permission_use_sip_txt">呼叫管理</string>
+    <string name="permission_process_calls_txt">电话管理</string>
+    <string name="permission_body_sensors_txt">传感器</string>
+    <string name="permission_sendsms_txt">发送短信</string>
+    <string name="permission_receive_sms_txt">接受短信</string>
+    <string name="permission_read_sms_txt">读取短信</string>
+    <string name="permission_receive_wap_push_txt">接受推送</string>
+    <string name="permission_receive_mms_txt">短信拦截</string>
+    <string name="permission_read_storage_txt">读取存储</string>
+    <string name="permission_write_storage_txt">写存储</string>
 </resources>
