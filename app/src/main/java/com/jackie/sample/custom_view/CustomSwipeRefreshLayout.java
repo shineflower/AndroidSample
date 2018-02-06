@@ -31,9 +31,11 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
     private OnLoadListener mOnLoadListener;
     private OnScrollListener mOnScrollListener;
     private OnScrollStateChangeListener mOnScrollStateChangeListener;
+    private OnPullRefreshListener mOnPullRefreshListener;
 
     // ListView的加载中FooterView
-    private View mFooterView;
+    private View mHasMoreDataFooterView;
+    private View mNoMoreDataFooterView;
 
     // 按下时的y坐标
     private int mDownY;
@@ -42,8 +44,11 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
     // 是否在加载中 (上拉加载更多)
     private boolean mIsLoading = false;
 
+    private boolean mIsNoMoreData = false;   // 是否没有更多数据  true 没有更多数据 false 有更多数据
+
     private int mCanLoadCount = 6;
     private int mStartLoadCount = 3;
+
 
     public CustomSwipeRefreshLayout(Context context) {
         this(context, null);
@@ -63,6 +68,19 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 
         // 设置下拉progress的开始位置和结束位置
 //        setProgressViewOffset(false, DensityUtils.dp2px(context, 20), DensityUtils.dp2px(context, 80));
+
+        mNoMoreDataFooterView = LayoutInflater.from(mContext).inflate(R.layout.listview_footer_no_data, null);
+
+        setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                if (mOnPullRefreshListener != null) {
+                    mOnPullRefreshListener.onRefresh();
+
+                    mIsNoMoreData = false;
+                }
+            }
+        });
 	}
 
     @Override  
@@ -135,7 +153,7 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
             return false;
         }
 
-        return isBottom() && !mIsLoading && isPullUp() && mListView.getAdapter().getCount() > mCanLoadCount && !isRefreshing();
+        return !mIsNoMoreData && isBottom() && !mIsLoading && isPullUp() && mListView.getAdapter().getCount() > mCanLoadCount && !isRefreshing();
     }
 
     /**
@@ -182,25 +200,25 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
         mIsLoading = loading;
 
         if (mIsLoading) {
-            mFooterView = LayoutInflater.from(mContext).inflate(R.layout.listview_footer, null, false);
+            mHasMoreDataFooterView = LayoutInflater.from(mContext).inflate(R.layout.listview_footer, null, false);
 
 //            if (mListView.getFooterViewsCount() <= 0) {
-//                mListView.addFooterView(mFooterView);
+//                mListView.addFooterView(mHasMoreDataFooterView);
 //            }
 //
-//            mFooterView.setVisibility(View.VISIBLE);
+//            mHasMoreDataFooterView.setVisibility(View.VISIBLE);
 
-            mListView.addFooterView(mFooterView);
+            mListView.addFooterView(mHasMoreDataFooterView);
         } else {
-            if (mListView == null || mListView.getFooterViewsCount() <= 0 || mListView.getAdapter() == null || mFooterView == null) {
+            if (mListView == null || mListView.getFooterViewsCount() <= 0 || mListView.getAdapter() == null || mHasMoreDataFooterView == null) {
                 return;
             }
 
-//            mFooterView.setVisibility(View.GONE);
+//            mHasMoreDataFooterView.setVisibility(View.GONE);
 
-            mListView.removeFooterView(mFooterView);
+            mListView.removeFooterView(mHasMoreDataFooterView);
 
-//        	ObjectAnimator animation = ObjectAnimator.ofFloat(mFooterView, "scaleY", 1, 0);
+//        	ObjectAnimator animation = ObjectAnimator.ofFloat(mHasMoreDataFooterView, "scaleY", 1, 0);
 //			animation.setDuration(100);
 //			animation.start();
 //			animation.addListener(new Animator.AnimatorListener() {
@@ -213,7 +231,7 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 //				}
 //
 //				public void onAnimationEnd(Animator arg0) {
-//					mListView.removeFooterView(mFooterView);
+//					mListView.removeFooterView(mHasMoreDataFooterView);
 //
 //				}
 //
@@ -265,6 +283,10 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
         void onScrollStateChanged(AbsListView listView, int state);
     }
 
+    public interface OnPullRefreshListener {
+        void onRefresh();
+    }
+
     public void onRefreshComplete() {
         setLoading(false);
         setRefreshing(false);
@@ -276,11 +298,23 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 //        }
     }
 
+    // 设置没有更多数据，从此以后没有加载更多
+    public void setNoMoreData() {
+        mIsNoMoreData = true;
+
+        mListView.removeFooterView(mHasMoreDataFooterView);
+        mListView.addFooterView(mNoMoreDataFooterView);
+    }
+
     public void setOnScrollListener(OnScrollListener onScrollListener) {
         this.mOnScrollListener = onScrollListener;
     }
 
     public void setOnScrollStateChangeListener(OnScrollStateChangeListener onScrollStateChangeListener) {
         this.mOnScrollStateChangeListener = onScrollStateChangeListener;
+    }
+
+    public void setOnPullRefreshListener(OnPullRefreshListener onPullRefreshListener) {
+        mOnPullRefreshListener = onPullRefreshListener;
     }
 }

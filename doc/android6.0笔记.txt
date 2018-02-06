@@ -1,0 +1,50 @@
+参考：http://www.jikexueyuan.com/course/1247_4.html?ss=2
+http://www.w2bc.com/article/android-6-0-runtime-permission
+
+					android M笔记
+1、权限声明
+   权限分为安装时权限和运行时权限，运行时权限是开发者在需要用到权限的时候向用户请求，用户可以拒绝请求，因此在代码中需要处理请求到和被拒绝的逻辑。
+
+// 例如要拍照，请求相机权限
+if (Build.VERSION.CODENAME.equals(“MNC”)) { // 判断是否是android M
+	// 检查权限, checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED 请求权限被拒绝
+	if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+		// 如果返回true表示程序是具备权限的，可以直接操作
+		// 打开相机
+	}
+	else {
+		// 表示不具备权限， 需要申请，String数组就是要请求的权限，可能请求多个，第二个参数是请求码，这里给1
+		requestPermissions(new String[] {Manifest.permission.CAMERA}, 1);
+	}
+else {
+	// android M以下的系统，跟之前一样
+
+}
+
+在Activity中重载此方法来监听用户选择权限的结果
+@override
+public void onRequestPermissionResult(int requestCode, String[] permission, int[]grantResults) {
+	super.onRequestPermissionResult(requestCode, permissions, grantResults);
+	// grantResults为请求的权限结果
+	if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+		// 由于我们只请求了一个权限，因此取第0个
+		Toast.ShowTost("请求到了");
+		// 打开相机
+	}
+	else {
+		// 没有请求到权限
+		Toast.ShowTost("用户拒绝使用此权限");
+	}
+}
+
+
+这些权限都是运行时权限：
+身体传感器
+日历
+摄像头
+通讯录
+地理位置
+麦克风
+电话
+短信
+存储空间
