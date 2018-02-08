@@ -208,7 +208,8 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 //
 //            mHasMoreDataFooterView.setVisibility(View.VISIBLE);
 
-            mListView.addFooterView(mHasMoreDataFooterView);
+            mListView.removeFooterView(mNoMoreDataFooterView);
+            mListView.addFooterView(mHasMoreDataFooterView, null, false);  //禁用FooterView的点击事件
         } else {
             if (mListView == null || mListView.getFooterViewsCount() <= 0 || mListView.getAdapter() == null || mHasMoreDataFooterView == null) {
                 return;
@@ -216,6 +217,7 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 
 //            mHasMoreDataFooterView.setVisibility(View.GONE);
 
+            mListView.removeFooterView(mNoMoreDataFooterView);
             mListView.removeFooterView(mHasMoreDataFooterView);
 
 //        	ObjectAnimator animation = ObjectAnimator.ofFloat(mHasMoreDataFooterView, "scaleY", 1, 0);
@@ -303,7 +305,7 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
         mIsNoMoreData = true;
 
         mListView.removeFooterView(mHasMoreDataFooterView);
-        mListView.addFooterView(mNoMoreDataFooterView);
+        mListView.addFooterView(mNoMoreDataFooterView, null, false);
     }
 
     public void setOnScrollListener(OnScrollListener onScrollListener) {

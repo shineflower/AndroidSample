@@ -229,4 +229,25 @@
         <attr name="border_width" format="dimension" />
         <attr name="border_color" />
     </declare-styleable>
+
+    <!-- 文本指示器 -->
+    <declare-styleable name="TextPageIndicator">
+        <attr name="indicatorType" format="integer" />
+    </declare-styleable>
+
+    <!-- 图片上传 -->
+    <declare-styleable name="CustomUploadLayout">
+        <attr name="numColumns" format="integer" />
+        <attr name="paddingLeft" format="dimension" />
+        <attr name="paddingRight" format="dimension" />
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+        <attr name="dialogType" format="enum" >
+            <enum name="withTaskPhoto" value="0" />
+            <enum name="onlyTakePhoto" value="1" />
+        </attr>
+        <attr name="maxCount" format="integer" />
+        <attr name="showMainView" format="boolean" />
+        <attr name="mainViewText" format="reference|string" />
+    </declare-styleable>
 </resources>
