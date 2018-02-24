@@ -302,10 +302,14 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 
     // 设置没有更多数据，从此以后没有加载更多
     public void setNoMoreData() {
-        mIsNoMoreData = true;
+        try {
+            mIsNoMoreData = true;
 
-        mListView.removeFooterView(mHasMoreDataFooterView);
-        mListView.addFooterView(mNoMoreDataFooterView, null, false);
+            mListView.removeFooterView(mHasMoreDataFooterView);
+            mListView.addFooterView(mNoMoreDataFooterView, null, false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void setOnScrollListener(OnScrollListener onScrollListener) {
