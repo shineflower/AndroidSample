@@ -2,6 +2,7 @@ package com.jackie.sample.utils;
 
 import android.text.InputFilter;
 import android.text.Spanned;
+import android.text.TextUtils;
 
 /**
  * 根据字节判断长度，1个中文字符 = 2个英文字符
@@ -55,5 +56,19 @@ public class CheckUtils {
         };
 
         return filter;
+    }
+
+    /**
+     * 判断邮箱是否合法
+     * @return
+     */
+    public static boolean isEmail(String strEmail) {
+        String pattern = "^[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9]\\.[a-zA-Z][a-zA-Z\\.]*[a-zA-Z]$";
+
+        if (TextUtils.isEmpty(pattern)) {
+            return false;
+        } else {
+            return strEmail.matches(pattern);
+        }
     }
 }
