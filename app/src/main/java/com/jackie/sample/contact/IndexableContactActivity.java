@@ -70,7 +70,7 @@ public class IndexableContactActivity extends AppCompatActivity {
                 }
             }
 
-            return 0;
+            return -1;
         }
 
         //提供adapter中的位置，在section数组对象中返回相应的section索引
