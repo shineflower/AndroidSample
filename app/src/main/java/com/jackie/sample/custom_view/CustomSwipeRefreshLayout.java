@@ -46,6 +46,8 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 
     private boolean mIsNoMoreData = false;   // 是否没有更多数据  true 没有更多数据 false 有更多数据
 
+    private boolean mCanPullRefreshAndLoadMore = true;  // 是否有下拉刷新和上拉加载更多的功能
+
     private int mCanLoadCount = 6;
     private int mStartLoadCount = 3;
 
@@ -148,7 +150,7 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
   
     // 是否可以加载更多, 条件是到了最底部, ListView不在加载中, 且为上拉操作.
     private boolean canLoad() {
-        if (mListView == null) {
+        if (mListView == null || !mCanPullRefreshAndLoadMore) {
             LogUtils.showLog("不能加载");
             return false;
         }
@@ -157,8 +159,19 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
     }
 
     /**
+     * 设置是否有上拉刷新 下拉加载更多的功能
+     * @param canPullRefreshAndLoadMore  canPullRefreshAndLoadMore
+     */
+    public void setCanPullRefreshAndLoadMore(boolean canPullRefreshAndLoadMore) {
+        // 下拉刷新
+        setEnabled(canPullRefreshAndLoadMore);
+
+        mCanPullRefreshAndLoadMore = canPullRefreshAndLoadMore;
+    }
+
+    /**
      * 设置列表的数目达到多少条才能上拉加载更多
-     * @param canLoadCount
+     * @param canLoadCount  canLoadCount
      */
     public void setCanLoadCount(int canLoadCount) {
         this.mCanLoadCount = canLoadCount;
@@ -175,7 +188,7 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 
     /**
      * 设置上拉到列表倒数第几条的时候开始加载更多
-     * @param startLoadCount
+     * @param startLoadCount startLoadCount
      */
     public void setStartLoadCount(int startLoadCount) {
         this.mStartLoadCount = startLoadCount;
@@ -298,6 +311,10 @@ public class CustomSwipeRefreshLayout extends SwipeRefreshLayout implements OnSc
 //        } else {
 //            setRefreshing(false);
 //        }
+    }
+
+    public void setHaveMoreData() {
+        mIsNoMoreData = false;
     }
 
     // 设置没有更多数据，从此以后没有加载更多
