@@ -175,4 +175,7 @@ dependencies {
 
     //仿美团城市定位
     compile 'com.zaaach:citypicker:2.0.2'
+
+    //ToggleButton
+    compile 'com.facebook.rebound:rebound:0.3.8'
 }
