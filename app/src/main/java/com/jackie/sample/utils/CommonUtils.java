@@ -63,6 +63,7 @@ public class CommonUtils {
     /**
      * 深拷贝就是将A复制给B的同时，给B创建新的地址，再将地址A的内容传递到地址B。
      * ListA与ListB内容一致，但是由于所指向的地址不同，所以改变相互不受影响。
+     * 使用序列化方法，必须保证List里面的实体实现了Serializable接口
      * https://blog.csdn.net/demonliuhui/article/details/54572908
      * @param src                       src
      * @param <T>                       dest
