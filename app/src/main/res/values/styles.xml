@@ -154,4 +154,13 @@
         <item name="android:buttonStyle">?android:attr/borderlessButtonStyle</item>
     </style>
 
+    <!-- 仿美团城市定位 -->
+    <style name="CustomCityPickerTheme" parent="DefaultCityPickerTheme">
+        <item name="cpCancelTextColor">@android:color/holo_blue_dark</item>
+        <item name="cpSearchCursorDrawable">@android:color/holo_blue_dark</item>
+        <item name="cpIndexBarNormalTextColor">@android:color/holo_blue_dark</item>
+        <item name="cpIndexBarSelectedTextColor">@android:color/holo_purple</item>
+        <item name="cpOverlayBackground">@android:color/holo_blue_dark</item>
+    </style>
+
 </resources>

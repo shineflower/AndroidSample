@@ -172,4 +172,7 @@ dependencies {
 
     //圆角 圆形图片 https://github.com/vinc3m1/RoundedImageView
     compile 'com.makeramen:roundedimageview:2.3.0'
+
+    //仿美团城市定位
+    compile 'com.zaaach:citypicker:2.0.2'
 }

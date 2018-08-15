@@ -2,6 +2,12 @@ package com.jackie.sample.utils;
 
 import android.graphics.Color;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -52,5 +58,27 @@ public class CommonUtils {
         }
 
         return Color.parseColor("#" + stringBuilder.toString());
+    }
+
+    /**
+     * 深拷贝就是将A复制给B的同时，给B创建新的地址，再将地址A的内容传递到地址B。
+     * ListA与ListB内容一致，但是由于所指向的地址不同，所以改变相互不受影响。
+     * https://blog.csdn.net/demonliuhui/article/details/54572908
+     * @param src                       src
+     * @param <T>                       dest
+     * @return                          list
+     * @throws IOException              IOException
+     * @throws ClassNotFoundException   ClassNotFoundException
+     */
+    private <T> List<T> deepCopy(List<T> src) throws IOException, ClassNotFoundException {
+        ByteArrayOutputStream byteOut = new ByteArrayOutputStream();
+        ObjectOutputStream out = new ObjectOutputStream(byteOut);
+        out.writeObject(src);
+
+        ByteArrayInputStream byteIn = new ByteArrayInputStream(byteOut.toByteArray());
+        ObjectInputStream in = new ObjectInputStream(byteIn);
+        @SuppressWarnings("unchecked")
+        List<T> dest = (List<T>) in.readObject();
+        return dest;
     }
 }
