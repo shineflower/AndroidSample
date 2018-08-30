@@ -26,10 +26,10 @@ android {
         enabled = true
     }
 
-    dexOptions {
-        incremental true
-        javaMaxHeapSize "4g"
-    }
+//    dexOptions {
+//        incremental true
+//        javaMaxHeapSize "4g"
+//    }
 
 //    lintOptions {
 //        abortOnError false
