@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_text_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -48,4 +49,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp" />
+
+    <com.jackie.sample.custom_view.FoldTextView
+        android:id="@+id/text_fold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#fff"
+        android:textColor="#000"
+        app:showMaxLine="4"
+        app:showTipAfterExpand="true"
+        app:tipClickable="true"
+        app:tipColor="@color/colorPrimary"
+        app:tipGravity="0" />
 </LinearLayout>

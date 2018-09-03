@@ -18,9 +18,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.jackie.sample.R;
+import com.jackie.sample.custom_view.FoldTextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,7 @@ import java.util.TimerTask;
 public class TextViewActivity extends AppCompatActivity {
     private TextView mTextView1, mTextView2, mTextView3, mTextView4;
     private TextSwitcher mTextSwitcher;
+    private FoldTextView mFoldTextView;
 
     private List<String> mList = new ArrayList<>();
 
@@ -122,6 +125,17 @@ public class TextViewActivity extends AppCompatActivity {
         SwitcherTask switcherTask = new SwitcherTask();
 
         mTimer.schedule(switcherTask, 0, 1000);
+
+        mFoldTextView = (FoldTextView) findViewById(R.id.text_fold);
+
+        mFoldTextView.setText("111111123阿斯顿发阿斯顿发送到大。厦法定阿萨【德法师打发斯蒂芬撒地】方阿萨德法师打发斯问问蒂芬撒地方阿萨德法师打发斯蒂。芬撒地方发送到发送到发送到发送到发送到发送，到发送到发送到发送到，发送111111123阿斯顿发阿斯顿发送到大。厦法定阿萨【德法师打发斯蒂芬撒地】方阿萨德法师打发斯问问蒂芬撒地方阿萨德法师打发斯蒂。芬撒地方发送到发送到发送到发送到发送到发送，到发送到发送到发送到，发送");
+
+        mFoldTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(TextViewActivity.this, "textView点击事件", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     //定时任务,定时发送message
