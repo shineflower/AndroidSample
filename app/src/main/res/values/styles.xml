@@ -163,16 +163,4 @@
         <item name="cpOverlayBackground">@android:color/holo_blue_dark</item>
     </style>
 
-    <!-- ToggleButton -->
-    <declare-styleable name="ToggleButton">
-        <attr format="dimension" name="tbBorderWidth"/>
-        <attr format="reference|color" name="tbOffBorderColor"/>
-        <attr format="reference|color" name="tbOffColor"/>
-        <attr format="reference|color" name="tbOnColor"/>
-        <attr format="reference|color" name="tbSpotColor"/>
-        <attr format="reference|boolean" name="tbAnimate"/>
-        <attr format="reference|boolean" name="tbAsDefaultOn"/>
-        <attr name="toggleEnable" format="boolean"/>
-    </declare-styleable>
-
 </resources>

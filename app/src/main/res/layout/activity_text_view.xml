@@ -62,4 +62,14 @@
         app:tipClickable="true"
         app:tipColor="@color/colorPrimary"
         app:tipGravity="0" />
+
+    <com.jackie.sample.custom_view.AnimTextView
+        android:id="@+id/text_anim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_dp30"
+        app:textColor="@color/colorAccent"
+        app:textSize="20sp"
+        app:duration="5000" />
 </LinearLayout>

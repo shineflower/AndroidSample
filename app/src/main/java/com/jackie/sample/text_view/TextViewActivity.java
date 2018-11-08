@@ -22,6 +22,7 @@ import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.jackie.sample.R;
+import com.jackie.sample.custom_view.AnimTextView;
 import com.jackie.sample.custom_view.FoldTextView;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class TextViewActivity extends AppCompatActivity {
     private TextView mTextView1, mTextView2, mTextView3, mTextView4;
     private TextSwitcher mTextSwitcher;
     private FoldTextView mFoldTextView;
+    private AnimTextView mAnimTextView;
 
     private List<String> mList = new ArrayList<>();
 
@@ -136,6 +138,9 @@ public class TextViewActivity extends AppCompatActivity {
                 Toast.makeText(TextViewActivity.this, "textView点击事件", Toast.LENGTH_SHORT).show();
             }
         });
+
+        mAnimTextView = (AnimTextView) findViewById(R.id.text_anim);
+        mAnimTextView.setText("1234.56");
     }
 
     //定时任务,定时发送message
