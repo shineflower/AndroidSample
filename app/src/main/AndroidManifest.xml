@@ -434,6 +434,9 @@
         <activity android:name=".meituan_location.MeiTuanLocationActivity"
             android:theme="@style/CustomCityPickerTheme" />
 
+        <!-- Android雷达图 -->
+        <activity android:name=".radar.RadarActivity" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.jackie.sample.fileProvider"

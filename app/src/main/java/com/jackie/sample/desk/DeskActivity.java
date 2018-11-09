@@ -65,6 +65,7 @@ import com.jackie.sample.notification.NotificationActivity;
 import com.jackie.sample.popup_window.PopupWindowActivity;
 import com.jackie.sample.progress_bar.ProgressBarActivity;
 import com.jackie.sample.progress_bar.ProgressLinearLayoutActivity;
+import com.jackie.sample.radar.RadarActivity;
 import com.jackie.sample.recorder_timing.RecorderTimingActivity;
 import com.jackie.sample.ripple.RippleActivity;
 import com.jackie.sample.scratch_card.ScratchCardActivity;
@@ -106,6 +107,9 @@ import com.jackie.sample.zxing.ZxingActivity;
 
 import java.util.LinkedList;
 
+/**
+ * http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0908/6606.html
+ */
 public class DeskActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
 
@@ -591,6 +595,12 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean.setTitle("仿美团城市定位");
         sampleBean.setClassName(MeiTuanLocationActivity.class);
         linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("Android雷达图");
+        sampleBean.setClassName(RadarActivity.class);
+        linkedList.add(sampleBean);
+
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
         mRecyclerView.setAdapter(sampleAdapter);
