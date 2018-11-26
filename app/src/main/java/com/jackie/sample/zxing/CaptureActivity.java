@@ -50,6 +50,7 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 	private boolean playBeep;
 	private static final float BEEP_VOLUME = 0.10f;
 	private boolean vibrate;
+	private Handler mHandler = null;
 
 	private boolean isLightOpen;
 
@@ -95,6 +96,8 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 
 			}
 		});
+
+		mHandler = new Handler();
 	}
 
 	@Override
@@ -172,7 +175,27 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 			resultIntent.putExtras(bundle);
 			this.setResult(RESULT_OK, resultIntent);
 		}
+
 		CaptureActivity.this.finish();
+
+
+		/*
+		 * 实现多次扫描
+		 * 把SignInCaptureFragment这个类里面的restartPreviewAndDecode这个方法的private改成public，发现是可以用的
+		 * 但速度太快，因此用定时器每隔3s去扫描一次
+		 */
+//		mHandler.postDelayed(new Runnable() {
+//			@Override
+//			public void run() {
+//				try {
+//					if (handler != null) {
+//						handler.restartPreviewAndDecode();
+//					}
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		}, 3000);
 	}
 	
 	private void initCamera(SurfaceHolder surfaceHolder) {
