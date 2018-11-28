@@ -24,12 +24,18 @@ import android.widget.ViewSwitcher;
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.AnimTextView;
 import com.jackie.sample.custom_view.FoldTextView;
+import com.jackie.sample.utils.FontHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/*
+ * 用TextView显示图片
+ * http://fontawesome.dashgame.com/
+ * https://github.com/FortAwesome/Font-Awesome
+ */
 public class TextViewActivity extends AppCompatActivity {
     private TextView mTextView1, mTextView2, mTextView3, mTextView4;
     private TextSwitcher mTextSwitcher;
@@ -141,6 +147,8 @@ public class TextViewActivity extends AppCompatActivity {
 
         mAnimTextView = (AnimTextView) findViewById(R.id.text_anim);
         mAnimTextView.setText("1234.56");
+
+        FontHelper.injectFont(findViewById(android.R.id.content));
     }
 
     //定时任务,定时发送message

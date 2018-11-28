@@ -72,4 +72,32 @@
         app:textColor="@color/colorAccent"
         app:textSize="20sp"
         app:duration="5000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="&#xf242;" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:text="&#xf206;" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="40sp"
+        android:textColor="#FF00FF00"
+        android:text="&#xf206;" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="#FFFF0000"
+        android:text="&#xf206;" />
 </LinearLayout>
