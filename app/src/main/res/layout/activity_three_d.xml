@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.jackie.sample.custom_view.ThreeDLayout
+        android:id="@+id/tdl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="30℃"
+            android:textSize="80sp"/>
+
+    </com.jackie.sample.custom_view.ThreeDLayout>
+
+</RelativeLayout>

@@ -281,6 +281,9 @@
         <!-- 三维开门一样的效果 -->
         <activity android:name=".animator.OpenDoor3DActivity" />
 
+        <!-- Android 3D 动画效果 -->
+        <activity android:name=".animator.ThreeDActivity" />
+
         <!-- 模拟电视的关机动画 -->
         <activity android:name=".animator.TurnOffTvActivity" />
 

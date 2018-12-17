@@ -15,6 +15,7 @@ import com.jackie.sample.android_l.AndroidLCircularRevealActivity;
 import com.jackie.sample.android_l.AndroidLTouchFeedbackActivity;
 import com.jackie.sample.animator.OpenDoor3DActivity;
 import com.jackie.sample.animator.ShoppingCartBezierActivity;
+import com.jackie.sample.animator.ThreeDActivity;
 import com.jackie.sample.animator.TurnOffTvActivity;
 import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
@@ -397,6 +398,11 @@ public class DeskActivity extends AppCompatActivity {
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
+        sampleBean.setTitle("Android 3D 动画效果");
+        sampleBean.setClassName(ThreeDActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
         sampleBean.setTitle("模拟电视的关机动画");
         sampleBean.setClassName(TurnOffTvActivity.class);
         linkedList.add(sampleBean);
@@ -600,7 +606,6 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean.setTitle("Android雷达图");
         sampleBean.setClassName(RadarActivity.class);
         linkedList.add(sampleBean);
-
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
         mRecyclerView.setAdapter(sampleAdapter);
