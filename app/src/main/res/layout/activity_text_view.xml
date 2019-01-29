@@ -9,95 +9,120 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.jackie.sample.custom_view.FlashTextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="北京市发布霾黄色预警，外出携带好口罩" />
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
-    <!-- 文本内容要够长才可以滚动 -->
-    <com.jackie.sample.custom_view.MarqueeTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        android:singleLine="true"
-        android:text="北京市发布霾黄色预警，外出携带好口罩北京市发布霾黄色预警，外出携带好口罩"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text_view_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <com.jackie.sample.custom_view.FlashTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="北京市发布霾黄色预警，外出携带好口罩" />
 
-    <TextView
-        android:id="@+id/text_view_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <!-- 文本内容要够长才可以滚动 -->
+            <com.jackie.sample.custom_view.MarqueeTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="北京市发布霾黄色预警，外出携带好口罩北京市发布霾黄色预警，外出携带好口罩" />
 
-    <TextView
-        android:id="@+id/text_view_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/text_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/text_view_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/text_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <TextSwitcher
-        android:id="@+id/text_switcher"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp" />
+            <TextView
+                android:id="@+id/text_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <com.jackie.sample.custom_view.FoldTextView
-        android:id="@+id/text_fold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="#fff"
-        android:textColor="#000"
-        app:showMaxLine="4"
-        app:showTipAfterExpand="true"
-        app:tipClickable="true"
-        app:tipColor="@color/colorPrimary"
-        app:tipGravity="0" />
+            <TextView
+                android:id="@+id/text_view_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <com.jackie.sample.custom_view.AnimTextView
-        android:id="@+id/text_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/dimen_dp30"
-        app:textColor="@color/colorAccent"
-        app:textSize="20sp"
-        app:duration="5000" />
+            <TextSwitcher
+                android:id="@+id/text_switcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="&#xf242;" />
+            <com.jackie.sample.custom_view.FoldTextView
+                android:id="@+id/text_fold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#fff"
+                android:textColor="#000"
+                app:showMaxLine="4"
+                app:showTipAfterExpand="true"
+                app:tipClickable="true"
+                app:tipColor="@color/colorPrimary"
+                app:tipGravity="0" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="20sp"
-        android:text="&#xf206;" />
+            <com.jackie.sample.custom_view.AnimTextView
+                android:id="@+id/text_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_dp30"
+                app:textColor="@color/colorAccent"
+                app:textSize="20sp"
+                app:duration="5000" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="40sp"
-        android:textColor="#FF00FF00"
-        android:text="&#xf206;" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="&#xf242;" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textColor="#FFFF0000"
-        android:text="&#xf206;" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:text="&#xf206;" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="40sp"
+                android:textColor="#FF00FF00"
+                android:text="&#xf206;" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="#FFFF0000"
+                android:text="&#xf206;" />
+
+            <TextView
+                android:id="@+id/text_view_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

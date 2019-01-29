@@ -10,9 +10,11 @@ import android.text.Html;
 import android.text.InputFilter;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.LeadingMarginSpan;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -24,6 +26,7 @@ import android.widget.ViewSwitcher;
 import com.jackie.sample.R;
 import com.jackie.sample.custom_view.AnimTextView;
 import com.jackie.sample.custom_view.FoldTextView;
+import com.jackie.sample.utils.DensityUtils;
 import com.jackie.sample.utils.FontHelper;
 
 import java.util.ArrayList;
@@ -41,6 +44,7 @@ public class TextViewActivity extends AppCompatActivity {
     private TextSwitcher mTextSwitcher;
     private FoldTextView mFoldTextView;
     private AnimTextView mAnimTextView;
+    private TextView mTextView5;
 
     private List<String> mList = new ArrayList<>();
 
@@ -149,6 +153,20 @@ public class TextViewActivity extends AppCompatActivity {
         mAnimTextView.setText("1234.56");
 
         FontHelper.injectFont(findViewById(android.R.id.content));
+
+        mTextView5 = (TextView) findViewById(R.id.text_view_5);
+
+        // 设置首行缩进
+        SpannableString spannableString =
+                new SpannableString("设置首行缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进设" +
+                        "首行缩进设置首行缩进缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进设置首行缩进");
+
+        spannableString.setSpan(new LeadingMarginSpan.Standard(DensityUtils.dp2px(this, 50), 0),
+                0,
+                spannableString.length(),
+                Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+
+        mTextView5.setText(spannableString);
     }
 
     //定时任务,定时发送message
