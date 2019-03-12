@@ -607,6 +607,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean.setClassName(RadarActivity.class);
         linkedList.add(sampleBean);
 
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("TaskAffinity的那些事儿");
+        sampleBean.setClassName(FirstTaskAffinityActivity.class);
+        linkedList.add(sampleBean);
+
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);
         mRecyclerView.setAdapter(sampleAdapter);
     }

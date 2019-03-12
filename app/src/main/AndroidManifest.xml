@@ -440,6 +440,14 @@
         <!-- Android雷达图 -->
         <activity android:name=".radar.RadarActivity" />
 
+        <!-- TaskAffinity的那些事儿 -->
+        <activity android:name=".desk.FirstTaskAffinityActivity"
+            android:taskAffinity="com.chengjie" />
+        <activity android:name=".desk.SecondAffinityActivity"
+            android:taskAffinity="com.jackie" />
+        <activity android:name=".desk.ThirdAffinityActivity"
+            android:taskAffinity="com.chengjie" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.jackie.sample.fileProvider"
