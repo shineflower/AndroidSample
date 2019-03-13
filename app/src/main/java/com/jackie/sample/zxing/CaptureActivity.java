@@ -181,18 +181,18 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 		 * 把CaptureActivityHandler这个类里面的restartPreviewAndDecode这个方法的private改成public，发现是可以用的
 		 * 但速度太快，因此用定时器每隔3s去扫描一次
 		 */
-//		handler.postDelayed(new Runnable() {
-//			@Override
-//			public void run() {
-//				try {
-//					if (handler != null) {
-//						handler.restartPreviewAndDecode();
-//					}
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		}, 3000);
+//		if (handler != null) {
+//            handler.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    try {
+//                        handler.restartPreviewAndDecode();
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }, 3000);
+//        }
 	}
 	
 	private void initCamera(SurfaceHolder surfaceHolder) {
