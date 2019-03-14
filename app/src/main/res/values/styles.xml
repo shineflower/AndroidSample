@@ -171,4 +171,10 @@
         <item name="android:textColor">#353535</item>
     </style>
 
+    <style name="PasswordActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
 </resources>

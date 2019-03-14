@@ -65,6 +65,8 @@
     <!-- 换肤 背景颜色 -->
     <color name="background">#ffffff</color>
 
+    <color name="window_background">#80000000</color>
+
     <!--
         颜色值透明度查询
         透明度	数值

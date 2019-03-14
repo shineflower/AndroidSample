@@ -220,7 +220,9 @@
 
         <!-- 仿微信支付密码输入框 -->
         <activity android:name=".wechat_pay.WechatPayActivity" />
-        <activity android:name=".wechat_pay.CodeActivity" />
+        <activity android:name=".wechat_pay.CodeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/PasswordActivity" />
 
         <!-- 各种网络加载框架 -->
         <activity android:name=".framework.FrameworkActivity" />
