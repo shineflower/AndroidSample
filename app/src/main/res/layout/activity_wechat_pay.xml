@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/main_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/selector_wechat_pay_button"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="仿微信支付密码"
+        android:textColor="#555"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/main_sms"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/selector_wechat_pay_button"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="短信验证码"
+        android:textColor="#555"
+        android:textSize="16dp" />
+
+</LinearLayout>

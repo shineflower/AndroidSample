@@ -97,6 +97,7 @@ import com.jackie.sample.web_view.WebViewActivity;
 import com.jackie.sample.wechat_camera.WechatCameraActivity;
 import com.jackie.sample.wechat_image_picker.WechatImagePickerActivity;
 import com.jackie.sample.wechat_image_upload.WechatImageUploadActivity;
+import com.jackie.sample.wechat_pay.WechatPayActivity;
 import com.jackie.sample.wechat_recorder.WechatRecorderActivity;
 import com.jackie.sample.wechat_slide.WechatSlideActivity;
 import com.jackie.sample.wechat_tab.WechatTabWithIndicatorActivity;
@@ -310,6 +311,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("阿里支付密码框");
         sampleBean.setClassName(AliPayActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("微信支付密码框");
+        sampleBean.setClassName(WechatPayActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

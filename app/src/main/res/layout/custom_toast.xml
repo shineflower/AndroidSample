@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/custom_toast_bkg_shape"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="#ffffffff"
+        android:textSize="14dp"
+        android:singleLine="true"
+        android:maxWidth="240dp"
+        android:ellipsize="end" />
+
+</RelativeLayout>

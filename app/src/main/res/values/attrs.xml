@@ -6,6 +6,7 @@
     <attr name="text_color" format="color" />
     <attr name="radius" format="dimension" />
     <attr name="border_color" format="color|reference" />
+    <attr name="textSize" format="dimension" />
 
     <declare-styleable name="ChangeColorIconView">
         <attr name="icon" />
@@ -277,7 +278,23 @@
 
     <declare-styleable name="AnimTextView">
         <attr name="textColor" format="color" />
-        <attr name="textSize" format="dimension" />
+        <attr name="textSize" />
         <attr name="duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CodeView">
+        <attr name="length" format="integer" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="code" format="string" />
+        <attr name="codeColor" format="color" />
+        <attr name="pointRadius" format="dimension" />
+        <attr name="textSize" />
+        <attr name="showType" format="enum">
+            <enum name="word" value="1" />
+            <enum name="password" value="2" />
+        </attr>
     </declare-styleable>
 </resources>
