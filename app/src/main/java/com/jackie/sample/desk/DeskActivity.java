@@ -21,6 +21,7 @@ import com.jackie.sample.animator.ValueAnimatorActivity;
 import com.jackie.sample.arc_menu.ArcMenuActivity;
 import com.jackie.sample.bean.SampleBean;
 import com.jackie.sample.blur.BlurActivity;
+import com.jackie.sample.blur.YouDaoActivity;
 import com.jackie.sample.card_piece.CardPieceActivity;
 import com.jackie.sample.card_swipe.CardSwipeActivity;
 import com.jackie.sample.circle_menu.CircleMenuActivity;
@@ -456,6 +457,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("快速实现动态模糊效果");
         sampleBean.setClassName(BlurActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("仿有道云笔记头像背景");
+        sampleBean.setClassName(YouDaoActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();
