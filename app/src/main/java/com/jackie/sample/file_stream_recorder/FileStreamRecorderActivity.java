@@ -17,7 +17,7 @@ public class FileStreamRecorderActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file_stream_recorder);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
     @OnClick({R.id.btn_file_mode, R.id.btn_stream_mode})

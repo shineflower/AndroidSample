@@ -25,17 +25,17 @@ import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class StreamModeActivity extends AppCompatActivity {
 
-    @InjectView(R.id.btn_start)
+    @Bind(R.id.btn_start)
     Button mBtnStart;
-    @InjectView(R.id.tv_time)
+    @Bind(R.id.tv_time)
     TextView mTvTime;
-    @InjectView(R.id.btn_play)
+    @Bind(R.id.btn_play)
     Button btnPlay;
 
     //录音的状态 volatile 保证多线程内存同步，避免出问题
@@ -59,7 +59,7 @@ public class StreamModeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stream_mode);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         //录音JNI函数不具备线程安全性，所以要用单线程
         mExecutorService = Executors.newSingleThreadExecutor();

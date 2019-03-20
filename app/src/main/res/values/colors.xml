@@ -67,6 +67,9 @@
 
     <color name="window_background">#80000000</color>
 
+    <color name="key_ok_color">#1280FA</color>
+    <color name="key_ok_color_pressed">#0174f2</color>
+
     <!--
         颜色值透明度查询
         透明度	数值

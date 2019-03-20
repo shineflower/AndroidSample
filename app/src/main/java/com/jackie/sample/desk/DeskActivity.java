@@ -50,6 +50,7 @@ import com.jackie.sample.image_filling.ImageFillingActivity;
 import com.jackie.sample.image_processing.ImageProcessingActivity;
 import com.jackie.sample.jd_tmall_refresh.JdTmallRefreshActivity;
 import com.jackie.sample.keyboard.KeyboardActivity;
+import com.jackie.sample.keyboard.XianYuKeyboardActivity;
 import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
@@ -547,6 +548,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("自定义键盘");
         sampleBean.setClassName(KeyboardActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("高仿闲鱼键自定义数字键盘特效");
+        sampleBean.setClassName(XianYuKeyboardActivity.class);
         linkedList.add(sampleBean);
 
         sampleBean = new SampleBean();

@@ -20,15 +20,15 @@ import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class FileModeActivity extends AppCompatActivity {
 
-    @InjectView(R.id.tv_time)
+    @Bind(R.id.tv_time)
     TextView mTvTime;
-    @InjectView(R.id.btn_speak)
+    @Bind(R.id.btn_speak)
     Button mBtnSpeak;
 
     private ExecutorService mExecutorService;
@@ -45,7 +45,7 @@ public class FileModeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_file_mode);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         //录音JNI函数不具备线程安全性，所以要用单线程
         mExecutorService = Executors.newSingleThreadExecutor();

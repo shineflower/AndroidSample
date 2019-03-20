@@ -403,6 +403,11 @@
         <!-- 自定义键盘 -->
         <activity android:name=".keyboard.KeyboardActivity" />
 
+        <!-- 高仿闲鱼键自定义数字键盘特效 -->
+        <activity android:name=".keyboard.XianYuKeyboardActivity" />
+        <activity android:name=".keyboard.RandomActivity" />
+        <activity android:name=".keyboard.XianYuActivity" />
+
         <!-- 数字加减器 -->
         <activity android:name=".adder_subtractor.AdderSubtractorActivity" />
 
