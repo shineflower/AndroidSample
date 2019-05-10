@@ -96,7 +96,7 @@ public class ToggleButton extends View {
 		spring.addListener(springListener);
 	}
 
-	private boolean toggleEnable;
+//	private boolean toggleEnable;
 	public void setup(AttributeSet attrs) {
 		paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		paint.setStyle(Style.FILL);
@@ -121,20 +121,20 @@ public class ToggleButton extends View {
 		borderWidth = typedArray.getDimensionPixelSize(R.styleable.ToggleButton_tbBorderWidth, borderWidth);
 		defaultAnimate = typedArray.getBoolean(R.styleable.ToggleButton_tbAnimate, defaultAnimate);
 		isDefaultOn = typedArray.getBoolean(R.styleable.ToggleButton_tbAsDefaultOn, isDefaultOn);
-		toggleEnable = typedArray.getBoolean(R.styleable.ToggleButton_toggleEnable, false);
+//		toggleEnable = typedArray.getBoolean(R.styleable.ToggleButton_toggleEnable, false);
 		typedArray.recycle();
 		
 		borderColor = offBorderColor;
 
-		if(toggleEnable){
-			onColor = Color.parseColor("#4470FF");
-			offBorderColor = Color.parseColor("#B9BBBF");
-			offColor = Color.parseColor("#B9BBBF");
-		}else{
-			onColor = Color.parseColor("#BFD2FF");
-			offBorderColor = Color.parseColor("#E7E8EB");
-			offColor = Color.parseColor("#E7E8EB");
-		}
+//		if(toggleEnable){
+//			onColor = Color.parseColor("#4470FF");
+//			offBorderColor = Color.parseColor("#E7E8EB");
+//			offColor = Color.parseColor("#E7E8EB");
+//		} else {
+//			onColor = Color.parseColor("#BFD2FF");
+//			offBorderColor = Color.parseColor("#E7E8EB");
+//			offColor = Color.parseColor("#E7E8EB");
+//		}
 		if (isDefaultOn) {
 			toggleOn();
 		}
