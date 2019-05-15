@@ -84,6 +84,7 @@ import com.jackie.sample.slide_delete.SlideDeleteActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
+import com.jackie.sample.tick_view.TickViewActivity;
 import com.jackie.sample.time_picker.TimePickerActivity;
 import com.jackie.sample.timeline.TimelineActivity;
 import com.jackie.sample.tree.TreeActivity;
@@ -628,6 +629,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("TaskAffinity的那些事儿");
         sampleBean.setClassName(FirstTaskAffinityActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("一个精致带感的打钩小动画");
+        sampleBean.setClassName(TickViewActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

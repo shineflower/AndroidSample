@@ -462,6 +462,9 @@
         <activity android:name=".desk.ThirdAffinityActivity"
             android:taskAffinity="com.chengjie" />
 
+        <!-- 一个精致带感的打钩小动画 -->
+        <activity android:name=".tick_view.TickViewActivity" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.jackie.sample.fileProvider"
