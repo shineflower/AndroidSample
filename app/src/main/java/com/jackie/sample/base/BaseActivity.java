@@ -24,7 +24,7 @@ public class BaseActivity extends AppCompatActivity {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
-            /**
+            /*
              * style 要设置成NoActionBar，style中配置 <item name="android:windowIsTranslucent">true</item>
              * 否则，会闪一下状态栏的颜色
              * 需要在xml中设置下面的代码，background为状态栏的颜色
