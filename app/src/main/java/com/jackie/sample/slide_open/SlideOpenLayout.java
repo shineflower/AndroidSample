@@ -34,7 +34,7 @@ public class SlideOpenLayout extends RelativeLayout {
     private String textOff = "<";
     private float sliderTextSize = 16;
     private float thumbTextSize = 16;
-    private int margin = 500;
+    private int margin = 10;
     private OnSliderStatusChange onSliderStatusChange;
 
     public SlideOpenLayout(Context context) {
