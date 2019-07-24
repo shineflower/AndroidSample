@@ -81,6 +81,7 @@ import com.jackie.sample.share_element.ShareElementFromActivity;
 import com.jackie.sample.sin.SinActivity;
 import com.jackie.sample.skin_support.SkinSupportActivity;
 import com.jackie.sample.slide_delete.SlideDeleteActivity;
+import com.jackie.sample.slide_open.SlideOpenActivity;
 import com.jackie.sample.sliding_menu.SlidingMenuActivity;
 import com.jackie.sample.switcher.SwitcherActivity;
 import com.jackie.sample.text_view.TextViewActivity;
@@ -634,6 +635,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("一个精致带感的打钩小动画");
         sampleBean.setClassName(TickViewActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("滑动开门");
+        sampleBean.setClassName(SlideOpenActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jackie.sample.slide_open.SlideOpenLayout
+        android:id="@+id/slide_open"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        app:margin="10"
+        app:sliderColor="@color/colorPrimary"
+        app:sliderText="Slide to open >"
+        app:sliderTextSize="20"
+        app:textOff="Close"
+        app:textOn="Open"
+        app:textSize="12sp"
+        app:thumbColor="@color/colorAccent" />
+
+</RelativeLayout>
