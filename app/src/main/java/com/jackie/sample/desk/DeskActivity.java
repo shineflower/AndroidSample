@@ -53,6 +53,7 @@ import com.jackie.sample.keyboard.KeyboardActivity;
 import com.jackie.sample.keyboard.XianYuKeyboardActivity;
 import com.jackie.sample.list_view.LoopCompletenessListViewActivity;
 import com.jackie.sample.lock_pattern.LockPatternActivity;
+import com.jackie.sample.lottie.LottieActivity;
 import com.jackie.sample.lucky_wheel.LuckyWheelActivity;
 import com.jackie.sample.map.AMapActivity;
 import com.jackie.sample.map.BaiduMapActivity;
@@ -640,6 +641,11 @@ public class DeskActivity extends AppCompatActivity {
         sampleBean = new SampleBean();
         sampleBean.setTitle("滑动开门");
         sampleBean.setClassName(SlideOpenActivity.class);
+        linkedList.add(sampleBean);
+
+        sampleBean = new SampleBean();
+        sampleBean.setTitle("Lottie实现复杂动画");
+        sampleBean.setClassName(LottieActivity.class);
         linkedList.add(sampleBean);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this, linkedList);

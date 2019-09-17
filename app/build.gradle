@@ -99,6 +99,17 @@ repositories {
     mavenCentral()
 }
 
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.2.0'
+            }
+        }
+    }
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -190,4 +201,7 @@ dependencies {
 
     //ToggleButton
     compile 'com.facebook.rebound:rebound:0.3.8'
+    //Lottie(2.8.0及以上支持了androidx)
+    def lottieVersion = "2.7.0"
+    compile "com.airbnb.android:lottie:$lottieVersion"
 }

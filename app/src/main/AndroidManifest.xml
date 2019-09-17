@@ -76,13 +76,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <!-- 主界面 -->
         <activity
             android:name=".desk.DeskActivity"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -467,6 +468,9 @@
 
         <!-- 滑动开门控件 -->
         <activity android:name=".slide_open.SlideOpenActivity" />
+
+        <!-- Lottie实现复杂动画 -->
+        <activity android:name=".lottie.LottieActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
